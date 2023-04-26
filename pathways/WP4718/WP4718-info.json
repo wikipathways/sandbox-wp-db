@@ -1,0 +1,18 @@
+{
+    "wpid": "WP4718",
+    "organisms": ["Homo sapiens"],
+    "description": "New PW, homology converted",
+    "ontology-ids": [
+        "PW:0000454",
+        "PW:0001304",
+        "PW:0000959"
+    ],
+    "last-edited": "2023-01-18",
+    "title": "Cholesterol metabolism with Bloch and Kandutsch-Russell pathways",
+    "authors": [
+        "DeSl",
+        "Eweitz",
+        "Khanspers"
+    ],
+    "revision": "r124755"
+}

@@ -1,0 +1,13 @@
+{
+    "wpid": "WP148",
+    "organisms": ["Caenorhabditis elegans"],
+    "description": "Molecular mechanisms regulating lipid storage and metabolism.",
+    "ontology-ids": [
+        "PW:0000738",
+        "PW:0000002"
+    ],
+    "last-edited": "20210528",
+    "title": "Fatty acid beta-oxidation 2",
+    "authors": ["Nsalomonis","MaintBot","Evelo","C.Redfern","Mkutmon","Christine Chichester","Eweitz","Fehrhart","DeSl","Egonw"],
+    "revision": "r121852"
+}

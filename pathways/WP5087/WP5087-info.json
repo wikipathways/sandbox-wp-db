@@ -1,0 +1,25 @@
+{
+    "wpid": "WP5087",
+    "organisms": ["Homo sapiens"],
+    "description": "Mesothelioma",
+    "ontology-ids": [
+        "PW:0000013",
+        "PW:0001562",
+        "CL:1000491",
+        "DOID:7474",
+        "CL:0000077"
+    ],
+    "last-edited": "2023-02-01",
+    "title": "Malignant pleural mesothelioma",
+    "authors": [
+        "Ziska",
+        "Marvin M2",
+        "Eweitz",
+        "Finterly",
+        "Egonw",
+        "L Dupuis",
+        "AlexanderPico",
+        "Larsgw"
+    ],
+    "revision": "r125314"
+}

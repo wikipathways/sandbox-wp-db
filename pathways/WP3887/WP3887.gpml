@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Angiotensin II signaling (acute) in thick ascending limbs" Data-Source="WikiPathways" Version="WP3887_r107039" Author="[AgustinGV, AlexanderPico, Egonw, Khanspers, Susan, DeSl, MaintBot, Mkutmon]" Last-Modified="20190917140028" Organism="Rattus norvegicus">
+  <Comment Source="WikiPathways-description">The thick ascending limb of the loop pf Henle reabsorbs 25 to 30 % of the NaCl filtered through the glomerulus. Abnormally elevated Na reabsorption by this segment is link to salt-sensitive hypertension. Ang II is an important regulator of transport in the thick ascending limb, in part due to its modulatory effects on the balance between nitric oxide and superoxide. This pathway features the acute effects of Ang II in NO and O2- production in thick ascending limb. The information presented here is based on both genomic and physiological data.</Comment>
+  <Graphics BoardWidth="1238.5" BoardHeight="946.0998633315337" />
+  <DataNode TextLabel="PIP2" GraphId="a3933" Type="Metabolite">
+    <Graphics CenterX="199.727198" CenterY="270.4184567238967" Width="65.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" />
+    <Xref Database="Chemspider" ID="21169207" />
+  </DataNode>
+  <DataNode TextLabel="Itpr3" GraphId="a7143" Type="GeneProduct" GroupRef="ba003">
+    <Graphics CenterX="530.0" CenterY="290.0" Width="75.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="25679" />
+  </DataNode>
+  <DataNode TextLabel="Itpr1" GraphId="a8f00" Type="GeneProduct" GroupRef="ba003">
+    <BiopaxRef>aab</BiopaxRef>
+    <Graphics CenterX="530.0" CenterY="250.0" Width="75.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="25262" />
+  </DataNode>
+  <DataNode TextLabel="Superoxide" GraphId="ab0a9" Type="Metabolite">
+    <Graphics CenterX="875.0" CenterY="380.0" Width="65.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" />
+    <Xref Database="HMDB" ID="HMDB0002168" />
+  </DataNode>
+  <DataNode TextLabel="Itpr2" GraphId="abb93" Type="GeneProduct" GroupRef="ba003">
+    <Graphics CenterX="530.0" CenterY="270.0" Width="75.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="81678" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="abcf8" Type="Metabolite">
+    <Graphics CenterX="596.0" CenterY="188.47234759281264" Width="65.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" />
+    <Xref Database="HMDB" ID="HMDB0000464" />
+  </DataNode>
+  <DataNode TextLabel="PKCa" GraphId="b8028" Type="GeneProduct">
+    <Graphics CenterX="730.0" CenterY="140.0" Width="75.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="24680" />
+  </DataNode>
+  <DataNode TextLabel="IP3" GraphId="be6ba" Type="Metabolite">
+    <Graphics CenterX="383.6867886044834" CenterY="271.4184567238967" Width="65.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" />
+    <Xref Database="HMDB" ID="HMDB0001498" />
+  </DataNode>
+  <DataNode TextLabel="cAMP" GraphId="ccbf0" Type="Metabolite">
+    <Graphics CenterX="780.0" CenterY="785.0" Width="65.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" />
+    <Xref Database="HMDB" ID="HMDB0000058" />
+  </DataNode>
+  <DataNode TextLabel="Mas1" GraphId="cef66" Type="Protein">
+    <BiopaxRef>cf7</BiopaxRef>
+    <BiopaxRef>b15</BiopaxRef>
+    <BiopaxRef>e61</BiopaxRef>
+    <BiopaxRef>d0d</BiopaxRef>
+    <Graphics CenterX="160.48417" CenterY="700.0" Width="75.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="25153" />
+  </DataNode>
+  <DataNode TextLabel="DAG" GraphId="d1c35" Type="Metabolite">
+    <Graphics CenterX="199.727198" CenterY="140.81517876199717" Width="65.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" />
+    <Xref Database="ChEBI" ID="CHEBI:18035" />
+  </DataNode>
+  <DataNode TextLabel="PLC g2" GraphId="e3a4c" Type="GeneProduct" GroupRef="ef177">
+    <Graphics CenterX="201.1600928074246" CenterY="323.50348027842097" Width="75.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="29337" />
+  </DataNode>
+  <DataNode TextLabel="G alfa-Q" GraphId="ed261" Type="GeneProduct" GroupRef="da431">
+    <Graphics CenterX="201.19489559164765" CenterY="419.02552204176396" Width="75.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="81666" />
+  </DataNode>
+  <DataNode TextLabel="AT2R" GraphId="ee387" Type="GeneProduct">
+    <BiopaxRef>f34</BiopaxRef>
+    <BiopaxRef>bbc</BiopaxRef>
+    <BiopaxRef>e6a</BiopaxRef>
+    <BiopaxRef>f00</BiopaxRef>
+    <BiopaxRef>c25</BiopaxRef>
+    <Graphics CenterX="160.0" CenterY="630.0" Width="75.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="24182" />
+  </DataNode>
+  <DataNode TextLabel="PKA" GraphId="f0fa8" Type="Protein">
+    <Graphics CenterX="780.0" CenterY="880.0" Width="75.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="RGD" ID="3389" />
+  </DataNode>
+  <DataNode TextLabel="AT1a" GraphId="f39cb" Type="GeneProduct" GroupRef="feafe">
+    <Graphics CenterX="160.48417" CenterY="513.4686774942018" Width="75.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="24180" />
+  </DataNode>
+  <DataNode TextLabel="NO" GraphId="f4360" Type="Metabolite">
+    <Graphics CenterX="875.0" CenterY="620.0" Width="65.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff3333" />
+    <Xref Database="HMDB" ID="HMDB0003378" />
+  </DataNode>
+  <DataNode TextLabel="PI3K" GraphId="ffde5" Type="Protein">
+    <BiopaxRef>c25</BiopaxRef>
+    <Graphics CenterX="269.0" CenterY="764.1753031973549" Width="75.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="AT1b" GraphId="cfebc" Type="GeneProduct" GroupRef="feafe">
+    <Graphics CenterX="160.48417" CenterY="533.4686774942018" Width="75.0" Height="20.0" ZOrder="32769" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="81638" />
+  </DataNode>
+  <DataNode TextLabel="AT1R AP" GraphId="c4d79" Type="GeneProduct" GroupRef="dfabb">
+    <Graphics CenterX="380.0" CenterY="494.0" Width="75.0" Height="20.0" ZOrder="32770" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="298646" />
+  </DataNode>
+  <DataNode TextLabel="B-Arrestin 2" GraphId="e590a" Type="GeneProduct" GroupRef="dfabb">
+    <Graphics CenterX="380.0" CenterY="514.0" Width="75.0" Height="20.0" ZOrder="32771" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="25388" />
+  </DataNode>
+  <DataNode TextLabel="Dynamin 1 " GraphId="fe590" Type="GeneProduct" GroupRef="dfabb">
+    <Graphics CenterX="380.0" CenterY="534.0" Width="75.0" Height="20.0" ZOrder="32772" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="140694" />
+  </DataNode>
+  <DataNode TextLabel="Dynamin 2" GraphId="df5d7" Type="GeneProduct" GroupRef="dfabb">
+    <Graphics CenterX="380.0" CenterY="554.0" Width="75.0" Height="20.0" ZOrder="32773" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="25751" />
+  </DataNode>
+  <DataNode TextLabel="G alfa-11" GraphId="adf65" Type="GeneProduct" GroupRef="da431">
+    <Graphics CenterX="201.19489559164765" CenterY="439.0255220417645" Width="75.0" Height="20.0" ZOrder="32774" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="81662" />
+  </DataNode>
+  <DataNode TextLabel="PLC g1" GraphId="d4dd0" Type="GeneProduct" GroupRef="ef177">
+    <Graphics CenterX="201.1600928074246" CenterY="343.5034802784215" Width="75.0" Height="20.0" ZOrder="32775" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="25738" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="d9523" Type="Metabolite">
+    <Graphics CenterX="530.0" CenterY="383.5631857842366" Width="65.0" Height="20.0" ZOrder="32777" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" />
+    <Xref Database="HMDB" ID="HMDB0000464" />
+  </DataNode>
+  <DataNode TextLabel="PIP2" GraphId="b8c38" Type="Metabolite">
+    <Graphics CenterX="199.727198" CenterY="813.1753031973549" Width="65.0" Height="20.0" ZOrder="32781" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" />
+    <Xref Database="Chemspider" ID="21169207" />
+  </DataNode>
+  <DataNode TextLabel="PIP3" GraphId="b6852" Type="Metabolite">
+    <Graphics CenterX="339.727198" CenterY="813.1753031973549" Width="65.0" Height="20.0" ZOrder="32782" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" />
+    <Xref Database="Wikidata" ID="Q3078767" />
+  </DataNode>
+  <DataNode TextLabel="PTEN" GraphId="f7ba4" Type="Protein">
+    <Graphics CenterX="269.0" CenterY="863.1753031973549" Width="75.0" Height="20.0" ZOrder="32783" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="50557" />
+  </DataNode>
+  <DataNode TextLabel="Akt2 / PKB" GraphId="faa83" Type="Protein" GroupRef="e82e5">
+    <Graphics CenterX="596.0" CenterY="710.1753031973549" Width="75.0" Height="20.0" ZOrder="32786" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="25233" />
+  </DataNode>
+  <DataNode TextLabel="Akt1 / PKB" GraphId="d41f3" Type="Protein" GroupRef="e82e5">
+    <BiopaxRef>ba3</BiopaxRef>
+    <Graphics CenterX="596.0" CenterY="690.1753031973549" Width="75.0" Height="20.0" ZOrder="32787" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="24185" />
+  </DataNode>
+  <DataNode TextLabel="Akt3 / PKB" GraphId="c1420" Type="Protein" GroupRef="e82e5">
+    <Graphics CenterX="596.0" CenterY="730.1753031973549" Width="75.0" Height="20.0" ZOrder="32788" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="29414" />
+  </DataNode>
+  <DataNode TextLabel="NOS3" GraphId="a09e1" Type="GeneProduct">
+    <Graphics CenterX="730.0" CenterY="620.0" Width="75.0" Height="20.0" ZOrder="32790" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="24600" />
+  </DataNode>
+  <DataNode TextLabel="Calmodulin 1" GraphId="a2500" Type="GeneProduct" GroupRef="aab89">
+    <Graphics CenterX="530.0" CenterY="460.0" Width="75.0" Height="20.0" ZOrder="32791" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="24242" />
+  </DataNode>
+  <DataNode TextLabel="Calmodulin 2" GraphId="a621a" Type="GeneProduct" GroupRef="aab89">
+    <Graphics CenterX="530.0" CenterY="480.0" Width="75.0" Height="20.0" ZOrder="32792" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="50663" />
+  </DataNode>
+  <DataNode TextLabel="Calmodulin 3" GraphId="e8697" Type="GeneProduct" GroupRef="aab89">
+    <Graphics CenterX="530.0" CenterY="500.0" Width="75.0" Height="20.0" ZOrder="32793" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="24244" />
+  </DataNode>
+  <DataNode TextLabel="NOX4" GraphId="f63a0" Type="GeneProduct" GroupRef="a1bf2">
+    <BiopaxRef>f75</BiopaxRef>
+    <BiopaxRef>bf4</BiopaxRef>
+    <BiopaxRef>c95</BiopaxRef>
+    <Graphics CenterX="997.2222222222194" CenterY="130.60690943043878" Width="75.0" Height="20.0" ZOrder="32794" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="85431" />
+  </DataNode>
+  <DataNode TextLabel="Rac1" GraphId="efee5" Type="GeneProduct" GroupRef="a1bf2">
+    <BiopaxRef>a24</BiopaxRef>
+    <Graphics CenterX="997.2222222222194" CenterY="150.60690943043878" Width="75.0" Height="20.0" ZOrder="32795" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="85431" />
+  </DataNode>
+  <DataNode TextLabel="PKCa" GraphId="de503" Type="GeneProduct" GroupRef="c9eb3">
+    <Graphics CenterX="990.0" CenterY="369.99999999999983" Width="75.0" Height="20.0" ZOrder="32799" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="24680" />
+  </DataNode>
+  <DataNode TextLabel="PKCg" GraphId="a3c70" Type="GeneProduct" GroupRef="c9eb3">
+    <Graphics CenterX="990.0" CenterY="389.99999999999983" Width="75.0" Height="20.0" ZOrder="32801" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="24681" />
+  </DataNode>
+  <DataNode TextLabel="AMP" GraphId="a4755" Type="Metabolite">
+    <Graphics CenterX="969.9999999999959" CenterY="786.1111111111113" Width="65.0" Height="20.0" ZOrder="32805" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" />
+    <Xref Database="HMDB" ID="HMDB0003540" />
+  </DataNode>
+  <DataNode TextLabel="PDE 2a" GraphId="fac07" Type="GeneProduct">
+    <BiopaxRef>daa</BiopaxRef>
+    <BiopaxRef>c84</BiopaxRef>
+    <Graphics CenterX="875.0" CenterY="739.9999999999975" Width="75.0" Height="20.0" ZOrder="32806" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="81743" />
+  </DataNode>
+  <DataNode TextLabel="Uncoupled NOSs" GraphId="a31fe" Type="GeneProduct">
+    <BiopaxRef>b57</BiopaxRef>
+    <Graphics CenterX="875.0" CenterY="220.0" Width="100.0" Height="20.0" ZOrder="32808" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="24600" />
+  </DataNode>
+  <DataNode TextLabel="PDPK1" GraphId="a32f6" Type="GeneProduct">
+    <Graphics CenterX="595.3025210084035" CenterY="813.1753031973549" Width="75.0" Height="20.0" ZOrder="32811" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="Entrez Gene" ID="81745" />
+  </DataNode>
+  <DataNode TextLabel="PLA2" GraphId="c684b" Type="GeneProduct">
+    <Graphics CenterX="262.95825771324894" CenterY="576.5952813067158" Width="75.0" Height="20.0" ZOrder="32815" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="AA" GraphId="f1bdb" Type="Metabolite">
+    <Graphics CenterX="316.805237927404" CenterY="623.5919482719787" Width="65.0" Height="20.0" ZOrder="32818" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" />
+    <Xref Database="ChEBI" ID="CHEBI:15843" />
+  </DataNode>
+  <DataNode TextLabel="20-HETE" GraphId="d331d" Type="Metabolite">
+    <Graphics CenterX="481.81488203266315" CenterY="622.7898769913286" Width="65.0" Height="20.0" ZOrder="32821" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" />
+    <Xref Database="HMDB" ID="HMDB0005998" />
+  </DataNode>
+  <DataNode TextLabel="cit-P450" GraphId="b59c2" Type="GeneProduct">
+    <Graphics CenterX="391.8330308529951" CenterY="663.7277676951006" Width="75.0" Height="20.0" ZOrder="32825" FontSize="12" Valign="Middle" Color="008000" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <Interaction GraphId="b556b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="b7d91" X="767.5" Y="620.0" GraphRef="a09e1" RelX="1.0" RelY="0.0" />
+      <Point GraphId="de0fd" X="842.5" Y="620.0" GraphRef="f4360" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c50b8">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="ef9d4" X="780.0" Y="795.0" GraphRef="ccbf0" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c99b6" X="780.0" Y="870.0" GraphRef="f0fa8" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1f33717f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="a8c12" X="197.5" Y="630.0" GraphRef="ee387" RelX="1.0" RelY="0.0" />
+      <Point GraphId="b180f" X="287.75" Y="754.1753031973549" GraphRef="ffde5" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id333d5b2f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="bf231" X="232.227198" Y="140.81517876199717" GraphRef="d1c35" RelX="1.0" RelY="0.0" />
+      <Point GraphId="b1961" X="692.5" Y="140.0" GraphRef="b8028" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id34690075">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="e6fc0" X="232.227198" Y="270.4184567238967" GraphRef="a3933" RelX="1.0" RelY="0.0" />
+      <Point GraphId="fe83d" X="351.1867886044834" Y="271.4184567238967" GraphRef="be6ba" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3d67eaad">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="f4f07" X="183.23417" Y="495.46867749420176" GraphRef="feafe" RelX="0.5" RelY="-1.0" />
+      <Point GraphId="c1d67" X="223.94489559164765" Y="457.02552204176453" GraphRef="da431" RelX="0.5" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id44bc36be">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="f6add" X="197.98417" Y="700.0" GraphRef="cef66" RelX="1.0" RelY="0.0" />
+      <Point GraphId="b21c0" X="250.25" Y="754.1753031973549" GraphRef="ffde5" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5d2f2ce2">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="caa2e" X="858.75" Y="370.0" GraphRef="ab0a9" RelX="-0.5" RelY="-1.0" />
+      <Point GraphId="a8d5a" X="850.0" Y="230.0" GraphRef="a31fe" RelX="-0.5" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6430679a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="cfb9e" X="997.2222222222194" Y="168.60690943043878" GraphRef="a1bf2" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a8ffd" X="907.5" Y="380.0" GraphRef="ab0a9" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id7097a338">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="d8e3d" X="372.227198" Y="813.1753031973549" GraphRef="b6852" RelX="1.0" RelY="0.0" />
+      <Point GraphId="df3cf" X="557.8025210084035" Y="813.1753031973549" GraphRef="a32f6" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id72d72e40">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="ae5da" X="416.1867886044834" Y="271.4184567238967" GraphRef="be6ba" RelX="1.0" RelY="0.0" />
+      <Point GraphId="f2289" X="484.5" Y="270.0" GraphRef="ba003" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id80261360">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="f04be" X="269.0" Y="774.1753031973549" GraphRef="ffde5" RelX="0.0" RelY="1.0" />
+      <Point GraphId="caa1d" X="269.727198" Y="803.1753031973549" GraphRef="e0e24" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id920e3ba9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="c0d07" X="907.5" Y="380.0" GraphRef="ab0a9" RelX="1.0" RelY="0.0" />
+      <Point GraphId="ee502" X="944.5" Y="379.99999999999983" GraphRef="c9eb3" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id99aa66ae">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="be960" X="215.977198" Y="803.1753031973549" GraphRef="b8c38" RelX="0.5" RelY="-1.0" />
+      <Point GraphId="b03c2" X="323.477198" Y="803.1753031973549" GraphRef="b6852" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.5" Shape="None" GraphId="e0e24" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida687f8b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="d4be2" X="575.5" Y="480.0" GraphRef="aab89" RelX="1.0" RelY="0.0" />
+      <Point GraphId="b577a" X="711.25" Y="610.0" GraphRef="a09e1" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida6f6b38a">
+    <BiopaxRef>ca7</BiopaxRef>
+    <BiopaxRef>aa1</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="bd87f" X="990.0" Y="600.0" GraphRef="de144" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="f48f3" X="891.25" Y="390.0" GraphRef="ab0a9" RelX="0.5" RelY="1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida9061ad8">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="ed3f6" X="628.5" Y="188.47234759281264" GraphRef="abcf8" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d4046" X="692.5" Y="140.0" GraphRef="b8028" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idaedd66fd">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="f86a3" X="223.94489559164765" Y="401.02552204176396" GraphRef="da431" RelX="0.5" RelY="-1.0" />
+      <Point GraphId="a92ae" X="201.1600928074246" Y="361.5034802784214" GraphRef="ef177" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb6aeda6e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="e9ef4" X="875.0" Y="390.0" GraphRef="ab0a9" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e82d7" X="875.0" Y="610.0" GraphRef="f4360" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idba0cfd5e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="b9370" X="812.5" Y="785.0" GraphRef="ccbf0" RelX="1.0" RelY="0.0" />
+      <Point GraphId="f148e" X="937.4999999999959" Y="786.1111111111113" GraphRef="a4755" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Anchor Position="0.5" Shape="None" GraphId="b4a97" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbf59f2bb">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="cecd4" X="730.0" Y="150.0" GraphRef="b8028" RelX="0.0" RelY="1.0" />
+      <Point GraphId="dc28e" X="730.0" Y="610.0" GraphRef="a09e1" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc5ac7655">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="cccb5" X="199.727198" Y="260.4184567238967" GraphRef="a3933" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="f03e9" X="199.727198" Y="150.81517876199717" GraphRef="d1c35" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc6772478">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="b08be" X="530.0" Y="393.5631857842366" GraphRef="d9523" RelX="0.0" RelY="1.0" />
+      <Point GraphId="cba94" X="530.0" Y="442.0" GraphRef="aab89" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd339fb0f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="f5a39" X="334.5" Y="524.0" GraphRef="dfabb" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="c9f12" X="205.98417" Y="523.4686774942018" GraphRef="feafe" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd77ff2ca">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="ea18c" X="990.0" Y="640.0" GraphRef="de144" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e338a" X="875.0" Y="729.9999999999975" GraphRef="fac07" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="iddc695f71">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="dde17" X="223.9100928074246" Y="305.50348027842097" GraphRef="ef177" RelX="0.5" RelY="-1.0" />
+      <Point GraphId="c8882" X="199.727198" Y="280.4184567238967" GraphRef="a3933" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="iddd646a04">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="a8786" X="767.5" Y="140.0" GraphRef="b8028" RelX="1.0" RelY="0.0" />
+      <Point GraphId="f5132" X="951.7222222222194" Y="140.60690943043878" GraphRef="a1bf2" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide7bb8a6b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="e9288" X="842.5" Y="380.0" GraphRef="ab0a9" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="e976c" X="748.75" Y="610.0" GraphRef="a09e1" RelX="0.5" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf2ab756f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="f9dd5" X="875.0" Y="749.9999999999975" GraphRef="fac07" RelX="0.0" RelY="1.0" />
+      <Point GraphId="b5d57" X="874.999999999998" Y="785.5555555555557" GraphRef="b4a97" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf6e6880e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="de814" X="842.5" Y="380.0" GraphRef="ab0a9" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="b7b56" X="748.75" Y="150.0" GraphRef="b8028" RelX="0.5" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idfd4c6609">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="b4dc6" X="1035.0" Y="620.0" GraphRef="de144" RelX="1.0" RelY="0.0" />
+      <Point GraphId="e521b" X="1091.5" Y="620.0" GraphRef="d1f32" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cb1c7">
+    <Graphics ZOrder="32779" LineThickness="1.0">
+      <Point GraphId="dbe50" X="530.0" Y="308.0" GraphRef="ba003" RelX="0.0" RelY="1.0" />
+      <Point GraphId="fce06" X="530.0" Y="373.5631857842366" GraphRef="d9523" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf8955580">
+    <Graphics ZOrder="32780" LineThickness="1.0">
+      <Point GraphId="ad3d1" X="530.0" Y="232.0" GraphRef="ba003" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="fe722" X="563.5" Y="188.47234759281264" GraphRef="abcf8" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fd27e">
+    <Graphics ZOrder="32784" LineThickness="1.0">
+      <Point GraphId="e4d18" X="323.477198" Y="823.1753031973549" GraphRef="b6852" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="baf0e" X="215.977198" Y="823.1753031973549" GraphRef="b8c38" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.5" Shape="None" GraphId="c0d6e" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b1df6">
+    <Graphics ZOrder="32785" LineThickness="1.0">
+      <Point GraphId="c04d9" X="269.0" Y="853.1753031973549" GraphRef="f7ba4" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="d2a1c" X="269.727198" Y="823.1753031973549" GraphRef="c0d6e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b8ff6">
+    <Graphics ZOrder="32789" LineThickness="1.0">
+      <Point GraphId="f5af8" X="648.7563025210076" Y="707.7331932772963" GraphRef="e82e5" RelX="1.0" RelY="0.0" />
+      <Point GraphId="e52f4" X="711.25" Y="630.0" GraphRef="a09e1" RelX="-0.5" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b2878">
+    <Graphics ZOrder="32800" LineThickness="1.0">
+      <Point GraphId="fcd93" X="1035.5" Y="379.99999999999983" GraphRef="c9eb3" RelX="1.0" RelY="0.0" />
+      <Point GraphId="fb119" X="1091.5" Y="379.0" GraphRef="f14e2" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fb50d">
+    <Graphics ZOrder="32804" LineThickness="1.0">
+      <Point GraphId="a253d" X="817.5" Y="880.0" GraphRef="f0fa8" RelX="1.0" RelY="0.0" />
+      <Point GraphId="e4a9c" X="1091.5" Y="880.0" GraphRef="a626f" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e2f4f">
+    <Graphics ZOrder="32807" LineThickness="1.0">
+      <Point GraphId="b5cd5" X="907.5" Y="620.0" GraphRef="f4360" RelX="1.0" RelY="0.0" />
+      <Point GraphId="b9f55" X="945.0" Y="620.0" GraphRef="de144" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cdddb">
+    <Graphics ZOrder="32809" LineThickness="1.0">
+      <Point GraphId="bc133" X="767.5" Y="140.0" GraphRef="b8028" RelX="1.0" RelY="0.0" />
+      <Point GraphId="e2c9c" X="875.0" Y="210.0" GraphRef="a31fe" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="da15d">
+    <Graphics ZOrder="32810" LineThickness="1.0">
+      <Point GraphId="b9e0b" X="900.0" Y="230.0" GraphRef="a31fe" RelX="0.5" RelY="1.0" />
+      <Point GraphId="e2d4a" X="891.25" Y="370.0" GraphRef="ab0a9" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="eb1ae">
+    <Graphics ZOrder="32812" LineThickness="1.0">
+      <Point GraphId="b0c41" X="595.3025210084035" Y="803.1753031973549" GraphRef="a32f6" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="b15fd" X="596.3886554621839" Y="755.8991596638509" GraphRef="e82e5" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a256f">
+    <Graphics ZOrder="32813" LineThickness="1.0">
+      <Point GraphId="c5798" X="372.227198" Y="813.1753031973549" GraphRef="b6852" RelX="1.0" RelY="0.0" />
+      <Point GraphId="a00a7" X="544.0210084033603" Y="707.7331932772963" GraphRef="e82e5" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f2a61">
+    <Graphics ZOrder="32816" LineThickness="1.0">
+      <Point GraphId="beec4" X="205.98417" Y="537.4686774942018" GraphRef="feafe" RelX="1.0" RelY="0.5" />
+      <Point GraphId="c7745" X="244.20825771324894" Y="566.5952813067158" GraphRef="c684b" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="afc8d">
+    <Graphics ZOrder="32817" LineThickness="1.0">
+      <Point GraphId="c10d5" X="197.5" Y="630.0" GraphRef="ee387" RelX="1.0" RelY="0.0" />
+      <Point GraphId="e3a1a" X="244.20825771324894" Y="586.5952813067158" GraphRef="c684b" RelX="-0.5" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fee06">
+    <Graphics ZOrder="32819" LineThickness="1.0">
+      <Point GraphId="b6720" X="300.45825771324894" Y="576.5952813067158" GraphRef="c684b" RelX="1.0" RelY="0.0" />
+      <Point GraphId="cc6b1" X="300.555237927404" Y="613.5919482719787" GraphRef="f1bdb" RelX="-0.5" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ab959">
+    <Graphics ZOrder="32820" LineThickness="1.0">
+      <Point GraphId="d056e" X="391.8330308529951" Y="653.7277676951006" GraphRef="b59c2" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="d1f81" X="390.9530125675011" Y="623.2579356450899" GraphRef="f71fa" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f6f9f">
+    <Graphics ZOrder="32822" LineThickness="1.0">
+      <Point GraphId="c7f1e" X="349.305237927404" Y="623.5919482719787" GraphRef="f1bdb" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d3802" X="449.31488203266315" Y="622.7898769913286" GraphRef="d331d" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4164375847219618" Shape="None" GraphId="f71fa" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ee76e">
+    <Graphics ZOrder="32823" LineThickness="1.0">
+      <Point GraphId="dea27" X="514.3148820326631" Y="622.7898769913286" GraphRef="d331d" RelX="1.0" RelY="0.0" />
+      <Point GraphId="c5ea5" X="548.1728675136113" Y="603.0595825883986" GraphRef="b618d" RelX="-0.5" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e4476">
+    <Graphics ZOrder="32824" LineThickness="1.0">
+      <Point GraphId="c767f" X="514.3148820326631" Y="622.7898769913286" GraphRef="d331d" RelX="1.0" RelY="0.0" />
+      <Point GraphId="b00e4" X="544.0210084033603" Y="683.650210084019" GraphRef="e82e5" RelX="-1.0" RelY="-0.5" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Label TextLabel="cGMP Signaling" GraphId="de144">
+    <Graphics CenterX="990.0" CenterY="620.0" Width="89.99999999999989" Height="39.99999999999997" ZOrder="28672" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0033cc" />
+  </Label>
+  <Label TextLabel="DECREASED&#xA;Transport Rates" GraphId="d1f32">
+    <BiopaxRef>d53</BiopaxRef>
+    <BiopaxRef>d70</BiopaxRef>
+    <BiopaxRef>d4c</BiopaxRef>
+    <Graphics CenterX="1150.0" CenterY="620.0" Width="117.0" Height="51.38232307153392" ZOrder="32797" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="INCREASED&#xA;Transport Rates" GraphId="f14e2">
+    <Graphics CenterX="1150.0" CenterY="379.0" Width="117.0" Height="51.38232307153392" ZOrder="32798" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="INCREASED&#xA;Transport Rates" GraphId="a626f">
+    <Graphics CenterX="1150.0" CenterY="880.0" Width="117.0" Height="51.38232307153392" ZOrder="32803" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="DECREASED&#xA;Transport Rates" GraphId="b618d">
+    <Graphics CenterX="577.4228675136113" CenterY="577.3684210526317" Width="117.0" Height="51.38232307153392" ZOrder="32814" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Shape GraphId="b3d96">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Endoplasmic Reticulum" />
+    <Graphics CenterX="571.6757540603271" CenterY="286.29292343387385" Width="218.5974477958241" Height="132.75058004640368" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Endoplasmic Reticulum" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="bd4cd" GroupRef="e82e5">
+    <Graphics CenterX="596.3886554621839" CenterY="707.7331932772963" Width="88.73529411764726" Height="80.33193277310909" ZOrder="16384" FillColor="99ff99" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d5138">
+    <Graphics CenterX="610.5734011191732" CenterY="505.4270095032274" Width="893.0333333333333" Height="821.3457076566126" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="c9eb3" GraphId="c9eb3" Style="Group">
+    <BiopaxRef>adb</BiopaxRef>
+    <BiopaxRef>d5e</BiopaxRef>
+    <BiopaxRef>b6d</BiopaxRef>
+    <BiopaxRef>dea</BiopaxRef>
+  </Group>
+  <Group GroupId="ba003" GraphId="ba003" Style="Group" />
+  <Group GroupId="ef177" GraphId="ef177" Style="Group" />
+  <Group GroupId="feafe" GraphId="feafe" Style="Group">
+    <BiopaxRef>f6c</BiopaxRef>
+    <BiopaxRef>c15</BiopaxRef>
+    <BiopaxRef>b67</BiopaxRef>
+  </Group>
+  <Group GroupId="a1bf2" GraphId="a1bf2" Style="Group">
+    <BiopaxRef>fe2</BiopaxRef>
+    <BiopaxRef>ed1</BiopaxRef>
+    <BiopaxRef>f35</BiopaxRef>
+    <BiopaxRef>db4</BiopaxRef>
+  </Group>
+  <Group GroupId="e82e5" GraphId="e82e5" Style="Group" />
+  <Group GroupId="dfabb" GraphId="dfabb" Style="Group" />
+  <Group GroupId="da431" GraphId="da431" Style="Group" />
+  <Group GroupId="aab89" GraphId="aab89" Style="Group">
+    <BiopaxRef>dc5</BiopaxRef>
+  </Group>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">angiotensin signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000245</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">renin-angiotensin cascade pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000492</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000003</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">renal hypertension</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1073</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney loop of henle thick ascending limb epithelial cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:1001106</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="adb">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16894053</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Superoxide stimulates NaCl absorption in the thick ascending limb via activation of protein kinase C.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypertension</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silva GB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ortiz PA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong NJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garvin JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d5e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24370594</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiotensin II stimulates basolateral 50-pS K channels in the thick ascending limb.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol Renal Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luan H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wu P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fan L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duan X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang WH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gu R</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b6d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9575802</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ANG II controls Na(+)-K+(NH4+)-2Cl- cotransport via 20-HETE and PKC in medullary thick ascending limb.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amlal H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LeGoff C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vernimmen C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soleimani M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paillard M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bichara M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dea">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25080525</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Endogenous flow-induced superoxide stimulates Na/H exchange activity via PKC in thick ascending limbs.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol Renal Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong NJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garvin JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f6c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12110004</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The luminal membrane of rat thick limb expresses AT1 receptor and aminopeptidase activities.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kidney Int</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poumarat JS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Houillier P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rismondo C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roques B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lazar G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paillard M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanchard A</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c15">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9355068</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expression of type 1 angiotensin II receptor subtypes and angiotensin II-induced calcium mobilization along the rat nephron.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Am Soc Nephrol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bouby N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hus-Citharel A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marchetti J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bankir L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corvol P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Llorens-Cortes C</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b67">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8377377</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cellular expression of angiotensin type-1 receptor mRNA in the kidney.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kidney Int</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1993</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meister B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lippoldt A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunnemann B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inagami T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ganten D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fuxe K</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fe2">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20053794</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PKC-alpha mediates flow-stimulated superoxide production in thick ascending limbs.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol Renal Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong NJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silva GB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garvin JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ed1">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22896039</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NADPH oxidase 4 mediates flow-induced superoxide production in thick ascending limbs.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol Renal Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong NJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garvin JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f35">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12975384</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiotensin II-NAD(P)H oxidase-stimulated superoxide modifies tubulovascular nitric oxide cross-talk in renal outer medulla.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypertension</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mori T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cowley AW Jr</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="db4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11997328</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Production of superoxide through NADH oxidase in thick ascending limb of Henle's loop in rat kidney.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol Renal Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yi FX</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spurrier JL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bobrowitz CA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zou AP</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dc5">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25314136</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resveratrol increases nitric oxide production in the rat thick ascending limb via Ca2+/calmodulin.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLoS One</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gonzalez-Vicente A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cabral PD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garvin JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d53">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15100097</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiotensin II inhibits NaCl absorption in the rat medullary thick ascending limb.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol Renal Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lerolle N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bourgeois S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leviel F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lebrun G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paillard M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Houillier P</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d70">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10330055</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiotensin II inhibits HCO-3 absorption via a cytochrome P-450-dependent pathway in MTAL.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Good DW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang DH</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d4c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22777935</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiotensin II type 2 receptor-mediated inhibition of NaCl absorption is blunted in thick ascending limbs from Dahl salt-sensitive rats.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypertension</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong NJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garvin JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="aab">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17636122</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apoptosis regulation by Bcl-x(L) modulation of mammalian inositol 1,4,5-trisphosphate receptor channel isoform gating.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vais H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thompson CB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foskett JK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">White C</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cf7">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18026570</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The antithrombotic effect of angiotensin-(1-7) involves mas-mediated NO release from platelets.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Med</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fraga-Silva RA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinheiro SV</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goncalves AC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alenina N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bader M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santos RA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b15">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15951342</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiotensin-(1-7) inhibits growth of cardiac myocytes through activation of the mas receptor.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol Heart Circ Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tallant EA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferrario CM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gallagher PE</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e61">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15687842</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The renin-angiotensin system: peptides and enzymes beyond angiotensin II.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curr Opin Nephrol Hypertens</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reudelhuber TL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d0d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17116756</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiotensin-(1-7) through receptor Mas mediates endothelial nitric oxide synthase activation via Akt-dependent pathways.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypertension</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sampaio WO</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Souza dos Santos RA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faria-Silva R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">da Mata Machado LT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schiffrin EL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Touyz RM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f34">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18158356</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiotensin II type 2 receptors and nitric oxide sustain oxygenation in the clipped kidney of early Goldblatt hypertensive rats.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypertension</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Palm F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connors SG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mendonca M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Welch WJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilcox CS</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bbc">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18158338</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conversion of renal angiotensin II to angiotensin III is critical for AT2 receptor-mediated natriuresis in rats.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypertension</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Padia SH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kemp BA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Howell NL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fournie-Zaluski MC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roques BP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carey RM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e6a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7713098</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cloning, expression and regulation of angiotensin II receptors.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eur Heart J</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inagami T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iwai N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sasaki K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yamano Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bardhan S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chaki S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guo DF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Furuta H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ohyama K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kambayashi Y</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f00">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8227010</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expression cloning of type 2 angiotensin II receptor reveals a unique class of seven-transmembrane receptors.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1993</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mukoyama M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nakajima M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horiuchi M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sasamura H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pratt RE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dzau VJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c25">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20299462</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiotensin II stimulates thick ascending limb NO production via AT(2) receptors and Akt1-dependent nitric-oxide synthase 3 (NOS3) activation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herrera M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garvin JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ba3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19570880</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akt1 mediates purinergic-dependent NOS3 activation in thick ascending limbs.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol Renal Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silva GB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garvin JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f75">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20448043</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiotensin II stimulates thick ascending limb superoxide production via protein kinase C(ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â½ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â±)-dependent NADPH oxidase activation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herrera M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silva GB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garvin JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bf4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22875785</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiotensin II stimulates superoxide production in the thick ascending limb by activating NOX4.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol Cell Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Massey KJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong NJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garvin JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c95">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23569086</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiotensin II stimulates basolateral 10-pS Cl channels in the thick ascending limb.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypertension</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wu P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luan H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang WH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gu R</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a24">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19923407</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rac1 mediates NaCl-induced superoxide generation in the thick ascending limb.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol Renal Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silva GB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garvin JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="daa">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23830406</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiotensin II inhibits ADH-stimulated cAMP: role on O2- and transport-related oxygen consumption in the loop of Henle.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Regul Homeost Agents</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silva GB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juncos LI</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baigorria ST</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garcia NH</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c84">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17635349</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Losartan decreases vasopressin-mediated cAMP accumulation in the thick ascending limb of the loop of Henle in rats with congestive heart failure.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acta Physiol (Oxf)</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Torp M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brønd L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hadrup N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nielsen JB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Praetorius J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nielsen S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christensen S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jonassen TE</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b57">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26884476</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ca7">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25503735</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Endogenous flow-induced nitric oxide reduces superoxide-stimulated Na/H exchange activity via PKG in thick ascending limbs.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol Renal Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong NJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garvin JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="aa1">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19244401</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nitric oxide reduces flow-induced superoxide production via cGMP-dependent protein kinase in thick ascending limbs.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol Renal Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong NJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garvin JL</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

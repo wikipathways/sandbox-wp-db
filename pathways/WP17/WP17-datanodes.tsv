@@ -1,0 +1,10 @@
+Label	Type	Identifier	Comment	Ensembl	NCBI gene	HGNC	UniProt	Wikidata	ChEBI	InChI
+PIP	Metabolite	hmdb:HMDB0004249							chebi:16618;chebi:16618	inchikey:RQQIRMLGKSPXSE-UQPICLANSA-N
+SGK-1	GeneProduct	wormbase:W10G6.2								
+AKT-1	GeneProduct	wormbase:C12D8.10								
+PDK-1	GeneProduct	wormbase:H42K12.1								
+DAF-2/INSR	GeneProduct	wormbase:Y55D5A.5								
+DAF-18/PTEN	GeneProduct	wormbase:T07A9.6								
+AKT-2	GeneProduct	wormbase:F28H6.1								
+AGE-1/PI-3K	GeneProduct	wormbase:B0334.8								
+DAF-16/FOXO	GeneProduct	wormbase:R13H8.1								

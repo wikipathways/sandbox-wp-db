@@ -1,0 +1,18 @@
+{
+    "wpid": "WP3115",
+    "organisms": ["Bos taurus"],
+    "description": "This pathway depicts the downstream signaling of serotonin via receptor 2A, resulting in the activation of STAT3.",
+    "ontology-ids": [
+        "PW:0000854",
+        "CL:0000540"
+    ],
+    "last-edited": "2023-03-06",
+    "title": "Serotonin receptor 2 and STAT3 signaling",
+    "authors": [
+        "Mkutmon",
+        "Egonw",
+        "Eweitz",
+        "AlexanderPico"
+    ],
+    "revision": "r125631"
+}

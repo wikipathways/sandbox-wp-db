@@ -1,0 +1,15 @@
+Label	Type	Identifier	Comment	Ensembl	NCBI gene	HGNC	UniProt	Wikidata	ChEBI	InChI
+L-glutamate	Metabolite	cas:56-86-0						wikidata:Q26995161	chebi:16015;chebi:16015	inchikey:WHUUTDBJXJRKMK-VKHMYHEASA-N
+prephenate	Metabolite	cas:126-49-8						wikidata:Q2598317	chebi:16666;chebi:16666	inchikey:FPWMCUPFBRFMLH-UHFFFAOYSA-N
+L-alanine	Metabolite	chebi:16977						wikidata:Q218642	chebi:16977;chebi:16977	inchikey:QNAYBMKLOCPYGJ-REOHCLBHSA-N
+Phenylpyruvate	Metabolite	chebi:30851						wikidata:Q425030	chebi:30851;chebi:30851	inchikey:BTNMPGBKDVTSJY-UHFFFAOYSA-N
+chorismate	Metabolite	chebi:17333						wikidata:Q423531	chebi:17333;chebi:17333	inchikey:WTFXTQVDAKGDEY-HTQZYQBOSA-N
+L-phenylalanine	Metabolite	chebi:17295						wikidata:Q170545	chebi:17295;chebi:17295	inchikey:COLNVLDHVKWLRT-QMMMGPOBSA-N
+carbon dioxide	Metabolite	chebi:16526						wikidata:Q1997	chebi:16526;chebi:16526	inchikey:CURLTUGMZLYLDI-UHFFFAOYSA-N
+water	Metabolite	chebi:15377						wikidata:Q283	chebi:15377;chebi:15377	inchikey:XLYOFNOQVPJJNP-UHFFFAOYSA-N
+2-oxoglutarate	Metabolite	chebi:16810						wikidata:Q27102088	chebi:16810;chebi:16810	inchikey:KPGXRSRHYNQIFN-UHFFFAOYSA-L
+pyruvate	Metabolite	chebi:15361						wikidata:Q27089397	chebi:15361;chebi:15361	inchikey:LCTONWCANYUPML-UHFFFAOYSA-M
+PHA2	GeneProduct	sgd:S000005260		ensembl:YNL316C	ncbigene:855400		uniprot:P32452			
+ARO9	GeneProduct	sgd:S000001179		ensembl:YHR137W	ncbigene:856539		uniprot:P38840			
+ARO8	GeneProduct	sgd:S000003170		ensembl:YGL202W	ncbigene:852672		uniprot:P53090			
+ARO7	GeneProduct	sgd:S000006264		ensembl:YPR060C	ncbigene:856173		uniprot:P32178			

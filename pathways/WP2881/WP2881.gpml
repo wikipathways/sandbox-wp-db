@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Estrogen receptor pathway" Data-Source="WikiPathways" Version="WP2881_r117716" Author="[Riannefijten, MaintBot, Khanspers, Fehrhart, Egonw, Susan, AlexanderPico, Eweitz]" Last-Modified="20210522122958" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">The estrogen receptor is a nuclear receptor that is activated upon ligand binding and subsequently translocates to the nuclear. There, it activates transcription of target genes involved in  essential cellular processes. The ER receptor has been implicated in a multitude of diseases, most notably cancer (breast/ovarian).
+
+Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP2881 CPTAC Assay Portal]</Comment>
+  <BiopaxRef>f48</BiopaxRef>
+  <Graphics BoardWidth="964.9397590361459" BoardHeight="974.5783132530144" />
+  <DataNode TextLabel="Estrogen" GraphId="c6ac8" Type="Metabolite">
+    <Graphics CenterX="399.28009443596295" CenterY="80.85444393464269" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:4903" />
+  </DataNode>
+  <DataNode TextLabel="Ligand" GraphId="fedd0" Type="Metabolite" GroupRef="db037">
+    <Graphics CenterX="473.51414283622745" CenterY="376.21884027426523" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:48705" />
+  </DataNode>
+  <DataNode TextLabel="SP1" GraphId="fe581" Type="GeneProduct" GroupRef="aceec">
+    <Graphics CenterX="529.6987243331976" CenterY="684.5488740428481" Width="80.0" Height="20.0" ZOrder="33595" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000185591" />
+  </DataNode>
+  <DataNode TextLabel="ESR1" GraphId="a4f32" Type="GeneProduct">
+    <BiopaxRef>aca</BiopaxRef>
+    <Graphics CenterX="324.2489690972713" CenterY="201.04460027637296" Width="80.0" Height="20.0" ZOrder="33605" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000091831" />
+  </DataNode>
+  <DataNode TextLabel="JUN" GraphId="ff685" Type="GeneProduct" GroupRef="aceec">
+    <Graphics CenterX="529.6987243331971" CenterY="664.5488740428478" Width="80.0" Height="20.0" ZOrder="33606" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000177606" />
+  </DataNode>
+  <DataNode TextLabel="ESR1" GraphId="a7482" Type="GeneProduct" GroupRef="df255">
+    <Graphics CenterX="401.8023373892319" CenterY="481.0727463123398" Width="80.0" Height="20.0" ZOrder="33609" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000091831" />
+  </DataNode>
+  <DataNode TextLabel="ESR1" GraphId="f115e" Type="GeneProduct" GroupRef="df255">
+    <Graphics CenterX="401.80233738923283" CenterY="501.0727463123394" Width="80.00000000000001" Height="19.99999999999995" ZOrder="33610" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000091831" />
+  </DataNode>
+  <DataNode TextLabel="ESR1" GraphId="e9b9d" Type="GeneProduct" GroupRef="db037">
+    <Graphics CenterX="473.51414283622745" CenterY="356.21884027426546" Width="80.00000000000003" Height="20.000000000000036" ZOrder="33622" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000091831" />
+  </DataNode>
+  <DataNode TextLabel="ESR1" GraphId="d2b19" Type="GeneProduct" GroupRef="c6e96">
+    <Graphics CenterX="334.4156211419917" CenterY="354.85668877866476" Width="80.0" Height="20.0" ZOrder="33624" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000091831" />
+  </DataNode>
+  <DataNode TextLabel="ESR1" GraphId="c28d0" Type="GeneProduct">
+    <BiopaxRef>aca</BiopaxRef>
+    <Graphics CenterX="478.44627450785464" CenterY="205.18566377020903" Width="80.0" Height="20.0" ZOrder="33626" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000091831" />
+  </DataNode>
+  <DataNode TextLabel="ESR1" GraphId="cdcbb" Type="GeneProduct" GroupRef="c7df4">
+    <Graphics CenterX="404.7339325762745" CenterY="647.3813902155655" Width="80.0" Height="20.0" ZOrder="33627" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000091831" />
+  </DataNode>
+  <DataNode TextLabel="ESR1" GraphId="ff625" Type="GeneProduct" GroupRef="c7df4">
+    <Graphics CenterX="404.7339325762745" CenterY="667.3813902155654" Width="80.0" Height="20.0" ZOrder="33628" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000091831" />
+  </DataNode>
+  <DataNode TextLabel="PDK4" GraphId="d1c83" Type="GeneProduct" GroupRef="eed99">
+    <Graphics CenterX="482.1275700506697" CenterY="859.2565609754408" Width="80.0" Height="20.0" ZOrder="33667" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000004799" />
+  </DataNode>
+  <DataNode TextLabel="STAT3" GraphId="a7be3" Type="GeneProduct" GroupRef="d8830">
+    <Graphics CenterX="696.5865524793516" CenterY="828.5436304894026" Width="80.0" Height="20.0" ZOrder="33668" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000168610" />
+  </DataNode>
+  <DataNode TextLabel="ACOX1" GraphId="fb0ee" Type="GeneProduct" GroupRef="eed99">
+    <Graphics CenterX="482.1275700506697" CenterY="799.2565609754411" Width="80.0" Height="20.0" ZOrder="33669" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000161533" />
+  </DataNode>
+  <DataNode TextLabel="GPAM" GraphId="a488b" Type="GeneProduct" GroupRef="eed99">
+    <Graphics CenterX="482.1275700506697" CenterY="819.2565609754413" Width="80.0" Height="20.0" ZOrder="33670" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000119927" />
+  </DataNode>
+  <DataNode TextLabel="PCK1" GraphId="d6471" Type="GeneProduct" GroupRef="eed99">
+    <Graphics CenterX="482.1275700506697" CenterY="839.2565609754411" Width="80.0" Height="20.0" ZOrder="33671" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000124253" />
+  </DataNode>
+  <DataNode TextLabel="CYP1A1" GraphId="c3842" Type="GeneProduct" GroupRef="eb11a">
+    <Graphics CenterX="364.45829465719834" CenterY="807.882075001115" Width="80.0" Height="20.0" ZOrder="33672" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000140465" />
+  </DataNode>
+  <DataNode TextLabel="PPARA" GraphId="ccfdf" Type="GeneProduct" GroupRef="dcffd">
+    <Graphics CenterX="595.7026979894056" CenterY="837.3602467941218" Width="80.0" Height="20.0" ZOrder="33673" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000186951" />
+  </DataNode>
+  <DataNode TextLabel="CYP1A2" GraphId="ba52c" Type="GeneProduct" GroupRef="eb11a">
+    <Graphics CenterX="364.45829465719834" CenterY="827.8820750011148" Width="80.0" Height="20.0" ZOrder="33678" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000140505" />
+  </DataNode>
+  <DataNode TextLabel="NR0B2" GraphId="c8278" Type="GeneProduct" GroupRef="dcffd">
+    <Graphics CenterX="595.7026979894056" CenterY="817.3602467941216" Width="80.0" Height="20.0" ZOrder="33679" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000131910" />
+  </DataNode>
+  <DataNode TextLabel="CYP1B1" GraphId="f238c" Type="GeneProduct" GroupRef="eb11a">
+    <Graphics CenterX="364.45829465719834" CenterY="847.8820750011147" Width="80.0" Height="20.0" ZOrder="33680" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000138061" />
+  </DataNode>
+  <DataNode TextLabel="Ligand" GraphId="b2d14" Type="Metabolite" GroupRef="c6e96">
+    <Graphics CenterX="334.41562114199405" CenterY="374.85668877866436" Width="80.00000000000003" Height="20.000000000000036" ZOrder="33684" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:48705" />
+  </DataNode>
+  <DataNode TextLabel="Ligand" GraphId="e8526" Type="Metabolite" GroupRef="df255">
+    <Graphics CenterX="401.80233738923283" CenterY="521.0727463123387" Width="80.00000000000001" Height="19.99999999999995" ZOrder="33685" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:48705" />
+  </DataNode>
+  <DataNode TextLabel="Ligand" GraphId="e1cf3" Type="Metabolite" GroupRef="df255">
+    <Graphics CenterX="401.80233738923283" CenterY="461.07274631233935" Width="80.00000000000001" Height="19.99999999999995" ZOrder="33686" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:48705" />
+  </DataNode>
+  <Interaction GraphId="cd413">
+    <Graphics ZOrder="33585" LineThickness="1.0">
+      <Point GraphId="e180f" X="334.4156211419929" Y="396.8566887786644" GraphRef="c6e96" RelX="0.0" RelY="1.0" />
+      <Point GraphId="ecf44" X="375.80233738923215" Y="439.0727463123394" GraphRef="df255" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d54da">
+    <Graphics ZOrder="33586" LineThickness="1.0">
+      <Point GraphId="b11b0" X="473.5141428362275" Y="398.21884027426523" GraphRef="db037" RelX="0.0" RelY="1.0" />
+      <Point GraphId="decec" X="427.8023373892326" Y="439.0727463123394" GraphRef="df255" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c36f2">
+    <Graphics ZOrder="33587" LineThickness="1.0">
+      <Point GraphId="cb9f0" X="324.2489690972713" Y="211.04460027637296" GraphRef="a4f32" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f179f" X="334.4156211419929" Y="332.85668877866476" GraphRef="c6e96" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d565b">
+    <Graphics ZOrder="33588" LineThickness="1.0">
+      <Point GraphId="e1ae3" X="478.4462745078547" Y="215.18566377020903" GraphRef="c28d0" RelX="0.0" RelY="1.0" />
+      <Point GraphId="b0f24" X="473.5141428362275" Y="334.21884027426546" GraphRef="db037" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bfb74">
+    <Graphics ZOrder="33589" LineThickness="1.0">
+      <Point GraphId="cf1b9" X="401.8023373892324" Y="543.0727463123387" GraphRef="df255" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c3d42" X="404.7339325762739" Y="605.3813902155656" GraphRef="c7df4" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c5029">
+    <Graphics ZOrder="33590" LineThickness="1.0">
+      <Point GraphId="c6976" X="399.28009443596295" Y="90.85444393464269" GraphRef="c6ac8" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f656e" X="478.4462745078547" Y="195.18566377020903" GraphRef="c28d0" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e0027">
+    <Graphics ZOrder="33591" LineThickness="1.0">
+      <Point GraphId="e243e" X="399.28009443596295" Y="90.85444393464269" GraphRef="c6ac8" RelX="0.0" RelY="1.0" />
+      <Point GraphId="debbb" X="324.2489690972713" Y="191.04460027637296" GraphRef="a4f32" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <GraphicalLine GraphId="ccfa1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="b72b8" X="429.46681741996184" Y="705.2969574978881" GraphRef="bc7fc" RelX="1.0" RelY="0.0" />
+      <Point GraphId="bc29e" X="620.2450032237266" Y="705.35138620245" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Cell proliferation &#xA;and apoptosis" GraphId="acd09">
+    <Graphics CenterX="693.7806474517898" CenterY="804.3613543732635" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Drug and steroid &#xA;metabolism&#xA;" GraphId="c31b5">
+    <Graphics CenterX="362.12439793255896" CenterY="774.2629220137944" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Transcription &#xA;factors" GraphId="c85c1">
+    <Graphics CenterX="592.893628701793" CenterY="792.2062918732639" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Metabolism&#xA;" GraphId="f752e">
+    <Graphics CenterX="479.2836060316726" CenterY="770.0888358821394" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="ERE" GraphId="bc7fc" GroupRef="c7df4">
+    <Graphics CenterX="404.7339325762737" CenterY="705.296957497888" Width="49.465769687376316" Height="15.831134564643746" ZOrder="33621" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="Ligand" GraphId="e46c1" GroupRef="c7df4">
+    <Graphics CenterX="404.7339325762732" CenterY="627.3813902155656" Width="79.99999999999999" Height="20.00000000000001" ZOrder="33629" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="Ligand" GraphId="c66da" GroupRef="c7df4">
+    <Graphics CenterX="404.7339325762732" CenterY="687.3813902155656" Width="79.99999999999999" Height="20.00000000000001" ZOrder="33630" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="Coregulators" GraphId="a1e23" GroupRef="aceec">
+    <Graphics CenterX="530.3434696587947" CenterY="643.3464841996812" Width="79.16355489171035" Height="22.40477968633298" ZOrder="33631" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape GraphId="a8a05">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="506.0240963855436" CenterY="540.3573196897199" Width="857.8313253012046" Height="808.4419871265889" ZOrder="33592" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e2998">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="498.65695659349865" CenterY="587.9230543147605" Width="799.6575342465756" Height="654.4633434936404" ZOrder="33607" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="db037" GraphId="db037" Style="Complex" />
+  <Group GroupId="aceec" GraphId="aceec" Style="Group" />
+  <Group GroupId="c7df4" GraphId="c7df4" Style="Complex" />
+  <Group GroupId="c6e96" GraphId="c6e96" Style="Complex" />
+  <Group GroupId="dcffd" GraphId="dcffd" Style="Group" />
+  <Group GroupId="eb11a" GraphId="eb11a" Style="Group" />
+  <Group GroupId="eed99" GraphId="eed99" Style="Group" />
+  <Group GroupId="d8830" GraphId="d8830" Style="Group" />
+  <Group GroupId="df255" GraphId="df255" Style="Complex" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">estrogen signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000507</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f48">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24261707</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathways for ligand activated nuclear receptors to unravel the genomic responses induced by hepatotoxicants.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curr Drug Metab</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fijten RR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jennen DG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Delft JH</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="aca">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21124311</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estrogen receptors: therapies targeted to receptor subtypes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clin Pharmacol Ther</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nilsson S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gustafsson JÃƒÆ’Ã¢â‚¬Â¦</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

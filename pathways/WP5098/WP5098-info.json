@@ -1,0 +1,23 @@
+{
+    "wpid": "WP5098",
+    "organisms": ["Homo sapiens"],
+    "description": "T-cell activation SARS-CoV-2 (Work in Progress)",
+    "ontology-ids": [
+        "CL:0000084",
+        "DOID:0080600",
+        "DOID:0080600",
+        "CL:0000084"
+    ],
+    "last-edited": "2023-02-01",
+    "title": "T-cell activation SARS-CoV-2",
+    "authors": [
+        "Clclass",
+        "Eweitz",
+        "Finterly",
+        "Egonw",
+        "Mkutmon",
+        "AlexanderPico",
+        "Larsgw"
+    ],
+    "revision": "r125315"
+}

@@ -1,0 +1,13 @@
+{
+    "wpid": "WP3185",
+    "organisms": ["Bos taurus"],
+    "description": "",
+    "ontology-ids": [
+        "CL:0000182",
+        "PW:0000721"
+    ],
+    "last-edited": "20210521",
+    "title": "Nicotine metabolism",
+    "authors": ["Mkutmon","Egonw","MaintBot","Eweitz"],
+    "revision": "r117574"
+}

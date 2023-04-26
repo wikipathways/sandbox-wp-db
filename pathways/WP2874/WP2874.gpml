@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Liver X receptor pathway" Data-Source="WikiPathways" Version="WP2874_r116465" Author="[Riannefijten, Egonw, MaintBot, Khanspers, Fehrhart, Mkutmon, Jmelius, AlexanderPico, Eweitz]" Last-Modified="20210507100659" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">The liver X receptor (LXR) is a nuclear receptor involved in the regulation of liver-specific processes, such as cholesterol, fatty acid and glucose homeostasis.
+
+
+Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP2874 CPTAC Assay Portal]</Comment>
+  <BiopaxRef>b70</BiopaxRef>
+  <Graphics BoardWidth="902.7598566308245" BoardHeight="985.1971326164878" />
+  <DataNode TextLabel="NR1H3" GraphId="e7df7" Type="GeneProduct">
+    <Comment>nuclear receptor subfamily 1, group H, member 3</Comment>
+    <BiopaxRef>ed4</BiopaxRef>
+    <Graphics CenterX="423.5677077585044" CenterY="273.5250192602182" Width="80.0" Height="20.0" ZOrder="33624" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="10062" />
+  </DataNode>
+  <DataNode TextLabel="LXR ligand" GraphId="b2f22" Type="Metabolite">
+    <Comment>T3</Comment>
+    <Graphics CenterX="423.56770775850447" CenterY="171.9965019067804" Width="79.99999999999999" Height="20.00000000000001" ZOrder="33627" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:86029" />
+  </DataNode>
+  <DataNode TextLabel="NR1H3" GraphId="d8848" Type="GeneProduct" GroupRef="aa801">
+    <Comment>nuclear receptor subfamily 1, group H, member 3</Comment>
+    <Graphics CenterX="423.56770775850447" CenterY="388.15143611204746" Width="80.0" Height="20.0" ZOrder="33629" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="10062" />
+  </DataNode>
+  <DataNode TextLabel="Ligand" GraphId="c756d" Type="Metabolite" GroupRef="aa801">
+    <Graphics CenterX="423.56770775850447" CenterY="408.1514361120471" Width="79.99999999999999" Height="20.00000000000001" ZOrder="33630" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:86029" />
+  </DataNode>
+  <DataNode TextLabel="NR1H3" GraphId="dc40d" Type="GeneProduct" GroupRef="a28f5">
+    <Comment>nuclear receptor subfamily 1, group H, member 3</Comment>
+    <Graphics CenterX="423.56770775850447" CenterY="568.7140189542866" Width="80.0" Height="20.0" ZOrder="33663" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="10062" />
+  </DataNode>
+  <DataNode TextLabel="Ligand" GraphId="b5a8f" Type="Metabolite" GroupRef="a28f5">
+    <Graphics CenterX="423.56770775850447" CenterY="588.7140189542865" Width="79.99999999999999" Height="20.00000000000001" ZOrder="33664" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:86029" />
+  </DataNode>
+  <DataNode TextLabel="RXRA" GraphId="a3d92" Type="GeneProduct" GroupRef="a28f5">
+    <Comment>retinoid X receptor, alpha</Comment>
+    <BiopaxRef>bdd</BiopaxRef>
+    <BiopaxRef>d52</BiopaxRef>
+    <Graphics CenterX="423.56770775850447" CenterY="608.7140189542865" Width="80.0" Height="20.0" ZOrder="33666" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="6256" />
+  </DataNode>
+  <DataNode TextLabel="RXRA" GraphId="ffd99" Type="GeneProduct">
+    <Comment>retinoid X receptor, alpha</Comment>
+    <BiopaxRef>bdd</BiopaxRef>
+    <BiopaxRef>d52</BiopaxRef>
+    <Graphics CenterX="539.5797154184552" CenterY="438.5298082401758" Width="80.0" Height="20.0" ZOrder="33668" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="6256" />
+  </DataNode>
+  <DataNode TextLabel="ABCG8" GraphId="eb79d" Type="GeneProduct" GroupRef="d84f7">
+    <Comment>ATP-binding cassette, sub-family G (WHITE), member 8</Comment>
+    <BiopaxRef>ed4</BiopaxRef>
+    <Graphics CenterX="468.28469921073156" CenterY="762.5147488760504" Width="80.0" Height="20.0" ZOrder="33673" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="64241" />
+  </DataNode>
+  <DataNode TextLabel="CYP3A4" GraphId="d06e6" Type="GeneProduct" GroupRef="ed052">
+    <Comment>cytochrome P450, family 3, subfamily A, polypeptide 4</Comment>
+    <BiopaxRef>cd6</BiopaxRef>
+    <Graphics CenterX="352.5421113512664" CenterY="761.0073739502183" Width="80.0" Height="20.0" ZOrder="33674" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="1576" />
+  </DataNode>
+  <DataNode TextLabel="ABCG5" GraphId="fbe9e" Type="GeneProduct" GroupRef="d84f7">
+    <Comment>ATP-binding cassette, sub-family G (WHITE), member 5</Comment>
+    <BiopaxRef>ed4</BiopaxRef>
+    <Graphics CenterX="468.28469921073156" CenterY="742.5147488760499" Width="80.0" Height="20.0" ZOrder="33675" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="64240" />
+  </DataNode>
+  <DataNode TextLabel="CYP2B6" GraphId="c55b2" Type="GeneProduct" GroupRef="ed052">
+    <Comment>cytochrome P450, family 2, subfamily B, polypeptide 6</Comment>
+    <BiopaxRef>cd6</BiopaxRef>
+    <Graphics CenterX="352.5421113512655" CenterY="741.0073739502182" Width="80.0" Height="20.0" ZOrder="33676" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="1555" />
+  </DataNode>
+  <DataNode TextLabel="CYP7A1" GraphId="de2f8" Type="GeneProduct" GroupRef="d6604">
+    <Comment>cytochrome P450, family 7, subfamily A, polypeptide 1 , is not affected in human</Comment>
+    <BiopaxRef>cd6</BiopaxRef>
+    <Graphics CenterX="468.70149121639037" CenterY="831.1334368340117" Width="80.0" Height="20.0" ZOrder="33677" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="1581" />
+  </DataNode>
+  <DataNode TextLabel="SREBF1" GraphId="e1ba4" Type="GeneProduct" GroupRef="dbf72">
+    <Comment>sterol regulatory element binding transcription factor 1</Comment>
+    <BiopaxRef>cd6</BiopaxRef>
+    <Graphics CenterX="353.52710004939104" CenterY="815.697747074026" Width="80.0" Height="20.0" ZOrder="33678" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="6720" />
+  </DataNode>
+  <DataNode TextLabel="FASN" GraphId="a7df1" Type="GeneProduct" GroupRef="d6604">
+    <Comment>fatty acid synthase</Comment>
+    <BiopaxRef>cd6</BiopaxRef>
+    <Graphics CenterX="468.70149121639037" CenterY="811.1334368340117" Width="80.0" Height="20.0" ZOrder="33679" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2194" />
+  </DataNode>
+  <DataNode TextLabel="SCD" GraphId="c19d8" Type="GeneProduct" GroupRef="d6604">
+    <Graphics CenterX="468.70149121639037" CenterY="851.1334368340117" Width="80.0" Height="20.0" ZOrder="33685" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="6319" />
+  </DataNode>
+  <Interaction GraphId="f613c">
+    <Graphics ZOrder="33606" LineThickness="1.0">
+      <Point GraphId="e478d" X="423.56770775850447" Y="181.9965019067804" GraphRef="b2f22" RelX="0.0" RelY="1.0" />
+      <Point GraphId="ab53c" X="423.5677077585044" Y="263.5250192602182" GraphRef="e7df7" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ca9dd">
+    <Graphics ZOrder="33609" LineThickness="1.0">
+      <Point GraphId="efbf5" X="539.5797154184552" Y="448.5298082401758" GraphRef="ffd99" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f7c2e" X="423.56770775850447" Y="518.6052900820566" GraphRef="e6f3e" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a1fc9">
+    <Graphics ZOrder="33610" LineThickness="1.0">
+      <Point GraphId="ba80e" X="423.56770775850447" Y="430.1514361120471" GraphRef="aa801" RelX="0.0" RelY="1.0" />
+      <Point GraphId="fae33" X="423.56770775850447" Y="546.7140189542866" GraphRef="a28f5" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.7588528995597713" Shape="None" GraphId="e6f3e" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e3779">
+    <Graphics ZOrder="33612" LineThickness="1.0">
+      <Point GraphId="af9fb" X="423.5677077585044" Y="283.5250192602182" GraphRef="e7df7" RelX="0.0" RelY="1.0" />
+      <Point GraphId="bb5ef" X="423.56770775850447" Y="366.15143611204746" GraphRef="aa801" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <GraphicalLine GraphId="ida0d75026">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="baa7b" X="671.9298245614035" Y="590.6432748538011" />
+      <Point GraphId="d882b" X="671.9298245614035" Y="619.2982456140351" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="dfa5e">
+    <Graphics ZOrder="33655" LineThickness="1.0">
+      <Point GraphId="a15ac" X="409.88680904559476" Y="619.1108797745494" />
+      <Point GraphId="e1f96" X="738.1716337857722" Y="619.9251629061589" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a4cd7">
+    <Graphics ZOrder="33656" LineThickness="1.0">
+      <Point GraphId="f9327" X="672.1966819908055" Y="590.4457325604637" />
+      <Point GraphId="e2d8a" X="713.6138749999997" Y="590.3887499999997" GraphRef="fc81e" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d94c8">
+    <Graphics ZOrder="33660" LineThickness="1.0">
+      <Point GraphId="f17af" X="411.9898584672559" Y="633.8322257261793" />
+      <Point GraphId="fcce8" X="738.1716337857722" Y="636.0666060734643" />
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Drug and steroid metabolism" GraphId="a5ed5">
+    <Graphics CenterX="350.7603750000002" CenterY="715.4122499999986" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Other" GraphId="bcde1">
+    <Graphics CenterX="466.52287500000034" CenterY="787.1850000000018" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Multi-drug resistance" GraphId="c778e">
+    <Graphics CenterX="464.2076250000004" CenterY="714.254625" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Transcription factors" GraphId="f6e18">
+    <Graphics CenterX="357.7061250000003" CenterY="790.6578750000009" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Transcription" GraphId="fc81e">
+    <Graphics CenterX="753.6138749999997" CenterY="590.3887499999997" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Genes" GraphId="e3e53">
+    <Graphics CenterX="713.7637972436379" CenterY="628.2491157337505" Width="49.465769687376316" Height="15.829046299960597" ZOrder="33661" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="TATA box" GraphId="f5c94">
+    <Graphics CenterX="609.0138144396743" CenterY="628.1276012641864" Width="49.465769687376316" Height="15.831134564643746" ZOrder="33662" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="LXRE" GraphId="a5e0f" GroupRef="a28f5">
+    <Graphics CenterX="423.56770775850447" CenterY="626.6295862366084" Width="49.465769687376316" Height="15.831134564643746" ZOrder="33665" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="LXR target genes" GraphId="a5774">
+    <Graphics CenterX="413.6321231233321" CenterY="675.7070566344643" Width="117.25452812202093" Height="24.52670855758766" ZOrder="33680" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="666666" />
+  </Label>
+  <Shape GraphId="c675b">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="448.0286738351256" CenterY="593.1024422772362" Width="849.4623655913979" Height="724.1893806785032" ZOrder="33616" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e0791">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="448.924731182796" CenterY="619.004751187797" Width="732.9749103942656" Height="589.9474868717181" ZOrder="33625" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="d6604" GraphId="d6604" Style="Group" />
+  <Group GroupId="a28f5" GraphId="a28f5" Style="Complex" />
+  <Group GroupId="ed052" GraphId="ed052" Style="Group" />
+  <Group GroupId="d84f7" GraphId="d84f7" Style="Group" />
+  <Group GroupId="aa801" GraphId="aa801" Style="Complex" />
+  <Group GroupId="dbf72" GraphId="dbf72" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulatory pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000004</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b70">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24261707</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathways for ligand activated nuclear receptors to unravel the genomic responses induced by hepatotoxicants.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curr Drug Metab</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fijten RR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jennen DG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Delft JH</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ed4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21908933</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crosstalk of thyroid hormone receptor and liver X receptor in lipid metabolism and beyond [Review].</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Endocr J</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hashimoto K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mori M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bdd">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15610735</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A structural basis for constitutive activity in the human CAR/RXRalpha heterodimer.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xu RX</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lambert MH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wisely BB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warren EN</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weinert EE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waitt GM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Williams JD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collins JL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moore LB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Willson TM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moore JT</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d52">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11803135</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The role of hepatocyte RXR alpha in xenobiotic-sensing nuclear receptor-mediated pathways.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eur J Pharm Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cai Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Konishi T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Han G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Campwala KH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French SW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wan YJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cd6">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15581595</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regulatory network of lipid-sensing nuclear receptors: roles for CAR, PXR, LXR, and FXR.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arch Biochem Biophys</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Handschin C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meyer UA</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

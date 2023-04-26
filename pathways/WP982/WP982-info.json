@@ -1,0 +1,13 @@
+{
+    "wpid": "WP982",
+    "organisms": ["Bos taurus"],
+    "description": "",
+    "ontology-ids": [
+        "DOID:114",
+        "PW:0000296"
+    ],
+    "last-edited": "20210521",
+    "title": "Hypertrophy model",
+    "authors": ["MaintBot","Mkutmon","Jmelius","Eweitz"],
+    "revision": "r117541"
+}

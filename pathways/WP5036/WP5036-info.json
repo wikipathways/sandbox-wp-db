@@ -1,0 +1,20 @@
+{
+    "wpid": "WP5036",
+    "organisms": ["Homo sapiens"],
+    "description": "angiotensin test",
+    "ontology-ids": [
+        "PW:0000003",
+        "PW:0000244"
+    ],
+    "last-edited": "2023-03-21",
+    "title": "Angiotensin II receptor type 1 pathway",
+    "authors": [
+        "Marvin M2",
+        "Khanspers",
+        "RaatsS",
+        "Eweitz",
+        "Egonw",
+        "AlexanderPico"
+    ],
+    "revision": "r125920"
+}

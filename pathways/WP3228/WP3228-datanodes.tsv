@@ -1,0 +1,53 @@
+Label	Type	Identifier	Comment	Ensembl	NCBI gene	HGNC	UniProt	Wikidata	ChEBI	InChI
+N'-Formylkynurenine	Metabolite	hmdb:HMDB0001200							chebi:18377;chebi:18377	inchikey:BYHJHXPTQMMKCA-UHFFFAOYSA-N
+Adenosinetriphosphate	Metabolite	hmdb:HMDB0000538							chebi:15422;chebi:15422	inchikey:ZKHQWZAMYRWXGA-KQYNXXCUSA-N
+Formic acid	Metabolite	hmdb:HMDB0000142							chebi:30751;chebi:30751	inchikey:BDAGIHXWWSANSR-UHFFFAOYSA-N
+Oxygen	Metabolite	hmdb:HMDB0001377							chebi:15379;chebi:15379	inchikey:MYMOFIZGZYHOMD-UHFFFAOYSA-N
+Hydrogen Ion	Metabolite	hmdb:HMDB0059597							chebi:15378;chebi:15378	inchikey:GPRLSGONYQIRFK-UHFFFAOYSA-N
+L-Alanine	Metabolite	hmdb:HMDB0000161							chebi:16977;chebi:16977	inchikey:QNAYBMKLOCPYGJ-REOHCLBHSA-N
+Nicotinic acidadenine dinucleotide	Metabolite	hmdb:HMDB0001179							chebi:18304;chebi:18304	inchikey:SENPVEZBRZQVST-HISDBWNOSA-O
+2-Amino-3-carboxymuconicacid semialdehyde	Metabolite	hmdb:HMDB0001330							chebi:995;chebi:995	inchikey:KACPVQQHDVBVFC-OIFXTYEKSA-N
+pyrophosphate	Metabolite	cas:2466-09-3						wikidata:Q411092	chebi:29888;chebi:29888	inchikey:XPPKVPWEQAFLFU-UHFFFAOYSA-N
+L-Glutamine	Metabolite	hmdb:HMDB0000641							chebi:18050;chebi:18050	inchikey:ZDXPYRJPNDTMRX-VKHMYHEASA-N
+Water	Metabolite	hmdb:HMDB0002111							chebi:15377;chebi:15377	inchikey:XLYOFNOQVPJJNP-UHFFFAOYSA-N
+Pyrophosphate	Metabolite	hmdb:HMDB0000250							chebi:29888;chebi:29888	inchikey:XPPKVPWEQAFLFU-UHFFFAOYSA-N
+NADPH	Metabolite	hmdb:HMDB0000221							chebi:16474;chebi:16474	inchikey:ACFIXJIJDZMPPO-NNYOXOHSSA-N
+Adenosinetriphosphate	Metabolite	hmdb:HMDB0000538							chebi:15422;chebi:15422	inchikey:ZKHQWZAMYRWXGA-KQYNXXCUSA-N
+Phosphoribosylpyrophosphate	Metabolite	hmdb:HMDB0000280							chebi:17111;chebi:17111	inchikey:PQGCEDQWHSBAJP-TXICZTDVSA-N
+NADP	Metabolite	hmdb:HMDB0000217							chebi:44409;chebi:44409	inchikey:XJLXINKUBYWONI-NNYOXOHSSA-N
+L-Kynurenine	Metabolite	hmdb:HMDB0000684							chebi:16946;chebi:16946	inchikey:YGPSJZOEDVAXAB-QMMMGPOBSA-N
+3-Hydroxyanthranilic acid	Metabolite	hmdb:HMDB0001476							chebi:15793;chebi:15793	inchikey:WJXSWCUQABXPFS-UHFFFAOYSA-N
+NAD	Metabolite	hmdb:HMDB0000902							chebi:44215;chebi:44215	inchikey:BAWFJGJZGIEFAR-NNYOXOHSSA-N
+Carbon dioxide	Metabolite	hmdb:HMDB0001967							chebi:16526;chebi:16526	inchikey:CURLTUGMZLYLDI-UHFFFAOYSA-N
+L-Tryptophan	Metabolite	hmdb:HMDB0000929							chebi:16828;chebi:16828	inchikey:QIVBCDIJIAJPQS-VIFPVBQESA-N
+Water	Metabolite	hmdb:HMDB0002111							chebi:15377;chebi:15377	inchikey:XLYOFNOQVPJJNP-UHFFFAOYSA-N
+Quinolinic acid	Metabolite	hmdb:HMDB0000232							chebi:16675;chebi:16675	inchikey:GJAWHXHKYYXBSV-UHFFFAOYSA-N
+L-Glutamic acid	Metabolite	hmdb:HMDB0000148							chebi:16015;chebi:16015	inchikey:WHUUTDBJXJRKMK-VKHMYHEASA-N
+Pyrophosphate	Metabolite	hmdb:HMDB0000250							chebi:29888;chebi:29888	inchikey:XPPKVPWEQAFLFU-UHFFFAOYSA-N
+Adenosinemonophosphate	Metabolite	hmdb:HMDB0000045							chebi:16027;chebi:16027	inchikey:UDMBCSSLTHHNCD-KQYNXXCUSA-N
+Water	Metabolite	hmdb:HMDB0002111							chebi:15377;chebi:15377	inchikey:XLYOFNOQVPJJNP-UHFFFAOYSA-N
+Nicotinic acidmononucleotide	Metabolite	hmdb:HMDB0001132							chebi:15763;chebi:15763	inchikey:JOUIQRNQJGXQDC-ZYUZMQFOSA-O
+L-3-Hydroxykynurenine	Metabolite	hmdb:HMDB0011631							chebi:17380;chebi:17380	inchikey:VCKPUUFAIGNJHC-LURJTMIESA-N
+Hydrogen Ion	Metabolite	hmdb:HMDB0059597							chebi:15378;chebi:15378	inchikey:GPRLSGONYQIRFK-UHFFFAOYSA-N
+Water	Metabolite	hmdb:HMDB0002111							chebi:15377;chebi:15377	inchikey:XLYOFNOQVPJJNP-UHFFFAOYSA-N
+Hydrogen Ion	Metabolite	hmdb:HMDB0059597							chebi:15378;chebi:15378	inchikey:GPRLSGONYQIRFK-UHFFFAOYSA-N
+Hydrogen Ion	Metabolite	hmdb:HMDB0059597							chebi:15378;chebi:15378	inchikey:GPRLSGONYQIRFK-UHFFFAOYSA-N
+Hydrogen Ion	Metabolite	hmdb:HMDB0059597							chebi:15378;chebi:15378	inchikey:GPRLSGONYQIRFK-UHFFFAOYSA-N
+Hydrogen Ion	Metabolite	hmdb:HMDB0059597							chebi:15378;chebi:15378	inchikey:GPRLSGONYQIRFK-UHFFFAOYSA-N
+Oxygen	Metabolite	hmdb:HMDB0001377							chebi:15379;chebi:15379	inchikey:MYMOFIZGZYHOMD-UHFFFAOYSA-N
+Hydrogen Ion	Metabolite	hmdb:HMDB0059597							chebi:15378;chebi:15378	inchikey:GPRLSGONYQIRFK-UHFFFAOYSA-N
+Water	Metabolite	hmdb:HMDB0002111							chebi:15377;chebi:15377	inchikey:XLYOFNOQVPJJNP-UHFFFAOYSA-N
+Hydrogen Ion	Metabolite	hmdb:HMDB0059597							chebi:15378;chebi:15378	inchikey:GPRLSGONYQIRFK-UHFFFAOYSA-N
+Hydrogen Ion	Metabolite	hmdb:HMDB0059597							chebi:15378;chebi:15378	inchikey:GPRLSGONYQIRFK-UHFFFAOYSA-N
+Hydrogen Ion	Metabolite	hmdb:HMDB0059597							chebi:15378;chebi:15378	inchikey:GPRLSGONYQIRFK-UHFFFAOYSA-N
+Oxygen	Metabolite	hmdb:HMDB0001377							chebi:15379;chebi:15379	inchikey:MYMOFIZGZYHOMD-UHFFFAOYSA-N
+Hydrogen Ion	Metabolite	hmdb:HMDB0059597							chebi:15378;chebi:15378	inchikey:GPRLSGONYQIRFK-UHFFFAOYSA-N
+Hydrogen Ion	Metabolite	hmdb:HMDB0059597							chebi:15378;chebi:15378	inchikey:GPRLSGONYQIRFK-UHFFFAOYSA-N
+QPRT	GeneProduct	ensembl:ENSBTAG00000018082	HomologyConvert: Homo sapiens to Bos taurus: Original ID = En:ENSG00000103485	ensembl:ENSBTAG00000018082	ncbigene:614254		uniprot:A0A3Q1M3Z8;uniprot:F1MHB8			
+KYNU	GeneProduct	ensembl:ENSBTAG00000032277	HomologyConvert: Homo sapiens to Bos taurus: Original ID = En:ENSG00000115919	ensembl:ENSBTAG00000032277	ncbigene:520327		uniprot:F1MCH2;uniprot:A0A3Q1MB81			
+AFMID	GeneProduct	ensembl:ENSBTAG00000007125	HomologyConvert: Homo sapiens to Bos taurus: Original ID = En:ENSG00000183077	ensembl:ENSBTAG00000007125	ncbigene:518864		uniprot:E1BLL5			
+HAAO	GeneProduct	ensembl:ENSBTAG00000004674	HomologyConvert: Homo sapiens to Bos taurus: Original ID = En:ENSG00000162882	ensembl:ENSBTAG00000004674	ncbigene:510602		uniprot:A0A452DIN3			
+KMO	GeneProduct	ensembl:ENSBTAG00000014439	HomologyConvert: Homo sapiens to Bos taurus: Original ID = En:ENSG00000117009	ensembl:ENSBTAG00000014439	ncbigene:515996		uniprot:A0A3Q1M294;uniprot:E1BN59			
+NADSYN1	GeneProduct	ensembl:ENSBTAG00000016470	HomologyConvert: Homo sapiens to Bos taurus: Original ID = En:ENSG00000172890	ensembl:ENSBTAG00000016470	ncbigene:513400		uniprot:Q3ZBF0;uniprot:A0A452DIQ2;uniprot:A0A3Q1MER9			
+TDO2	GeneProduct	ensembl:ENSBTAG00000011062	HomologyConvert: Homo sapiens to Bos taurus: Original ID = En:ENSG00000151790	ensembl:ENSBTAG00000011062	ncbigene:530397		uniprot:A0A3Q1N950;uniprot:A0A3Q1M8R0;uniprot:Q2KIQ5			
+NMNAT1	GeneProduct	ensembl:ENSBTAG00000001361	HomologyConvert: Homo sapiens to Bos taurus: Original ID = En:ENSG00000173614							

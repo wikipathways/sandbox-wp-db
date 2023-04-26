@@ -1,0 +1,11 @@
+Label	Type	Identifier	Comment	Ensembl	NCBI gene	HGNC	UniProt	Wikidata	ChEBI	InChI
+violaxanthin	Metabolite	chebi:35288						wikidata:Q607883	chebi:35288;chebi:35288	inchikey:SZCBXWMUOPQSOX-WVJDLNGLSA-N
+abscisic aldehyde	Metabolite	chebi:31157						wikidata:Q13476484	chebi:31157;chebi:31157	inchikey:RIKWDZWVHUIUAM-KICRZJJPSA-N
+xanthoxin	Metabolite	chebi:32304						wikidata:Q5933737	chebi:32304;chebi:32304	inchikey:ZTALKMXOHWQNIA-TVBSHJCBSA-N
+(+)-abscisate	Metabolite	chebi:2365						wikidata:Q332211	chebi:2365;chebi:2365	inchikey:JLIDBLDQVAYHNE-YKALOCIXSA-N
+9'-cis-neoxanthin	Metabolite	chebi:35306						wikidata:Q27104309	chebi:35306;chebi:35306	inchikey:PGYAYSRVSAJXTE-OQASCVKESA-N;inchikey:PGYAYSRVSAJXTE-FTLOKQSXSA-N
+Trans-neoxanthin	Metabolite	chebi:32446						wikidata:Q27104219	chebi:32446;chebi:32446	inchikey:PGYAYSRVSAJXTE-MTYISEJWSA-N
+1.13.11.51	GeneProduct	eccode:1.13.11.51								
+1.2.3.14	GeneProduct	eccode:1.2.3.14								
+1.1.1.288	GeneProduct	eccode:1.1.1.288								
+5.3.99.9	GeneProduct	eccode:5.3.99.9								

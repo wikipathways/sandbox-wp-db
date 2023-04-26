@@ -1,0 +1,462 @@
+name: When GPML changed, do everything
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - pathways/**/*.gpml
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: false # to allow multiple runs to queue up rather than clobber
+
+jobs:
+  # inspired by https://dev.to/scienta/get-changed-files-in-github-actions-1p36
+  changed-gpmls:
+    runs-on: ubuntu-latest
+    # Map a step output to a job output
+    outputs:
+      added-modified: ${{ steps.changes.outputs.added-modified }}
+      copied: ${{ steps.changes.outputs.copied }}
+      deleted: ${{ steps.changes.outputs.deleted }}
+      renamed: ${{ steps.changes.outputs.renamed }}
+    steps:
+        # Make sure we have some code to diff.
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: main
+      - name: Get changed files
+        id: changes
+        # Set outputs using the command.
+        run: |
+          echo "GPML files were changed in pull request ${{ github.event.before }} -> ${{ github.event.after }}"
+          
+          #echo "::set-output name=added-modified::$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          echo "added-modified=$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)" >> $GITHUB_OUTPUT
+          if git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'added or modified:'
+            git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+          
+          #echo "::set-output name=copied::$(git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          echo "copied=$(git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)" >> $GITHUB_OUTPUT
+          if git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'copied:'
+            git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+
+          #echo "::set-output name=deleted::$(git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          echo "deleted=$(git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)" >> $GITHUB_OUTPUT
+          if git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'deleted:'
+            git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+            
+          #echo "::set-output name=renamed::$(git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          echo "renamed=$(git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)" >> $GITHUB_OUTPUT
+          if git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'renamed:'
+            git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+          
+  author-list:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # only run if gpmls were added or modified
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
+    steps:
+      - name: Checkout sandbox-wp-db repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+          ref: main
+                
+      - name: Checkout jekyll repo
+        run: |
+          echo "SANDBOX: Skipping checkout of jekyll repo"
+          
+      - name: Update author list and create md profiles
+        run: |
+          authorList=() 
+          {
+            read #skip header line
+            while IFS=, read -r username realname orcid wikidata github; do
+              authorList+=("$username") 
+            done 
+          }< scripts/author_list.csv
+          echo ${#authorList[@]}
+          checkAuthors=()
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            auth="$(sed -n '/<Pathway /s/.*Author=\"\[\(.*\)\]\".*/\1/p' $f )"
+            IFS=', ' read -r -a checkAuthors <<< "$auth"
+            checkAuthors=($(echo "${checkAuthors[@]}" | tr ' ' '\n' | sort -u | tr '\n' ' '))
+          done
+          echo ${#checkAuthors[@]}
+          for a in ${checkAuthors[@]}; do
+            a=$(echo "$a" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+            if [[ ! " ${authorList[*]} " =~ " ${a} " ]]; then
+              echo "Adding $a"
+              echo $a","$a",,," >> scripts/author_list.csv
+              echo "SANDBOX: Skipping author profile creation"
+            fi
+          done
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add scripts/author_list.csv
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git commit -m 'Update author_list file'
+              git pull --rebase
+              git push
+          fi
+          echo "SANDBOX: Skipping commit to Jekyll repo"
+
+  metadata:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # only run if gpmls were added or modified
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
+    steps:
+        
+      - name: Checkout sandbox-wp-db repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+          ref: main
+          
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+            
+      - name: Cache meta-data-action with dependencies
+        uses: actions/cache@v3
+        id: cacheMetaJar
+        with:
+          path: ./meta-data-action-1.1.0-jar-with-dependencies.jar
+          key: cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.0-jar-with-dependencies.jar') }}
+          restore-keys: |
+            cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.0-jar-with-dependencies.jar') }}
+            cached-meta-data-action-
+    
+      - if: steps.cacheMetaJar.outputs.cache-hit != 'true'
+        name: Install deps
+        run: |
+          echo "Cache not found: cached-meta-data-action"
+          if [ ! -e ./meta-data-action-1.1.0-jar-with-dependencies.jar ]; then
+            wget -O meta-data-action-1.1.0-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v1.1.0/meta-data-action-1.1.0-jar-with-dependencies.jar
+          fi
+
+      - name: Cache all bridge files
+        uses: actions/cache@v3
+        id: cacheAllBridge
+        with:
+          path: |
+            ./metabolites*.bridge
+            ./Ag*.bridge
+            ./An*.bridge
+            ./At*.bridge
+            ./Bs*.bridge
+            ./Bt*.bridge
+            ./Ce*.bridge
+            ./Cf*.bridge
+            ./Ci*.bridge
+            ./Dr*.bridge
+            ./Da*.bridge
+            ./Dp*.bridge
+            ./Dm*.bridge
+            ./Ec*.bridge
+            ./Gg*.bridge
+            ./Fg*.bridge
+            ./Gm*.bridge
+            ./Hs*.bridge
+            ./Hv*.bridge
+            ./Ml*.bridge
+            ./Mm*.bridge
+            ./Mx*.bridge
+            ./Oa*.bridge
+            ./Ova*.bridge
+            ./Oi*.bridge
+            ./Oj*.bridge
+            ./Pi*.bridge
+            ./Pt*.bridge
+            ./Qc*.bridge
+            ./Rn*.bridge
+            ./Sc*.bridge
+            ./Sl*.bridge
+            ./Ss*.bridge
+            ./Vv*.bridge
+            ./Xt*.bridge
+            ./Zm*.bridge
+          key: cached-bridge-files
+          restore-keys: |
+            cached-bridge-files
+            
+      - if: steps.cacheAllBridge.outputs.cache-hit != 'true'
+        name: Install all bridge files
+        run: |
+          echo "Cache not found: cached-bridge-files"
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"
+            echo "generating configuration files for "$org""
+            scripts/meta-data-action/configGenerator.sh "$org"
+            echo "installing bridgedb files for "$org""
+            scripts/meta-data-action/installDependencies.sh "$org"
+          done
+            
+      - name: Generate configs, install bridgeDb, generate info and datanode files
+        run: |
+          chmod 777 meta-data-action-1.1.0-jar-with-dependencies.jar
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
+            echo "generating configuration files for "$org""
+            scripts/meta-data-action/configGenerator.sh "$org"
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            cat gdb.config
+            echo "generating info and datanode files for $wpid, organism "$org""
+            java -jar meta-data-action-1.1.0-jar-with-dependencies.jar wikipathways/sandbox-wp-db "$f" $(date --utc +%F) gdb.config "$org"
+          done
+      
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add pathways/WP*/WP*.{json,tsv}
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git commit -m 'Update metadata files'
+              git pull --rebase
+              git push
+          fi
+          
+  pubmed:
+    runs-on: ubuntu-latest
+    needs: [changed-gpmls, metadata]
+    # only run if gpmls were added or modified
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
+    steps:
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+          fetch-depth: 1
+          ref: main
+
+      - name: Install dependencies
+        working-directory: scripts/generate-references
+        run: npm install
+
+      - name: Generate references
+        working-directory: scripts/generate-references
+        run: node index.js
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add pathways/*/*-bibliography.tsv
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git commit -m 'Update formatted references'
+              git pull --rebase
+              git push
+          fi
+          
+  frontmatter:
+    runs-on: ubuntu-latest
+    needs: [changed-gpmls, metadata]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+          fetch-depth: 1
+          ref: main
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+          
+      - name: Install deps
+        run: |
+          pip install python-frontmatter
+          
+      - name: Create pathway frontmatter
+        run: |        
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            echo "generating frontmatter file for $wpid"
+            json_info_f=./pathways/"$wpid"/"$wpid"-info.json
+            if [ -e "$json_info_f" ]; then
+              python scripts/create_pathway_frontmatter.py "$json_info_f"
+            else
+              echo "info.json file missing for $wpid" >2
+            fi
+          done
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add pathways/*/*.md
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git commit -m 'Update frontmatter .md files'
+              git pull --rebase
+              git push
+          fi
+
+  homology-conversion:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # only run if gpmls were added or modified
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
+    steps:
+      - name: Homology steps
+        run: |
+          echo: "SANDBOX: Skip homology steps"
+          
+  json-svg:
+    needs: [changed-gpmls, pubmed]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sandbox-wp-db repo
+        uses: actions/checkout@v3
+        with:
+          path: sandbox-wp-db
+          submodules: true
+          fetch-depth: 1
+          ref: main
+
+      - name: Checkout assets repo
+        run: |
+          echo "SANDBOX: Skip checkout of assets repo"
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Cache NPM dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install deps
+        working-directory: sandbox-wp-db/scripts/generate-svgs
+        run: |
+          npm install
+          sudo apt-get update
+          sudo apt-get install -y xmlstarlet
+            
+      - name: Convert GPML to JSON and SVG
+        run: |
+          echo "SANDBOX: Adapted to produce JSON and SVG files in sandbox-wp-db repo only"
+          DB_PATH="${{ github.workspace }}/sandbox-wp-db"
+          #AS_PATH="${{ github.workspace }}/wikipathways-assets"
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            echo "generating JSON and SVG files for $wpid"
+            #cd "$AS_PATH"
+            #mkdir -p pathways/"$wpid"
+            
+            #for old_f in pathways/"$wpid"/"$wpid".{json,svg}; do 
+            #  if [ -e "$old_f" ]; then
+            #    rm "$old_f"
+            #  fi
+            #done
+            
+            cd "$DB_PATH/scripts/generate-svgs"
+            ./gpmlconverter --id "$wpid" -i $DB_PATH/pathways/"$wpid"/"$wpid".gpml -o $DB_PATH/pathways/"$wpid"/"$wpid".svg
+            
+            # delete intermediate JSON files
+            rm $DB_PATH/pathways/"$wpid"/"$wpid".json.b4bridgedb.json || true
+            rm $DB_PATH/pathways/"$wpid"/"$wpid".b4wd.json || true
+            rm $DB_PATH/pathways/"$wpid"/"$wpid".b4hgnc.json || true
+            
+            # mv thumbnail png
+            #mv $AS_PATH/pathways/"$wpid"/"$wpid"-thumb.png $DB_PATH/pathways/"$wpid"/
+
+            # cp gpml and tsv to assets
+            #cp $DB_PATH/pathways/"$wpid"/"$wpid".gpml $AS_PATH/pathways/"$wpid"/
+            #cp $DB_PATH/pathways/"$wpid"/"$wpid"-bibliography.tsv $AS_PATH/pathways/"$wpid"/
+            #cp $DB_PATH/pathways/"$wpid"/"$wpid"-datanodes.tsv $AS_PATH/pathways/"$wpid"/
+            
+            # pretty print the JSON
+            for json_f in $DB_PATH/pathways/"$wpid"/"$wpid".json; do
+              mv "$json_f" "$json_f".tmp.json 
+              jq -S . "$json_f".tmp.json >"$json_f"
+              rm "$json_f".tmp.json
+            done
+          done
+         
+      - name: Commit report for database
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          cd $DB_PATH
+          git add pathways/WP*/WP*-thumb.png
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git commit -m 'Update PNG files'
+              git pull --rebase
+              git push
+          fi
+
+  sync-site-repo-added-modified:
+    runs-on: ubuntu-latest
+    needs: [changed-gpmls, metadata, pubmed, frontmatter, json-svg]
+    steps:
+      - name: Checkouts, copy and commit
+        run: |
+          echo "SANDBOX: Skipping checkouts, copy and commit to jekyll repo"
+
+  sync-assets-repo-deleted:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # only run if gpmls were deleted
+    if: ${{needs.changed-gpmls.outputs.deleted}}
+    steps:
+      - name: Checkouts, copy and commit
+        run: |
+          echo "SANDBOX: Skipping checkouts, deletion and commit to assets repo"
+
+  sync-site-repo-deleted:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # only run if gpmls were deleted
+    if: ${{needs.changed-gpmls.outputs.deleted}}
+    steps:
+      - name: Checkouts, copy and commit
+        run: |
+          echo "SANDBOX: Skipping checkouts, deletion and commit to jekyll repo"

@@ -429,7 +429,7 @@ jobs:
               echo "No changes"
           else
               git commit -m 'Update PNG files'
-              git pull --rebase
+              git pull --rebase --autostash
               git push
           fi
 

@@ -340,7 +340,7 @@ jobs:
     steps:
       - name: Homology steps
         run: |
-          echo: "SANDBOX: Skip homology steps"
+          echo "SANDBOX: Skip homology steps"
           
   json-svg:
     needs: [changed-gpmls, pubmed]

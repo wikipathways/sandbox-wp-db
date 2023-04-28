@@ -390,14 +390,14 @@ jobs:
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "generating JSON and SVG files for $wpid"
-            #cd "$AS_PATH"
-            #mkdir -p pathways/"$wpid"
+            cd "$DB_PATH"
+            mkdir -p pathways/"$wpid"
             
-            #for old_f in pathways/"$wpid"/"$wpid".{json,svg}; do 
-            #  if [ -e "$old_f" ]; then
-            #    rm "$old_f"
-            #  fi
-            #done
+            for old_f in pathways/"$wpid"/"$wpid".{json,svg}; do 
+              if [ -e "$old_f" ]; then
+                rm "$old_f"
+              fi
+            done
             
             cd "$DB_PATH/scripts/generate-svgs"
             ./gpmlconverter --id "$wpid" -i $DB_PATH/pathways/"$wpid"/"$wpid".gpml -o $DB_PATH/pathways/"$wpid"/"$wpid".svg

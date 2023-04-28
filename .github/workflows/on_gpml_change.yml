@@ -407,14 +407,15 @@ jobs:
          
       - name: Commit report for database
         run: |
+          DB_PATH="${{ github.workspace }}/sandbox-wp-db"
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          cd sandbox-wp-db
-          git add pathways/WP*/WP*-thumb.png
+          cd "$DB_PATH"
+          git add pathways/WP*/WP*.{json,svg,png}
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git commit -m 'Update PNG files'
+              git commit -m 'Update json-svg files'
               git pull --rebase --autostash
               git push
           fi

@@ -353,15 +353,6 @@ jobs:
           fetch-depth: 1
           ref: main
 
-      - name: Checkout assets repo
-        uses: actions/checkout@v3
-        with:
-          repository: wikipathways/wikipathways-assets
-          path: wikipathways-assets
-          fetch-depth: 1
-          ref: main
-          #ssh-key: ${{ secrets.ACTIONS_ASSETS_KEY }}
-
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
@@ -386,11 +377,9 @@ jobs:
         run: |
           echo "SANDBOX: Adapted to produce JSON and SVG files in sandbox-wp-db repo only"
           DB_PATH="${{ github.workspace }}/sandbox-wp-db"
-          #AS_PATH="${{ github.workspace }}/wikipathways-assets"
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "generating JSON and SVG files for $wpid"
-            cd "$DB_PATH"
             mkdir -p pathways/"$wpid"
             
             for old_f in pathways/"$wpid"/"$wpid".{json,svg}; do 
@@ -399,24 +388,16 @@ jobs:
               fi
             done
             
-            cd "$DB_PATH/scripts/generate-svgs"
+            cd "scripts/generate-svgs"
             ./gpmlconverter --id "$wpid" -i $DB_PATH/pathways/"$wpid"/"$wpid".gpml -o $DB_PATH/pathways/"$wpid"/"$wpid".svg
             
             # delete intermediate JSON files
-            rm $DB_PATH/pathways/"$wpid"/"$wpid".json.b4bridgedb.json || true
-            rm $DB_PATH/pathways/"$wpid"/"$wpid".b4wd.json || true
-            rm $DB_PATH/pathways/"$wpid"/"$wpid".b4hgnc.json || true
-            
-            # mv thumbnail png
-            #mv $AS_PATH/pathways/"$wpid"/"$wpid"-thumb.png $DB_PATH/pathways/"$wpid"/
-
-            # cp gpml and tsv to assets
-            #cp $DB_PATH/pathways/"$wpid"/"$wpid".gpml $AS_PATH/pathways/"$wpid"/
-            #cp $DB_PATH/pathways/"$wpid"/"$wpid"-bibliography.tsv $AS_PATH/pathways/"$wpid"/
-            #cp $DB_PATH/pathways/"$wpid"/"$wpid"-datanodes.tsv $AS_PATH/pathways/"$wpid"/
+            rm pathways/"$wpid"/"$wpid".json.b4bridgedb.json || true
+            rm pathways/"$wpid"/"$wpid".b4wd.json || true
+            rm pathways/"$wpid"/"$wpid".b4hgnc.json || true
             
             # pretty print the JSON
-            for json_f in $DB_PATH/pathways/"$wpid"/"$wpid".json; do
+            for json_f in pathways/"$wpid"/"$wpid".json; do
               mv "$json_f" "$json_f".tmp.json 
               jq -S . "$json_f".tmp.json >"$json_f"
               rm "$json_f".tmp.json
@@ -427,7 +408,6 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          cd $DB_PATH
           git add pathways/WP*/WP*-thumb.png
           if git diff --exit-code --staged; then
               echo "No changes"

@@ -350,13 +350,17 @@ jobs:
         uses: actions/checkout@v3
         with:
           path: sandbox-wp-db
-          submodules: true
           fetch-depth: 1
           ref: main
 
       - name: Checkout assets repo
-        run: |
-          echo "SANDBOX: Skip checkout of assets repo"
+        uses: actions/checkout@v3
+        with:
+          repository: wikipathways/wikipathways-assets
+          path: wikipathways-assets
+          fetch-depth: 1
+          ref: main
+          #ssh-key: ${{ secrets.ACTIONS_ASSETS_KEY }}
 
       - name: Setup Node
         uses: actions/setup-node@v3

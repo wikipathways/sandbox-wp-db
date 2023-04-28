@@ -6,7 +6,7 @@ Source: PharmGKB (https://www.pharmgkb.org/pathway/PA2023)
 
 Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP554 CPTAC Assay Portal]</Comment>
   <BiopaxRef>b93</BiopaxRef>
-  <Graphics BoardWidth="894.0" BoardHeight="651.0" />
+  <Graphics BoardWidth="894.0" BoardHeight="651.0"/>
   <DataNode TextLabel="CYP11B2" GraphId="e14ac" Type="GeneProduct">
     <BiopaxRef>ce3</BiopaxRef>
     <Graphics CenterX="491.0" CenterY="479.0" Width="62.0" Height="20.0" ZOrder="32773" FontSize="10" Valign="Middle" />

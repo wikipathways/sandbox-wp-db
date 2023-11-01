@@ -15,6 +15,7 @@ jobs:
       uses: dkershner6/get-pull-request-action@v1
       id: get-pr
       with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           pull-number: 4
           
     - run: echo ${{ fromJSON(steps.get-pr.outputs.pr).title }}

@@ -18,4 +18,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           pull-number: 4
           
-    - run: echo ${{ fromJSON(steps.get-pr.outputs.pr).body }}
+    - run: echo ${{ fromJSON(steps.get-pr.outputs.pr).title }}

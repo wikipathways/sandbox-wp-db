@@ -11,25 +11,10 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v3
 
-    - name: Install GitHub CLI
-      run: |
-        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-        sudo apt-add-repository https://cli.github.com/packages
-        sudo apt update
-        sudo apt install gh
-
-    - name: Edit PR description
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        PR_NUMBER=4 #$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
-        
-        # Get the current PR description
-        CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
-        echo "$CURRENT_DESCRIPTION"
-        
-        # Modify the description. For this example, let's just append some text.
-        NEW_DESCRIPTION="$CURRENT_DESCRIPTION \n\n Edited by GitHub Action."
-        
-        # Update the PR description with the modified content
-        gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+    - name: Try Get-PR
+      uses: dkershner6/get-pull-request-action@v1
+      id: get-pr
+      with:
+          pull-number: 4
+          
+    - run: echo ${{ fromJSON(steps.get-pr.outputs.pr).title }}

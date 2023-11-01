@@ -8,11 +8,14 @@ jobs:
   test_one:
     runs-on: ubuntu-latest
     steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+
     - name: Edit PR description
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        PR_NUMBER=4 #$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
+        PR_NUMBER="4"
         
         # Get the current PR description
         CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")

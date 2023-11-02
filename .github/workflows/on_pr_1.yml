@@ -27,10 +27,11 @@ jobs:
         run: |
           echo "GPML files were changed in pull request ${{ github.event.before }} -> ${{ github.event.after }}"
 
-          #echo "pr-number=${{ github.event.pull_request.number }}" 
-          echo "pr-number=4" #for testing
+          #echo "pr-number=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
+          echo "pr-number=4" >> $GITHUB_OUTPUT #TESTING
         
-          echo "added-modified=$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)" >> $GITHUB_OUTPUT
+          #echo "added-modified=$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)" >> $GITHUB_OUTPUT
+          echo "added-modified=$(gh pr view 4 --json files --jq '.files.[].path' | grep '.gpml$')" >> $GITHUB_OUTPUT #TESTING
           if git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
             echo 'added or modified:'
             git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
@@ -40,8 +41,7 @@ jobs:
           if git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
             echo 'deleted:'
             git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
-          fi
-
+          fi          
           
   test_one:
     runs-on: ubuntu-latest

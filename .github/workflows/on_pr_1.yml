@@ -21,8 +21,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        echo "PR_NUMBER $PR_NUMBER"
-        
         # Get the current PR description
         CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
         
@@ -38,8 +36,8 @@ jobs:
     needs: test_one
     runs-on: ubuntu-latest
     steps:
-    #- name: Check out code
-    #  uses: actions/checkout@v3
+    - name: Check out code
+      uses: actions/checkout@v3
     
     - name: Get PR number
       run: |

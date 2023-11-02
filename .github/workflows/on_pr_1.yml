@@ -3,6 +3,7 @@ name: On Pull Request 1
 on:
   workflow_dispatch:
   #pull_request:
+  #  types: [opened, synchronize]
 
 jobs:
   test_one:
@@ -10,13 +11,16 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v3
+    
+    - name: Get PR number
+      run: |
+        #echo "PR_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+        PR_NUMBER="4" #for testing
 
     - name: Edit PR description
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        PR_NUMBER="4"
-        
         # Get the current PR description
         CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
         

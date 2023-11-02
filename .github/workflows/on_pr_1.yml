@@ -22,6 +22,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         PR_NUMBER=${{ env.PR_NUMBER }}
+        echo "PR_NUMBER $PR_NUMBER"
         # Ensure that GitHub CLI is authenticated
         gh auth status
         

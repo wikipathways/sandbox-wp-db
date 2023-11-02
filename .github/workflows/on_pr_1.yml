@@ -25,7 +25,35 @@ jobs:
         CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
         
         # Modify the description. For this example, let's just append some text.
-        NEW_DESCRIPTION="$CURRENT_DESCRIPTION \n\n Edited by GitHub Action."
+        NEW_DESCRIPTION="$CURRENT_DESCRIPTION
+        
+        - [x] Test one"
+        
+        # Update the PR description with the modified content
+        gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+
+  test_two:
+    needs: test_one
+    runs-on: ubuntu-latest
+    steps:
+    #- name: Check out code
+    #  uses: actions/checkout@v3
+    
+    - name: Get PR number
+      run: |
+        #echo "PR_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+        PR_NUMBER="4" #for testing
+
+    - name: Edit PR description
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        # Get the current PR description
+        CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
+        
+        # Modify the description. For this example, let's just append some text.
+        NEW_DESCRIPTION="$CURRENT_DESCRIPTION
+        - [x] Test two"
         
         # Update the PR description with the modified content
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"

@@ -24,6 +24,8 @@ jobs:
         
       - name: Get PR and GPML
         id: changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} #only need to support TESTING
         run: |
           echo "GPML files were changed in pull request ${{ github.event.before }} -> ${{ github.event.after }}"
 

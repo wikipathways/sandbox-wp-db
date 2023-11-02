@@ -15,16 +15,13 @@ jobs:
     - name: Get PR number
       run: |
         #echo "PR_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
-        PR_NUMBER="4" >> $GITHUB_ENV #for testing
+        echo "PR_NUMBER=4" >> $GITHUB_ENV #for testing
 
     - name: Edit PR description
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        PR_NUMBER=${{ env.PR_NUMBER }}
         echo "PR_NUMBER $PR_NUMBER"
-        # Ensure that GitHub CLI is authenticated
-        gh auth status
         
         # Get the current PR description
         CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
@@ -47,7 +44,7 @@ jobs:
     - name: Get PR number
       run: |
         #echo "PR_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
-        PR_NUMBER="4" #for testing
+        echo "PR_NUMBER=4" >> $GITHUB_ENV #for testing
 
     - name: Edit PR description
       env:

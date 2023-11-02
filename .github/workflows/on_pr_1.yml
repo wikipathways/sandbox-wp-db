@@ -82,21 +82,9 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v3
 
-    - name: Update PR description
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Do stuff in parallel with test_two_b
       run: |
-        PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
-
-        # Get the current PR description
-        CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
-        
-        # Modify the description. For this example, let's just append some text.
-        NEW_DESCRIPTION="$CURRENT_DESCRIPTION
-        - [x] Test two A"
-        
-        # Update the PR description with the modified content
-        gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+        echo "Do stuff in parallel with test_two_b"
 
   test_two_b:
     needs: [get-gpml-pr, test_one]
@@ -105,24 +93,12 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v3
     
-    - name: Update PR description
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Do stuff in parallel with test_two_a
       run: |
-        PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
-        
-        # Get the current PR description
-        CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
-        
-        # Modify the description. For this example, let's just append some text.
-        NEW_DESCRIPTION="$CURRENT_DESCRIPTION
-        - [x] Test two B"
-        
-        # Update the PR description with the modified content
-        gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+        echo "Do stuff in parallel with test_two_a"
 
-  test_two_c:
-    needs: [get-gpml-pr, test_one]
+  test_two_check:
+    needs: [get-gpml-pr, test_one, test_two_a, test_two_b]
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -139,7 +115,7 @@ jobs:
         
         # Modify the description. For this example, let's just append some text.
         NEW_DESCRIPTION="$CURRENT_DESCRIPTION
-        - [x] Test two C"
+        - [x] Test two"
         
         # Update the PR description with the modified content
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"

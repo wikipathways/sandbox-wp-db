@@ -1,4 +1,4 @@
-name: On Pull Request 1
+name: On Pull Request
 
 on:
   workflow_dispatch:
@@ -11,6 +11,11 @@ concurrency:
   cancel-in-progress: false # to allow multiple runs to queue up rather than clobber
 
 jobs:
+  # Retrieves GPML file and PR number associated with incoming Pull Request and creates
+  # global variables that can accessed by subsequent jobs:
+  #  * pr-number = the unique number that identifies a Pull Request
+  #  * add-modified = a GPML file that is being added or modified in the wikipathways database
+  #  * deleted = a GPML file that is being deleted from the wikipathways database
   get-gpml-pr:
     runs-on: ubuntu-latest
     outputs:
@@ -45,77 +50,156 @@ jobs:
             git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
           fi          
           
-  test_one:
-    runs-on: ubuntu-latest
+  check_gpml:
     needs: [get-gpml-pr]
     if: ${{needs.get-gpml-pr.outputs.added-modified}}
+    runs-on: ubuntu-latest
     steps:
     - name: Check out code
       uses: actions/checkout@v3
         
     - name: Check GPML file
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         GPML_FILE=${{needs.get-gpml-pr.outputs.added-modified}}
         echo "Found .gpml file: $GPML_FILE"
+        org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $GPML_FILE | tr -d '"' | tr -d '>' | tr -d '\r')"  
+        name="$(sed -n '/<Pathway /s/.*Name=\(.*\)[^\n]*/\1/p' $GPML_FILE | tr -d '"' | tr -d '>' | tr -d '\r')" 
+        desc="$(sed -n '/<Comment Source="WikiPathways-description">\(.*\)<\/Comment>/\1/p' $GPML_FILE | tr -d '"')"
 
-    - name: Update PR description
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
+        # Start PR description
+        NEW_DESCRIPTION="
+        #Pathway Information
+        TITLE: $name
+        ORGANISM: $org
+        DESCRIPTION: $desc
+        ---
+        "
         PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
-
-        # Get the current PR description
-        CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
-        
-        # Modify the description. For this example, let's just append some text.
-        NEW_DESCRIPTION="$CURRENT_DESCRIPTION
-        
-        - [x] Test one"
-        
-        # Update the PR description with the modified content
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 
-  test_two_a:
-    needs: [get-gpml-pr, test_one]
+  metadata:
+    needs: [check_gpml]
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
       uses: actions/checkout@v3
 
-    - name: Do stuff in parallel with test_two_b
-      run: |
-        echo "Do stuff in parallel with test_two_b"
-
-  test_two_b:
-    needs: [get-gpml-pr, test_one]
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check out code
-      uses: actions/checkout@v3
-    
-    - name: Do stuff in parallel with test_two_a
-      run: |
-        echo "Do stuff in parallel with test_two_a"
-
-  test_two_check:
-    needs: [get-gpml-pr, test_one, test_two_a, test_two_b]
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check out code
-      uses: actions/checkout@v3
-    
-    - name: Update PR description
+    - name: Run meta-data-action
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
+        echo "TODO: Run meta-data-action and attach output JSON and TSV to PR"
+
+        # Update PR description
         PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
-        
-        # Get the current PR description
         CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
-        
-        # Modify the description. For this example, let's just append some text.
         NEW_DESCRIPTION="$CURRENT_DESCRIPTION
-        - [x] Test two"
+        #Generate Metadata Files
+        - [x] info.json generated
+        - [x] datanodes.tsv generated
+        "
+        gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+
+  pubmed:
+    needs: [metadata]
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+    
+    - name: Run generate-references
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "TODO: Run generate-references and attach output TSV to PR"
+
+        # Update PR description
+        PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
+        CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
+        NEW_DESCRIPTION="$CURRENT_DESCRIPTION
+        - [x] references.tsv generated
+        "
+        gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+
+  frontmatter:
+    needs: [pubmed]
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+    
+    - name: Run create_pathway_frontmatter.py
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "TODO: Run create_pathway_frontmatter.py and attach output MD to PR"
+
+        # Update PR description
+        PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
+        CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
+        NEW_DESCRIPTION="$CURRENT_DESCRIPTION
+        - [x] .md generated
+        "
+        gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+
+  json-svg:
+    needs: [frontmatter]
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+    
+    - name: Run generate-svgs
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "TODO: Run generate-svgs and attach output JSON, SVG and PNG to PR"
+
+        # Update PR description
+        PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
+        CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
+        NEW_DESCRIPTION="$CURRENT_DESCRIPTION
+        - [x] .json generated
+        - [x] .svg generated
+        - [x] .png generated
+
+        * TODO: insert PNG here *
+        ![Pathway thumbnail](pathway.png)
+        "
+        gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+
+
+  testing:
+    needs: [frontmatter]
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+    
+    - name: Perform automatic test
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        # TODO: perform testing
         
-        # Update the PR description with the modified content
+        # Update PR description
+        PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
+        CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
+        NEW_DESCRIPTION="$CURRENT_DESCRIPTION
+        ---
+        # Automated Testing
+        - [x] Test one PASSED
+        ```diff
+        - Test two FAILED
+        ```
+        - [x] Test three PASSED
+        ---
+        "
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"

@@ -200,6 +200,12 @@ jobs:
         - Test two FAILED
         ```
         - [x] Test three PASSED
+        - [ ] Interactions are connected
+        - [ ] Datanodes are annotated with database references
+        - [ ] Decription, consisting of 2-3 sentence overview of processes described in the pathway
+        - [ ] At least one literature reference
+        - [ ] At least one pathway ontology term
+        - [ ] Pathway title conforms to the [guidelines](https://github.com/wikipathways/wikipathways-faq/discussions/24)
         ---
         "
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"

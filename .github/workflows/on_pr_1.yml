@@ -67,18 +67,18 @@ jobs:
         GPML_FILE=${{needs.get-gpml-pr.outputs.added-modified}}
         echo "Found .gpml file: $GPML_FILE"
         wpid="$(basename ""$GPML_FILE"" | sed 's/.gpml//')"
-        org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $GPML_FILE | tr -d '"' | tr -d '>' | tr -d '\r')"  
-        name="$(sed -n '/<Pathway /s/.*Name=\(.*\)[^\n]*/\1/p' $GPML_FILE | tr -d '"' | tr -d '>' | tr -d '\r')" 
-        desc="$(sed -n 's/<Comment Source="WikiPathways-description">\(.*?\)<\/Comment>/\1/p' $GPML_FILE | tr -d '"')"
+        org="$(sed -n 's/.* Organism="\([^"]*\)".*/\1/p' "$GPML_FILE")"  
+        name="$(sed -n 's/.* Name="\([^"]*\)".*/\1/p' "$GPML_FILE")" 
+        desc="$(sed -n 's/.*<Comment Source="WikiPathways-description">\([^<]*\)<\/Comment>.*/\1/p' "$GPML_FILE")"
 
         # Start PR description
         NEW_DESCRIPTION="
         # Pathway Information
 
         WPID: $wpid
-        Title: $name
-        Organism: $org
-        Description: $desc
+        TITLE: $name
+        ORGANISM: $org
+        DESCRIPTION: $desc
         
         ---
         "

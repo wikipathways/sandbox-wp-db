@@ -56,7 +56,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
         
     - name: Check GPML file
       env:
@@ -70,10 +72,11 @@ jobs:
 
         # Start PR description
         NEW_DESCRIPTION="
-        #Pathway Information
-        TITLE: $name
-        ORGANISM: $org
-        DESCRIPTION: $desc
+        # Pathway Information
+        
+        Title: $name
+        Organism: $org
+        Description: $desc
         ---
         "
         PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
@@ -97,7 +100,7 @@ jobs:
         PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
         CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
         NEW_DESCRIPTION="$CURRENT_DESCRIPTION
-        #Generate Metadata Files
+        # Generate Metadata Files
         - [x] info.json generated
         - [x] datanodes.tsv generated
         "

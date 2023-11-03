@@ -69,7 +69,7 @@ jobs:
         wpid="$(basename ""$GPML_FILE"" | sed 's/.gpml//')"
         org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $GPML_FILE | tr -d '"' | tr -d '>' | tr -d '\r')"  
         name="$(sed -n '/<Pathway /s/.*Name=\(.*\)[^\n]*/\1/p' $GPML_FILE | tr -d '"' | tr -d '>' | tr -d '\r')" 
-        desc="$(sed -n '/<Comment Source="WikiPathways-description">\(.*\)<\/Comment>/\1/p' $GPML_FILE | tr -d '"')"
+        desc="$(sed -n 's/<Comment Source="WikiPathways-description">\(.*?\)<\/Comment>/\1/p' $GPML_FILE | tr -d '"')"
 
         # Start PR description
         NEW_DESCRIPTION="
@@ -79,6 +79,7 @@ jobs:
         Title: $name
         Organism: $org
         Description: $desc
+        
         ---
         "
         PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
@@ -198,6 +199,7 @@ jobs:
         PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
         CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
         NEW_DESCRIPTION="$CURRENT_DESCRIPTION
+        
         ---
         # Automated Testing
         - [x] Test one PASSED

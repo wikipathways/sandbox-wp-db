@@ -209,9 +209,9 @@ jobs:
         *As table*
         | # | Test name | Link | Notes | Result |
         |---|---|---|---|---|
-        | 1 | Test one | | | $${\color{green}PASS}$$ |
-        | 2 | Test two | | | $${\color{red}FAIL}$$ |
-        | 3 | Test three | | | $${\color{green}PASS}$$ |
+        | 1 | Test one | | | \$\${\color{green}PASS}\$\$ |
+        | 2 | Test two | | | \$\${\color{red}FAIL}\$\$ |
+        | 3 | Test three | | | \$\${\color{green}PASS}\$\$ |
 
         *As checklist*
         - [ ] Interactions are connected

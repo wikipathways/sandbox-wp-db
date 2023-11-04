@@ -30,7 +30,7 @@ jobs:
       - name: Get PR and GPML
         id: changes
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} #only need to support TESTING
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} #only need to support TESTING via GH API calls
         run: |
           echo "GPML files were changed in pull request ${{ github.event.before }} -> ${{ github.event.after }}"
 
@@ -58,7 +58,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v4
       with:
-        ref: refs/pull/4/head
+        ref: refs/pull/${{needs.get-gpml-pr.outputs.pr-number}}/head
         
     - name: Check GPML file
       env:
@@ -87,7 +87,6 @@ jobs:
 
   metadata:
     needs: [check_gpml]
-    if: ${{needs.changed-gpmls.outputs.added-modified}}
     runs-on: ubuntu-latest
     steps:
     - name: Check out code

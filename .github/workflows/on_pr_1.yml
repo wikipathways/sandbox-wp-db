@@ -86,7 +86,7 @@ jobs:
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 
   metadata:
-    needs: [check_gpml]
+    needs: [get-gpml-pr,check_gpml]
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -111,7 +111,7 @@ jobs:
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 
   pubmed:
-    needs: [metadata]
+    needs: [get-gpml-pr,metadata]
     if: ${{needs.changed-gpmls.outputs.added-modified}}
     runs-on: ubuntu-latest
     steps:
@@ -135,7 +135,7 @@ jobs:
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 
   frontmatter:
-    needs: [pubmed]
+    needs: [get-gpml-pr,pubmed]
     if: ${{needs.changed-gpmls.outputs.added-modified}}
     runs-on: ubuntu-latest
     steps:
@@ -159,7 +159,7 @@ jobs:
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 
   json-svg:
-    needs: [frontmatter]
+    needs: [get-gpml-pr,frontmatter]
     if: ${{needs.changed-gpmls.outputs.added-modified}}
     runs-on: ubuntu-latest
     steps:
@@ -189,7 +189,7 @@ jobs:
 
 
   testing:
-    needs: [frontmatter]
+    needs: [get-gpml-pr,frontmatter]
     if: ${{needs.changed-gpmls.outputs.added-modified}}
     runs-on: ubuntu-latest
     steps:

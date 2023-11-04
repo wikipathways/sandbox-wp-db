@@ -179,14 +179,13 @@ jobs:
         - [x] .svg generated
         - [x] .png generated
 
-        * TODO: insert PNG here *
-        ![Pathway thumbnail](pathway.png)
+        *TODO: insert PNG here*
         "
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 
 
   testing:
-    needs: [get-gpml-pr,frontmatter]
+    needs: [get-gpml-pr,json-svg]
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -207,11 +206,14 @@ jobs:
         
         ---
         ## Automated Testing
-        - [x] Test one PASSED
-        ```diff
-        - Test two FAILED
-        ```
-        - [x] Test three PASSED
+        *As table*
+        | # | Test name | Link | Notes | Result |
+        |---|---|---|---|---|
+        | 1 | Test one | | | $${\color{green}PASS}$$ |
+        | 2 | Test two | | | $${\color{red}FAIL}$$ |
+        | 3 | Test three | | | $${\color{green}PASS}$$ |
+
+        *As checklist*
         - [ ] Interactions are connected
         - [ ] Datanodes are annotated with database references
         - [ ] Decription, consisting of 2-3 sentence overview of processes described in the pathway

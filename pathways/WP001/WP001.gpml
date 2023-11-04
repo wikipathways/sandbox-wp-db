@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Vitamin A1 and A5/X pathways" Data-Source="WikiPathways" Version="20231104" Author="Egonw" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Vitamin A1 and A5/X pathways" Data-Source="WikiPathways" Version="20231104" Author="[Egonw, AlexanderPico]" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Vitamin A5/X pathway which shows how our food results in precursors from which Vitamin A5/X (9CBC, 9CDHBC, 9CDHROL-ES and 9CDKHROL) is metabolized which is converted into Vitamin A5/X acid (9CDHRA) which binds to RXR.</Comment>
   <BiopaxRef>cc4</BiopaxRef>
   <Graphics BoardWidth="870.9999999999998" BoardHeight="595.571428571428" />

@@ -75,10 +75,10 @@ jobs:
         NEW_DESCRIPTION="
         ## Pathway Information
 
-        *WPID*: $wpid
-        *TITLE*: $name
-        *ORGANISM*: $org
-        *DESCRIPTION*: $desc
+        **WPID**: $wpid
+        **TITLE**: $name
+        **ORGANISM**: $org
+        **DESCRIPTION**: $desc
         
         ---
         "

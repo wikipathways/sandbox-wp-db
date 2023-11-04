@@ -73,7 +73,7 @@ jobs:
 
         # Start PR description
         NEW_DESCRIPTION="
-        # Pathway Information
+        ## Pathway Information
 
         WPID: $wpid
         TITLE: $name
@@ -104,7 +104,7 @@ jobs:
         PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
         CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
         NEW_DESCRIPTION="$CURRENT_DESCRIPTION
-        # Generate Metadata Files
+        ## Generate Metadata Files
         - [x] info.json generated
         - [x] datanodes.tsv generated
         "
@@ -112,7 +112,6 @@ jobs:
 
   pubmed:
     needs: [get-gpml-pr,metadata]
-    if: ${{needs.changed-gpmls.outputs.added-modified}}
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -136,7 +135,6 @@ jobs:
 
   frontmatter:
     needs: [get-gpml-pr,pubmed]
-    if: ${{needs.changed-gpmls.outputs.added-modified}}
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -160,7 +158,6 @@ jobs:
 
   json-svg:
     needs: [get-gpml-pr,frontmatter]
-    if: ${{needs.changed-gpmls.outputs.added-modified}}
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -190,7 +187,6 @@ jobs:
 
   testing:
     needs: [get-gpml-pr,frontmatter]
-    if: ${{needs.changed-gpmls.outputs.added-modified}}
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -210,7 +206,7 @@ jobs:
         NEW_DESCRIPTION="$CURRENT_DESCRIPTION
         
         ---
-        # Automated Testing
+        ## Automated Testing
         - [x] Test one PASSED
         ```diff
         - Test two FAILED

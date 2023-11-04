@@ -35,10 +35,10 @@ jobs:
           echo "GPML files were changed in pull request ${{ github.event.before }} -> ${{ github.event.after }}"
 
           #echo "pr-number=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
-          echo "pr-number=10" >> $GITHUB_OUTPUT #TESTING
+          echo "pr-number=11" >> $GITHUB_OUTPUT #TESTING
         
           #echo "added-modified=$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)" >> $GITHUB_OUTPUT
-          echo "added-modified=$(gh pr view 10 --json files --jq '.files.[].path' | grep '.gpml$')" >> $GITHUB_OUTPUT #TESTING
+          echo "added-modified=$(gh pr view 11 --json files --jq '.files.[].path' | grep '.gpml$')" >> $GITHUB_OUTPUT #TESTING
           if git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
             echo 'added or modified:'
             git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
@@ -59,6 +59,9 @@ jobs:
       uses: actions/checkout@v4
       with:
         ref: refs/pull/${{needs.get-gpml-pr.outputs.pr-number}}/head
+
+    - name: Install XML processing tools
+      run: sudo apt-get install -y libxml2-utils
         
     - name: Check GPML file
       env:
@@ -67,9 +70,9 @@ jobs:
         GPML_FILE=${{needs.get-gpml-pr.outputs.added-modified}}
         echo "Found .gpml file: $GPML_FILE"
         wpid="$(basename ""$GPML_FILE"" | sed 's/.gpml//')"
-        org="$(sed -n 's/.* Organism="\([^"]*\)".*/\1/p' "$GPML_FILE")"  
-        name="$(sed -n 's/.* Name="\([^"]*\)".*/\1/p' "$GPML_FILE")" 
-        desc="$(sed -n 's/.*<Comment Source="WikiPathways-description">\([^<]*\)<\/Comment>.*/\1/p' "$GPML_FILE")"
+        org="$(xmllint --xpath 'string(//Pathway/@Organism)' "$GPML_FILE")"  
+        name="$(xmllint --xpath 'string(//Pathway/@Name)' "$GPML_FILE")" 
+        desc="$(xmllint --xpath 'string(//Comment[@Source="WikiPathways-description"])' "$GPML_FILE")"
 
         # Start PR description
         NEW_DESCRIPTION="

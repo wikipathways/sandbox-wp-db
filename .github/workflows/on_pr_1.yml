@@ -92,26 +92,32 @@ jobs:
     needs: [get-gpml-pr,check_gpml]
     runs-on: ubuntu-latest
     steps:
-    - name: Check out code
-      uses: actions/checkout@v4
-      with:
-        ref: refs/pull/${{needs.get-gpml-pr.outputs.pr-number}}/head
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          ref: refs/pull/${{needs.get-gpml-pr.outputs.pr-number}}/head
 
-    - name: Run meta-data-action
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        echo "TODO: Run meta-data-action and attach output JSON and TSV to PR"
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+          
+      - name: Run meta-data-action
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "TODO: Run meta-data-action and attach output JSON and TSV to PR"
 
-        # Update PR description
-        PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
-        CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
-        NEW_DESCRIPTION="$CURRENT_DESCRIPTION
-        ## Generate Metadata Files
-        - [x] info.json generated
-        - [x] datanodes.tsv generated
-        "
-        gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+          # Update PR description
+          PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
+          CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
+          NEW_DESCRIPTION="$CURRENT_DESCRIPTION
+          ## Generate Metadata Files
+          - [x] info.json generated
+          - [x] datanodes.tsv generated
+          "
+          gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 
   pubmed:
     needs: [get-gpml-pr,metadata]

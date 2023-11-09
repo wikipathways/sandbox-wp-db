@@ -98,13 +98,13 @@ jobs:
           ref: refs/pull/${{needs.get-gpml-pr.outputs.pr-number}}/head
 
       - name: Setup Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '11'
 
       - name: Cache meta-data-action with dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: cacheMetaJar
         with:
           path: ./meta-data-action-1.1.0-jar-with-dependencies.jar
@@ -119,7 +119,64 @@ jobs:
           echo "Cache not found: cached-meta-data-action"
           if [ ! -e ./meta-data-action-1.1.0-jar-with-dependencies.jar ]; then
             wget -O meta-data-action-1.1.0-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v1.1.0/meta-data-action-1.1.0-jar-with-dependencies.jar
-          fi    
+          fi
+          
+      - name: Cache all bridge files
+        uses: actions/cache@v4
+        id: cacheAllBridge
+        with:
+          path: |
+            ./metabolites*.bridge
+            ./Ag*.bridge
+            ./An*.bridge
+            ./At*.bridge
+            ./Bs*.bridge
+            ./Bt*.bridge
+            ./Ce*.bridge
+            ./Cf*.bridge
+            ./Ci*.bridge
+            ./Dr*.bridge
+            ./Da*.bridge
+            ./Dp*.bridge
+            ./Dm*.bridge
+            ./Ec*.bridge
+            ./Gg*.bridge
+            ./Fg*.bridge
+            ./Gm*.bridge
+            ./Hs*.bridge
+            ./Hv*.bridge
+            ./Ml*.bridge
+            ./Mm*.bridge
+            ./Mx*.bridge
+            ./Oa*.bridge
+            ./Ova*.bridge
+            ./Oi*.bridge
+            ./Oj*.bridge
+            ./Pi*.bridge
+            ./Pt*.bridge
+            ./Qc*.bridge
+            ./Rn*.bridge
+            ./Sc*.bridge
+            ./Sl*.bridge
+            ./Ss*.bridge
+            ./Vv*.bridge
+            ./Xt*.bridge
+            ./Zm*.bridge
+          key: cached-bridge-files
+          restore-keys: |
+            cached-bridge-files
+            
+      - if: steps.cacheAllBridge.outputs.cache-hit != 'true'
+        name: Install all bridge files
+        run: |
+          echo "Cache not found: cached-bridge-files"
+          declare -a OrganismNames=("Metabolites" "Anopheles gambiae" "Aspergillus niger" "Arabidopsis thaliana" "Bacillus subtilis" "Bos taurus" "Caenorhabditis elegans" "Canis familiaris" "Ciona intestinalis" "Danio rerio" "Daphnia magna" "Daphnia pulex" "Drosophila melanogaster" "Escherichia coli" "Gallus gallus" "Fusarium graminearum"  "Glycine max" "Homo sapiens" "Hordeum vulgare" "Macaca mulatta" "Mus musculus" "Mycobacterium tuberculosis" "Ornithorhynchus anatinus" "Ovis aries" "Oryza indica" "Oryza japonica" "Populus trichocarpa" "Pan troglodytes" "Equus caballus" "Rattus norvegicus" "Saccharomyces cerevisiae" "Solanum lycopersicum" "Sus scrofa" "Vitis vinifera" "Xenopus tropicalis" "Zea mays")
+          for org in "${OrganismNames[@]}"; do
+            echo "generating configuration files for "$org""
+            scripts/meta-data-action/configGenerator.sh "$org"
+            echo "installing bridgedb files for "$org""
+            scripts/meta-data-action/installDependencies.sh "$org"
+          done        
 
       - name: Run meta-data-action
         env:

@@ -176,7 +176,19 @@ jobs:
             scripts/meta-data-action/configGenerator.sh "$org"
             echo "installing bridgedb files for "$org""
             scripts/meta-data-action/installDependencies.sh "$org"
-          done        
+          done
+
+      - name: Generate configs, install bridgeDb, generate info and datanode files
+        run: |
+          chmod 777 meta-data-action-1.1.0-jar-with-dependencies.jar
+          f=${{ needs.get-gpml-pr.outputs.pr-number }}
+          org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
+          echo "generating configuration files for "$org""
+          scripts/meta-data-action/configGenerator.sh "$org"
+          wpid="$(basename ""$f"" | sed 's/.gpml//')"
+          cat gdb.config
+          echo "generating info and datanode files for $wpid, organism "$org""
+          java -jar meta-data-action-1.1.0-jar-with-dependencies.jar wikipathways/sandbox-wp-db "$f" $(date --utc +%F) gdb.config "$org"
 
       - name: Run meta-data-action
         env:

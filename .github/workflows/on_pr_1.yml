@@ -182,6 +182,7 @@ jobs:
         run: |
           chmod 777 meta-data-action-1.1.0-jar-with-dependencies.jar
           f=${{ needs.get-gpml-pr.outputs.added-modified }}
+          echo "value of f "$f""
           org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
           echo "generating configuration files for "$org""
           scripts/meta-data-action/configGenerator.sh "$org"

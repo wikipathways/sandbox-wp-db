@@ -124,7 +124,7 @@ jobs:
         uses: actions/cache@v3
         id: cache
         with:
-          path: ${{ github.workspace }}/Hs_Derby_Ensembl_108.bridge
+          path: ${{ github.workspace }}/sandbox-wp-db/Hs_Derby_Ensembl_108.bridge
           key: ${{ runner.os }}-java-Hs_Derby_Ensembl_108
           restore-keys: |
             ${{ runner.os }}-java-Hs_Derby_Ensembl_108

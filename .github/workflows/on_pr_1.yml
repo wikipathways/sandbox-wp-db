@@ -104,7 +104,7 @@ jobs:
           java-version: '11'
 
       - name: Cache meta-data-action with dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v3
         id: cacheMetaJar
         with:
           path: ./meta-data-action-1.1.2-jar-with-dependencies.jar
@@ -121,7 +121,7 @@ jobs:
           fi
 
       - name: Cache and install dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v3
         id: cache
         with:
           path: ${{ github.workspace }}/Hs_Derby_Ensembl_108.bridge
@@ -145,7 +145,7 @@ jobs:
           done
           
       - name: Cache all bridge files
-        uses: actions/cache@v4
+        uses: actions/cache@v3
         id: cacheAllBridge
         with:
           path: |

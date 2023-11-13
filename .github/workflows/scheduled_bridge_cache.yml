@@ -50,7 +50,7 @@ jobs:
         uses: actions/cache@v3
         id: cache
         with:
-          path: ${{ github.workspace }}/sandbox-wp-db/Hs_Derby_Ensembl_108.bridge #SANDBOX
+          path: ${{ github.workspace }}/Hs_Derby_Ensembl_108.bridge #SANDBOX
           key: ${{ runner.os }}-java-Hs_Derby_Ensembl_108
           restore-keys: |
             ${{ runner.os }}-java-Hs_Derby_Ensembl_108
@@ -59,7 +59,7 @@ jobs:
       - if: steps.cache.outputs.cache-hit != 'true'
         name: Install deps
         run: |
-          cd "${{ github.workspace }}/sandbox-wp-db" #SANDBOX
+          cd "${{ github.workspace }}" #SANDBOX
           if [ ! -e ./Hs_Derby_Ensembl_108.bridge ]; then
             wget -O Hs_Derby_Ensembl_108.bridge https://zenodo.org/record/7781913/files/Hs_Derby_Ensembl_108.bridge?download=1
           fi

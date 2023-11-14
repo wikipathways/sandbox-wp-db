@@ -249,7 +249,8 @@ jobs:
           else
               git commit -m 'Update metadata files'
               git pull origin ${{needs.get-branch.outputs.branch-name}} --rebase
-              git push origin HEAD:refs/heads/${{needs.get-branch.outputs.branch-name}}
+              # NOT WORKING DUE TO BRANCH NOT EXISTING ON MAIN YET
+              #git push origin HEAD:refs/heads/${{needs.get-branch.outputs.branch-name}}
           fi
           
       - name: Report on meta-data-action

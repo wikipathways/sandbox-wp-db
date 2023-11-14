@@ -247,9 +247,10 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
+              echo "TODO: Save the new files"
               git commit -m 'Update metadata files'
-              git pull origin ${{needs.get-branch.outputs.branch-name}} --rebase
               # NOT WORKING DUE TO BRANCH NOT EXISTING ON MAIN YET
+              #git pull origin ${{needs.get-branch.outputs.branch-name}} --rebase
               #git push origin HEAD:refs/heads/${{needs.get-branch.outputs.branch-name}}
           fi
           

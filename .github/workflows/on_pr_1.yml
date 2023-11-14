@@ -231,11 +231,9 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              echo "BRANCH_NAME=$(git branch --show-current)" >> $GITHUB_ENV
-              echo "Branch: ${{ env.BRANCH_NAME }}"
-              echo "BranchName: ${{needs.get-gpml-pr.outputs.pr-number}}"
+              echo "BranchName: ${{needs.get-gpml-pr.outputs.branch-name}}"
               git commit -m 'Update metadata files'
-              git push origin HEAD:${{needs.get-gpml-pr.outputs.pr-number}}
+              git push origin HEAD:${{needs.get-gpml-pr.outputs.branch-name}}
           fi
           
       - name: Report on meta-data-action

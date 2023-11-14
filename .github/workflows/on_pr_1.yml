@@ -214,20 +214,51 @@ jobs:
           echo "generating info and datanode files for $wpid, organism "$org""
           java -jar meta-data-action-1.1.2-jar-with-dependencies.jar local "$f" $(date --utc +%F) gdb.config "$org"
 
-      - name: Run meta-data-action
+      - name: Commit info and datanode files to PR branch
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add pathways/WP*/WP*.{json,tsv}
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git commit -m 'Update metadata files'
+              git pull --rebase
+              git push origin HEAD:${{ github.head_ref }}
+          fi
+          
+      - name: Report on meta-data-action
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "TODO: Run meta-data-action and attach output JSON and TSV to PR"
+          # Verify generated files 
+          infojson=$(find . -path "./pathways/WP*/WP*.json" -print -quit)
+          dntsv=$(find . -path "./pathways/WP*/WP*datanodes.tsv" -print -quit)
 
           # Update PR description
           PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
           CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
           NEW_DESCRIPTION="$CURRENT_DESCRIPTION
           ## Generate Metadata Files
-          - [x] info.json generated
-          - [x] datanodes.tsv generated
           "
+          if [[ -n $infojson ]]; then
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+            - [x] info.json generated
+            "
+          else
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+            - [] info.json generated
+            "          
+          fi
+          if [[ -n $dntsv ]]; then
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+            - [x] datanodes.tsv generated
+            "
+          else
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+            - [] datanodes.tsv generated
+            "          
+          fi
           gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 
   pubmed:

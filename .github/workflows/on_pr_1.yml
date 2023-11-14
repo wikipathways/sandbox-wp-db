@@ -212,7 +212,7 @@ jobs:
           wpid="$(basename ""$f"" | sed 's/.gpml//')"
           cat gdb.config
           echo "generating info and datanode files for $wpid, organism "$org""
-          java -jar meta-data-action-1.1.2-jar-with-dependencies.jar wikipathways/sandbox-wp-db "$f" $(date --utc +%F) gdb.config "$org"
+          java -jar meta-data-action-1.1.2-jar-with-dependencies.jar local "$f" $(date --utc +%F) gdb.config "$org"
 
       - name: Run meta-data-action
         env:

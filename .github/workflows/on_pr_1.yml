@@ -50,7 +50,7 @@ jobs:
             git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
           fi          
           
-  check_gpml:
+  get-branch:
     needs: [get-gpml-pr]
     if: ${{needs.get-gpml-pr.outputs.added-modified}}
     runs-on: ubuntu-latest
@@ -63,12 +63,24 @@ jobs:
         ref: refs/pull/${{needs.get-gpml-pr.outputs.pr-number}}/head
 
     - name: Get branch name for future pushes
+      id: changes
       run: |
           BRANCH_NAME=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             https://api.github.com/repos/${{ github.repository }}/pulls/${{needs.get-gpml-pr.outputs.pr-number}} \
             | jq -r .head.ref)
+          echo "branch-name=$BRANCH_NAME"
           echo "branch-name=$BRANCH_NAME" >> $GITHUB_OUTPUT
-    
+
+  check_gpml:
+    needs: [get-gpml-pr,get-branch]
+    if: ${{needs.get-gpml-pr.outputs.added-modified}}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+      with:
+        ref: refs/pull/${{needs.get-gpml-pr.outputs.pr-number}}/head
+
     - name: Install XML processing tools
       run: sudo apt-get install -y libxml2-utils
         
@@ -98,7 +110,7 @@ jobs:
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 
   metadata:
-    needs: [get-gpml-pr,check_gpml]
+    needs: [get-gpml-pr,get-branch,check_gpml]
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
@@ -231,9 +243,9 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              echo "BranchName: ${{needs.get-gpml-pr.outputs.branch-name}}"
+              echo "BranchName: ${{needs.get-branch.outputs.branch-name}}"
               git commit -m 'Update metadata files'
-              git push origin HEAD:${{needs.get-gpml-pr.outputs.branch-name}}
+              git push origin HEAD:${{needs.get-branch.outputs.branch-name}}
           fi
           
       - name: Report on meta-data-action
@@ -281,7 +293,7 @@ jobs:
           gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 
   pubmed:
-    needs: [get-gpml-pr,metadata]
+    needs: [get-gpml-pr,get-branch,metadata]
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -304,7 +316,7 @@ jobs:
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 
   frontmatter:
-    needs: [get-gpml-pr,pubmed]
+    needs: [get-gpml-pr,get-branch,pubmed]
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -327,7 +339,7 @@ jobs:
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 
   json-svg:
-    needs: [get-gpml-pr,frontmatter]
+    needs: [get-gpml-pr,get-branch,frontmatter]
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -355,7 +367,7 @@ jobs:
 
 
   testing:
-    needs: [get-gpml-pr,json-svg]
+    needs: [get-gpml-pr,get-branch,json-svg]
     runs-on: ubuntu-latest
     steps:
     - name: Check out code

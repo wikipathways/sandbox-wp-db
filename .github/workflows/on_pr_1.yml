@@ -223,7 +223,7 @@ jobs:
               echo "No changes"
           else
               git commit -m 'Update metadata files'
-              git push
+              git push origin HEAD:${{ github.head_ref }}
           fi
           
       - name: Report on meta-data-action

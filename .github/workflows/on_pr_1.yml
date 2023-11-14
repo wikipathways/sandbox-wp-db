@@ -36,7 +36,7 @@ jobs:
 
           #echo "pr-number=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
           echo "pr-number=10" >> $GITHUB_OUTPUT #TESTING
-        
+
           #echo "added-modified=$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)" >> $GITHUB_OUTPUT
           echo "added-modified=$(gh pr view 10 --json files --jq '.files.[].path' | grep '.gpml$')" >> $GITHUB_OUTPUT #TESTING
           if git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
@@ -54,12 +54,21 @@ jobs:
     needs: [get-gpml-pr]
     if: ${{needs.get-gpml-pr.outputs.added-modified}}
     runs-on: ubuntu-latest
+    outputs:
+      branch-name:  ${{ steps.changes.outputs.branch-name }}
     steps:
     - name: Check out code
       uses: actions/checkout@v4
       with:
         ref: refs/pull/${{needs.get-gpml-pr.outputs.pr-number}}/head
 
+    - name: Get branch name for future pushes
+      run: |
+          BRANCH_NAME=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/pulls/${{needs.get-gpml-pr.outputs.pr-number}} \
+            | jq -r .head.ref)
+          echo "branch-name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+    
     - name: Install XML processing tools
       run: sudo apt-get install -y libxml2-utils
         
@@ -223,8 +232,10 @@ jobs:
               echo "No changes"
           else
               echo "BRANCH_NAME=$(git branch --show-current)" >> $GITHUB_ENV
+              echo "Branch: ${{ env.BRANCH_NAME }}"
+              echo "BranchName: ${{needs.get-gpml-pr.outputs.pr-number}}"
               git commit -m 'Update metadata files'
-              git push origin ${{ env.BRANCH_NAME }}
+              git push origin HEAD:${{needs.get-gpml-pr.outputs.pr-number}}
           fi
           
       - name: Report on meta-data-action

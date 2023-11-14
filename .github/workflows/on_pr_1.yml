@@ -71,6 +71,10 @@ jobs:
           echo "branch-name=$BRANCH_NAME"
           echo "branch-name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
+          if ! git ls-remote --heads origin $BRANCH_NAME; then
+            git push origin HEAD:refs/heads/$BRANCH_NAME
+          fi
+
   check_gpml:
     needs: [get-gpml-pr,get-branch]
     if: ${{needs.get-gpml-pr.outputs.added-modified}}

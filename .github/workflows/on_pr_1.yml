@@ -243,9 +243,8 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              echo "BranchName: ${{needs.get-branch.outputs.branch-name}}"
               git commit -m 'Update metadata files'
-              git push origin HEAD:${{needs.get-branch.outputs.branch-name}}
+              git push origin HEAD:refs/heads/${{needs.get-branch.outputs.branch-name}}
           fi
           
       - name: Report on meta-data-action

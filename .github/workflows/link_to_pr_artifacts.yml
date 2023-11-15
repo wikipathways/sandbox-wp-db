@@ -20,7 +20,12 @@ jobs:
           REPO: ${{ github.event.repository.name }}
           WORKFLOW_RUN_EVENT_OBJ: ${{ toJSON(github.event.workflow_run) }}
         run: |
-          echo "Workflow run event obj: $WORKFLOW_RUN_EVENT_OBJ"
+          #ARTIFACT FILENAMES
+          INFOJSON_FN="info.json"
+          DNTSV_FN="datanodes.tsv"
+          REFTSV_FN="refs.tsv"
+          
+          #echo "Workflow run event obj: $WORKFLOW_RUN_EVENT_OBJ"
           
           PREVIOUS_JOB_ID=$(jq -r '.id' <<< "$WORKFLOW_RUN_EVENT_OBJ")
           echo "Previous Job ID: $PREVIOUS_JOB_ID"
@@ -28,7 +33,7 @@ jobs:
 
           INFOJSON_URL=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
             --jq ".artifacts.[] |
-            select (.name =="info.json") |
+            select(.name ==${INFOJSON_FN}) |
             select(.workflow_run.id==${PREVIOUS_JOB_ID}) |
             select(.expired==false) | 
             .archive_download_url")
@@ -38,7 +43,7 @@ jobs:
 
           DNTSV_URL=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
             --jq ".artifacts.[] |
-            select (.name =="datanodes.tsv") |
+            select(.name ==${DNTSV_FN}) |
             select(.workflow_run.id==${PREVIOUS_JOB_ID}) |
             select(.expired==false) | 
             .archive_download_url")
@@ -48,7 +53,7 @@ jobs:
 
           REFTSV_URL=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
             --jq ".artifacts.[] |
-            select (.name =="refs.tsv") |
+            select (.name ==${REFTSV_FN}) |
             select(.workflow_run.id==${PREVIOUS_JOB_ID}) |
             select(.expired==false) | 
             .archive_download_url")
@@ -56,9 +61,9 @@ jobs:
           echo "REFTSV_URL: $REFTSV_URL"
           echo "REFTSV_URL=$REFTSV_URL" >> "$GITHUB_ENV"
 
-          PR_NUMBER=$(jq -r '.pull_requests[0].number' \
-            <<< "$WORKFLOW_RUN_EVENT_OBJ")
-
+          #PR_NUMBER=$(jq -r '.pull_requests[0].number' <<< "$WORKFLOW_RUN_EVENT_OBJ")
+          PR_NUMBER=10  #TESTING
+          
           echo "PR Number: $PR_NUMBER"
           echo "PR_NUMBER=$PR_NUMBER" >> "$GITHUB_ENV"
 

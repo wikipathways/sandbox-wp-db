@@ -238,30 +238,15 @@ jobs:
           cat gdb.config
           echo "generating info and datanode files for $wpid, organism "$org""
           java -jar meta-data-action-1.1.2-jar-with-dependencies.jar local "$f" $(date --utc +%F) gdb.config "$org"
-
-      - name: Commit info and datanode files to PR branch
-        run: |
-          git config --global user.name 'GitHub Action'
-          git config --global user.email 'action@github.com'
-          git add pathways/WP*/WP*.{json,tsv}
-          if git diff --exit-code --staged; then
-              echo "No changes"
-          else
-              echo "TODO: Save the new files"
-              git commit -m 'Update metadata files'
-              # NOT WORKING DUE TO BRANCH NOT EXISTING ON MAIN YET
-              #git pull origin ${{needs.get-branch.outputs.branch-name}} --rebase
-              #git push origin HEAD:refs/heads/${{needs.get-branch.outputs.branch-name}}
-          fi
+          mkdir ./artifacts
+          mv pathways/"$wpid"/"$wpid"-info.json artifacts/.
+          mv pathways/"$wpid"/"$wpid"*.tsv artifacts/.
       
       - name: Upload info and datanode files as artifacts
         uses: actions/upload-artifact@v3
         with:
           name: metadata-files
-          path: |
-            pathways/WP*/WP*info.json
-            pathways/WP*/WP*datanodes.tsv
-            pathways/WP*/WP*refs.tsv
+          path: artifacts/
           if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
           
       - name: Report on meta-data-action
@@ -269,9 +254,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Verify generated files 
-          infojson=$(find . -path "./pathways/WP*/WP*info.json" -print -quit)
-          dntsv=$(find . -path "./pathways/WP*/WP*datanodes.tsv" -print -quit)
-          refstsv=$(find . -path "./pathways/WP*/WP*refs.tsv" -print -quit)
+          infojson=$(find . -path "./artifacts/WP*info.json" -print -quit)
+          dntsv=$(find . -path "./artifacts/WP*datanodes.tsv" -print -quit)
+          refstsv=$(find . -path "./artifacts/WP*refs.tsv" -print -quit)
 
           # Update PR description
           PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
@@ -303,6 +288,7 @@ jobs:
           gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 
   pubmed:
+    if: false
     needs: [get-gpml-pr,get-branch,metadata]
     runs-on: ubuntu-latest
     steps:
@@ -326,6 +312,7 @@ jobs:
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 
   frontmatter:
+    if: false
     needs: [get-gpml-pr,get-branch,pubmed]
     runs-on: ubuntu-latest
     steps:
@@ -349,6 +336,7 @@ jobs:
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 
   json-svg:
+    if: false
     needs: [get-gpml-pr,get-branch,frontmatter]
     runs-on: ubuntu-latest
     steps:
@@ -377,6 +365,7 @@ jobs:
 
 
   testing:
+    if: false
     needs: [get-gpml-pr,get-branch,json-svg]
     runs-on: ubuntu-latest
     steps:

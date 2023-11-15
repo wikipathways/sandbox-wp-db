@@ -253,6 +253,16 @@ jobs:
               #git pull origin ${{needs.get-branch.outputs.branch-name}} --rebase
               #git push origin HEAD:refs/heads/${{needs.get-branch.outputs.branch-name}}
           fi
+      
+      - name: Upload info and datanode files as artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: metadata-files
+          path: |
+            pathways/WP*/WP*info.json
+            pathways/WP*/WP*datanodes.tsv
+            pathways/WP*/WP*refs.tsv
+          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
           
       - name: Report on meta-data-action
         env:

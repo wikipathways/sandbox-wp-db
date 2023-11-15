@@ -281,30 +281,24 @@ jobs:
           "
           if [[ -n $infojson ]]; then
             NEW_DESCRIPTION="$NEW_DESCRIPTION
-            - [x] info.json generated
-            "
+            - [x] info.json generated"
           else
             NEW_DESCRIPTION="$NEW_DESCRIPTION
-            - [] info.json generated
-            "          
+            - [] info.json generated"          
           fi
           if [[ -n $dntsv ]]; then
             NEW_DESCRIPTION="$NEW_DESCRIPTION
-            - [x] datanodes.tsv generated
-            "
+            - [x] datanodes.tsv generated"
           else
             NEW_DESCRIPTION="$NEW_DESCRIPTION
-            - [] datanodes.tsv generated
-            "          
+            - [] datanodes.tsv generated"          
           fi
           if [[ -n $refstsv ]]; then
             NEW_DESCRIPTION="$NEW_DESCRIPTION
-            - [x] refs.tsv generated
-            "
+            - [x] refs.tsv generated"
           else
             NEW_DESCRIPTION="$NEW_DESCRIPTION
-            - [] refs.tsv generated
-            "          
+            - [] refs.tsv generated"          
           fi
           gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
 

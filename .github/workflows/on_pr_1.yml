@@ -226,7 +226,7 @@ jobs:
             scripts/meta-data-action/installDependencies.sh "$org"
           done
 
-      - name: Generate configs, install bridgeDb, generate info and datanode files
+      - name: Generate configs, install bridgeDb, generate info and tsv files
         run: |
           chmod 777 meta-data-action-1.1.2-jar-with-dependencies.jar
           f=${{ needs.get-gpml-pr.outputs.added-modified }}
@@ -242,11 +242,25 @@ jobs:
           mv pathways/"$wpid"/"$wpid"-info.json artifacts/.
           mv pathways/"$wpid"/"$wpid"*.tsv artifacts/.
       
-      - name: Upload info and datanode files as artifacts
+      - name: Upload info as artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: metadata-files
-          path: artifacts/
+          name: info.json
+          path: artifacts/WP*info.json
+          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+          
+      - name: Upload datanode as artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: datanodes.tsv
+          path: artifacts/WP*datanodes.tsv
+          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+          
+      - name: Upload refs as artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: refs.tsv
+          path: artifacts/WP*refs.tsv
           if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
           
       - name: Report on meta-data-action

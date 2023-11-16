@@ -67,6 +67,12 @@ jobs:
           echo "PR Number: $PR_NUMBER"
           echo "PR_NUMBER=$PR_NUMBER" >> "$GITHUB_ENV"
 
+      
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          ref: refs/pull/${{ env.PR_NUMBER }}/head
+
       - name: Update PR Description
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -83,6 +89,6 @@ jobs:
 
             | datanode.tsv | ${{ env.DNTSV_URL }}
 
-            | refs.tsv | ${{ env. REFTSV_URL }}
+            | refs.tsv | ${{ env.REFTSV_URL }}
           "
           gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"

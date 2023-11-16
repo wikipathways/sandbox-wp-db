@@ -31,12 +31,23 @@ jobs:
           echo "Previous Job ID : $PREVIOUS_JOB_ID"
           echo "PREVIOUS_JOB_ID=$PREVIOUS_JOB_ID" >> "$GITHUB_ENV"
 
-          INFOJSON_URL=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
+          SUITES_ID=$(jq -r '.check_suite_id' <<< "$WORKFLOW_RUN_EVENT_OBJ")
+          echo "Previous Suites ID : $SUITES_ID"
+
+          #INFOJSON_URL=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
+          #  --jq ".artifacts.[] |
+          #  select(.name ==\"${INFOJSON_FN}\") |
+          #  select(.workflow_run.id==${PREVIOUS_JOB_ID}) |
+          #  select(.expired==false) | 
+          #  .archive_download_url")
+
+          INFOJSON_ID=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
             --jq ".artifacts.[] |
             select(.name ==\"${INFOJSON_FN}\") |
             select(.workflow_run.id==${PREVIOUS_JOB_ID}) |
             select(.expired==false) | 
-            .archive_download_url")
+            .id")
+          INFOJSON_URL="https://github.com/wikipathways/sandbox-wp-db/suites/$SUITES_ID/artifacts/$INFOJSON_ID"
 
           echo "INFOJSON_URL: $INFOJSON_URL"
           echo "INFOJSON_URL=$INFOJSON_URL" >> "$GITHUB_ENV"

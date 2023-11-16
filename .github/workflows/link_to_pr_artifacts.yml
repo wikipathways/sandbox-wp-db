@@ -28,12 +28,12 @@ jobs:
           #echo "Workflow run event obj: $WORKFLOW_RUN_EVENT_OBJ"
           
           PREVIOUS_JOB_ID=$(jq -r '.id' <<< "$WORKFLOW_RUN_EVENT_OBJ")
-          echo "Previous Job ID: $PREVIOUS_JOB_ID"
+          echo "Previous Job ID : $PREVIOUS_JOB_ID"
           echo "PREVIOUS_JOB_ID=$PREVIOUS_JOB_ID" >> "$GITHUB_ENV"
 
           INFOJSON_URL=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
             --jq ".artifacts.[] |
-            select(.name ==${INFOJSON_FN}) |
+            select(.name ==\"${INFOJSON_FN}\") |
             select(.workflow_run.id==${PREVIOUS_JOB_ID}) |
             select(.expired==false) | 
             .archive_download_url")
@@ -43,7 +43,7 @@ jobs:
 
           DNTSV_URL=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
             --jq ".artifacts.[] |
-            select(.name ==${DNTSV_FN}) |
+            select(.name ==\"${DNTSV_FN}\") |
             select(.workflow_run.id==${PREVIOUS_JOB_ID}) |
             select(.expired==false) | 
             .archive_download_url")
@@ -53,7 +53,7 @@ jobs:
 
           REFTSV_URL=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
             --jq ".artifacts.[] |
-            select (.name ==${REFTSV_FN}) |
+            select (.name ==\"${REFTSV_FN}\") |
             select(.workflow_run.id==${PREVIOUS_JOB_ID}) |
             select(.expired==false) | 
             .archive_download_url")

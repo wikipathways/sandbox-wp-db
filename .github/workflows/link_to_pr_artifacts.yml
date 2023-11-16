@@ -34,13 +34,6 @@ jobs:
           SUITES_ID=$(jq -r '.check_suite_id' <<< "$WORKFLOW_RUN_EVENT_OBJ")
           echo "Previous Suites ID : $SUITES_ID"
 
-          #INFOJSON_URL=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
-          #  --jq ".artifacts.[] |
-          #  select(.name ==\"${INFOJSON_FN}\") |
-          #  select(.workflow_run.id==${PREVIOUS_JOB_ID}) |
-          #  select(.expired==false) | 
-          #  .archive_download_url")
-
           INFOJSON_ID=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
             --jq ".artifacts.[] |
             select(.name ==\"${INFOJSON_FN}\") |
@@ -52,22 +45,24 @@ jobs:
           echo "INFOJSON_URL: $INFOJSON_URL"
           echo "INFOJSON_URL=$INFOJSON_URL" >> "$GITHUB_ENV"
 
-          DNTSV_URL=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
+          DNTSV_ID=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
             --jq ".artifacts.[] |
             select(.name ==\"${DNTSV_FN}\") |
             select(.workflow_run.id==${PREVIOUS_JOB_ID}) |
             select(.expired==false) | 
-            .archive_download_url")
-
+            .id")
+          DNTSV_URL="https://github.com/wikipathways/sandbox-wp-db/suites/$SUITES_ID/artifacts/$DNTSV_ID"
+          
           echo "DNTSV_URL: $DNTSV_URL"
           echo "DNTSV_URL=$DNTSV_URL" >> "$GITHUB_ENV"
 
-          REFTSV_URL=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
+          REFTSV_ID=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
             --jq ".artifacts.[] |
             select (.name ==\"${REFTSV_FN}\") |
             select(.workflow_run.id==${PREVIOUS_JOB_ID}) |
             select(.expired==false) | 
-            .archive_download_url")
+            .id")
+          REFTSV_URL="https://github.com/wikipathways/sandbox-wp-db/suites/$SUITES_ID/artifacts/$REFTSV_ID"
 
           echo "REFTSV_URL: $REFTSV_URL"
           echo "REFTSV_URL=$REFTSV_URL" >> "$GITHUB_ENV"

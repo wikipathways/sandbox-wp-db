@@ -1,4 +1,4 @@
-name: Link Artifact URLs to PR
+name: Link to PR Artifacts
 
 on:
   workflow_run:

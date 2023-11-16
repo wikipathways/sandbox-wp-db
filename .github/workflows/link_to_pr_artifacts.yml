@@ -81,14 +81,10 @@ jobs:
           NEW_DESCRIPTION="$CURRENT_DESCRIPTION
             ## Generated Files
 
-            You can find files derived from the attached GPML in the table below. Please note that files only stay for around 90 days!
+            You can find files derived from the attached GPML listed below. Please note that files only stay for around 90 days!
 
-            | Name      | Link
-            --------------------------------------------------------------------
-            | info.json | ${{ env.INFOJSON_URL }}
-
-            | datanode.tsv | ${{ env.DNTSV_URL }}
-
-            | refs.tsv | ${{ env.REFTSV_URL }}
+            * [info.json](${{ env.INFOJSON_URL }})
+            * [datanode.tsv](${{ env.DNTSV_URL }})
+            * [refs.tsv](${{ env.REFTSV_URL }})
           "
           gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"

@@ -1,7 +1,12 @@
 name: On Pull Request
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: 
+    inputs:
+      manual-pr-number:
+        description: 'PR Number'
+        required: true
+        default: '10'
   #pull_request:
     #paths:
     #  - '**/*.gpml'
@@ -11,62 +16,74 @@ concurrency:
   cancel-in-progress: false # to allow multiple runs to queue up rather than clobber
 
 jobs:
-  # Retrieves GPML file and PR number associated with incoming Pull Request and creates
-  # global variables that can accessed by subsequent jobs:
-  #  * pr-number = the unique number that identifies a Pull Request
-  #  * add-modified = a GPML file that is being added or modified in the wikipathways database
-  #  * deleted = a GPML file that is being deleted from the wikipathways database
-  get-gpml-pr:
+  # Retrieves PR number and creates a GITHUB_OUTPUT environment variable that can accessed by subsequent jobs.
+  get-pr:
     runs-on: ubuntu-latest
     outputs:
-      pr-number:  ${{ steps.changes.outputs.pr-number }}
-      added-modified: ${{ steps.changes.outputs.added-modified }}
-      deleted: ${{ steps.changes.outputs.deleted }}
+      pr-number:  ${{ steps.get-pr.outputs.pr-number }}
     steps:
-        # Make sure we have some code to diff.
+      - name: Get PR
+        id: get-pr
+        run: | #Get PR from triggering event, unless provided via manual run
+          if [ -z "${{ inputs.manual-pr-number }}" ]; then
+            echo "pr-number=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
+          else
+            echo "pr-number=${{ inputs.manual-pr-number }}" >> $GITHUB_OUTPUT
+          fi
+  # Retrieves GPML file and branch name, then creates GITHUB_OUTPUT environment variables that can accessed by subsequent jobs:
+  get-gpml:
+    needs: [get-pr]
+    if: ${{ needs.get-pr.outputs.pr-number }}
+    runs-on: ubuntu-latest
+    outputs:
+      gpml-file: ${{ steps.get-gpml.outputs.gpml-file }}
+      branch-name: ${{ steps.get-branch.outputs.branch-name }}
+    steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
-      - name: Get PR and GPML
-        id: changes
+        with:
+          ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head  
+
+      - name: Get GPML
+        id: get-gpml
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} #only need to support TESTING via GH API calls
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         run: |
-          echo "GPML files were changed in pull request ${{ github.event.before }} -> ${{ github.event.after }}"
+          GPML_FILE=$(gh pr view ${{ needs.get-pr.outputs.pr-number }} --json files --jq '.files.[].path' | grep '.gpml$')
+          echo "Found GPML file: $GPML_FILE"
+          echo "gpml-file=$GPML_FILE" >> $GITHUB_OUTPUT 
 
-          #echo "pr-number=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
-          echo "pr-number=10" >> $GITHUB_OUTPUT #TESTING
+      - name: Install XML processing tools
+        run: sudo apt-get install -y libxml2-utils
+        
+      - name: Check GPML file
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          wpid="$(basename ""$GPML_FILE"" | sed 's/.gpml//')"
+          org="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Organism)' "$GPML_FILE")"  
+          name="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Name)' "$GPML_FILE")" 
+          desc="$(xmllint --xpath 'string(//*[local-name()="Comment" and @Source="WikiPathways-description"])' "$GPML_FILE")"
 
-          #echo "added-modified=$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)" >> $GITHUB_OUTPUT
-          echo "added-modified=$(gh pr view 10 --json files --jq '.files.[].path' | grep '.gpml$')" >> $GITHUB_OUTPUT #TESTING
-          if git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
-            echo 'added or modified:'
-            git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
-          fi
+          # Start PR description
+          NEW_DESCRIPTION="
+          ## Pathway Information
 
-          echo "deleted=$(git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)" >> $GITHUB_OUTPUT
-          if git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
-            echo 'deleted:'
-            git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
-          fi          
+          **WPID**: $wpid
+          **TITLE**: $name
+          **ORGANISM**: $org
+          **DESCRIPTION**: $desc
+        
+          ---
+          "
+          PR_NUMBER=${{needs.get-pr.outputs.pr-number}}
+          gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
           
-  get-branch:
-    needs: [get-gpml-pr]
-    if: ${{needs.get-gpml-pr.outputs.added-modified}}
-    runs-on: ubuntu-latest
-    outputs:
-      branch-name:  ${{ steps.changes.outputs.branch-name }}
-    steps:
-    - name: Check out code
-      uses: actions/checkout@v4
-      with:
-        ref: refs/pull/${{needs.get-gpml-pr.outputs.pr-number}}/head
-
-    - name: Get branch name for future pushes
-      id: changes
-      run: |
+      - name: Get branch name
+        id: get-branch
+        run: |
           BRANCH_NAME=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            https://api.github.com/repos/${{ github.repository }}/pulls/${{needs.get-gpml-pr.outputs.pr-number}} \
+            https://api.github.com/repos/${{ github.repository }}/pulls/${{needs.get-pr.outputs.pr-number}} \
             | jq -r .head.ref)
           echo "branch-name=$BRANCH_NAME"
           echo "branch-name=$BRANCH_NAME" >> $GITHUB_OUTPUT
@@ -76,42 +93,16 @@ jobs:
           fi
 
   check_gpml:
-    needs: [get-gpml-pr,get-branch]
-    if: ${{needs.get-gpml-pr.outputs.added-modified}}
+    needs: [get-pr,get-gpml]
+    if: ${{needs.get-gpml.outputs.gpml-file}}
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
       uses: actions/checkout@v4
       with:
-        ref: refs/pull/${{needs.get-gpml-pr.outputs.pr-number}}/head
+        ref: refs/pull/${{needs.get-pr.outputs.pr-number}}/head
 
-    - name: Install XML processing tools
-      run: sudo apt-get install -y libxml2-utils
-        
-    - name: Check GPML file
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        GPML_FILE=${{needs.get-gpml-pr.outputs.added-modified}}
-        echo "Found .gpml file: $GPML_FILE"
-        wpid="$(basename ""$GPML_FILE"" | sed 's/.gpml//')"
-        org="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Organism)' "$GPML_FILE")"  
-        name="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Name)' "$GPML_FILE")" 
-        desc="$(xmllint --xpath 'string(//*[local-name()="Comment" and @Source="WikiPathways-description"])' "$GPML_FILE")"
-
-        # Start PR description
-        NEW_DESCRIPTION="
-        ## Pathway Information
-
-        **WPID**: $wpid
-        **TITLE**: $name
-        **ORGANISM**: $org
-        **DESCRIPTION**: $desc
-        
-        ---
-        "
-        PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
-        gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+   
 
   metadata:
     needs: [get-gpml-pr,get-branch,check_gpml]
@@ -120,7 +111,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
         with:
-          ref: refs/pull/${{needs.get-gpml-pr.outputs.pr-number}}/head
+          ref: refs/pull/${{needs.get-pr.outputs.pr-number}}/head
 
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -165,7 +156,7 @@ jobs:
 
       - name: Generate gdb.config, fileNames.config, and fileDownloads.config
         run: |
-          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+          for f in ${{needs.changed-gpmls.outputs.gpml-file}}; do
             scripts/meta-data-action/configGenerator.sh $f
           done
           
@@ -229,7 +220,7 @@ jobs:
       - name: Generate configs, install bridgeDb, generate info and tsv files
         run: |
           chmod 777 meta-data-action-1.1.2-jar-with-dependencies.jar
-          f=${{ needs.get-gpml-pr.outputs.added-modified }}
+          f=${{ needs.get-gpml.outputs.gpml-file }}
           echo "value of f "$f""
           org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
           echo "generating configuration files for "$org""
@@ -273,7 +264,7 @@ jobs:
           refstsv=$(find . -path "./artifacts/WP*refs.tsv" -print -quit)
 
           # Update PR description
-          PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
+          PR_NUMBER=${{needs.get-pr.outputs.pr-number}}
           CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
           NEW_DESCRIPTION="$CURRENT_DESCRIPTION
           ## Generate Metadata Files
@@ -309,7 +300,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v4
       with:
-        ref: refs/pull/${{needs.get-gpml-pr.outputs.pr-number}}/head
+        ref: refs/pull/${{needs.get-pr.outputs.pr-number}}/head
     
     - name: Run generate-references
       env:
@@ -318,7 +309,7 @@ jobs:
         echo "TODO: Run generate-references and attach output TSV to PR"
 
         # Update PR description
-        PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
+        PR_NUMBER=${{needs.get-pr.outputs.pr-number}}
         CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
         NEW_DESCRIPTION="$CURRENT_DESCRIPTION
         - [x] references.tsv generated
@@ -333,7 +324,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v4
       with:
-        ref: refs/pull/${{needs.get-gpml-pr.outputs.pr-number}}/head
+        ref: refs/pull/${{needs.get-pr.outputs.pr-number}}/head
     
     - name: Run create_pathway_frontmatter.py
       env:
@@ -342,7 +333,7 @@ jobs:
         echo "TODO: Run create_pathway_frontmatter.py and attach output MD to PR"
 
         # Update PR description
-        PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
+        PR_NUMBER=${{needs.get-pr.outputs.pr-number}}
         CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
         NEW_DESCRIPTION="$CURRENT_DESCRIPTION
         - [x] .md generated
@@ -357,7 +348,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v4
       with:
-        ref: refs/pull/${{needs.get-gpml-pr.outputs.pr-number}}/head
+        ref: refs/pull/${{needs.get-pr.outputs.pr-number}}/head
     
     - name: Run generate-svgs
       env:
@@ -366,7 +357,7 @@ jobs:
         echo "TODO: Run generate-svgs and attach output JSON, SVG and PNG to PR"
 
         # Update PR description
-        PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
+        PR_NUMBER=${{needs.get-pr.outputs.pr-number}}
         CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
         NEW_DESCRIPTION="$CURRENT_DESCRIPTION
         - [x] .json generated
@@ -386,7 +377,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v4
       with:
-        ref: refs/pull/${{needs.get-gpml-pr.outputs.pr-number}}/head
+        ref: refs/pull/${{needs.get-pr.outputs.pr-number}}/head
     
     - name: Perform automatic test
       env:
@@ -395,7 +386,7 @@ jobs:
         # TODO: perform testing
         
         # Update PR description
-        PR_NUMBER=${{needs.get-gpml-pr.outputs.pr-number}}
+        PR_NUMBER=${{needs.get-pr.outputs.pr-number}}
         CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
         NEW_DESCRIPTION="$CURRENT_DESCRIPTION
         

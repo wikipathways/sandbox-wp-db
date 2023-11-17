@@ -61,7 +61,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "GPML: $GPML_FILE"
           wpid="$(basename ""$GPML_FILE"" | sed 's/.gpml//')"
           org="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Organism)' "$GPML_FILE")"  
           name="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Name)' "$GPML_FILE")" 

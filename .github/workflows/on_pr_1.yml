@@ -92,20 +92,8 @@ jobs:
             git push origin HEAD:refs/heads/$BRANCH_NAME
           fi
 
-  check_gpml:
-    needs: [get-pr,get-gpml]
-    if: ${{needs.get-gpml.outputs.gpml-file}}
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check out code
-      uses: actions/checkout@v4
-      with:
-        ref: refs/pull/${{needs.get-pr.outputs.pr-number}}/head
-
-   
-
   metadata:
-    needs: [get-gpml-pr,get-branch,check_gpml]
+    needs: [get-pr,get-gpml]
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
@@ -294,7 +282,7 @@ jobs:
 
   pubmed:
     if: false
-    needs: [get-gpml-pr,get-branch,metadata]
+    needs: [get-pr,get-gpml,metadata]
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -318,7 +306,7 @@ jobs:
 
   frontmatter:
     if: false
-    needs: [get-gpml-pr,get-branch,pubmed]
+    needs: [get-pr,get-gpml,pubmed]
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -342,7 +330,7 @@ jobs:
 
   json-svg:
     if: false
-    needs: [get-gpml-pr,get-branch,frontmatter]
+    needs: [get-pr,get-gpml,frontmatter]
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -371,7 +359,7 @@ jobs:
 
   testing:
     if: false
-    needs: [get-gpml-pr,get-branch,json-svg]
+    needs: [get-pr,get-gpml,json-svg]
     runs-on: ubuntu-latest
     steps:
     - name: Check out code

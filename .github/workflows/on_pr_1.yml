@@ -34,8 +34,8 @@ jobs:
           fi
   
   get-gpml:
-    # This job gets the GPML filepath and stores it as a GITHUB_OUTPUT environment 
-    # variable that can accessed by subsequent jobs. It also extracts key information from
+    # This job gets the GPML file and uploads it as an artifact 
+    # that can accessed by subsequent jobs. It also extracts key information from
     # the GPML file and starts a new PR description.
     #
     # A markdown text report is stored as pr-desc to be compiled and written to the PR description.
@@ -45,6 +45,7 @@ jobs:
     #if: ${{ needs.get-pr.outputs.pr-number }}
     runs-on: ubuntu-latest
     outputs:
+      gpml-filepath: ${{ steps.get-gpml.outputs.gpml-filepath }}
       gpml-file: ${{ steps.get-gpml.outputs.gpml-file }}
       pr-desc: ${{ steps.get-gpml.outputs.pr-desc }}
       branch-name: ${{ steps.get-branch.outputs.branch-name }}
@@ -65,16 +66,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         run: |
-          GPML_FILE=$(gh pr view $PR_NUMBER --json files --jq '.files.[].path' | grep '.gpml$')
-          echo "Found GPML file: $GPML_FILE"
-          echo "GPML_FILE=$GPML_FILE" >> $GITHUB_ENV #for subsequent steps
-          echo "gpml-file=$GPML_FILE" >> $GITHUB_OUTPUT #for subsequent jobs
+          GPML_FILEPATH=$(gh pr view $PR_NUMBER --json files --jq '.files.[].path' | grep '.gpml$')
+          echo "Found GPML file at: $GPML_FILEPATH"
+          echo "gpml-filepath=$GPML_FILEPATH" >> $GITHUB_OUTPUT #for subsequent jobs
 
           # Extract information from GPML
-          wpid="$(basename ""$GPML_FILE"" | sed 's/.gpml//')"
-          org="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Organism)' "$GPML_FILE")"  
-          name="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Name)' "$GPML_FILE")" 
-          desc="$(xmllint --xpath 'string(//*[local-name()="Comment" and @Source="WikiPathways-description"])' "$GPML_FILE")"
+          GPML_FILE="$(basename ""$GPML_FILEPATH"")"
+          echo "gpml-file=$GPML_FILE" >> $GITHUB_OUTPUT
+          wpid="$($GPML_FILE | sed 's/.gpml//')"
+          org="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Organism)' "$GPML_FILEPATH")"  
+          name="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Name)' "$GPML_FILEPATH")" 
+          desc="$(xmllint --xpath 'string(//*[local-name()="Comment" and @Source="WikiPathways-description"])' "$GPML_FILEPATH")"
 
           # Start PR description (newlines are important in NEW_DESCRIPTION string)
           NEW_DESCRIPTION="
@@ -107,7 +109,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: gpml-file
-          path: ${{ steps.get-gpml.outputs.gpml-file }}
+          path: ${{ steps.get-gpml.outputs.gpml-filepath }}
           retention-days: 1
           if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
           
@@ -139,12 +141,13 @@ jobs:
     outputs:
       pr-desc: ${{ steps.report.outputs.pr-desc }}
     env:
-      GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
+      GPML_FILE: ${{ needs.get-gpml.outpus.gpml-file }}
     steps:
-      - name: Check out code
-        uses: actions/checkout@v4
+      - name: Download GPML artifact
+        # Downloads GPML to top-level dir in VM with original filename
+        uses: actions/download-artifact@v3
         with:
-          ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head
+          name: ${{ needs.get-gpml.outpus.gpml-file }}
 
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -188,7 +191,7 @@ jobs:
           fi
 
       - name: Generate gdb.config, fileNames.config, and fileDownloads.config
-        run: scripts/meta-data-action/configGenerator.sh $GPML_FILE
+        run: scripts/meta-data-action/configGenerator.sh ./$GPML_FILE
           
       - name: Cache all bridge files
         uses: actions/cache@v3
@@ -259,8 +262,8 @@ jobs:
           echo "generating info and datanode files for $wpid, organism "$org""
           java -jar meta-data-action-1.1.2-jar-with-dependencies.jar local "$f" $(date --utc +%F) gdb.config "$org"
           mkdir ./metadata
-          mv pathways/"$wpid"/"$wpid"-info.json metadata/.
-          mv pathways/"$wpid"/"$wpid"*.tsv metadata/.
+          mv "$wpid"-info.json metadata/.
+          mv "$wpid"*.tsv metadata/.
       
       - name: Upload metadata files as artifacts
         uses: actions/upload-artifact@v3

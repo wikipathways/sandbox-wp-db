@@ -102,16 +102,12 @@ jobs:
           
           # Edit PR description
           gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
-
-
-      - name: Add path to a file for upload-artifact
-        run: echo "$GPML_FILE" > file_to_upload.txt
         
       - name: Upload GPML file as artifact
         uses: actions/upload-artifact@v3
         with:
           name: gpml-file
-          path: file_to_upload.txt
+          path: ${{ steps.get-gpml.outputs.gpml-file }}
           retention-days: 1
           if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
           
@@ -448,6 +444,11 @@ jobs:
     needs: [get-pr,get-gpml,metadata]
     runs-on: ubuntu-latest
     steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+      with:
+        ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head
+        
     - name: Compile and update PR description
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 

@@ -149,6 +149,9 @@ jobs:
         with:
           name: gpml-file
 
+      - name: check download
+        run: ls -l
+        
       - name: Setup Java
         uses: actions/setup-java@v3
         with:

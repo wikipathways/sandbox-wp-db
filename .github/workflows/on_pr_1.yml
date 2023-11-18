@@ -488,7 +488,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v4
       with:
-        ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head
+        ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head  
         
     - name: Compile and update PR description
       env:
@@ -497,12 +497,11 @@ jobs:
       run: |          
         NEW_DESCRIPTION="${{ needs.get-gpml.outputs.pr-desc }}
         ${{ needs.metadata.outputs.pr-desc }}
+        ${{ needs.pubmed.outputs.pr-desc }}
+        ${{ needs.frontmatter.outputs.pr-desc }}
+        ${{ needs.json-svg.outputs.pr-desc }}
+        ${{ needs.testing.outputs.pr-desc }}
         "
-        #TODO:
-        #${{ needs.pubmed.outputs.pr-desc }}
-        #${{ needs.frontmatter.outputs.pr-desc }}
-        #${{ needs.json-svg.outputs.pr-desc }}
-        #${{ needs.testing.outputs.pr-desc }}
         
         # Edit PR description
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"

@@ -67,6 +67,7 @@ jobs:
         run: |
           GPML_FILE=$(gh pr view $PR_NUMBER --json files --jq '.files.[].path' | grep '.gpml$')
           echo "Found GPML file: $GPML_FILE"
+          echo "GPML_FILE=$GPML_FILE" >> $GITHUB_ENV #for subsequent steps
           echo "gpml-file=$GPML_FILE" >> $GITHUB_OUTPUT #for subsequent jobs
 
           # Extract information from GPML
@@ -101,6 +102,18 @@ jobs:
           
           # Edit PR description
           gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+
+
+      - name: Add path to a file for upload-artifact
+        run: echo "$GPML_FILE" > file_to_upload.txt
+        
+      - name: Upload GPML file as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: gpml-file
+          path: file_to_upload.txt
+          retention-days: 1
+          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
           
       - name: Get branch name
         id: get-branch
@@ -439,17 +452,15 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
-      run: |   
-        DESC1=$(echo "${{ needs.get-gpml.outputs.pr-desc }}" | base64 --decode)
-        DESC2=$(echo "${{ needs.metadata.outputs.pr-desc }}" | base64 --decode)
-        #DESC3=$(echo "${{ needs.pubmed.outputs.pr-desc }}" | base64 --decode)
-        #DESC4=$(echo "${{ needs.frontmatter.outputs.pr-desc }}" | base64 --decode)
-        #DESC5=$(echo "${{ needs.json-svg.outputs.pr-desc }}" | base64 --decode)
-        #DESC6=$(echo "${{ needs.testing.outputs.pr-desc }}" | base64 --decode)
-        
-        NEW_DESCRIPTION="$DESC1
-        $DESC2
+      run: |          
+        NEW_DESCRIPTION="${{ needs.get-gpml.outputs.pr-desc }}
+        ${{ needs.metadata.outputs.pr-desc }}
         "
+        #TODO:
+        #${{ needs.pubmed.outputs.pr-desc }}
+        #${{ needs.frontmatter.outputs.pr-desc }}
+        #${{ needs.json-svg.outputs.pr-desc }}
+        #${{ needs.testing.outputs.pr-desc }}
         
         # Edit PR description
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"

@@ -344,9 +344,7 @@ jobs:
       id: report
       run: |
         # Update PR description
-        NEW_DESCRIPTION="
-        - [x] references.tsv generated
-        "
+        NEW_DESCRIPTION="- [x] references.tsv generated"
 
         # Store PR description for compilation in final job
           EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
@@ -379,9 +377,7 @@ jobs:
       id: report
       run: |
         # Update PR description
-        NEW_DESCRIPTION="
-        - [x] .md generated
-        "
+        NEW_DESCRIPTION="- [x] .md generated"
         
         # Store PR description for compilation in final job
           EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
@@ -414,8 +410,7 @@ jobs:
       id: report
       run: |
         # Update PR description
-        NEW_DESCRIPTION="
-        - [x] .json generated
+        NEW_DESCRIPTION="- [x] .json generated
         - [x] .svg generated
         - [x] .png generated
 
@@ -454,8 +449,7 @@ jobs:
       id: report
       run: |        
         # Update PR description
-        NEW_DESCRIPTION="
-        
+        NEW_DESCRIPTION='
         ---
         ## Automated Testing
         *As table*
@@ -473,7 +467,7 @@ jobs:
         - [ ] At least one pathway ontology term
         - [ ] Pathway title conforms to the [guidelines](https://github.com/wikipathways/wikipathways-faq/discussions/24)
         ---
-        "
+        '
         
         # Store PR description for compilation in final job
           EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)

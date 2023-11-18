@@ -54,7 +54,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: refs/pull/$PR_NUMBER/head  
+          ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head  
           
       - name: Install XML processing tools
         # Used to parse XML values from GPML
@@ -126,13 +126,12 @@ jobs:
     outputs:
       pr-desc: ${{ steps.report.outputs.pr-desc }}
     env:
-      PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
       - name: Check out code
         uses: actions/checkout@v4
         with:
-          ref: refs/pull/$PR_NUMBER/head
+          ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head
 
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -304,7 +303,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v4
       with:
-        ref: refs/pull/$PR_NUMBER/head
+        ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head
     
     - name: Run generate-references
       run: |
@@ -331,7 +330,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v4
       with:
-        ref: refs/pull/$PR_NUMBER/head
+        ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head
     
     - name: Run create_pathway_frontmatter.py
       run: |
@@ -358,7 +357,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v4
       with:
-        ref: refs/pull/$PR_NUMBER/head
+        ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head
     
     - name: Run generate-svgs
       run: |
@@ -390,7 +389,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v4
       with:
-        ref: refs/pull/$PR_NUMBER/head
+        ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head
     
     - name: Perform automatic test
       run: |

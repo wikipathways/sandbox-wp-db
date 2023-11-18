@@ -143,14 +143,15 @@ jobs:
     env:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
+      - name: Checkout repository for scripts
+        uses: actions/checkout@v4
+        
       - name: Download GPML artifact
-        # Downloads GPML to top-level dir in VM with original filename
+        # Downloads gpml-file artifact to working dir
+        # Note: Automatically unzips to provide GPML with original filename
         uses: actions/download-artifact@v3
         with:
           name: gpml-file
-
-      - name: check download
-        run: ls -l
         
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -325,8 +326,6 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v4
-      with:
-        ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head
     
     - name: Run generate-references
       run: |
@@ -352,8 +351,6 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v4
-      with:
-        ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head
     
     - name: Run create_pathway_frontmatter.py
       run: |
@@ -379,8 +376,6 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v4
-      with:
-        ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head
     
     - name: Run generate-svgs
       run: |
@@ -411,8 +406,6 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v4
-      with:
-        ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head
     
     - name: Perform automatic test
       run: |

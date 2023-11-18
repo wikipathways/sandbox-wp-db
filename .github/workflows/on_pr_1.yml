@@ -258,6 +258,7 @@ jobs:
         with:
           name: metadata
           path: metadata/
+          retention-days: 1
           if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
           
       - name: Report on meta-data-action
@@ -439,12 +440,12 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
       run: |   
-        DESC1: $(echo "${{ needs.get-gpml.outputs.pr-desc }}" | base64 --decode)
-        DESC2: $(echo "${{ needs.metadata.outputs.pr-desc }}" | base64 --decode)
-        #DESC3: $(echo "${{ needs.pubmed.outputs.pr-desc }}" | base64 --decode)
-        #DESC4: $(echo "${{ needs.frontmatter.outputs.pr-desc }}" | base64 --decode)
-        #DESC5: $(echo "${{ needs.json-svg.outputs.pr-desc }}" | base64 --decode)
-        #DESC6: $(echo "${{ needs.testing.outputs.pr-desc }}" | base64 --decode)
+        DESC1=$(echo "${{ needs.get-gpml.outputs.pr-desc }}" | base64 --decode)
+        DESC2=$(echo "${{ needs.metadata.outputs.pr-desc }}" | base64 --decode)
+        #DESC3=$(echo "${{ needs.pubmed.outputs.pr-desc }}" | base64 --decode)
+        #DESC4=$(echo "${{ needs.frontmatter.outputs.pr-desc }}" | base64 --decode)
+        #DESC5=$(echo "${{ needs.json-svg.outputs.pr-desc }}" | base64 --decode)
+        #DESC6=$(echo "${{ needs.testing.outputs.pr-desc }}" | base64 --decode)
         
         NEW_DESCRIPTION="$DESC1
         $DESC2

@@ -87,7 +87,7 @@ jobs:
           ---
           "
           # Store PR description for compilation in final job
-          echo "pr-desc=$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+          echo "pr-desc=$(echo "$NEW_DESCRIPTION" | base64)" >> $GITHUB_OUTPUT
 
           # Temporarily append PR description
           NEW_DESCRIPTION="$NEW_DESCRIPTION
@@ -291,7 +291,7 @@ jobs:
           fi
 
           # Store PR description for compilation in final job
-          echo "pr-desc=$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+          echo "pr-desc=$(echo "$NEW_DESCRIPTION" | base64)" >> $GITHUB_OUTPUT
 
   pubmed:
     if: false
@@ -318,7 +318,7 @@ jobs:
         "
 
         # Store PR description for compilation in final job
-        echo "pr-desc=$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+        echo "pr-desc=$(echo "$NEW_DESCRIPTION" | base64)" >> $GITHUB_OUTPUT
 
   frontmatter:
     if: false
@@ -345,7 +345,7 @@ jobs:
         "
         
         # Store PR description for compilation in final job
-        echo "pr-desc=$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+        echo "pr-desc=$(echo "$NEW_DESCRIPTION" | base64)" >> $GITHUB_OUTPUT
 
   json-svg:
     if: false
@@ -376,7 +376,7 @@ jobs:
         "
         
         # Store PR description for compilation in final job
-        echo "pr-desc=$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+        echo "pr-desc=$(echo "$NEW_DESCRIPTION" | base64)" >> $GITHUB_OUTPUT
 
 
   testing:
@@ -421,23 +421,24 @@ jobs:
         "
         
         # Store PR description for compilation in final job
-        echo "pr-desc=$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+        echo "pr-desc=$(echo "$NEW_DESCRIPTION" | base64)" >> $GITHUB_OUTPUT
 
   update-pr-desc:
     needs: [get-pr,get-gpml,metadata]
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-      PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
-      DESC1: ${{ needs.get-gpml.outputs.pr-desc }}
-      DESC2: ${{ needs.metadata.outputs.pr-desc }}
-      #DESC3: ${{ needs.pubmed.outputs.pr-desc }}
-      #DESC4: ${{ needs.frontmatter.outputs.pr-desc }}
-      #DESC5: ${{ needs.json-svg.outputs.pr-desc }}
-      #DESC6: ${{ needs.testing.outputs.pr-desc }}
     steps:
     - name: Compile and update PR description
-      run: |
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
+      run: |   
+        DESC1: $(echo "${{ needs.get-gpml.outputs.pr-desc }}" | base64 --decode)
+        DESC2: $(echo "${{ needs.metadata.outputs.pr-desc }}" | base64 --decode)
+        #DESC3: $(echo "${{ needs.pubmed.outputs.pr-desc }}" | base64 --decode)
+        #DESC4: $(echo "${{ needs.frontmatter.outputs.pr-desc }}" | base64 --decode)
+        #DESC5: $(echo "${{ needs.json-svg.outputs.pr-desc }}" | base64 --decode)
+        #DESC6: $(echo "${{ needs.testing.outputs.pr-desc }}" | base64 --decode)
+        
         NEW_DESCRIPTION="$DESC1
         $DESC2
         "

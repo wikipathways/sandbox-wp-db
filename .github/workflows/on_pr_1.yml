@@ -48,9 +48,9 @@ jobs:
       gpml-file: ${{ steps.get-gpml.outputs.gpml-file }}
       pr-desc: ${{ steps.get-gpml.outputs.pr-desc }}
       branch-name: ${{ steps.get-branch.outputs.branch-name }}
+    env:
+      PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
     steps:
-      - env:
-          PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -125,10 +125,10 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       pr-desc: ${{ steps.report.outputs.pr-desc }}
+    env:
+      PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
+      GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
-      - env:
-          PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
-          GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
       - name: Check out code
         uses: actions/checkout@v4
         with:
@@ -427,17 +427,16 @@ jobs:
   update-pr-desc:
     needs: [get-pr,get-gpml,metadata]
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+      PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
+      DESC1: ${{ needs.get-gpml.outputs.pr-desc }}
+      DESC2: ${{ needs.metadata.outputs.pr-desc }}
+      #DESC3: ${{ needs.pubmed.outputs.pr-desc }}
+      #DESC4: ${{ needs.frontmatter.outputs.pr-desc }}
+      #DESC5: ${{ needs.json-svg.outputs.pr-desc }}
+      #DESC6: ${{ needs.testing.outputs.pr-desc }}
     steps:
-    - env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-        PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
-        DESC1: ${{ needs.get-gpml.outputs.pr-desc }}
-        DESC2: ${{ needs.metadata.outputs.pr-desc }}
-        #DESC3: ${{ needs.pubmed.outputs.pr-desc }}
-        #DESC4: ${{ needs.frontmatter.outputs.pr-desc }}
-        #DESC5: ${{ needs.json-svg.outputs.pr-desc }}
-        #DESC6: ${{ needs.testing.outputs.pr-desc }}
-        
     - name: Compile and update PR description
       run: |
         NEW_DESCRIPTION="$DESC1

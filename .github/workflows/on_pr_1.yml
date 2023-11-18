@@ -257,7 +257,7 @@ jobs:
       - name: Generate configs, install bridgeDb, generate info and tsv files
         run: |
           chmod 777 meta-data-action-1.1.2-jar-with-dependencies.jar
-          f=$GPML_FILE
+          f=./$GPML_FILE
           org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
           echo "generating configuration files for "$org""
           scripts/meta-data-action/configGenerator.sh "$org"

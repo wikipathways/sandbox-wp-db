@@ -16,57 +16,66 @@ concurrency:
   cancel-in-progress: false # to allow multiple runs to queue up rather than clobber
 
 jobs:
-  # Retrieves PR number and creates a GITHUB_OUTPUT environment variable that can accessed by subsequent jobs.
   get-pr:
+    # This job determines the PR number and stores it as a GITHUB_OUTPUT environment variable 
+    # that can accessed by subsequent jobs.
     runs-on: ubuntu-latest
     outputs:
       pr-number:  ${{ steps.get-pr.outputs.pr-number }}
     steps:
       - name: Get PR
         id: get-pr
-        run: | #Get PR from triggering event, unless provided via manual run
+        # Get PR from triggering event, unless provided via manual workflow run
+        run: | 
           if [ -z "${{ inputs.manual-pr-number }}" ]; then
             echo "pr-number=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
           else
             echo "pr-number=${{ inputs.manual-pr-number }}" >> $GITHUB_OUTPUT
           fi
-  # Retrieves GPML file and branch name, then creates GITHUB_OUTPUT environment variables that can accessed by subsequent jobs:
+  
   get-gpml:
+    # This job gets the GPML filepath and stores it as a GITHUB_OUTPUT environment 
+    # variable that can accessed by subsequent jobs. It also extracts key information from
+    # the GPML file and starts a new PR description.
+    #
+    # A markdown text report is stored as pr-desc to be compiled and written to the PR description.
+    #
+    # The branch name from the submitter's fork is also extracted and stored (if needed).
     needs: [get-pr]
-    if: ${{ needs.get-pr.outputs.pr-number }}
+    #if: ${{ needs.get-pr.outputs.pr-number }}
     runs-on: ubuntu-latest
     outputs:
       gpml-file: ${{ steps.get-gpml.outputs.gpml-file }}
+      pr-desc: ${{ steps.get-gpml.outputs.pr-desc }}
       branch-name: ${{ steps.get-branch.outputs.branch-name }}
     steps:
+      - env:
+          PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head  
+          ref: refs/pull/$PR_NUMBER/head  
+          
+      - name: Install XML processing tools
+        # Used to parse XML values from GPML
+        run: sudo apt-get install -y libxml2-utils
 
       - name: Get GPML
         id: get-gpml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         run: |
-          GPML_FILE=$(gh pr view ${{ needs.get-pr.outputs.pr-number }} --json files --jq '.files.[].path' | grep '.gpml$')
+          GPML_FILE=$(gh pr view $PR_NUMBER --json files --jq '.files.[].path' | grep '.gpml$')
           echo "Found GPML file: $GPML_FILE"
-          echo "GPML_FILE=$GPML_FILE" >> "$GITHUB_ENV"
-          echo "gpml-file=$GPML_FILE" >> $GITHUB_OUTPUT 
+          echo "gpml-file=$GPML_FILE" >> $GITHUB_OUTPUT #for subsequent jobs
 
-      - name: Install XML processing tools
-        run: sudo apt-get install -y libxml2-utils
-        
-      - name: Check GPML file
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
+          # Extract information from GPML
           wpid="$(basename ""$GPML_FILE"" | sed 's/.gpml//')"
           org="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Organism)' "$GPML_FILE")"  
           name="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Name)' "$GPML_FILE")" 
           desc="$(xmllint --xpath 'string(//*[local-name()="Comment" and @Source="WikiPathways-description"])' "$GPML_FILE")"
 
-          # Start PR description
+          # Start PR description (newlines are important in NEW_DESCRIPTION string)
           NEW_DESCRIPTION="
           ## Pathway Information
 
@@ -77,11 +86,21 @@ jobs:
         
           ---
           "
-          PR_NUMBER=${{needs.get-pr.outputs.pr-number}}
+          # Store PR description for compilation in final job
+          echo "pr-desc=$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+
+          # Temporarily append PR description
+          NEW_DESCRIPTION="$NEW_DESCRIPTION
+          
+          Processing...
+          "
+          
+          # Edit PR description
           gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
           
       - name: Get branch name
         id: get-branch
+        # Determine PR branch from submitter's fork, if needed #TODO: prune if not needed
         run: |
           BRANCH_NAME=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             https://api.github.com/repos/${{ github.repository }}/pulls/${{needs.get-pr.outputs.pr-number}} \
@@ -94,13 +113,26 @@ jobs:
           fi
 
   metadata:
+    # This job generates files dervied from the GPML, including info.json, datanodes.tsv and refs.tsv.
+    # The meta-data-action Java application performs the bulk of the work: 
+    # https://github.com/wikipathways/meta-data-action
+    #
+    # The generated files are uploaded as artifacts to be downloaded and pushed together with other files 
+    # to another repo in a final sync job. This strategy allows for parallel job processing!
+    #
+    # A markdown text report is stored as pr-desc to be compiled and written to the PR description.
     needs: [get-pr,get-gpml]
     runs-on: ubuntu-latest
+    outputs:
+      pr-desc: ${{ steps.report.outputs.pr-desc }}
     steps:
+      - env:
+          PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
+          GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
       - name: Check out code
         uses: actions/checkout@v4
         with:
-          ref: refs/pull/${{needs.get-pr.outputs.pr-number}}/head
+          ref: refs/pull/$PR_NUMBER/head
 
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -144,10 +176,7 @@ jobs:
           fi
 
       - name: Generate gdb.config, fileNames.config, and fileDownloads.config
-        run: |
-          for f in ${{needs.changed-gpmls.outputs.gpml-file}}; do
-            scripts/meta-data-action/configGenerator.sh $f
-          done
+        run: scripts/meta-data-action/configGenerator.sh $GPML_FILE
           
       - name: Cache all bridge files
         uses: actions/cache@v3
@@ -209,8 +238,7 @@ jobs:
       - name: Generate configs, install bridgeDb, generate info and tsv files
         run: |
           chmod 777 meta-data-action-1.1.2-jar-with-dependencies.jar
-          f=${{ needs.get-gpml.outputs.gpml-file }}
-          echo "value of f "$f""
+          f=$GPML_FILE
           org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
           echo "generating configuration files for "$org""
           scripts/meta-data-action/configGenerator.sh "$org"
@@ -218,44 +246,27 @@ jobs:
           cat gdb.config
           echo "generating info and datanode files for $wpid, organism "$org""
           java -jar meta-data-action-1.1.2-jar-with-dependencies.jar local "$f" $(date --utc +%F) gdb.config "$org"
-          mkdir ./artifacts
-          mv pathways/"$wpid"/"$wpid"-info.json artifacts/.
-          mv pathways/"$wpid"/"$wpid"*.tsv artifacts/.
+          mkdir ./metadata
+          mv pathways/"$wpid"/"$wpid"-info.json metadata/.
+          mv pathways/"$wpid"/"$wpid"*.tsv metadata/.
       
-      - name: Upload info as artifacts
+      - name: Upload metadata files as artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: info.json
-          path: artifacts/WP*info.json
-          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
-          
-      - name: Upload datanode as artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: datanodes.tsv
-          path: artifacts/WP*datanodes.tsv
-          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
-          
-      - name: Upload refs as artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: refs.tsv
-          path: artifacts/WP*refs.tsv
+          name: metadata
+          path: metadata/
           if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
           
       - name: Report on meta-data-action
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        id: report
         run: |
           # Verify generated files 
-          infojson=$(find . -path "./artifacts/WP*info.json" -print -quit)
-          dntsv=$(find . -path "./artifacts/WP*datanodes.tsv" -print -quit)
-          refstsv=$(find . -path "./artifacts/WP*refs.tsv" -print -quit)
+          infojson=$(find . -path "./metadata/WP*info.json" -print -quit)
+          dntsv=$(find . -path "./metadata/WP*datanodes.tsv" -print -quit)
+          refstsv=$(find . -path "./metadata/WP*refs.tsv" -print -quit)
 
           # Update PR description
-          PR_NUMBER=${{needs.get-pr.outputs.pr-number}}
-          CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
-          NEW_DESCRIPTION="$CURRENT_DESCRIPTION
+          NEW_DESCRIPTION="
           ## Generate Metadata Files
           "
           if [[ -n $infojson ]]; then
@@ -279,105 +290,117 @@ jobs:
             NEW_DESCRIPTION="$NEW_DESCRIPTION
             - [] refs.tsv generated"          
           fi
-          gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+
+          # Store PR description for compilation in final job
+          echo "pr-desc=$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
 
   pubmed:
     if: false
     needs: [get-pr,get-gpml,metadata]
     runs-on: ubuntu-latest
+    outputs:
+      pr-desc: ${{ steps.report.outputs.pr-desc }}
     steps:
     - name: Check out code
       uses: actions/checkout@v4
       with:
-        ref: refs/pull/${{needs.get-pr.outputs.pr-number}}/head
+        ref: refs/pull/$PR_NUMBER/head
     
     - name: Run generate-references
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         echo "TODO: Run generate-references and attach output TSV to PR"
 
+    - name: Report on pubmed
+      id: report
+      run: |
         # Update PR description
-        PR_NUMBER=${{needs.get-pr.outputs.pr-number}}
-        CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
-        NEW_DESCRIPTION="$CURRENT_DESCRIPTION
+        NEW_DESCRIPTION="
         - [x] references.tsv generated
         "
-        gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+
+        # Store PR description for compilation in final job
+        echo "pr-desc=$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
 
   frontmatter:
     if: false
     needs: [get-pr,get-gpml,pubmed]
     runs-on: ubuntu-latest
+    outputs:
+      pr-desc: ${{ steps.report.outputs.pr-desc }}
     steps:
     - name: Check out code
       uses: actions/checkout@v4
       with:
-        ref: refs/pull/${{needs.get-pr.outputs.pr-number}}/head
+        ref: refs/pull/$PR_NUMBER/head
     
     - name: Run create_pathway_frontmatter.py
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         echo "TODO: Run create_pathway_frontmatter.py and attach output MD to PR"
 
+    - name: Report on pubmed
+      id: report
+      run: |
         # Update PR description
-        PR_NUMBER=${{needs.get-pr.outputs.pr-number}}
-        CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
-        NEW_DESCRIPTION="$CURRENT_DESCRIPTION
+        NEW_DESCRIPTION="
         - [x] .md generated
         "
-        gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+        
+        # Store PR description for compilation in final job
+        echo "pr-desc=$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
 
   json-svg:
     if: false
     needs: [get-pr,get-gpml,frontmatter]
     runs-on: ubuntu-latest
+    outputs:
+      pr-desc: ${{ steps.report.outputs.pr-desc }}
     steps:
     - name: Check out code
       uses: actions/checkout@v4
       with:
-        ref: refs/pull/${{needs.get-pr.outputs.pr-number}}/head
+        ref: refs/pull/$PR_NUMBER/head
     
     - name: Run generate-svgs
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         echo "TODO: Run generate-svgs and attach output JSON, SVG and PNG to PR"
 
+    - name: Report on pubmed
+      id: report
+      run: |
         # Update PR description
-        PR_NUMBER=${{needs.get-pr.outputs.pr-number}}
-        CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
-        NEW_DESCRIPTION="$CURRENT_DESCRIPTION
+        NEW_DESCRIPTION="
         - [x] .json generated
         - [x] .svg generated
         - [x] .png generated
 
         *TODO: insert PNG here*
         "
-        gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+        
+        # Store PR description for compilation in final job
+        echo "pr-desc=$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
 
 
   testing:
     if: false
     needs: [get-pr,get-gpml,json-svg]
     runs-on: ubuntu-latest
+    outputs:
+      pr-desc: ${{ steps.report.outputs.pr-desc }}
     steps:
     - name: Check out code
       uses: actions/checkout@v4
       with:
-        ref: refs/pull/${{needs.get-pr.outputs.pr-number}}/head
+        ref: refs/pull/$PR_NUMBER/head
     
     - name: Perform automatic test
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         # TODO: perform testing
-        
+
+    - name: Report on pubmed
+      id: report
+      run: |        
         # Update PR description
-        PR_NUMBER=${{needs.get-pr.outputs.pr-number}}
-        CURRENT_DESCRIPTION=$(gh pr view $PR_NUMBER --json body -q ".body")
-        NEW_DESCRIPTION="$CURRENT_DESCRIPTION
+        NEW_DESCRIPTION="
         
         ---
         ## Automated Testing
@@ -397,4 +420,29 @@ jobs:
         - [ ] Pathway title conforms to the [guidelines](https://github.com/wikipathways/wikipathways-faq/discussions/24)
         ---
         "
+        
+        # Store PR description for compilation in final job
+        echo "pr-desc=$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+
+  update-pr-desc:
+    needs: [get-pr,get-gpml,metadata]
+    runs-on: ubuntu-latest
+    steps:
+    - env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
+        DESC1: ${{ needs.get-gpml.outputs.pr-desc }}
+        DESC2: ${{ needs.metadata.outputs.pr-desc }}
+        #DESC3: ${{ needs.pubmed.outputs.pr-desc }}
+        #DESC4: ${{ needs.frontmatter.outputs.pr-desc }}
+        #DESC5: ${{ needs.json-svg.outputs.pr-desc }}
+        #DESC6: ${{ needs.testing.outputs.pr-desc }}
+        
+    - name: Compile and update PR description
+      run: |
+        NEW_DESCRIPTION="$DESC1
+        $DESC2
+        "
+        
+        # Edit PR description
         gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"

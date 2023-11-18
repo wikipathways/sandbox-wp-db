@@ -320,14 +320,21 @@ jobs:
           echo "$EOF" >> $GITHUB_OUTPUT
 
   pubmed:
-    if: false
-    needs: [get-pr,get-gpml,metadata]
+    if: true
+    needs: [get-pr,get-gpml, metadata]
     runs-on: ubuntu-latest
     outputs:
       pr-desc: ${{ steps.report.outputs.pr-desc }}
+    env:
+      GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
-    - name: Check out code
+    - name: Checkout repository for scripts
       uses: actions/checkout@v4
+        
+    - name: Download GPML artifact
+      # Downloads gpml-file and metadata artifacts to working dir
+      # Note: Automatically unzips to provide files with original filenames
+      uses: actions/download-artifact@v3
     
     - name: Run generate-references
       run: |
@@ -345,14 +352,21 @@ jobs:
         echo "pr-desc=$(echo "$NEW_DESCRIPTION" | base64)" >> $GITHUB_OUTPUT
 
   frontmatter:
-    if: false
-    needs: [get-pr,get-gpml,pubmed]
+    if: true
+    needs: [get-pr,get-gpml,metadata]
     runs-on: ubuntu-latest
     outputs:
       pr-desc: ${{ steps.report.outputs.pr-desc }}
+    env:
+      GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
-    - name: Check out code
+    - name: Checkout repository for scripts
       uses: actions/checkout@v4
+        
+    - name: Download GPML artifact
+      # Downloads gpml-file and metadata artifacts to working dir
+      # Note: Automatically unzips to provide files with original filenames
+      uses: actions/download-artifact@v3
     
     - name: Run create_pathway_frontmatter.py
       run: |
@@ -370,14 +384,21 @@ jobs:
         echo "pr-desc=$(echo "$NEW_DESCRIPTION" | base64)" >> $GITHUB_OUTPUT
 
   json-svg:
-    if: false
-    needs: [get-pr,get-gpml,frontmatter]
+    if: true
+    needs: [get-pr,get-gpml,metadata]
     runs-on: ubuntu-latest
     outputs:
       pr-desc: ${{ steps.report.outputs.pr-desc }}
+    env:
+      GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
-    - name: Check out code
+    - name: Checkout repository for scripts
       uses: actions/checkout@v4
+        
+    - name: Download GPML artifact
+      # Downloads gpml-file and metadata artifacts to working dir
+      # Note: Automatically unzips to provide files with original filenames
+      uses: actions/download-artifact@v3
     
     - name: Run generate-svgs
       run: |
@@ -400,14 +421,21 @@ jobs:
 
 
   testing:
-    if: false
-    needs: [get-pr,get-gpml,json-svg]
+    if: true
+    needs: [get-pr,get-gpml,metadata]
     runs-on: ubuntu-latest
     outputs:
       pr-desc: ${{ steps.report.outputs.pr-desc }}
+    env:
+      GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
-    - name: Check out code
+    - name: Checkout repository for scripts
       uses: actions/checkout@v4
+        
+    - name: Download GPML artifact
+      # Downloads gpml-file and metadata artifacts to working dir
+      # Note: Automatically unzips to provide files with original filenames
+      uses: actions/download-artifact@v3
     
     - name: Perform automatic test
       run: |
@@ -442,7 +470,7 @@ jobs:
         echo "pr-desc=$(echo "$NEW_DESCRIPTION" | base64)" >> $GITHUB_OUTPUT
 
   update-pr-desc:
-    needs: [get-pr,get-gpml,metadata]
+    needs: [get-pr,get-gpml,metadata,pubmed,frontmatter,json-svg,testing]
     runs-on: ubuntu-latest
     steps:
     - name: Check out code

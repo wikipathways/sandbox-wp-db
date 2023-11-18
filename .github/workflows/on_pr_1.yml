@@ -349,7 +349,10 @@ jobs:
         "
 
         # Store PR description for compilation in final job
-        echo "pr-desc=$(echo "$NEW_DESCRIPTION" | base64)" >> $GITHUB_OUTPUT
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "pr-desc<<$EOF" >> $GITHUB_OUTPUT
+          echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
 
   frontmatter:
     if: true
@@ -381,7 +384,10 @@ jobs:
         "
         
         # Store PR description for compilation in final job
-        echo "pr-desc=$(echo "$NEW_DESCRIPTION" | base64)" >> $GITHUB_OUTPUT
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "pr-desc<<$EOF" >> $GITHUB_OUTPUT
+          echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
 
   json-svg:
     if: true
@@ -417,7 +423,10 @@ jobs:
         "
         
         # Store PR description for compilation in final job
-        echo "pr-desc=$(echo "$NEW_DESCRIPTION" | base64)" >> $GITHUB_OUTPUT
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "pr-desc<<$EOF" >> $GITHUB_OUTPUT
+          echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
 
 
   testing:
@@ -467,7 +476,10 @@ jobs:
         "
         
         # Store PR description for compilation in final job
-        echo "pr-desc=$(echo "$NEW_DESCRIPTION" | base64)" >> $GITHUB_OUTPUT
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "pr-desc<<$EOF" >> $GITHUB_OUTPUT
+          echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
 
   update-pr-desc:
     needs: [get-pr,get-gpml,metadata,pubmed,frontmatter,json-svg,testing]

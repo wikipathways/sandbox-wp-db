@@ -87,7 +87,12 @@ jobs:
           ---
           "
           # Store PR description for compilation in final job
-          echo "pr-desc=$(echo "$NEW_DESCRIPTION" | base64)" >> $GITHUB_OUTPUT
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "pr-desc<<$EOF" >> $GITHUB_OUTPUT
+          echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
+
+          #echo "pr-desc=$(echo "$NEW_DESCRIPTION" | base64)" >> $GITHUB_OUTPUT
 
           # Temporarily append PR description
           NEW_DESCRIPTION="$NEW_DESCRIPTION

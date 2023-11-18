@@ -141,13 +141,13 @@ jobs:
     outputs:
       pr-desc: ${{ steps.report.outputs.pr-desc }}
     env:
-      GPML_FILE: ${{ needs.get-gpml.outpus.gpml-file }}
+      GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
       - name: Download GPML artifact
         # Downloads GPML to top-level dir in VM with original filename
         uses: actions/download-artifact@v3
         with:
-          name: ${{ needs.get-gpml.outpus.gpml-file }}
+          name: ${{ needs.get-gpml.outputs.gpml-file }}
 
       - name: Setup Java
         uses: actions/setup-java@v3

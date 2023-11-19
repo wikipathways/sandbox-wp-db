@@ -1,5 +1,26 @@
 name: On Pull Request
-
+# This is the primary workflow to process pathway edits coming in as GPML files from 
+# PathVisio. A new pull request should be create per pathway. Subsequent edits to the
+# same GPML can accumulate in the same pull request while in review. 
+#
+# The outputs of this workflow will be temporarily stored as PR artifacts to allow access
+# by subsequent jobs and to allow parallelization. At the end of the worflow, the outputs
+# will be pushed to the main website (wikipathways.github.io repo) for transparent review.
+#
+# The acceptance/merge of a processed pull request will trigger a secondary workflow to
+# migrate output files to published folders in main website repo, as well as the assets
+# and homology repos.
+#
+# Inputs: Each pull request should have one and only one GPML file attached.
+#
+# Outputs: 
+#  - info.json
+#  - datanodes.tsv
+#  - bibliography.tsv (via refs.tsv)
+#  - .json .svg and .png files
+#  - .md file
+#  - TODO: test results?
+#
 on:
   workflow_dispatch: 
     inputs:

@@ -94,7 +94,7 @@ jobs:
           # Extract information from GPML
           GPML_FILE="$(basename ""$GPML_FILEPATH"")"
           echo "gpml-file=$GPML_FILE" >> $GITHUB_OUTPUT
-          wpid="$($GPML_FILE | sed 's/.gpml//')"
+          wpid="$(echo $GPML_FILE | sed 's/.gpml//')"
           org="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Organism)' "$GPML_FILEPATH")"  
           name="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Name)' "$GPML_FILEPATH")" 
           desc="$(xmllint --xpath 'string(//*[local-name()="Comment" and @Source="WikiPathways-description"])' "$GPML_FILEPATH")"
@@ -282,7 +282,7 @@ jobs:
           org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
           echo "generating configuration files for "$org""
           scripts/meta-data-action/configGenerator.sh "$org"
-          wpid="$(basename ""$f"" | sed 's/.gpml//')"
+          wpid="$(echo $GPML_FILE | sed 's/.gpml//')"
           cat gdb.config
           echo "generating info and datanode files for $wpid, organism "$org""
           java -jar meta-data-action-1.1.2-jar-with-dependencies.jar local "$f" $(date --utc +%F) gdb.config "$org"
@@ -519,7 +519,7 @@ jobs:
         PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
       run: |
           echo "$GPML_FILE"
-          wpid="$($GPML_FILE | sed 's/.gpml//')"
+          wpid="$(echo $GPML_FILE | sed 's/.gpml//')"
           echo "$wpid"
           
           ## Copy to draft_assets

@@ -99,7 +99,7 @@ jobs:
           fi
           
           cp "$GPML_FILEPATH" ./"$GPML_FILE"
-          GPML_FILEPATH="./${GPML_FILE"
+          GPML_FILEPATH="./${GPML_FILE}"
 
           echo "gpml-file=$GPML_FILE" >> $GITHUB_OUTPUT
           echo "gpml-filepath=$GPML_FILEPATH" >> $GITHUB_OUTPUT #for subsequent jobs

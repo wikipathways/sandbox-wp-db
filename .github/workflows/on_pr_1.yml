@@ -496,6 +496,45 @@ jobs:
           echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
           echo "$EOF" >> $GITHUB_OUTPUT
 
+  commit-outputs:
+    needs: [get-pr,get-gpml,metadata,pubmed,frontmatter,json-svg,testing]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download all output files as artifacts
+      uses: actions/download-artifact@v3
+
+    - name: Checkout jekyll repo
+      # TESTING: change repo and ssh-key from sandbox to real
+      uses: actions/checkout@v3
+      with:
+        repository: wikipathways/sandbox-wp.gh.io
+        path: wikipathways.github.io
+        fetch-depth: 1
+        ref: main
+        ssh-key: ${{ secrets.ACTIONS_SANDBOX_DEPLOY_KEY }}
+
+    - name: Commit report
+      env:
+        GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
+        PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
+      run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          ls 
+          wpid="$($GPML_FILE | sed 's/.gpml//')"
+          cp "$wpid".* wikipathways.github.io/draft_assets/"$wpid"/.
+          cp "$wpid"-datanodes.tsv wikipathways.github.io/_data/drafts/.
+          cp "$wpid".md wikipathways.github.io/_drafts/.
+          cd "${{ github.workspace }}/wikipathways.github.io"
+          git add .
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git commit -m 'Adds outputs from PR processing'
+              git pull --rebase
+              git push
+          fi
+  
   update-pr-desc:
     needs: [get-pr,get-gpml,metadata,pubmed,frontmatter,json-svg,testing]
     runs-on: ubuntu-latest

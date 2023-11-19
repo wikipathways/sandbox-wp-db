@@ -500,7 +500,7 @@ jobs:
     needs: [get-pr,get-gpml,metadata,pubmed,frontmatter,json-svg,testing]
     runs-on: ubuntu-latest
     steps:
-    - name: Download all output files as artifacts
+    - name: Download all output files from artifacts
       uses: actions/download-artifact@v3
 
     - name: Checkout jekyll repo
@@ -518,9 +518,6 @@ jobs:
         GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
         PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
       run: |
-          git config --global user.name 'GitHub Action'
-          git config --global user.email 'action@github.com'
-          ls 
           wpid="$($GPML_FILE | sed 's/.gpml//')"
           
           ## Copy to draft_assets
@@ -538,6 +535,8 @@ jobs:
 
           ## Commit, pull and push
           cd "${{ github.workspace }}/wikipathways.github.io"
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
           git add .
           if git diff --exit-code --staged; then
               echo "No changes"

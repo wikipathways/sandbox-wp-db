@@ -55,7 +55,7 @@ jobs:
           fi
   
   get-gpml:
-    # This job gets the GPML file and uploads it as an artifact 
+    # This job gets the GPML file, renames it (if new), and uploads it as an artifact 
     # that can accessed by subsequent jobs. It also extracts key information from
     # the GPML file and starts a new PR description.
     #
@@ -89,11 +89,22 @@ jobs:
         run: |
           GPML_FILEPATH=$(gh pr view $PR_NUMBER --json files --jq '.files.[].path' | grep '.gpml$')
           echo "Found GPML file at: $GPML_FILEPATH"
+          GPML_FILE="$(basename ""$GPML_FILEPATH"")"
+          
+          # Rename if new pathway
+          first_digit=${GPML_FILE:2:1}
+          if [ "$first_digit" == "0" ]; then
+            echo "Temporarily renaming new pathway per PR number."
+            GPML_FILE="WP0${PR_NUMBER}.gpml"
+          fi
+          
+          cp "$GPML_FILEPATH" ./"$GPML_FILE"
+          GPML_FILEPATH="./${GPML_FILE"
+
+          echo "gpml-file=$GPML_FILE" >> $GITHUB_OUTPUT
           echo "gpml-filepath=$GPML_FILEPATH" >> $GITHUB_OUTPUT #for subsequent jobs
 
           # Extract information from GPML
-          GPML_FILE="$(basename ""$GPML_FILEPATH"")"
-          echo "gpml-file=$GPML_FILE" >> $GITHUB_OUTPUT
           wpid="$(echo $GPML_FILE | sed 's/.gpml//')"
           org="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Organism)' "$GPML_FILEPATH")"  
           name="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Name)' "$GPML_FILEPATH")" 
@@ -165,6 +176,7 @@ jobs:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
       - name: Checkout repository for scripts
+        # TODO: impl more efficient way to get scripts
         uses: actions/checkout@v4
         
       - name: Download GPML artifact
@@ -521,6 +533,7 @@ jobs:
           wpid="$(echo $GPML_FILE | sed 's/.gpml//')"
           
           ## Copy to draft_assets
+          mkdir -p wikipathways.github.io/draft_assets/"$wpid"
           cp gpml-file/"$wpid".gpml wikipathways.github.io/draft_assets/"$wpid"/.
           cp metadata/"$wpid".* wikipathways.github.io/draft_assets/"$wpid"/.
           #cp pubmed/"$wpid"-bibliography.tsv wikipathways.github.io/draft_assets/"$wpid"/.

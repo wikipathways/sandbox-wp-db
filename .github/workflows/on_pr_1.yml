@@ -518,7 +518,9 @@ jobs:
         GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
         PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
       run: |
+          echo "$GPML_FILE"
           wpid="$($GPML_FILE | sed 's/.gpml//')"
+          echo "$wpid"
           
           ## Copy to draft_assets
           cp gpml-file/"$wpid".gpml wikipathways.github.io/draft_assets/"$wpid"/.

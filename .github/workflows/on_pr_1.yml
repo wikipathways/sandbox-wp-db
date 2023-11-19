@@ -535,7 +535,7 @@ jobs:
           ## Copy to draft_assets
           mkdir -p wikipathways.github.io/draft_assets/"$wpid"
           cp gpml-file/"$wpid".gpml wikipathways.github.io/draft_assets/"$wpid"/.
-          cp metadata/"$wpid".* wikipathways.github.io/draft_assets/"$wpid"/.
+          cp metadata/"$wpid"*.* wikipathways.github.io/draft_assets/"$wpid"/.
           #cp pubmed/"$wpid"-bibliography.tsv wikipathways.github.io/draft_assets/"$wpid"/.
           #cp json-svg/"$wpid"-bibliography.tsv wikipathways.github.io/draft_assets/"$wpid"/.
           

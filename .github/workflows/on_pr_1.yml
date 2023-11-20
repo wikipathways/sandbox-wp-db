@@ -392,21 +392,21 @@ jobs:
         working-directory: scripts/generate-references
         run: npm install
     
-    - name: Run generate-references
-      run: |
-        echo "TODO: Run generate-references and attach output TSV to PR"
+      - name: Run generate-references
+        run: |
+          echo "TODO: Run generate-references and attach output TSV to PR"
 
-    - name: Report on pubmed
-      id: report
-      run: |
-        # Update PR description
-        NEW_DESCRIPTION="- [x] references.tsv generated"
+      - name: Report on pubmed
+        id: report
+        run: |
+          # Update PR description
+          NEW_DESCRIPTION="- [x] references.tsv generated"
 
-        # Store PR description for compilation in final job
-          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
-          echo "pr-desc<<$EOF" >> $GITHUB_OUTPUT
-          echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
-          echo "$EOF" >> $GITHUB_OUTPUT
+          # Store PR description for compilation in final job
+            EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+            echo "pr-desc<<$EOF" >> $GITHUB_OUTPUT
+            echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+            echo "$EOF" >> $GITHUB_OUTPUT
 
   frontmatter:
     if: true

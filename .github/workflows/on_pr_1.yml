@@ -361,18 +361,36 @@ jobs:
     env:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
-    - name: Checkout repository for scripts
-      uses: actions/checkout@v4
-        
-    - name: Download GPML artifact
-      # Downloads gpml-file and metadata artifacts to working dir
-      # Note: Automatically unzips to provide files with original filenames
-      uses: actions/download-artifact@v3
+      - name: Checkout repository for scripts
+        uses: actions/checkout@v4
+          
+      - name: Download GPML artifact
+        # Downloads gpml-file and metadata artifacts to working dir
+        # Note: Automatically unzips to provide files with original filenames
+        uses: actions/download-artifact@v3
 
-    - name: Setup Node
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+          fetch-depth: 1
+          ref: main
+
+      - name: Install dependencies
+        working-directory: scripts/generate-references
+        run: npm install
     
     - name: Run generate-references
       run: |

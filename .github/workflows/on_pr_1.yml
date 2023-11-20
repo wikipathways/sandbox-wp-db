@@ -391,10 +391,13 @@ jobs:
       - name: Install dependencies
         working-directory: scripts/generate-references
         run: npm install
-    
-      - name: Run generate-references
+
+      - name: Generate references
+        working-directory: scripts/generate-references
         run: |
-          echo "TODO: Run generate-references and attach output TSV to PR"
+          node index.js
+          # where are generated files placed
+          ls -R 
 
       - name: Report on pubmed
         id: report

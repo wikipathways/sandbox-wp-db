@@ -176,66 +176,66 @@ jobs:
     env:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
-      - name: Checkout repository for scripts
-        # TODO: impl more efficient way to get scripts
-        uses: actions/checkout@v4
+    - name: Checkout repository for scripts
+      # TODO: impl more efficient way to get scripts
+      uses: actions/checkout@v4
         
-      - name: Download GPML artifact
-        # Downloads gpml-file artifact to working dir
-        # Note: Automatically unzips as folders containing files with original filenames
-        uses: actions/download-artifact@v3
-        with:
-          name: gpml-file
+    - name: Download GPML artifact
+      # Downloads gpml-file artifact to working dir
+      # Note: Automatically unzips as folders containing files with original filenames
+      uses: actions/download-artifact@v3
+      with:
+        name: gpml-file
         
-      - name: Setup Java
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '11'
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '11'
 
-      - name: Cache meta-data-action with dependencies
-        uses: actions/cache@v3
-        id: cacheMetaJar
-        with:
-          path: ./meta-data-action-1.1.2-jar-with-dependencies.jar
-          key: cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.2-jar-with-dependencies.jar') }}
-          restore-keys: |
-            cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.2-jar-with-dependencies.jar') }}
-            cached-meta-data-action-
+    - name: Cache meta-data-action with dependencies
+      uses: actions/cache@v3
+      id: cacheMetaJar
+      with:
+        path: ./meta-data-action-1.1.2-jar-with-dependencies.jar
+        key: cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.2-jar-with-dependencies.jar') }}
+        restore-keys: |
+          cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.2-jar-with-dependencies.jar') }}
+          cached-meta-data-action-
     
-      - name: Install deps
-        run: |
+    - name: Install deps
+      run: |
           echo "Refreshing cached-meta-data-action"
           if [ ! -e ./meta-data-action-1.1.2-jar-with-dependencies.jar ]; then
             wget -O meta-data-action-1.1.2-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v1.1.2/meta-data-action-1.1.2-jar-with-dependencies.jar
           fi
 
-      - name: Cache and install dependencies
-        uses: actions/cache@v3
-        id: cache
-        with:
-          path: ${{ github.workspace }}/Hs_Derby_Ensembl_108.bridge
-          key: ${{ runner.os }}-java-Hs_Derby_Ensembl_108
-          restore-keys: |
-            ${{ runner.os }}-java-Hs_Derby_Ensembl_108
-            ${{ runner.os }}-java-Hs_Derby_Ensembl_
+    - name: Cache and install dependencies
+      uses: actions/cache@v3
+      id: cache
+      with:
+        path: ${{ github.workspace }}/Hs_Derby_Ensembl_108.bridge
+        key: ${{ runner.os }}-java-Hs_Derby_Ensembl_108
+        restore-keys: |
+          ${{ runner.os }}-java-Hs_Derby_Ensembl_108
+          ${{ runner.os }}-java-Hs_Derby_Ensembl_
                 
-      - if: steps.cache.outputs.cache-hit != 'true'
-        name: Install deps
-        run: |
+    - if: steps.cache.outputs.cache-hit != 'true'
+      name: Install deps
+      run: |
           cd "${{ github.workspace }}"
           if [ ! -e ./Hs_Derby_Ensembl_108.bridge ]; then
             wget -O Hs_Derby_Ensembl_108.bridge https://zenodo.org/record/7781913/files/Hs_Derby_Ensembl_108.bridge?download=1
           fi
 
-      - name: Generate gdb.config, fileNames.config, and fileDownloads.config
-        run: scripts/meta-data-action/configGenerator.sh ./$GPML_FILE
+    - name: Generate gdb.config, fileNames.config, and fileDownloads.config
+      run: scripts/meta-data-action/configGenerator.sh ./$GPML_FILE
           
-      - name: Cache all bridge files
-        uses: actions/cache@v3
-        id: cacheAllBridge
-        with:
-          path: |
+    - name: Cache all bridge files
+      uses: actions/cache@v3
+      id: cacheAllBridge
+      with:
+        path: |
             ./metabolites*.bridge
             ./Ag*.bridge
             ./An*.bridge
@@ -272,13 +272,13 @@ jobs:
             ./Vv*.bridge
             ./Xt*.bridge
             ./Zm*.bridge
-          key: cached-bridge-files
-          restore-keys: |
-            cached-bridge-files
+        key: cached-bridge-files
+        restore-keys: |
+          cached-bridge-files
             
-      - if: steps.cacheAllBridge.outputs.cache-hit != 'true'
-        name: Install all bridge files
-        run: |
+    - if: steps.cacheAllBridge.outputs.cache-hit != 'true'
+      name: Install all bridge files
+      run: |
           echo "Cache not found: cached-bridge-files"
           declare -a OrganismNames=("Metabolites" "Anopheles gambiae" "Aspergillus niger" "Arabidopsis thaliana" "Bacillus subtilis" "Bos taurus" "Caenorhabditis elegans" "Canis familiaris" "Ciona intestinalis" "Danio rerio" "Daphnia magna" "Daphnia pulex" "Drosophila melanogaster" "Escherichia coli" "Gallus gallus" "Fusarium graminearum"  "Glycine max" "Homo sapiens" "Hordeum vulgare" "Macaca mulatta" "Mus musculus" "Mycobacterium tuberculosis" "Ornithorhynchus anatinus" "Ovis aries" "Oryza indica" "Oryza japonica" "Populus trichocarpa" "Pan troglodytes" "Equus caballus" "Rattus norvegicus" "Saccharomyces cerevisiae" "Solanum lycopersicum" "Sus scrofa" "Vitis vinifera" "Xenopus tropicalis" "Zea mays")
           for org in "${OrganismNames[@]}"; do
@@ -288,8 +288,8 @@ jobs:
             scripts/meta-data-action/installDependencies.sh "$org"
           done
 
-      - name: Generate configs, install bridgeDb, generate info and tsv files
-        run: |
+    - name: Generate configs, install bridgeDb, generate info and tsv files
+      run: |
           chmod 777 meta-data-action-1.1.2-jar-with-dependencies.jar
           f=./$GPML_FILE
           org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
@@ -305,17 +305,17 @@ jobs:
           mv pathways/"$wpid"-info.json metadata/.
           mv pathways/"$wpid"*.tsv metadata/.
       
-      - name: Upload metadata files as artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: metadata
-          path: metadata/
-          retention-days: 1
-          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+    - name: Upload metadata files as artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: metadata
+        path: metadata/
+        retention-days: 1
+        if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
           
-      - name: Report on meta-data-action
-        id: report
-        run: |
+    - name: Report on meta-data-action
+      id: report
+      run: |
           # Verify generated files 
           infojson=$(find . -path "./metadata/WP*info.json" -print -quit)
           dntsv=$(find . -path "./metadata/WP*datanodes.tsv" -print -quit)
@@ -366,9 +366,11 @@ jobs:
       uses: actions/checkout@v4
         
     - name: Download GPML artifact
-      # Downloads gpml-file and metadata artifacts to working dir
-      # Note: Automatically unzips as folders containing files with original filenames
+      # Downloads gpml-file artifact to working dir
+      # Note: Automatically unzips file with original filename
       uses: actions/download-artifact@v3
+      with:
+        name: gpml-file
     
     - name: Update author list and create md profiles
       run: |

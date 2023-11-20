@@ -354,7 +354,7 @@ jobs:
 
   pubmed:
     if: true
-    needs: [get-pr,get-gpml, metadata]
+    needs: [get-pr,get-gpml,metadata]
     runs-on: ubuntu-latest
     outputs:
       pr-desc: ${{ steps.report.outputs.pr-desc }}
@@ -368,6 +368,11 @@ jobs:
       # Downloads gpml-file and metadata artifacts to working dir
       # Note: Automatically unzips to provide files with original filenames
       uses: actions/download-artifact@v3
+
+    - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
     
     - name: Run generate-references
       run: |

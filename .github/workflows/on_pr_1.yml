@@ -370,9 +370,9 @@ jobs:
       uses: actions/download-artifact@v3
 
     - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
     
     - name: Run generate-references
       run: |

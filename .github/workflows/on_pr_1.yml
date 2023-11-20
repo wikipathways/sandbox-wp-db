@@ -56,8 +56,9 @@ jobs:
   
   get-gpml:
     # This job gets the GPML file, renames it (if new), and uploads it as an artifact 
-    # that can accessed by subsequent jobs. It also extracts key information from
-    # the GPML file and starts a new PR description.
+    # that can accessed by subsequent jobs. The GPML filename is also stored as a 
+    # GITHUB_OUTPUT environment variable. The job also extracts key information from
+    # the GPML file and starts a new PR description to let reviewers know the processing status.
     #
     # A markdown text report is stored as pr-desc to be compiled and written to the PR description.
     #

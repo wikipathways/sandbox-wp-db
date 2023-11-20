@@ -353,7 +353,7 @@ jobs:
           echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
           echo "$EOF" >> $GITHUB_OUTPUT
 
-authors:
+  authors:
     if: true
     needs: [get-pr,get-gpml,metadata]
     runs-on: ubuntu-latest
@@ -461,7 +461,7 @@ authors:
         echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
         echo "$EOF" >> $GITHUB_OUTPUT
 
-pubmed:
+  pubmed:
     if: true
     needs: [get-pr,get-gpml,metadata]
     runs-on: ubuntu-latest
@@ -520,7 +520,7 @@ pubmed:
             echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
             echo "$EOF" >> $GITHUB_OUTPUT
 
-frontmatter:
+  frontmatter:
     if: true
     needs: [get-pr,get-gpml,metadata]
     runs-on: ubuntu-latest

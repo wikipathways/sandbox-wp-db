@@ -432,7 +432,7 @@ jobs:
               $k=$k + 1
             fi
           done
-          if "$k" > 0
+          if "$k" > 0; then
             mv scripts/author_list.csv authors/.
           fi
           echo "NEW_AUTHORS=$k" >> $GITHUB_ENV
@@ -449,9 +449,9 @@ jobs:
       id: report
       run: |
         # Update PR description
-        if "${{ env.NEW_AUTHORS }}" == 0
+        if "${{ env.NEW_AUTHORS }}" == 0; then
           NEW_DESCRIPTION="- [x] no new author profiles need"
-        elif "${{ env.NEW_AUTHORS }}" == 1
+        elif "${{ env.NEW_AUTHORS }}" == 1; then
           NEW_DESCRIPTION="- [x] 1 author profile generated"
         else
           NEW_DESCRIPTION="- [x] "${{ env.NEW_AUTHORS }}" author profiles generated"

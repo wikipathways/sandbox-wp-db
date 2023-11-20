@@ -520,7 +520,7 @@ pubmed:
             echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
             echo "$EOF" >> $GITHUB_OUTPUT
 
-  frontmatter:
+frontmatter:
     if: true
     needs: [get-pr,get-gpml,metadata]
     runs-on: ubuntu-latest

@@ -182,7 +182,7 @@ jobs:
         
       - name: Download GPML artifact
         # Downloads gpml-file artifact to working dir
-        # Note: Automatically unzips to provide GPML with original filename
+        # Note: Automatically unzips as folders containing files with original filenames
         uses: actions/download-artifact@v3
         with:
           name: gpml-file
@@ -353,7 +353,115 @@ jobs:
           echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
           echo "$EOF" >> $GITHUB_OUTPUT
 
-  pubmed:
+authors:
+    if: true
+    needs: [get-pr,get-gpml,metadata]
+    runs-on: ubuntu-latest
+    outputs:
+      pr-desc: ${{ steps.report.outputs.pr-desc }}
+    env:
+      GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
+    steps:
+    - name: Checkout repository for scripts
+      uses: actions/checkout@v4
+        
+    - name: Download GPML artifact
+      # Downloads gpml-file and metadata artifacts to working dir
+      # Note: Automatically unzips as folders containing files with original filenames
+      uses: actions/download-artifact@v3
+    
+    - name: Update author list and create md profiles
+      run: |
+          # Read list of previous authors
+          authorList=() 
+          {
+            read #skip header line
+            while IFS=, read -r username realname orcid wikidata github; do
+              authorList+=("$username") 
+            done 
+          }< scripts/author_list.csv
+          echo ${#authorList[@]}
+
+          # Generate unique list of authors from this GPML
+          uniqueAuthors=()
+          auth="$(sed -n '/<Pathway /s/.*Author=\"\[\(.*\)\]\".*/\1/p' $GPML_FILE )"
+          IFS=',' read -r -a curAuthors <<< "$auth"
+          echo $curAuthors
+          echo ${#curAuthors[@]}
+          for i in "${curAuthors[@]}"; do
+            skip=
+            for j in "${uniqueAuthors[@]}"; do
+              [[ $i == $j ]] && { skip=1; break; }
+            done
+            [[ -n $skip ]] || uniqueAuthors+=("$i")
+          done
+          echo ${uniqueAuthors[@]}
+          echo ${#uniqueAuthors[@]}
+
+          # For any new authors, generate a profile and add them to the list
+          mkdir ./authors
+          k=0
+          for a in "${uniqueAuthors[@]}"; do
+            a=$(echo "$a" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+            a2=$(echo "$a" | tr ' ' '_')
+            if [[ ! " ${authorList[*]} " =~ " ${a} " ]]; then
+              echo "Adding $a"
+              echo $a","$a",,," >> scripts/author_list.csv
+              echo "---" > "authors/$a.md"
+              echo "username: $a" >> "authors/$a.md"
+              echo "realname: $a" >> "authors/$a.md"
+              echo "website: " >> "authors/$a.md"
+              echo "affiliation: " >> "authors/$a.md"
+              echo "bio: " >> "authors/$a.md"
+              echo "github: " >> "authors/$a.md"
+              echo "orcid: " >> "authors/$a.md"
+              echo "linkedin: " >> "authors/$a.md"
+              echo "googlescholar: " >> "authors/$a.md"
+              echo "wikidata: " >> "authors/$a.md"
+              echo "twitter: " >> "authors/$a.md"
+              echo "mastodon-url: " >> "authors/$a.md"
+              echo "meta:" >> "authors/$a.md"
+              echo "instagram:" >> "authors/$a.md"
+              echo "email:" >> "authors/$a.md"
+              echo "redirect_from:" >> "authors/$a.md"
+              echo "- /index.php/User:$a2" >> "authors/$a.md"
+              echo "- /index.php/Special:Contributions/$a2" >> "authors/$a.md"
+              echo "---" >> "authors/$a.md"
+              $k=$k + 1
+            fi
+          done
+          if "$k" > 0
+            mv scripts/author_list.csv authors/.
+          fi
+          echo "NEW_AUTHORS=$k" >> $GITHUB_ENV
+
+    - name: Upload author files as artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: authors
+        path: authors/
+        retention-days: 1
+        if-no-files-found: ignore # 'warn' or 'ignore' are also available, defaults to `warn`
+        
+    - name: Report on authors
+      id: report
+      run: |
+        # Update PR description
+        if "${{ env.NEW_AUTHORS }}" == 0
+          NEW_DESCRIPTION="- [x] no new author profiles need"
+        elif "${{ env.NEW_AUTHORS }}" == 1
+          NEW_DESCRIPTION="- [x] 1 author profile generated"
+        else
+          NEW_DESCRIPTION="- [x] "${{ env.NEW_AUTHORS }}" author profiles generated"
+        fi
+        
+        # Store PR description for compilation in final job
+        EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+        echo "pr-desc<<$EOF" >> $GITHUB_OUTPUT
+        echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+        echo "$EOF" >> $GITHUB_OUTPUT
+
+pubmed:
     if: true
     needs: [get-pr,get-gpml,metadata]
     runs-on: ubuntu-latest
@@ -367,7 +475,7 @@ jobs:
           
       - name: Download GPML artifact
         # Downloads gpml-file and metadata artifacts to working dir
-        # Note: Automatically unzips to provide files with original filenames
+        # Note: Automatically unzips as folders containing files with original filenames
         uses: actions/download-artifact@v3
 
       - name: Setup Node
@@ -426,7 +534,7 @@ jobs:
         
     - name: Download GPML artifact
       # Downloads gpml-file and metadata artifacts to working dir
-      # Note: Automatically unzips to provide files with original filenames
+      # Note: Automatically unzips as folders containing files with original filenames
       uses: actions/download-artifact@v3
     
     - name: Run create_pathway_frontmatter.py
@@ -459,7 +567,7 @@ jobs:
         
     - name: Download GPML artifact
       # Downloads gpml-file and metadata artifacts to working dir
-      # Note: Automatically unzips to provide files with original filenames
+      # Note: Automatically unzips as folders containing files with original filenames
       uses: actions/download-artifact@v3
     
     - name: Run generate-svgs
@@ -498,7 +606,7 @@ jobs:
         
     - name: Download GPML artifact
       # Downloads gpml-file and metadata artifacts to working dir
-      # Note: Automatically unzips to provide files with original filenames
+      # Note: Automatically unzips as folders containing files with original filenames
       uses: actions/download-artifact@v3
     
     - name: Perform automatic test
@@ -536,7 +644,7 @@ jobs:
           echo "$EOF" >> $GITHUB_OUTPUT
 
   commit-outputs:
-    needs: [get-pr,get-gpml,metadata,pubmed,frontmatter,json-svg,testing]
+    needs: [get-pr,get-gpml,metadata,authors,pubmed,frontmatter,json-svg,testing]
     runs-on: ubuntu-latest
     steps:
     - name: Download all output files from artifacts
@@ -573,6 +681,12 @@ jobs:
           ## Copy to _drafts
           #cp frontmatter/"$wpid".md wikipathways.github.io/_drafts/.
 
+          ## Copy to _authors
+          if [ -d "authors" ]; then
+            cp authors/*.md wikipathways.github.io/_authors/.
+            cp author_list.csv wikipathways.github.io/scripts/.
+          fi
+
           ## Commit, pull and push
           cd "${{ github.workspace }}/wikipathways.github.io"
           git config --global user.name 'GitHub Action'
@@ -587,7 +701,7 @@ jobs:
           fi
   
   update-pr-desc:
-    needs: [get-pr,get-gpml,metadata,pubmed,frontmatter,json-svg,testing]
+    needs: [get-pr,get-gpml,metadata,authors,pubmed,frontmatter,json-svg,testing]
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -602,6 +716,7 @@ jobs:
       run: |          
         NEW_DESCRIPTION="${{ needs.get-gpml.outputs.pr-desc }}
         ${{ needs.metadata.outputs.pr-desc }}
+        ${{ needs.authors.outputs.pr-desc }}
         ${{ needs.pubmed.outputs.pr-desc }}
         ${{ needs.frontmatter.outputs.pr-desc }}
         ${{ needs.json-svg.outputs.pr-desc }}

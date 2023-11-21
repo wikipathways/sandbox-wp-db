@@ -578,7 +578,6 @@ jobs:
     
     - name: Run create_pathway_frontmatter.py
       run: |        
-        #f=./$GPML_FILE
         wpid="$(echo $GPML_FILE | sed 's/.gpml//')"
         echo "generating frontmatter file for $wpid"
         json_info_f=./pathways/"$wpid"/"$wpid"-info.json
@@ -589,6 +588,9 @@ jobs:
         fi
         # generated files are placed in "pathways" dir
         ls -R 
+        mkdir ./frontmatter
+        mv pathways/"$wpid"-info.json frontmatter/.
+        mv pathways/"$wpid"*.tsv frontmatter/.
 
     - name: Report on frontmatter
       id: report
@@ -639,7 +641,7 @@ jobs:
           ${{ runner.os }}-node-
 
     - name: Install deps
-      working-directory: sandbox-wp-db/scripts/generate-svgs
+      #working-directory: sandbox-wp-db/scripts/generate-svgs
       run: |
         npm install
         sudo apt-get update

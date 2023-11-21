@@ -82,6 +82,7 @@ def get_parent_annotation_preferred_label(parent_iri, child_iri = ''):
 
 
 info_f = sys.argv[1]
+print("********* sys.arv is ", info_f)
 if not info_f:
     raise Exception('No info_f provided')
 

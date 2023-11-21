@@ -515,13 +515,21 @@ jobs:
     - name: Generate references
       working-directory: scripts/generate-references
       run: |
-          ls ../..
           mkdir -p ../../pubmed
           cp ../../*-refs.tsv ../../pubmed/.
           node index.js
           # where are generated files placed
-          ls ../../pubmed 
+          rm ../../*-refs.tsv
 
+      
+    - name: Upload pubmed file as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: pubmed
+        path: pubmed/
+        retention-days: 1
+        if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+        
     - name: Report on pubmed
       id: report
       run: |

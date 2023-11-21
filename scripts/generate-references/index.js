@@ -117,6 +117,8 @@ async function main () {
     existingFiles.forEach(file => readCsv(file, cache))
 
     for (const pathway of pathways) {
+        //extract the WPID from the refs.tsv file
+        pathway = pathway.split('-')[0];
         console.log('Processing pathway:', pathway)
 
         const refsFile = path.join(PATHWAY_DIR, `${pathway}-refs.tsv`)

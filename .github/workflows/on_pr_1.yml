@@ -449,12 +449,12 @@ jobs:
       id: report
       run: |
         # Update PR description
-        if "${{ env.NEW_AUTHORS }}" == 0; then
-          NEW_DESCRIPTION="- [x] no new author profiles need"
-        elif "${{ env.NEW_AUTHORS }}" == 1; then
+        if ${{ env.NEW_AUTHORS }} == 0; then
+          NEW_DESCRIPTION="- [x] No new author profiles needed"
+        elif ${{ env.NEW_AUTHORS }} == 1; then
           NEW_DESCRIPTION="- [x] 1 author profile generated"
         else
-          NEW_DESCRIPTION="- [x] "${{ env.NEW_AUTHORS }}" author profiles generated"
+          NEW_DESCRIPTION="- [x] ${{ env.NEW_AUTHORS }} author profiles generated"
         fi
         
         # Store PR description for compilation in final job

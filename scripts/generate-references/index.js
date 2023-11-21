@@ -118,13 +118,13 @@ async function main () {
 
     for (const pathway of pathways) {
         //extract the WPID from the refs.tsv file
-        pathway = pathway.split('-')[0];
-        console.log('Processing pathway:', pathway)
+        const wpid = pathway.split('-')[0];
+        console.log('Processing pathway:', wpid)
 
-        const refsFile = path.join(PATHWAY_DIR, `${pathway}-refs.tsv`)
+        const refsFile = path.join(PATHWAY_DIR, `${wpid}-refs.tsv`)
 
         if (!existsSync(refsFile)) {
-            console.log(`  no ${pathway}-refs.tsv file, skipping`)
+            console.log(`  no ${wpid}-refs.tsv file, skipping`)
             continue
         }
 
@@ -159,7 +159,7 @@ async function main () {
         table.unshift(['ID', 'Database', 'Citation'])
 
         await fs.writeFile(
-            getReferencesFile(pathway),
+            getReferencesFile(wpid),
             table.map(row => row.join('\t')).join('\n') + '\n'
         )
     }

@@ -587,6 +587,8 @@ jobs:
         else
           echo "info.json file missing for $wpid" >2
         fi
+        # generated files are placed in "pathways" dir
+        ls -R 
 
     - name: Report on frontmatter
       id: report
@@ -622,6 +624,26 @@ jobs:
       # Downloads gpml-file and metadata artifacts to working dir
       # Note: Automatically unzips as folders containing files with original filenames
       uses: actions/download-artifact@v3
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - name: Cache NPM dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: Install deps
+      working-directory: sandbox-wp-db/scripts/generate-svgs
+      run: |
+        npm install
+        sudo apt-get update
+        sudo apt-get install -y xmlstarlet
     
     - name: Run generate-svgs
       run: |
@@ -732,7 +754,7 @@ jobs:
           cp pubmed/"$wpid"-bibliography.tsv wikipathways.github.io/_data/drafts/.
           
           ## Copy to _drafts
-          #cp frontmatter/"$wpid".md wikipathways.github.io/_drafts/.
+          cp frontmatter/"$wpid".md wikipathways.github.io/_drafts/.
 
           ## Copy to _authors
           if [ -d "authors" ]; then

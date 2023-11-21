@@ -85,10 +85,10 @@ async function format (id, database) {
 }
 
 const PROJECT_DIR = path.join(__dirname, '..', '..')
-const PATHWAY_DIR = path.join(PROJECT_DIR, 'pathways')
+const PATHWAY_DIR = path.join(PROJECT_DIR, 'pubmed')
 
 function getReferencesFile (pathway) {
-    return path.join(PATHWAY_DIR, pathway, `${pathway}-bibliography.tsv`)
+    return path.join(PATHWAY_DIR, `${pathway}-bibliography.tsv`)
 }
 
 function sortIdentifier (a, b) {
@@ -119,7 +119,7 @@ async function main () {
     for (const pathway of pathways) {
         console.log('Processing pathway:', pathway)
 
-        const refsFile = path.join(PATHWAY_DIR, pathway, `${pathway}-refs.tsv`)
+        const refsFile = path.join(PATHWAY_DIR, `${pathway}-refs.tsv`)
 
         if (!existsSync(refsFile)) {
             console.log(`  no ${pathway}-refs.tsv file, skipping`)

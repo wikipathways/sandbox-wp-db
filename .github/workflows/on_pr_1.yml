@@ -566,12 +566,29 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: metadata
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+          
+    - name: Install deps
+      run: |
+        pip install python-frontmatter
     
     - name: Run create_pathway_frontmatter.py
-      run: |
-        echo "TODO: Run create_pathway_frontmatter.py and attach output MD to PR"
+      run: |        
+        #f=./$GPML_FILE
+        wpid="$(echo $GPML_FILE | sed 's/.gpml//')"
+        echo "generating frontmatter file for $wpid"
+        json_info_f=./pathways/"$wpid"/"$wpid"-info.json
+        if [ -e "$json_info_f" ]; then
+          python scripts/create_pathway_frontmatter.py "$json_info_f"
+        else
+          echo "info.json file missing for $wpid" >2
+        fi
 
-    - name: Report on pubmed
+    - name: Report on frontmatter
       id: report
       run: |
         # Update PR description

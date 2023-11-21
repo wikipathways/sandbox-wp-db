@@ -506,9 +506,11 @@ jobs:
       - name: Generate references
         working-directory: scripts/generate-references
         run: |
+          mkdir -p pubmed
+          cp metadata/*-refs.tsv pubmed/.
           node index.js
           # where are generated files placed
-          ls -R 
+          ls pubmed 
 
       - name: Report on pubmed
         id: report

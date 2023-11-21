@@ -707,12 +707,12 @@ jobs:
           mkdir -p wikipathways.github.io/draft_assets/"$wpid"
           cp gpml-file/"$wpid".gpml wikipathways.github.io/draft_assets/"$wpid"/.
           cp metadata/"$wpid"*.* wikipathways.github.io/draft_assets/"$wpid"/.
-          #cp pubmed/"$wpid"-bibliography.tsv wikipathways.github.io/draft_assets/"$wpid"/.
+          cp pubmed/"$wpid"-bibliography.tsv wikipathways.github.io/draft_assets/"$wpid"/.
           #cp json-svg/"$wpid"-bibliography.tsv wikipathways.github.io/draft_assets/"$wpid"/.
           
           ## Copy to _data/drafts
           cp metadata/"$wpid"-datanodes.tsv wikipathways.github.io/_data/drafts/.
-          #cp pubmed/"$wpid"-bibliography.tsv wikipathways.github.io/_data/drafts/.
+          cp pubmed/"$wpid"-bibliography.tsv wikipathways.github.io/_data/drafts/.
           
           ## Copy to _drafts
           #cp frontmatter/"$wpid".md wikipathways.github.io/_drafts/.

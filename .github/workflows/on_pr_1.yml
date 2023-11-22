@@ -580,7 +580,8 @@ jobs:
       run: |        
         wpid="$(echo $GPML_FILE | sed 's/.gpml//')"
         echo "generating frontmatter file for $wpid"
-        json_info_f=./pathways/"$wpid"/"$wpid"-info.json
+        json_info_f=./"$wpid"-info.json
+        echo "*****input for python script : $json_info_f"
         if [ -e "$json_info_f" ]; then
           python scripts/create_pathway_frontmatter.py "$json_info_f"
         else
@@ -588,9 +589,9 @@ jobs:
         fi
         # generated files are placed in "pathways" dir
         ls -R 
-        mkdir ./frontmatter
-        mv pathways/"$wpid"-info.json frontmatter/.
-        mv pathways/"$wpid"*.tsv frontmatter/.
+        #mkdir ./frontmatter
+        #mv pathways/"$wpid"-info.json frontmatter/.
+        #mv pathways/"$wpid"*.tsv frontmatter/.
 
     - name: Report on frontmatter
       id: report

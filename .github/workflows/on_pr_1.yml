@@ -685,10 +685,12 @@ jobs:
         done
 
         #move the generated files to the json-svg folder
-        mkdir ./json-svg
-        mv $DB_PATH/pathways/"$wpid"/"$wpid".json json-svg/. 
-        mv $DB_PATH/pathways/"$wpid"/"$wpid".png json-svg/. 
-        mv $DB_PATH/pathways/"$wpid"/"$wpid".svg json-svg/. 
+        echo "********* current folder path is"
+        pwd
+        mkdir ../../json-svg
+        mv $DB_PATH/pathways/"$wpid"/"$wpid".json ../../json-svg/. 
+        mv $DB_PATH/pathways/"$wpid"/"$wpid".png ../../json-svg/. 
+        mv $DB_PATH/pathways/"$wpid"/"$wpid".svg ../../json-svg/. 
         mv $DB_PATH/pathways/"$wpid"/"$wpid"-thumb.png json-svg/.  
 
     - name: Upload json-svg file as artifact

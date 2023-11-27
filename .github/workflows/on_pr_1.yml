@@ -587,11 +587,9 @@ jobs:
         else
           echo "info.json file missing for $wpid" >2
         fi
-        # generated files are placed in "pathways" dir
-        ls -R 
-        #mkdir ./frontmatter
-        #mv pathways/"$wpid"-info.json frontmatter/.
-        #mv pathways/"$wpid"*.tsv frontmatter/.
+        #move the generated file to the frontmatter folder
+        mkdir ./frontmatter
+        mv ./"$wpid".md frontmatter/.
 
     - name: Report on frontmatter
       id: report
@@ -642,7 +640,7 @@ jobs:
           ${{ runner.os }}-node-
 
     - name: Install deps
-      working-directory: sandbox-wp-db/scripts/generate-svgs
+      working-directory: scripts/generate-svgs
       run: |
         npm install
         sudo apt-get update

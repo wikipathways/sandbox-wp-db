@@ -642,7 +642,7 @@ jobs:
           ${{ runner.os }}-node-
 
     - name: Install deps
-      #working-directory: sandbox-wp-db/scripts/generate-svgs
+      working-directory: sandbox-wp-db/scripts/generate-svgs
       run: |
         npm install
         sudo apt-get update

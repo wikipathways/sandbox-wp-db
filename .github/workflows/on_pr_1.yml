@@ -650,7 +650,6 @@ jobs:
     - name: Install deps
       working-directory: scripts/generate-svgs
       run: |
-        ls -R
         npm install
         sudo apt-get update
         sudo apt-get install -y xmlstarlet
@@ -658,6 +657,42 @@ jobs:
     - name: Run generate-svgs
       run: |
         echo "TODO: Run generate-svgs and attach output JSON, SVG and PNG to PR"
+
+    - name: Convert GPML to JSON and SVG
+      run: |
+        echo "SANDBOX: Adapted to produce JSON and SVG files in sandbox-wp-db repo only"
+        DB_PATH="${{ github.workspace }}/sandbox-wp-db"
+        for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+          wpid="$(basename ""$f"" | sed 's/.gpml//')"
+          echo "generating JSON and SVG files for $wpid"
+          cd "$DB_PATH"
+          mkdir -p pathways/"$wpid"
+          
+          for old_f in pathways/"$wpid"/"$wpid".{json,svg}; do 
+            if [ -e "$old_f" ]; then
+              rm "$old_f"
+            fi
+          done
+          
+          cd "scripts/generate-svgs"
+          ./gpmlconverter --id "$wpid" -i $DB_PATH/gpml-file/"$wpid".gpml -o $DB_PATH/pathways/"$wpid"/"$wpid".svg
+          
+          # delete intermediate JSON files
+          rm $DB_PATH/pathways/"$wpid"/"$wpid".json.b4bridgedb.json || true
+          rm $DB_PATH/pathways/"$wpid"/"$wpid".b4wd.json || true
+          rm $DB_PATH/pathways/"$wpid"/"$wpid".b4hgnc.json || true
+          
+          # pretty print the JSON
+          for json_f in $DB_PATH/pathways/"$wpid"/"$wpid".json; do
+            mv "$json_f" "$json_f".tmp.json 
+            jq -S . "$json_f".tmp.json >"$json_f"
+            rm "$json_f".tmp.json
+          done
+        done 
+        #list the files generated
+        ls
+        echo "sub-folder"
+        ls $DB_PATH/pathways/"$wpid"/    
 
     - name: Report on json-svg
       id: report

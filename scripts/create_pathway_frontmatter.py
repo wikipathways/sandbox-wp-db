@@ -92,7 +92,8 @@ wpid = get_wpid(info_fp.stem)
 if not wpid:
     raise Exception('Cannot extract WikiPathways ID from ' + info_f)
 
-frontmatter_fp = Path('./pathways/' + wpid + '/' + wpid + '.md')
+#frontmatter_fp = Path('./pathways/' + wpid + '/' + wpid + '.md')
+frontmatter_fp = Path('./' + wpid + '.md')
 frontmatter_f = str(frontmatter_fp)
 if frontmatter_fp.exists():
     post = frontmatter.load(frontmatter_f, handler=YAMLHandler())

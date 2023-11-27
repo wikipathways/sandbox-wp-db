@@ -591,6 +591,14 @@ jobs:
         mkdir ./frontmatter
         mv ./"$wpid".md frontmatter/.
 
+    - name: Upload frontmatter file as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: frontmatter
+        path: frontmatter/
+        retention-days: 1
+        if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+
     - name: Report on frontmatter
       id: report
       run: |
@@ -651,7 +659,7 @@ jobs:
       run: |
         echo "TODO: Run generate-svgs and attach output JSON, SVG and PNG to PR"
 
-    - name: Report on pubmed
+    - name: Report on json-svg
       id: report
       run: |
         # Update PR description

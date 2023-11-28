@@ -412,30 +412,31 @@ jobs:
           k=0
           for a in "${uniqueAuthors[@]}"; do
             a=$(echo "$a" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+            a1=${a//&/and}
             a2=$(echo "$a" | tr ' ' '_')
             if [[ ! " ${authorList[*]} " =~ " ${a} " ]]; then
               echo "Adding $a"
               echo $a","$a",,," >> scripts/author_list.csv
-              echo "---" > "authors/$a.md"
-              echo "username: $a" >> "authors/$a.md"
-              echo "realname: $a" >> "authors/$a.md"
-              echo "website: " >> "authors/$a.md"
-              echo "affiliation: " >> "authors/$a.md"
-              echo "bio: " >> "authors/$a.md"
-              echo "github: " >> "authors/$a.md"
-              echo "orcid: " >> "authors/$a.md"
-              echo "linkedin: " >> "authors/$a.md"
-              echo "googlescholar: " >> "authors/$a.md"
-              echo "wikidata: " >> "authors/$a.md"
-              echo "twitter: " >> "authors/$a.md"
-              echo "mastodon-url: " >> "authors/$a.md"
-              echo "meta:" >> "authors/$a.md"
-              echo "instagram:" >> "authors/$a.md"
-              echo "email:" >> "authors/$a.md"
-              echo "redirect_from:" >> "authors/$a.md"
-              echo "- /index.php/User:$a2" >> "authors/$a.md"
-              echo "- /index.php/Special:Contributions/$a2" >> "authors/$a.md"
-              echo "---" >> "authors/$a.md"
+              echo "---" > "authors/$a1.md"
+              echo "username: $a1" >> "authors/$a1.md"
+              echo "realname: $a" >> "authors/$a1.md"
+              echo "website: " >> "authors/$a1.md"
+              echo "affiliation: " >> "authors/$a1.md"
+              echo "bio: " >> "authors/$a1.md"
+              echo "github: " >> "authors/$a1.md"
+              echo "orcid: " >> "authors/$a1.md"
+              echo "linkedin: " >> "authors/$a1.md"
+              echo "googlescholar: " >> "authors/$a1.md"
+              echo "wikidata: " >> "authors/$a1.md"
+              echo "twitter: " >> "authors/$a1.md"
+              echo "mastodon-url: " >> "authors/$a1.md"
+              echo "meta:" >> "authors/$a1.md"
+              echo "instagram:" >> "authors/$a1.md"
+              echo "email:" >> "authors/$a1.md"
+              echo "redirect_from:" >> "authors/$a1.md"
+              echo "- /index.php/User:$a2" >> "authors/$a1.md"
+              echo "- /index.php/Special:Contributions/$a2" >> "authors/$a1.md"
+              echo "---" >> "authors/$a1.md"
               $k=$k + 1
             fi
           done
@@ -584,6 +585,7 @@ jobs:
         echo "*****input for python script : $json_info_f"
         if [ -e "$json_info_f" ]; then
           python scripts/create_pathway_frontmatter.py "$json_info_f"
+          sed -i 's/&amp;/and/g' ./"$wpid".md
         else
           echo "info.json file missing for $wpid" >2
         fi

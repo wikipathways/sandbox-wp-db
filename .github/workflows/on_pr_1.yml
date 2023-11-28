@@ -687,8 +687,6 @@ jobs:
         done
 
         #move the generated files to the json-svg folder
-        echo "********* current folder path is"
-        pwd
         mkdir ../../json-svg
         mv $DB_PATH/pathways/"$wpid"/"$wpid".json ../../json-svg/. 
         mv $DB_PATH/pathways/"$wpid"/"$wpid".png ../../json-svg/. 

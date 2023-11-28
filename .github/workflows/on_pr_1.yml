@@ -691,7 +691,7 @@ jobs:
         mv $DB_PATH/pathways/"$wpid"/"$wpid".json ../../json-svg/. 
         mv $DB_PATH/pathways/"$wpid"/"$wpid".png ../../json-svg/. 
         mv $DB_PATH/pathways/"$wpid"/"$wpid".svg ../../json-svg/. 
-        mv $DB_PATH/pathways/"$wpid"/"$wpid"-thumb.png ./../json-svg/.  
+        mv $DB_PATH/pathways/"$wpid"/"$wpid"-thumb.png ../../json-svg/.  
 
     - name: Upload json-svg file as artifact
       uses: actions/upload-artifact@v3

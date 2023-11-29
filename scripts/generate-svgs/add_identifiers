@@ -1,0 +1,55 @@
+#!/usr/bin/env node
+
+const fs = require("fs");
+const path = require("path");
+
+const pathwayFile = process.argv[2];
+if (!pathwayFile) {
+  throw new Error("Must specify a pathway");
+}
+const { pathway, entitiesById } = JSON.parse(fs.readFileSync(pathwayFile));
+const pathwayId = pathway.id;
+
+// Find the corresponding datanodes.tsv file of the given pathway
+const parsedPath = path.parse(pathwayFile);
+pathToDatabase = path.join(__dirname, "..", "..");
+pathToDatanodes = path.join(pathToDatabase, "pathways", parsedPath.name, parsedPath.name + "-datanodes.tsv");
+
+// Read datanodes.tsv file
+const datanodesData = fs.readFileSync(pathToDatanodes, 'utf8');
+
+// Create a map between labels and compact identifiers
+let dataNodesMap = new Map();
+datanodesData.split(/\r?\n/).forEach((line, index) => {
+  if (index != 0) {
+    let lineArray = line.split('\t')
+    dataNodesMap.set(lineArray[0], lineArray[2]);
+  }
+})
+
+// DataNodes
+let dataNodes = Object.values(entitiesById).filter(
+  entityById =>
+    entityById.type !== undefined &&
+    entityById.type.indexOf("DataNode") > -1 &&
+    entityById.xrefDataSource &&
+    entityById.xrefIdentifier
+)
+
+dataNodes.forEach(function(entityById) {
+  let label = entityById.textContent;
+  let compactIdentifier = dataNodesMap.get(label);
+  entityById.type.push("CompactIdentifier:"+compactIdentifier);
+});
+
+fs.writeFile(
+  pathwayFile,
+  JSON.stringify({ pathway, entitiesById }),
+  function(err) {
+    if (err) {
+      console.error(`Error adding compact identifier:
+      ${errString}
+      ${__filename}`);
+    }
+  }
+);

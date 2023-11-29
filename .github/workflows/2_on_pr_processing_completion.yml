@@ -1,3 +1,7 @@
+name: On Pull Request
+# This workflow is triggered by the completion of the primary pull request processing workflow..
+# It distinguishes between success and failure of the triggering workflow.
+# It is used to set labels and reviewers on the pull request.
 on:
   workflow_run:
     workflows: [1_on_pull_request.yml]

@@ -111,6 +111,35 @@ if not 'description' in parsed_metadata:
 if not 'revision' in parsed_metadata:
     parsed_metadata['revision'] = None
 
+# Add in communities
+communities_by_wpid = dict()
+for p in sorted(Path('./').joinpath('communities/').glob('**/*.txt')):
+    community = p.stem
+    with p.open() as f:
+        for id in f.read().splitlines():
+            if not id in communities_by_wpid:
+                communities_by_wpid[id] = list()
+            communities_by_wpid[id].append(community)
+
+communities = communities_by_wpid.get(wpid, list())
+post['communities'] = communities
+
+# Add in NDEx UUID
+ndex_by_wpid = {}
+with open(Path('./').joinpath('downstream/ndex_lookup.csv')) as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+        ndex_by_wpid[row['wpid']] = row['ndexid']
+
+ndex = ndex_by_wpid.get(wpid)
+post['ndex'] = ndex
+
+# Add in citedIn
+ci_path = Path('./').joinpath('downstream/citedin_lookup.yml')
+citedin_lookup = frontmatter.load(str(ci_path), handler=YAMLHandler())
+citedin = citedin_lookup.get(wpid, str())
+post['citedin'] = citedin
+
 for key, value in parsed_metadata.items():
     if key == 'ontology-ids':
         annotations = []

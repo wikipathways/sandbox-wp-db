@@ -39,7 +39,7 @@ let dataNodes = Object.values(entitiesById).filter(
 dataNodes.forEach(function(entityById) {
   let label = entityById.textContent;
   let entityInfo = dataNodesMap.get(label);
-  if(entityById !== undefined){
+  if(entityInfo !== undefined){
     let compactIdentifier = entityInfo[2];
     // Add compact identifier
     entityById.type.push("CompactIdentifier:" + compactIdentifier);

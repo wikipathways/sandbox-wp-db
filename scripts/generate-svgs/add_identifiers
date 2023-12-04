@@ -39,17 +39,18 @@ let dataNodes = Object.values(entitiesById).filter(
 dataNodes.forEach(function(entityById) {
   let label = entityById.textContent;
   let entityInfo = dataNodesMap.get(label);
-  let compactIdentifier = entityInfo[2];
-  // Add compact identifier
-  entityById.type.push("CompactIdentifier:" + compactIdentifier);
-  // Add label
-  entityById.type.push(label);
-  /* Add other identifiers (First 4 indexes correspond to "Label", "Type", 
-     "Identifier" and "Comment" columns in datanodes file, so skip them.) */
-  for(let i = 4; i < entityInfo.length; i++) {
-    let idList = entityInfo[i].split(';');
-    if(!(idList.length == 1 && idList[0] == '')) {
-      idList.forEach(singleId => {
+  if(entityById !== undefined){
+    let compactIdentifier = entityInfo[2];
+    // Add compact identifier
+    entityById.type.push("CompactIdentifier:" + compactIdentifier);
+    // Add label
+    entityById.type.push(label);
+    /* Add other identifiers (First 4 indexes correspond to "Label", "Type", 
+       "Identifier" and "Comment" columns in datanodes file, so skip them.) */
+    for(let i = 4; i < entityInfo.length; i++) {
+      let idList = entityInfo[i].split(';');
+      if(!(idList.length == 1 && idList[0] == '')) {
+        idList.forEach(singleId => {
         let idSplitted = singleId.split(/:(.*)/s);
         let idType = idSplitted[0];
         let idValue = idSplitted[1];
@@ -76,7 +77,8 @@ dataNodes.forEach(function(entityById) {
           idToAdd = "InChI:" + idValue;
         }
         entityById.type.push(idToAdd);
-      });
+        });
+      }
     }
   }
 });

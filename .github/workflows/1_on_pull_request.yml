@@ -1,4 +1,4 @@
-name: On Pull Request
+name: 1. On Pull Request
 # This is the primary workflow to process pathway edits coming in as GPML files from 
 # PathVisio. A new pull request should be create per pathway. Subsequent edits to the
 # same GPML can accumulate in the same pull request while in review. 

@@ -106,7 +106,7 @@ jobs:
             #TODO: add label to PR
             wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
             echo $wpid
-            GPML_FILE="$wpid__PR${PR_NUMBER}.gpml"
+            GPML_FILE="${wpid}__PR${PR_NUMBER}.gpml"
             echo "$GPM_FILE"
           else
             echo "Assigning temporary WPID and appending PR number."
@@ -122,7 +122,7 @@ jobs:
           echo "gpml-filepath=$GPML_FILEPATH" >> $GITHUB_OUTPUT #for subsequent jobs
 
           # Extract information from GPML
-          wpid="$(echo $GPML_FILE | sed 's/.gpml//')"
+          wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
           org="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Organism)' "$GPML_FILEPATH")"  
           name="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Name)' "$GPML_FILEPATH")" 
           desc="$(xmllint --xpath 'string(//*[local-name()="Comment" and @Source="WikiPathways-description"])' "$GPML_FILEPATH")"
@@ -325,7 +325,7 @@ jobs:
           org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
           echo "generating configuration files for "$org""
           scripts/meta-data-action/configGenerator.sh "$org"
-          wpid="$(echo $GPML_FILE | sed 's/.gpml//')"
+          wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
           cat gdb.config
           echo "generating info and datanode files for $wpid, organism "$org""
           java -jar meta-data-action-1.1.2-jar-with-dependencies.jar local "$f" $(date --utc +%F) gdb.config "$org"
@@ -610,7 +610,7 @@ jobs:
     
     - name: Run create_pathway_frontmatter.py
       run: |        
-        wpid="$(echo $GPML_FILE | sed 's/.gpml//')"
+        wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
         echo "generating frontmatter file for $wpid"
         json_info_f=./"$wpid"-info.json
         echo "*****input for python script : $json_info_f"
@@ -693,7 +693,7 @@ jobs:
       run: |
         echo "SANDBOX: Adapted to produce JSON and SVG files in sandbox-wp-db repo only"
         DB_PATH="${{ github.workspace }}"
-        wpid="$(echo $GPML_FILE | sed 's/.gpml//')"
+        wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
         echo "generating JSON and SVG files for $wpid"
         cd "$DB_PATH"
         mkdir -p pathways/"$wpid"
@@ -825,7 +825,7 @@ jobs:
         GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
         PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
       run: |
-          wpid="$(echo $GPML_FILE | sed 's/.gpml//')"
+          wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
           
           ## Copy to draft_assets
           mkdir -p wikipathways.github.io/draft_assets/"$wpid"

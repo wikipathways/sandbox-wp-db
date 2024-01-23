@@ -69,6 +69,7 @@ jobs:
     outputs:
       gpml-filepath: ${{ steps.get-gpml.outputs.gpml-filepath }}
       gpml-file: ${{ steps.get-gpml.outputs.gpml-file }}
+      status: ${{ steps.get-gpml.outputs.status }}
       pr-desc: ${{ steps.get-gpml.outputs.pr-desc }}
       branch-name: ${{ steps.get-branch.outputs.branch-name }}
     env:
@@ -92,11 +93,24 @@ jobs:
           echo "Found GPML file at: $GPML_FILEPATH"
           GPML_FILE="$(basename ""$GPML_FILEPATH"")"
           
-          # Rename if new pathway
-          first_digit=${GPML_FILE:2:1}
-          if [ "$first_digit" == "0" ]; then
-            echo "Temporarily renaming new pathway per PR number."
-            GPML_FILE="WP0${PR_NUMBER}.gpml"
+          # TEMPORARY: Rename previously processed test GPMLs
+          if [[ $GPML_FILE == *__* ]]; then
+            # Split on '__' and take the first part, then append '.gpml'
+            GPML_FILE="${GPML_FILE%%__*}.gpml"
+          fi
+
+          # Rename GPMLs with unique PR number
+          if [[ $GPML_FILE =~ ^WP[0-9]{1,5}\.gpml$ ]]; then
+            echo "Appending PR number to existing WPID."
+            echo "status=Edit" >> $GITHUB_OUTPUT
+            #TODO: add label to PR
+            wpid="$(echo $GPML_FILE | sed 's/.gpml//')"
+            GPML_FILE="$wpid__PR${PR_NUMBER}.gpml"
+          else
+            echo "Assigning temporary WPID and appending PR number."
+            echo "status=New" >> $GITHUB_OUTPUT
+            #TODO: add label to PR
+            GPML_FILE="WPX__PR${PR_NUMBER}.gpml"
           fi
           
           cp "$GPML_FILEPATH" ./"$GPML_FILE"
@@ -114,14 +128,28 @@ jobs:
           # Start PR description (newlines are important in NEW_DESCRIPTION string)
           NEW_DESCRIPTION="
           ## Pathway Information
-
+          
           **WPID**: $wpid
           **TITLE**: $name
           **ORGANISM**: $org
           **DESCRIPTION**: $desc
         
+          ## Pathway Page Links
+          * [Pending Page](https://sandbox.wikipathways.org/drafts/$wpid)
+          "
+          
+          if $status=="Edit"; then
+            wpid_root="${wpid%%__*}
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+            * [Current Page](https://sandbox.wikipathways.org/pathways/$wpid_root)
+            "
+          fi
+
+          NEW_DESCRIPTION="$NEW_DESCRIPTION
+          
           ---
           "
+
           # Store PR description for compilation in final job
           # EOF base64 needed for storing multi-line strings as output variables
           EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)

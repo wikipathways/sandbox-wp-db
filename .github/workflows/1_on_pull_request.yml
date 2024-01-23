@@ -105,7 +105,9 @@ jobs:
             echo "status=Edit" >> $GITHUB_OUTPUT
             #TODO: add label to PR
             wpid="$(echo $GPML_FILE | sed 's/.gpml//')"
+            echo $wpid
             GPML_FILE="$wpid__PR${PR_NUMBER}.gpml"
+            echo $GPM_FILE
           else
             echo "Assigning temporary WPID and appending PR number."
             echo "status=New" >> $GITHUB_OUTPUT

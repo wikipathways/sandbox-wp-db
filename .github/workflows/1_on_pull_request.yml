@@ -108,6 +108,7 @@ jobs:
             echo "$wpid"
             GPML_FILE="${wpid}__PR${PR_NUMBER}.gpml"
             echo "$GPM_FILE"
+            echo "TEST"
           else
             echo "Assigning temporary WPID and appending PR number."
             echo "status=New" >> $GITHUB_OUTPUT

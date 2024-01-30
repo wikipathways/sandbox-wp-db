@@ -107,8 +107,7 @@ jobs:
             wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
             echo "$wpid"
             GPML_FILE="${wpid}__PR${PR_NUMBER}.gpml"
-            echo "$GPM_FILE"
-            echo "TEST"
+            echo "$GPML_FILE"
           else
             echo "Assigning temporary WPID and appending PR number."
             echo "status=New" >> $GITHUB_OUTPUT
@@ -127,6 +126,8 @@ jobs:
           org="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Organism)' "$GPML_FILEPATH")"  
           name="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Name)' "$GPML_FILEPATH")" 
           desc="$(xmllint --xpath 'string(//*[local-name()="Comment" and @Source="WikiPathways-description"])' "$GPML_FILEPATH")"
+
+          echo "TEST"
 
           # Start PR description (newlines are important in NEW_DESCRIPTION string)
           NEW_DESCRIPTION="
@@ -148,6 +149,8 @@ jobs:
             "
           fi
 
+
+          echo "TEST2"
           NEW_DESCRIPTION="$NEW_DESCRIPTION
           
           ---

@@ -10,6 +10,7 @@ import sys
 
 
 DATASOURCE_RE = re.compile(r'http://purl.obolibrary.org/obo/([A-Z]+)_\d+')
+WPID__PR_RE = re.compile(r'.*(WP\d+__PR\d+).*')
 WPID_RE = re.compile(r'.*(WP\d+).*')
 
 ANNOTION_TYPE_BY_NAMESPACE = {
@@ -34,6 +35,11 @@ supported_datasources = set(parent_annotation_iris_by_datasource.keys())
 
 def get_datasource(iri):
     m = DATASOURCE_RE.fullmatch(iri)
+    if m:
+        return m.group(1)
+
+def get_wpid_pr(input_str):
+    m = WPID__PR_RE.match(input_str)
     if m:
         return m.group(1)
 
@@ -86,14 +92,13 @@ if not info_f:
     raise Exception('No info_f provided')
 
 info_fp = Path(info_f)
-# TODO: will Tina name these files WPx-info.json or WPx-metadata.json?
-# remove the replace step for whichever one isn't relevant.
+wpid_pr = get_wpid_pr(info_fp.stem)
 wpid = get_wpid(info_fp.stem)
 if not wpid:
     raise Exception('Cannot extract WikiPathways ID from ' + info_f)
 
 #frontmatter_fp = Path('./pathways/' + wpid + '/' + wpid + '.md')
-frontmatter_fp = Path('./' + wpid + '.md')
+frontmatter_fp = Path('./' + wpid_pr + '.md')
 frontmatter_f = str(frontmatter_fp)
 if frontmatter_fp.exists():
     post = frontmatter.load(frontmatter_f, handler=YAMLHandler())
@@ -174,7 +179,7 @@ for key, value in parsed_metadata.items():
 
 datanode_labels = set()
 #with open('./pathways/' + wpid + '/' + wpid + '-datanodes.tsv') as f:
-with open('./' + wpid + '-datanodes.tsv') as f:
+with open('./' + wpid_pr + '-datanodes.tsv') as f:
     reader = csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE)
     for line in reader:
         datanode_labels.add(line['Label'])
@@ -183,19 +188,19 @@ with open('./' + wpid + '-datanodes.tsv') as f:
 #post['github-authors'] = []
 
 post['redirect_from'] = [
-    '/index.php/Pathway:' + wpid,
-    '/instance/' + wpid,
+    '/index.php/Pathway:' + wpid_pr,
+    '/instance/' + wpid_pr,
 ]
 if 'revision' in post and (not post['revision'] is None):
     post['redirect_from'].append(
-            '/instance/' + wpid + '_' + post['revision']
+            '/instance/' + wpid_pr + '_' + post['revision']
             )
 
 post['seo'] = 'CreativeWork'
 
 post['schema-jsonld'] = [{
     '@context': 'https://schema.org/',
-    '@id': 'https://wikipathways.github.io/pathways/' + wpid + '.html',
+    '@id': 'https://wikipathways.github.io/pathways/' + wpid_pr + '.html',
     '@type': 'Dataset',
     'name': post['title'],
     'description': post['description'],

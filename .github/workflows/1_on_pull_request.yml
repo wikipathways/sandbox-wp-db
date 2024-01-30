@@ -127,8 +127,6 @@ jobs:
           name="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Name)' "$GPML_FILEPATH")" 
           desc="$(xmllint --xpath 'string(//*[local-name()="Comment" and @Source="WikiPathways-description"])' "$GPML_FILEPATH")"
 
-          echo "TEST"
-
           # Start PR description (newlines are important in NEW_DESCRIPTION string)
           NEW_DESCRIPTION="
           ## Pathway Information
@@ -139,18 +137,16 @@ jobs:
           **DESCRIPTION**: $desc
         
           ## Pathway Page Links
-          * [Pending Page](https://sandbox.wikipathways.org/drafts/$wpid)
+          * Pending Page: https://sandbox.wikipathways.org/drafts/$wpid
           "
           
           if $status=="Edit"; then
             wpid_root="${wpid%%__*}
             NEW_DESCRIPTION="$NEW_DESCRIPTION
-            * [Current Page](https://sandbox.wikipathways.org/pathways/$wpid_root)
+            * Current Page: https://sandbox.wikipathways.org/pathways/$wpid_root
             "
           fi
 
-
-          echo "TEST2"
           NEW_DESCRIPTION="$NEW_DESCRIPTION
           
           ---

@@ -330,7 +330,7 @@ jobs:
           echo "generating info and datanode files for $wpid, organism "$org""
           java -jar meta-data-action-1.1.2-jar-with-dependencies.jar local "$f" $(date --utc +%F) gdb.config "$org"
           # generated files are placed in "pathways" dir
-          ls -R 
+          #ls -R 
           mkdir ./metadata
           mv pathways/"$wpid"-info.json metadata/.
           mv pathways/"$wpid"*.tsv metadata/.

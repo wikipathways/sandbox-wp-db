@@ -137,13 +137,13 @@ jobs:
           **DESCRIPTION**: $desc
         
           ## Pathway Page Links
-          * Pending Page: https://sandbox.wikipathways.org/drafts/$wpid
+          * [Pending Page](https://sandbox.wikipathways.org/drafts/$wpid)
           "
           
           if $status=="Edit"; then
-            wpid_root="${wpid%%__*}
+            wpid_root="${wpid%%__*}"
             NEW_DESCRIPTION="$NEW_DESCRIPTION
-            * Current Page: https://sandbox.wikipathways.org/pathways/$wpid_root
+            * [Current Page](https://sandbox.wikipathways.org/pathways/$wpid_root)
             "
           fi
 

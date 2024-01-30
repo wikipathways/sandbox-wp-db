@@ -169,7 +169,7 @@ jobs:
           gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
         
       - name: Upload GPML file as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: gpml-file
           path: ${{ steps.get-gpml.outputs.gpml-filepath }}
@@ -213,7 +213,7 @@ jobs:
     - name: Download GPML artifact
       # Downloads gpml-file artifact to working dir
       # Note: Automatically unzips as folders containing files with original filenames
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: gpml-file
         
@@ -336,7 +336,7 @@ jobs:
           mv pathways/"$wpid"*.tsv metadata/.
       
     - name: Upload metadata files as artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: metadata
         path: metadata/
@@ -405,7 +405,7 @@ jobs:
     - name: Download GPML artifact
       # Downloads gpml-file artifact to working dir
       # Note: Automatically unzips file with original filename
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: gpml-file
     
@@ -477,7 +477,7 @@ jobs:
           echo "NEW_AUTHORS=$k" >> $GITHUB_ENV
 
     - name: Upload author files as artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: authors
         path: authors/
@@ -523,7 +523,7 @@ jobs:
     - name: Download Metadata artifact
       # Downloads metadata artifact to working dir
       # Note: Automatically unzips as a folder containing files with original filenames
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: metadata
 
@@ -555,7 +555,7 @@ jobs:
 
       
     - name: Upload pubmed file as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: pubmed
         path: pubmed/
@@ -595,7 +595,7 @@ jobs:
     - name: Download Metadata artifact
       # Downloads metadata artifacts to working dir
       # Note: Automatically unzips as folders containing files with original filenames
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: metadata
 
@@ -627,7 +627,7 @@ jobs:
         mv ./"$wpid".md frontmatter/.
 
     - name: Upload frontmatter file as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: frontmatter
         path: frontmatter/
@@ -667,7 +667,7 @@ jobs:
     - name: Download GPML and Metadata artifacts
       # Downloads gpml-file and metadata artifacts to working dir
       # Note: Automatically unzips as folders containing files with original filenames
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
 
     - name: Setup Node
       uses: actions/setup-node@v3
@@ -727,7 +727,7 @@ jobs:
         mv $DB_PATH/pathways/"$wpid"/"$wpid"-thumb.png ../../json-svg/.  
 
     - name: Upload json-svg file as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: json-svg
         path: json-svg/
@@ -767,7 +767,7 @@ jobs:
     - name: Download GPML and Metadata artifacts
       # Downloads gpml-file and metadata artifacts to working dir
       # Note: Automatically unzips as folders containing files with original filenames
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
     
     - name: Perform automatic test
       run: |
@@ -808,7 +808,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Download all output files from artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
 
     - name: Checkout jekyll repo
       # TESTING: change repo and ssh-key from sandbox to real

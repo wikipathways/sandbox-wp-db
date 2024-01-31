@@ -100,9 +100,10 @@ jobs:
           fi
 
           # Rename GPMLs with unique PR number
+          STATUS="New"
           if [[ $GPML_FILE =~ ^WP[0-9]{1,5}\.gpml$ ]]; then
             echo "Appending PR number to existing WPID."
-            echo "status=Edit" >> $GITHUB_OUTPUT
+            $STATUS="Edit"
             #TODO: add label to PR
             wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
             echo "$wpid"
@@ -110,10 +111,11 @@ jobs:
             echo "$GPML_FILE"
           else
             echo "Assigning temporary WPID and appending PR number."
-            echo "status=New" >> $GITHUB_OUTPUT
             #TODO: add label to PR
             GPML_FILE="WPX__PR${PR_NUMBER}.gpml"
           fi
+
+          echo "status=$STATUS" >> $GITHUB_OUTPUT
           
           cp "$GPML_FILEPATH" ./"$GPML_FILE"
           GPML_FILEPATH="./${GPML_FILE}"
@@ -135,15 +137,17 @@ jobs:
           **TITLE**: $name
           **ORGANISM**: $org
           **DESCRIPTION**: $desc
-        
-          ## Pathway Page Links
-          * [Pending pathway page](https://sandbox.wikipathways.org/drafts/$wpid)
           "
           
-          if $status=="Edit"; then
+          echo "$status"
+          if $STATUS=="Edit"; then
             wpid_root="${wpid%%__*}"
             NEW_DESCRIPTION="$NEW_DESCRIPTION
-            * [Current pathway page](https://sandbox.wikipathways.org/pathways/$wpid_root)
+            Note: This is an edit to an existing pathway. 
+            "
+          else
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+            Note: This is a new pathway submission. 
             "
           fi
 
@@ -876,8 +880,27 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
+        STATUS: ${{ needs.get-gpml.outputs.status }}
       run: |          
         NEW_DESCRIPTION="${{ needs.get-gpml.outputs.pr-desc }}
+
+        ## Pathway Page Links
+          * [Pending pathway page](https://sandbox.wikipathways.org/drafts/$wpid)
+          "
+          
+          if $STATUS=="Edit"; then
+            wpid_root="${wpid%%__*}"
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+            * [Current pathway page](https://sandbox.wikipathways.org/pathways/$wpid_root)
+            "
+          fi
+
+        NEW_DESCRIPTION="$NEW_DESCRIPTION
+
+        ---
+        "
+
+        NEW_DESCRIPTION="$NEW_DESCRIPTION
         ${{ needs.metadata.outputs.pr-desc }}
         ${{ needs.authors.outputs.pr-desc }}
         ${{ needs.pubmed.outputs.pr-desc }}

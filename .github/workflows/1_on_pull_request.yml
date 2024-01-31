@@ -103,7 +103,7 @@ jobs:
           STATUS="New"
           if [[ $GPML_FILE =~ ^WP[0-9]{1,5}\.gpml$ ]]; then
             echo "Appending PR number to existing WPID."
-            $STATUS="Edit"
+            STATUS="Edit"
             #TODO: add label to PR
             wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
             echo "$wpid"
@@ -139,7 +139,6 @@ jobs:
           **DESCRIPTION**: $desc
           "
           
-          echo "$status"
           if $STATUS=="Edit"; then
             wpid_root="${wpid%%__*}"
             NEW_DESCRIPTION="$NEW_DESCRIPTION

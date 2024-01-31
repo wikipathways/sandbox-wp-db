@@ -138,8 +138,8 @@ jobs:
           **ORGANISM**: $org
           **DESCRIPTION**: $desc
           "
-          
-          if $STATUS=="Edit"; then
+
+          if [ "$STATUS" = "Edit" ]; then
             wpid_root="${wpid%%__*}"
             NEW_DESCRIPTION="$NEW_DESCRIPTION
             Note: This is an edit to an existing pathway. 
@@ -887,7 +887,7 @@ jobs:
           * [Pending pathway page](https://sandbox.wikipathways.org/drafts/$wpid)
           "
           
-          if $STATUS=="Edit"; then
+          if [ "$STATUS" = "Edit" ]; then
             wpid_root="${wpid%%__*}"
             NEW_DESCRIPTION="$NEW_DESCRIPTION
             * [Current pathway page](https://sandbox.wikipathways.org/pathways/$wpid_root)

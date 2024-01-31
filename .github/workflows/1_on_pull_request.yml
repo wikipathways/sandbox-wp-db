@@ -142,11 +142,11 @@ jobs:
           if [ "$STATUS" = "Edit" ]; then
             wpid_root="${wpid%%__*}"
             NEW_DESCRIPTION="$NEW_DESCRIPTION
-            Note: This is an edit to an existing pathway. 
+            *Note: This is an edit to an existing pathway.* 
             "
           else
             NEW_DESCRIPTION="$NEW_DESCRIPTION
-            Note: This is a new pathway submission. 
+            *Note: This is a new pathway submission.* 
             "
           fi
 

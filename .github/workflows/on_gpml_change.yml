@@ -447,3 +447,35 @@ jobs:
       - name: Checkouts, copy and commit
         run: |
           echo "SANDBOX: Skipping checkouts, deletion and commit to jekyll repo"
+
+  sync-database-repo-deleted:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # only run if gpmls were deleted
+    if: ${{needs.changed-gpmls.outputs.deleted}}
+    steps:
+      - name: Checkout sandbox-wp-db repo
+        uses: actions/checkout@v3
+        with:
+          path: sandbox-wp-db
+          submodules: true
+          fetch-depth: 1
+          ref: main 
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          cd sandbox-wp-db
+          for f in ${{needs.changed-gpmls.outputs.deleted}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            echo "deleting $wpid from sandbox-wp-db"
+            git rm pathways/"$wpid"/*
+          done          
+          if git diff --exit-code --staged > /dev/null; then
+              echo "No changes"
+          else
+              git commit -m 'Deleted sandbox-wp-db files'
+              git pull --rebase
+              git push
+          fi

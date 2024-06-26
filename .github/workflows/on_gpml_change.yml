@@ -468,5 +468,5 @@ jobs:
           else
               git commit -m 'Deleted sandbox-wp-db files'
               git pull --rebase
-              git push
+              git push --force
           fi

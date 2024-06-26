@@ -25,10 +25,9 @@ jobs:
     steps:
         # Make sure we have some code to diff.
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: main
       - name: Get changed files
         id: changes
         # Set outputs using the command.
@@ -70,10 +69,9 @@ jobs:
     if: ${{needs.changed-gpmls.outputs.added-modified}}
     steps:
       - name: Checkout sandbox-wp-db repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
-          ref: main
                 
       - name: Checkout jekyll repo
         run: |
@@ -127,10 +125,9 @@ jobs:
     steps:
         
       - name: Checkout sandbox-wp-db repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
-          ref: main
           
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -259,11 +256,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
           fetch-depth: 1
-          ref: main
 
       - name: Install dependencies
         working-directory: scripts/generate-references
@@ -291,11 +287,9 @@ jobs:
     needs: [changed-gpmls, metadata]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          submodules: true
           fetch-depth: 1
-          ref: main
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -347,11 +341,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout sandbox-wp-db repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: sandbox-wp-db
           fetch-depth: 1
-          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v3
@@ -455,12 +448,10 @@ jobs:
     if: ${{needs.changed-gpmls.outputs.deleted}}
     steps:
       - name: Checkout sandbox-wp-db repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: sandbox-wp-db
-          submodules: true
           fetch-depth: 1
-          ref: main 
 
       - name: Commit report
         run: |

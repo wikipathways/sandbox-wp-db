@@ -809,7 +809,7 @@ jobs:
         *As table*
         | # | Test name | Link | Notes | Result |
         |---|---|---|---|---|
-        | 1 | Test one | | ${{ env.note_test1 }} | \$\${\color{$color_test1}$status_test1}\$\$ |
+        | 1 | Test one | | ${{ env.note_test1 }} | \$\${\color{${{ env.color_test1 }}}${{ env.status_test1 }}}\$\$ |
         | 2 | Test two | | | \$\${\color{red}FAIL}\$\$ |
         | 3 | Test three | | | \$\${\color{green}PASS}\$\$ |
 

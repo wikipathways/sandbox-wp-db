@@ -780,20 +780,26 @@ jobs:
       # Note: Automatically unzips as folders containing files with original filenames
       uses: actions/download-artifact@v4
     
-    - name: Perform automatic test
+    - name: Perform Test 1 (characters in title)
       run: |
-        # TODO: perform testing
         echo "title=$GPML_NAME"
-        echo "description=$GPML_DESC"
 
-        # check the length og the title
+        # check the length of the title
         #length_of_string=$GPML_NAME
         echo "The length of the string is ${#GPML_NAME}"
         
-        #if [ $length_of_string -gt 2 ]; then
-        #  echo "The input string is too long: $length_of_string characters."
-        #  exit 1
-        #fi
+        title_length=${#title}
+        if [ "$title_length" -ge 10 ]; then
+          echo "Title has at least 10 characters."
+          note_test1="Title has at least 10 characters."
+          status_test1="PASS"
+          color_test1=green
+        else
+          echo "Title has less than 10 characters."
+          note_test1="Title has less than 10 characters."
+          status_test1="FAIL"
+          color_test1=red
+        fi
 
     - name: Report on pubmed
       id: report
@@ -805,7 +811,7 @@ jobs:
         *As table*
         | # | Test name | Link | Notes | Result |
         |---|---|---|---|---|
-        | 1 | Test one | | | \$\${\color{green}PASS}\$\$ |
+        | 1 | Test one | | $note_test1 | \$\${\color{$color_test1}$status_test1}\$\$ |
         | 2 | Test two | | | \$\${\color{red}FAIL}\$\$ |
         | 3 | Test three | | | \$\${\color{green}PASS}\$\$ |
 

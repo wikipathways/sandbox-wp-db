@@ -769,8 +769,8 @@ jobs:
       pr-desc: ${{ steps.report.outputs.pr-desc }}
     env:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
-      gpml-name: ${{ needs.get-gpml.outputs.name }}
-      gpml-desc: ${{ needs.get-gpml.outputs.desc }}
+      gpml-name: ${{ needs.get-gpml.outputs.gpml-name }}
+      gpml-desc: ${{ needs.get-gpml.outputs.gpml-desc }}
     steps:
     - name: Checkout repository for scripts
       uses: actions/checkout@v4
@@ -785,6 +785,15 @@ jobs:
         # TODO: perform testing
         echo "title=$gpml-name"
         echo "description=$gpml-desc"
+
+        # check the length og the title
+        length_of_string=${#gpml-name}
+        echo "The length of the string is $length_of_string"
+        
+        if [ $length_of_string -gt 2 ]; then
+          echo "The input string is too long: $length_of_string characters."
+          exit 1
+        fi
 
     - name: Report on pubmed
       id: report

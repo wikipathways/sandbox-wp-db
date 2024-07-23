@@ -72,6 +72,8 @@ jobs:
       status: ${{ steps.get-gpml.outputs.status }}
       pr-desc: ${{ steps.get-gpml.outputs.pr-desc }}
       branch-name: ${{ steps.get-branch.outputs.branch-name }}
+      gpml-name: ${{ steps.get-gpml.outputs.name }}
+      gpml-desc: ${{ steps.get-gpml.outputs.desc }}
     env:
       PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
     steps:
@@ -745,7 +747,6 @@ jobs:
         - [x] .svg generated
         - [x] .png generated
 
-        *TODO: insert PNG here*
         "
         
         # Store PR description for compilation in final job
@@ -763,6 +764,8 @@ jobs:
       pr-desc: ${{ steps.report.outputs.pr-desc }}
     env:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
+      gpml-name: ${{ needs.get-gpml.outputs.name }}
+      gpml-desc: ${{ needs.get-gpml.outputs.desc }}
     steps:
     - name: Checkout repository for scripts
       uses: actions/checkout@v4
@@ -775,6 +778,8 @@ jobs:
     - name: Perform automatic test
       run: |
         # TODO: perform testing
+        echo "title=$gpml-name"
+        echo "description=$gpml-desc"
 
     - name: Report on pubmed
       id: report

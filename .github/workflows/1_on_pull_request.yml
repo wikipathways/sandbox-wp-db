@@ -779,6 +779,8 @@ jobs:
       # Downloads gpml-file and metadata artifacts to working dir
       # Note: Automatically unzips as folders containing files with original filenames
       uses: actions/download-artifact@v4
+      with:
+        name: gpml-name
     
     - name: Perform automatic test
       run: |
@@ -787,7 +789,7 @@ jobs:
         echo "description=$gpml-desc"
 
         # check the length og the title
-        length_of_string=${#gpml-name}
+        length_of_string=$gpml-name
         echo "The length of the string is $length_of_string"
         
         if [ $length_of_string -gt 2 ]; then

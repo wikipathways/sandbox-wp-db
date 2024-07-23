@@ -894,6 +894,7 @@ jobs:
             wpid_root="${wpid%%__*}"
             NEW_DESCRIPTION="$NEW_DESCRIPTION
           * [Current pathway page](https://sandbox.wikipathways.org/pathways/$wpid_root)
+          *Note: The above URLs will activate after ~5 min.*
           "
           fi
 

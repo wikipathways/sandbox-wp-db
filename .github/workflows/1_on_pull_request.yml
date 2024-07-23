@@ -72,8 +72,8 @@ jobs:
       status: ${{ steps.get-gpml.outputs.status }}
       pr-desc: ${{ steps.get-gpml.outputs.pr-desc }}
       branch-name: ${{ steps.get-branch.outputs.branch-name }}
-      gpml-name: ${{ steps.get-gpml.outputs.name }}
-      gpml-desc: ${{ steps.get-gpml.outputs.desc }}
+      gpml-name: ${{ steps.get-gpml.outputs.gpml-name }}
+      gpml-desc: ${{ steps.get-gpml.outputs.gpml-desc }}
     env:
       PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
     steps:
@@ -131,7 +131,9 @@ jobs:
           name="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Name)' "$GPML_FILEPATH")" 
           desc="$(xmllint --xpath 'string(//*[local-name()="Comment" and @Source="WikiPathways-description"])' "$GPML_FILEPATH")"
 
+          echo "gpml-name=$name"
           echo "gpml-name=$name" >> $GITHUB_OUTPUT #for subsequent jobs
+          echo "gpml-desc=$desc"
           echo "gpml-desc=$desc" >> $GITHUB_OUTPUT #for subsequent jobs
 
           # Start PR description (newlines are important in NEW_DESCRIPTION string)

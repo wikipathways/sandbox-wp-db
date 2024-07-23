@@ -769,8 +769,8 @@ jobs:
       pr-desc: ${{ steps.report.outputs.pr-desc }}
     env:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
-      gpml-name: ${{ needs.get-gpml.outputs.gpml-name }}
-      gpml-desc: ${{ needs.get-gpml.outputs.gpml-desc }}
+      GPML_NAME: ${{ needs.get-gpml.outputs.gpml-name }}
+      GPML_DESC: ${{ needs.get-gpml.outputs.gpml-desc }}
     steps:
     - name: Checkout repository for scripts
       uses: actions/checkout@v4
@@ -779,17 +779,15 @@ jobs:
       # Downloads gpml-file and metadata artifacts to working dir
       # Note: Automatically unzips as folders containing files with original filenames
       uses: actions/download-artifact@v4
-      with:
-        name: gpml-name
     
     - name: Perform automatic test
       run: |
         # TODO: perform testing
-        echo "title=$gpml-name"
-        echo "description=$gpml-desc"
+        echo "title=$GPML_NAME"
+        echo "description=$GPML_DESC"
 
         # check the length og the title
-        length_of_string=$gpml-name
+        length_of_string=$GPML_NAME
         echo "The length of the string is $length_of_string"
         
         if [ $length_of_string -gt 2 ]; then

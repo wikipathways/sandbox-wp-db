@@ -131,6 +131,9 @@ jobs:
           name="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Name)' "$GPML_FILEPATH")" 
           desc="$(xmllint --xpath 'string(//*[local-name()="Comment" and @Source="WikiPathways-description"])' "$GPML_FILEPATH")"
 
+          echo "gpml-name=$name" >> $GITHUB_OUTPUT #for subsequent jobs
+          echo "gpml-desc=$desc" >> $GITHUB_OUTPUT #for subsequent jobs
+
           # Start PR description (newlines are important in NEW_DESCRIPTION string)
           NEW_DESCRIPTION="
           ## Pathway Information

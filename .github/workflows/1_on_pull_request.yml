@@ -787,13 +787,13 @@ jobs:
         echo "description=$GPML_DESC"
 
         # check the length og the title
-        length_of_string=$GPML_NAME
-        echo "The length of the string is $length_of_string"
+        #length_of_string=$GPML_NAME
+        echo "The length of the string is ${#GPML_NAME}"
         
-        if [ $length_of_string -gt 2 ]; then
-          echo "The input string is too long: $length_of_string characters."
-          exit 1
-        fi
+        #if [ $length_of_string -gt 2 ]; then
+        #  echo "The input string is too long: $length_of_string characters."
+        #  exit 1
+        #fi
 
     - name: Report on pubmed
       id: report

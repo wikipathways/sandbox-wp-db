@@ -798,6 +798,10 @@ jobs:
           echo "color_test1=red" >> $GITHUB_ENV
         fi
         
+
+    - name: Report on pubmed
+      id: report
+      run: |    
         # Update PR description
         NEW_DESCRIPTION='
         ---

@@ -782,23 +782,20 @@ jobs:
     
     - name: Perform Test 1 (characters in title)
       run: |
-        echo "title=$GPML_NAME"
+        title=$GPML_NAME
+        echo "The length of the string is ${#title}"
 
-        # check the length of the title
-        #length_of_string=$GPML_NAME
-        echo "The length of the string is ${#GPML_NAME}"
-        
         title_length=${#title}
         if [ "$title_length" -ge 10 ]; then
           echo "Title has at least 10 characters."
-          note_test1="Title has at least 10 characters."
-          status_test1="PASS"
-          color_test1=green
+          echo "note_test1=Title has at least 10 characters." >> $GITHUB_ENV
+          echo "status_test1=PASS" >> $GITHUB_ENV
+          echo "color_test1=green" >> $GITHUB_ENV
         else
           echo "Title has less than 10 characters."
-          note_test1="Title has less than 10 characters."
-          status_test1="FAIL"
-          color_test1=red
+          echo "note_test1=Title has less than 10 characters." >> $GITHUB_ENV
+          echo "status_test1=FAIL" >> $GITHUB_ENV
+          echo "color_test1=red" >> $GITHUB_ENV
         fi
 
     - name: Report on pubmed

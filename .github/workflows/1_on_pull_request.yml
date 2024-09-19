@@ -803,14 +803,14 @@ jobs:
         title_length=${#title}
         if [ "$title_length" -ge 10 ]; then
           echo "Title has at least 10 characters."
-          echo "note_test1=Title has at least 10 characters." >> $GITHUB_ENV
-          echo "status_test1=PASS" >> $GITHUB_ENV
-          echo "color_test1=green" >> $GITHUB_ENV
+          echo "note_test_title=Title has at least 10 characters." >> $GITHUB_ENV
+          echo "status_test_title=PASS" >> $GITHUB_ENV
+          echo "color_test_title=green" >> $GITHUB_ENV
         else
           echo "Title has less than 10 characters."
-          echo "note_test1=Title has less than 10 characters." >> $GITHUB_ENV
-          echo "status_test1=FAIL" >> $GITHUB_ENV
-          echo "color_test1=red" >> $GITHUB_ENV
+          echo "note_test_title=Title has less than 10 characters." >> $GITHUB_ENV
+          echo "status_test_title=FAIL" >> $GITHUB_ENV
+          echo "color_test_title=red" >> $GITHUB_ENV
         fi
 
     - name: Perform Test 2 (characters in title)
@@ -882,8 +882,8 @@ jobs:
         *As table*
         | # | Test name | Link | Notes | Result |
         |---|---|---|---|---|
-        | 1 | Test one | | ${{ env.note_test1 }} | \$\${\color{${{ env.color_test1 }}}${{ env.status_test1 }}}\$\$ |
-        | 2 | Test two | | | \$\${\color{red}FAIL}\$\$ |
+        | 1 | Title Length | | ${{ env.note_test_title }} | \$\${\color{${{ env.color_test_title }}}${{ env.status_test_title }}}\$\$ |
+        | 2 | Description Length | | |${{ env.note_test_desc }} | \$\${\color{${{ env.color_test_desc }}}${{ env.status_test_desc }}}\$\$ |
         | 3 | Test three | | | \$\${\color{green}PASS}\$\$ |
 
         *As checklist*
@@ -963,7 +963,7 @@ jobs:
           fi
   
   update-pr-desc:
-    needs: [get-pr,get-gpml,metadata,authors,pubmed,frontmatter,json-svg,testing]
+    needs: [get-pr,get-gpml,metadata,authors,pubmed,frontmatter,testing] #json-svg add once that step is resolved
     runs-on: ubuntu-latest
     steps:
     - name: Check out code

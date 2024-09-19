@@ -795,7 +795,7 @@ jobs:
         echo "$diff_output" > diff_output.txt  # Save the diff to a file for processing later
         echo "Diff fetched successfully"
     
-    - name: Perform Test 1 (characters in title)
+    - name: Test for characters in title
       run: |
         title=$GPML_NAME
         echo "The length of the title is ${#title}"
@@ -813,7 +813,7 @@ jobs:
           echo "color_test_title=red" >> $GITHUB_ENV
         fi
 
-    - name: Perform Test 2 (characters in title)
+    - name: Test for number of words in description
       run: |
         # Read the diff output from the file
         diff_output=$(cat diff_output.txt)
@@ -862,8 +862,8 @@ jobs:
           if [ "$word_diff" -gt 3 ] || [ "$char_diff" -gt 10 ]; then
             echo "Description changed significantly. Review required."
             note_test_desc="Description change exceeds 3 words or 10 characters. Review required."
-            status_test_desc="REVIEW"
-            color_test_desc="yellow"
+            status_test_desc="FAIL"
+            color_test_desc="red"
           else
             echo "Description change is minor."
             note_test_desc="Minor description change."
@@ -883,7 +883,7 @@ jobs:
         | # | Test name | Link | Notes | Result |
         |---|---|---|---|---|
         | 1 | Title Length | | ${{ env.note_test_title }} | \$\${\color{${{ env.color_test_title }}}${{ env.status_test_title }}}\$\$ |
-        | 2 | Description Length | | |${{ env.note_test_desc }} | \$\${\color{${{ env.color_test_desc }}}${{ env.status_test_desc }}}\$\$ |
+        | 2 | Description Length | | ${{ env.note_test_desc }} | \$\${\color{${{ env.color_test_desc }}}${{ env.status_test_desc }}}\$\$ |
         | 3 | Test three | | | \$\${\color{green}PASS}\$\$ |
 
         *As checklist*

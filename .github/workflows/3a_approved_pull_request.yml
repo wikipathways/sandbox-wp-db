@@ -1,4 +1,4 @@
-name: 3A. Approved Pull Request
+name: 3A. Approved PR
 
 on:
   workflow_dispatch:
@@ -10,7 +10,6 @@ on:
 jobs:
   process_approved_pr:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout sandbox-wp-db
         uses: actions/checkout@v4

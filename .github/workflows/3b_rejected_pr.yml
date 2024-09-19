@@ -1,4 +1,4 @@
-name: 3B. Rejected Pull Request
+name: 3B. Rejected PR
 
 on:
   workflow_dispatch:

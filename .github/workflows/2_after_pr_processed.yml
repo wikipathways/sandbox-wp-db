@@ -1,5 +1,5 @@
-name: 2. On PR Processing Completion
-# This workflow is triggered by the completion of the primary pull request processing workflow..
+name: 2. After PR Processed
+# This workflow is triggered by the completion of the primary pull request processing workflow.
 # It distinguishes between success and failure of the triggering workflow.
 # It is used to set labels and reviewers on the pull request.
 on:

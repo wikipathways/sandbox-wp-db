@@ -788,10 +788,9 @@ jobs:
       id: fetch_diff
       run: |
         PR_NUMBER="${{ needs.get-pr.outputs.pr-number }}"
-        GPML_FILE="${{ needs.get-gpml.outputs.gpml-file }}"
 
-        # Fetch the diff for the GPML file in the current PR
-        diff_output=$(git-diff "$PR_NUMBER" -- "$GPML_FILE")
+        # Fetch the entire diff for the PR
+        diff_output=$(gh pr diff "$PR_NUMBER")
         echo "$diff_output"
         echo "diff_output=$diff_output" >> $GITHUB_ENV
     

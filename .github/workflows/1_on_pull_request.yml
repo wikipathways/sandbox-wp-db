@@ -763,7 +763,7 @@ jobs:
 
   testing:
     if: true
-    needs: [get-pr,get-gpml,metadata]
+    needs: [get-pr, get-gpml, metadata]
     runs-on: ubuntu-latest
     outputs:
       pr-desc: ${{ steps.report.outputs.pr-desc }}
@@ -792,8 +792,8 @@ jobs:
 
         # Fetch the entire diff for the PR
         diff_output=$(gh pr diff "$PR_NUMBER")
-        echo "$diff_output"
-        echo "diff_output=$diff_output" >> $GITHUB_ENV
+        echo "$diff_output" > diff_output.txt  # Save the diff to a file for processing later
+        echo "Diff fetched successfully"
     
     - name: Perform Test 1 (characters in title)
       run: |
@@ -815,19 +815,62 @@ jobs:
 
     - name: Perform Test 2 (characters in title)
       run: |
-        desc=$GPML_DESC
-        status=$STATUS
-        echo "The length of the description is ${#desc}"
-        echo " This is a $status pathway"
+        # Read the diff output from the file
+        diff_output=$(cat diff_output.txt)
 
-        desc_length=${#desc}
-        if [ "$desc_length" -ge 15 & "$status" = "New" ]; then
-          echo "Description has at least 15 characters."
-          echo "note_test2=Description has at least 15 characters." >> $GITHUB_ENV
-          echo "status_test2=PASS" >> $GITHUB_ENV
-          echo "color_test2=green" >> $GITHUB_ENV
+        # Extract relevant changes (for example, only looking for Comment changes)
+        old_desc=$(echo "$diff_output" | grep -E '^[-]' | grep 'WikiPathways-description' | sed 's/^-//')
+        new_desc=$(echo "$diff_output" | grep -E '^[+]' | grep 'WikiPathways-description' | sed 's/^+//')
+
+        # Function to count words and characters in a string
+        word_count() {
+          echo "$1" | wc -w
+        }
+        char_count() {
+          echo "$1" | wc -c
+        }
+
+        # Calculate word and character differences
+        old_word_count=$(word_count "$old_desc")
+        new_word_count=$(word_count "$new_desc")
+        word_diff=$((new_word_count - old_word_count))
+
+        old_char_count=$(char_count "$old_desc")
+        new_char_count=$(char_count "$new_desc")
+        char_diff=$((new_char_count - old_char_count))
+
+        echo "Old description word count: $old_word_count"
+        echo "New description word count: $new_word_count"
+        echo "Word difference: $word_diff"
+        echo "Character difference: $char_diff"
+
+        # Check if description change is significant
+        status="${{ env.STATUS }}"
+        if [ "$status" = "New" ]; then
+          if [ "$new_word_count" -ge 15 ]; then
+            echo "Description for new pathway has at least 15 words."
+            note_test_desc="Description has at least 15 words."
+            status_test_desc="PASS"
+            color_test_desc="green"
+          else
+            echo "Description for new pathway has fewer than 15 words."
+            note_test_desc="Description has fewer than 15 words."
+            status_test_desc="FAIL"
+            color_test_desc="red"
+          fi
+        else
+          if [ "$word_diff" -gt 3 ] || [ "$char_diff" -gt 10 ]; then
+            echo "Description changed significantly. Review required."
+            note_test_desc="Description change exceeds 3 words or 10 characters. Review required."
+            status_test_desc="REVIEW"
+            color_test_desc="yellow"
+          else
+            echo "Description change is minor."
+            note_test_desc="Minor description change."
+            status_test_desc="PASS"
+            color_test_desc="green"
+          fi
         fi
-        
 
     - name: Report on testing
       id: report

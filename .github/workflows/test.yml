@@ -11,6 +11,9 @@ jobs:
   process_approved_pr:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
       - name: Checkout sandbox-wp.gh.io
         uses: actions/checkout@v4
         with:

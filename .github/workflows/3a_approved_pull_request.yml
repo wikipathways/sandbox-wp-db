@@ -1,4 +1,4 @@
-name: Test
+name: 3A. Approved Pull Request
 
 on:
   workflow_dispatch:
@@ -10,10 +10,14 @@ on:
 jobs:
   process_approved_pr:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: Checkout sandbox-wp-db
         uses: actions/checkout@v4
-        
+        with:
+          repository: wikipathways/sandbox-wp-db
+          path: sandbox-wp-db
+
       - name: Checkout sandbox-wp.gh.io
         uses: actions/checkout@v4
         with:
@@ -91,7 +95,7 @@ jobs:
           git commit -m "Add files for approved pathway WP${{ steps.get_wpid.outputs.wpid }}"
           git push
 
-       - name: Commit and push changes to sandbox-wp-assets
+      - name: Commit and push changes to sandbox-wp-assets
         working-directory: sandbox-wp-assets
         run: |
           git config user.name github-actions

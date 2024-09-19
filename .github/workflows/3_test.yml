@@ -1,0 +1,119 @@
+name: 3A. Approved PR
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'Pull Request Number'
+        required: true
+
+jobs:
+  process_approved_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sandbox-wp-db
+        uses: actions/checkout@v4
+        with:
+          repository: wikipathways/sandbox-wp-db
+          path: sandbox-wp-db
+
+      - name: Checkout sandbox-wp.gh.io
+        uses: actions/checkout@v4
+        with:
+          repository: wikipathways/sandbox-wp.gh.io
+          path: sandbox-wp.gh.io
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout sandbox-wp-assets
+        uses: actions/checkout@v4
+        with:
+          repository: wikipathways/sandbox-wp-assets
+          path: sandbox-wp-assets
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get WPID
+        id: get_wpid
+        working-directory: sandbox-wp.gh.io
+        run: |
+          WPID=$(ls _pathways/ | grep -E '^WP[0-9]+\.md$' | sort -V | tail -n 1)
+          WPID=$(echo $WPID | sed 's/\.md//')
+          WPID_NUM=$(echo $WPID | sed 's/WP//')
+          WPID_NUM=$((WPID_NUM + 1))
+          WPID="WP$WPID_NUM"
+          echo "::set-output name=wpid::$WPID"
+
+      - name: Rename and Move Files
+        working-directory: sandbox-wp.gh.io
+        run: |
+          PR_NUMBER=${{ github.event.inputs.pr_number }}
+          WPID=${{ steps.get_wpid.outputs.wpid }}
+          
+          # Process .md files
+          find _drafts -type f -name "WP0__PR${PR_NUMBER}.md" | while read file; do
+            new_file=$(echo $file | sed "s/WP0__PR${PR_NUMBER}/${WPID}/")
+            new_file=$(basename $new_file)
+            mkdir -p "../sandbox-wp-db/pathways/${WPID}"
+            cp "$file" "../sandbox-wp-db/pathways/${WPID}/${new_file}"
+            mv "$file" "_pathways/${new_file}"
+          done
+
+          # Process .tsv files
+          find _data/drafts -type f -name "WP0__PR${PR_NUMBER}*.tsv" | while read file; do
+            new_file=$(echo $file | sed "s/WP0__PR${PR_NUMBER}/${WPID}/")
+            new_file=$(basename $new_file)
+            mv "$file" "_data/${new_file}"
+          done
+
+          # Process files in draft_assets
+          find draft_assets -type f -name "WP0__PR${PR_NUMBER}*" | while read file; do
+            new_file=$(echo $file | sed "s/WP0__PR${PR_NUMBER}/${WPID}/")
+            new_file=$(basename $new_file)
+            #Skip SVG files
+            if [[ $file != *.svg ]]; then
+              cp "$file" "../sandbox-wp-db/pathways/${WPID}/${new_file}"
+            fi
+            mkdir -p "../sandbox-wp-assets/pathways/${WPID}"
+            mv "$file" "../sandbox-wp-assets/pathways/${WPID}/${new_file}"
+          done
+
+      - name: Commit and push changes to sandbox-wp.gh.io
+        working-directory: sandbox-wp.gh.io
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Publish approved pathway WP${{ steps.get_wpid.outputs.wpid }}"
+          git push
+
+      - name: Commit and push changes to sandbox-wp-db
+        working-directory: sandbox-wp-db
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Add files for approved pathway WP${{ steps.get_wpid.outputs.wpid }}"
+          git push
+
+       - name: Commit and push changes to sandbox-wp-assets
+        working-directory: sandbox-wp-assets
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Add assets for approved pathway WP${{ steps.get_wpid.outputs.wpid }}"
+          git push
+
+      - name: Append Message to PR Description
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.inputs.pr_number }}
+        run: |
+          NEW_DESCRIPTION="This PR has been approved and the pathway is being published at WikiPathways. The new WPID is ${{ steps.get_wpid.outputs.wpid }}."
+          gh pr edit $PR_NUMBER --add-body "$NEW_DESCRIPTION"
+
+      - name: Close PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.inputs.pr_number }}
+        run: |
+          gh pr close $PR_NUMBER

@@ -1,4 +1,4 @@
-name: 3A. Approved PR
+name: Test
 
 on:
   workflow_dispatch:

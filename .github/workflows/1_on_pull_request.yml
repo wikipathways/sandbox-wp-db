@@ -809,7 +809,7 @@ jobs:
         else
           echo "Title has less than 10 characters."
           echo "note_test_title=Title has less than 10 characters." >> $GITHUB_ENV
-          echo "status_test_title=FAIL" >> $GITHUB_ENV
+          echo "status_test_title=REVIEW REQUIRED" >> $GITHUB_ENV
           echo "color_test_title=red" >> $GITHUB_ENV
         fi
 
@@ -855,14 +855,14 @@ jobs:
           else
             echo "Description for new pathway has fewer than 15 words."
             echo "note_test_desc=Description has fewer than 15 words." >> $GITHUB_ENV
-            echo "status_test_desc=FAIL" >> $GITHUB_ENV
+            echo "status_test_desc=REVIEW REQUIRED" >> $GITHUB_ENV
             echo "color_test_desc=red" >> $GITHUB_ENV
           fi
         else
           if [ "$word_diff" -gt 3 ] || [ "$char_diff" -gt 10 ]; then
             echo "Description changed significantly. Review required."
             echo "note_test_desc=Description change exceeds 3 words or 10 characters. Review required." >> $GITHUB_ENV
-            echo "status_test_desc=FAIL" >> $GITHUB_ENV
+            echo "status_test_desc=REVIEW REQUIRED" >> $GITHUB_ENV
             echo "color_test_desc=red" >> $GITHUB_ENV
           else
             echo "Description change is minor."
@@ -880,11 +880,11 @@ jobs:
         ---
         ## Automated Testing
         *As table*
-        | # | Test name | Link | Notes | Result |
-        |---|---|---|---|---|
-        | 1 | Title Length | | ${{ env.note_test_title }} | \$\${\color{${{ env.color_test_title }}}${{ env.status_test_title }}}\$\$ |
-        | 2 | Description Length | | ${{ env.note_test_desc }} | \$\${\color{${{ env.color_test_desc }}}${{ env.status_test_desc }}}\$\$ |
-        | 3 | Test three | | | \$\${\color{green}PASS}\$\$ |
+        | # | Test name | Notes | Result |
+        |---|---|---|---|
+        | 1 | Title Length | ${{ env.note_test_title }} | \$\${\color{${{ env.color_test_title }}}${{ env.status_test_title }}}\$\$ |
+        | 2 | Description Length | ${{ env.note_test_desc }} | \$\${\color{${{ env.color_test_desc }}}${{ env.status_test_desc }}}\$\$ |
+        | 3 | Test three | | \$\${\color{green}PASS}\$\$ |
 
         *As checklist*
         - [ ] Interactions are connected

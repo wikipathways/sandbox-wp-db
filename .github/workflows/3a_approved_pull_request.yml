@@ -12,6 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout sandbox-wp-db
+        uses: actions/checkout@v4
+        with:
+          repository: wikipathways/sandbox-wp-db
+          path: sandbox-wp-db
+
       - name: Checkout sandbox-wp.gh.io
         uses: actions/checkout@v4
         with:
@@ -47,6 +53,8 @@ jobs:
           find _drafts -type f -name "WP0__PR${PR_NUMBER}.md" | while read file; do
             new_file=$(echo $file | sed "s/WP0__PR${PR_NUMBER}/${WPID}/")
             new_file=$(basename $new_file)
+            mkdir -p "../sandbox-wp-db/pathways/${WPID}"
+            cp "$file" "../sandbox-wp-db/pathways/${WPID}/${new_file}"
             mv "$file" "_pathways/${new_file}"
           done
 
@@ -58,9 +66,13 @@ jobs:
           done
 
           # Process files in draft_assets
-          find draft_assets -type f -name "WP0__PR${PR_NUMBER}.*" | while read file; do
+          find draft_assets -type f -name "WP0__PR${PR_NUMBER}*" | while read file; do
             new_file=$(echo $file | sed "s/WP0__PR${PR_NUMBER}/${WPID}/")
             new_file=$(basename $new_file)
+            #Skip SVG files
+            if [[ $file != *.svg ]]; then
+              cp "$file" "../sandbox-wp-db/pathways/${WPID}/${new_file}"
+            fi
             mkdir -p "../sandbox-wp-assets/pathways/${WPID}"
             mv "$file" "../sandbox-wp-assets/pathways/${WPID}/${new_file}"
           done
@@ -71,10 +83,19 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "Move approved pathway WP${{ steps.get_wpid.outputs.wpid }} from draft to main"
+          git commit -m "Publish approved pathway WP${{ steps.get_wpid.outputs.wpid }}"
           git push
 
-      - name: Commit and push changes to sandbox-wp-assets
+      - name: Commit and push changes to sandbox-wp-db
+        working-directory: sandbox-wp-db
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Add files for approved pathway WP${{ steps.get_wpid.outputs.wpid }}"
+          git push
+
+       - name: Commit and push changes to sandbox-wp-assets
         working-directory: sandbox-wp-assets
         run: |
           git config user.name github-actions

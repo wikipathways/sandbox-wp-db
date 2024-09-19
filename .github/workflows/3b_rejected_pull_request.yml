@@ -1,0 +1,45 @@
+name: 3B. Rejected Pull Request
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'Pull Request Number'
+        required: true
+
+jobs:
+  process_rejected_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Remove draft files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.inputs.pr_number }}
+        run: |
+          # Remove draft files from sandbox-wp.gh.io
+          gh repo clone wikipathways/sandbox-wp.gh.io
+          cd sandbox-wp.gh.io
+          find _drafts _data/drafts draft_assets -type f -name "WP0__PR${PR_NUMBER}*" -delete
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Remove draft files for rejected PR #${PR_NUMBER}" || echo "No changes to commit"
+          git push
+
+      - name: Add rejection comment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.inputs.pr_number }}
+        run: |
+          REJECTION_COMMENT="This pull request has been rejected. Please review the comments and make necessary changes before resubmitting."
+          gh pr comment $PR_NUMBER --body "$REJECTION_COMMENT"
+
+      - name: Close PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.inputs.pr_number }}
+        run: |
+          gh pr close $PR_NUMBER

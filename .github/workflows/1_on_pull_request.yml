@@ -809,7 +809,7 @@ jobs:
         else
           echo "Title has less than 10 characters."
           echo "note_test_title=Title has less than 10 characters." >> $GITHUB_ENV
-          echo "status_test_title=REVIEW REQUIRED" >> $GITHUB_ENV
+          echo "status_test_title=REVIEW  REQUIRED" >> $GITHUB_ENV
           echo "color_test_title=red" >> $GITHUB_ENV
         fi
 
@@ -855,14 +855,14 @@ jobs:
           else
             echo "Description for new pathway has fewer than 15 words."
             echo "note_test_desc=Description has fewer than 15 words." >> $GITHUB_ENV
-            echo "status_test_desc=REVIEW REQUIRED" >> $GITHUB_ENV
+            echo "status_test_desc=REVIEW  REQUIRED" >> $GITHUB_ENV
             echo "color_test_desc=red" >> $GITHUB_ENV
           fi
         else
           if [ "$word_diff" -gt 3 ] || [ "$char_diff" -gt 10 ]; then
             echo "Description changed significantly. Review required."
-            echo "note_test_desc=Description change exceeds 3 words or 10 characters. Review required." >> $GITHUB_ENV
-            echo "status_test_desc=REVIEW REQUIRED" >> $GITHUB_ENV
+            echo "note_test_desc=Description change exceeds 3 words or 10 characters." >> $GITHUB_ENV
+            echo "status_test_desc=REVIEW  REQUIRED" >> $GITHUB_ENV
             echo "color_test_desc=red" >> $GITHUB_ENV
           else
             echo "Description change is minor."
@@ -872,6 +872,26 @@ jobs:
           fi
         fi
 
+    - name: Check for deleted nodes
+      run: |
+        # Read the diff output from the file
+        diff_output=$(cat diff_output.txt)
+        
+        # Extract nodes that were removed from the GPML file (lines starting with '-')
+        deleted_nodes=$(echo "$diff_output" | grep "^-" | grep '<DataNode')
+    
+        if [ -z "$deleted_nodes" ]; then
+          echo "No nodes were deleted."
+        else
+          echo "Deleted nodes:"
+          echo "$deleted_nodes"
+          echo "Note: Review required for deleted nodes."
+        fi
+    
+        # Store the deleted nodes as an environment variable for later use
+        echo "deleted_nodes=$deleted_nodes" >> $GITHUB_ENV
+
+    
     - name: Report on testing
       id: report
       run: |    

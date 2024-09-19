@@ -772,6 +772,7 @@ jobs:
       GPML_NAME: ${{ needs.get-gpml.outputs.gpml-name }}
       GPML_DESC: ${{ needs.get-gpml.outputs.gpml-desc }}
       STATUS: ${{ needs.get-gpml.outputs.status }}
+      GH_TOKEN: ${{ github.token }}
     steps:
     - name: Checkout repository for scripts
       uses: actions/checkout@v4

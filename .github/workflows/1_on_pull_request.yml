@@ -849,26 +849,26 @@ jobs:
         if [ "$status" = "New" ]; then
           if [ "$new_word_count" -ge 15 ]; then
             echo "Description for new pathway has at least 15 words."
-            note_test_desc="Description has at least 15 words."
-            status_test_desc="PASS"
-            color_test_desc="green"
+            note_test_desc="Description has at least 15 words." >> $GITHUB_ENV
+            status_test_desc="PASS" >> $GITHUB_ENV
+            color_test_desc="green" >> $GITHUB_ENV
           else
             echo "Description for new pathway has fewer than 15 words."
-            note_test_desc="Description has fewer than 15 words."
-            status_test_desc="FAIL"
-            color_test_desc="red"
+            note_test_desc="Description has fewer than 15 words." >> $GITHUB_ENV
+            status_test_desc="FAIL" >> $GITHUB_ENV
+            color_test_desc="red" >> $GITHUB_ENV
           fi
         else
           if [ "$word_diff" -gt 3 ] || [ "$char_diff" -gt 10 ]; then
             echo "Description changed significantly. Review required."
-            note_test_desc="Description change exceeds 3 words or 10 characters. Review required."
-            status_test_desc="FAIL"
-            color_test_desc="red"
+            note_test_desc="Description change exceeds 3 words or 10 characters. Review required." >> $GITHUB_ENV
+            status_test_desc="FAIL" >> $GITHUB_ENV
+            color_test_desc="red" >> $GITHUB_ENV
           else
             echo "Description change is minor."
-            note_test_desc="Minor description change."
-            status_test_desc="PASS"
-            color_test_desc="green"
+            note_test_desc="Minor description change." >> $GITHUB_ENV
+            status_test_desc="PASS" >> $GITHUB_ENV
+            color_test_desc="green" >> $GITHUB_ENV
           fi
         fi
 

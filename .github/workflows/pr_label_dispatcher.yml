@@ -16,14 +16,14 @@ jobs:
           pr_number="${{ github.event.pull_request.number }}"
           
           case "$label" in
-            "approved")
+            "accepted")
               workflow="3a_approved_pull_request.yml"
               ;;
             "rejected")
               workflow="3b_rejected_pull_request.yml"
               ;;
             "resubmitted")
-              workflow="3c_resubmitted_pull_request.yml"
+              workflow="1_on_pull_request.yml"
               ;;
             *)
               echo "Label '$label' does not trigger any workflow."

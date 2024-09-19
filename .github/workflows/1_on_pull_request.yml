@@ -771,6 +771,7 @@ jobs:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
       GPML_NAME: ${{ needs.get-gpml.outputs.gpml-name }}
       GPML_DESC: ${{ needs.get-gpml.outputs.gpml-desc }}
+      STATUS: ${{ needs.get-gpml.outputs.status }}
     steps:
     - name: Checkout repository for scripts
       uses: actions/checkout@v4
@@ -779,11 +780,25 @@ jobs:
       # Downloads gpml-file and metadata artifacts to working dir
       # Note: Automatically unzips as folders containing files with original filenames
       uses: actions/download-artifact@v4
+
+    - name: Install tools
+      run: sudo apt-get install -y jq
+
+    - name: Fetch PR Diff
+      id: fetch_diff
+      run: |
+        PR_NUMBER="${{ needs.get-pr.outputs.pr-number }}"
+        GPML_FILE="${{ needs.get-gpml.outputs.gpml-file }}"
+
+        # Fetch the diff for the GPML file in the current PR
+        diff_output=$(gh pr diff "$PR_NUMBER" -- "$GPML_FILE")
+        echo "$diff_output"
+        echo "diff_output=$diff_output" >> $GITHUB_ENV
     
     - name: Perform Test 1 (characters in title)
       run: |
         title=$GPML_NAME
-        echo "The length of the string is ${#title}"
+        echo "The length of the title is ${#title}"
 
         title_length=${#title}
         if [ "$title_length" -ge 10 ]; then
@@ -796,6 +811,21 @@ jobs:
           echo "note_test1=Title has less than 10 characters." >> $GITHUB_ENV
           echo "status_test1=FAIL" >> $GITHUB_ENV
           echo "color_test1=red" >> $GITHUB_ENV
+        fi
+
+    - name: Perform Test 2 (characters in title)
+      run: |
+        desc=$GPML_DESC
+        status=$STATUS
+        echo "The length of the description is ${#desc}"
+        echo " This is a $status pathway"
+
+        desc_length=${#desc}
+        if [ "$desc_length" -ge 15 & "$status" = "New" ]; then
+          echo "Description has at least 15 characters."
+          echo "note_test2=Description has at least 15 characters." >> $GITHUB_ENV
+          echo "status_test2=PASS" >> $GITHUB_ENV
+          echo "color_test2=green" >> $GITHUB_ENV
         fi
         
 

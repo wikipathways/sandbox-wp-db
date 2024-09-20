@@ -878,14 +878,38 @@ jobs:
         diff_output=$(cat diff_output.txt)
         
         # Extract nodes that were removed from the GPML file (lines starting with '-')
-        deleted_nodes=$(echo "$diff_output" | grep "^-" | grep '<DataNode')
+        deleted_nodes=$(echo "$diff_output" | grep "^-" | grep '<DataNode' | sed 's/^-//')
+        
+        # Extract nodes that were added or changed in the GPML file (lines starting with '+')
+        added_or_modified_nodes=$(echo "$diff_output" | grep "^+" | grep '<DataNode' | sed 's/^+//')
+        
+        # Check for matching GraphId in both deleted and added/modified nodes to determine if it was modified
+        modified_nodes=""
+        for deleted_node in $deleted_nodes; do
+          graph_id=$(echo "$deleted_node" | grep -o 'GraphId="[^"]*"' | sed 's/GraphId="//;s/"//')
+          if echo "$added_or_modified_nodes" | grep -q "GraphId=\"$graph_id\""; then
+            modified_nodes="$modified_nodes\n$deleted_node"
+          fi
+        done
     
-        if [ -z "$deleted_nodes" ]; then
-          echo "No nodes were deleted."
+        # Remove modified nodes from the deleted nodes list
+        actual_deleted_nodes=$(echo "$deleted_nodes" | grep -v -f <(echo "$modified_nodes"))
+    
+        # Output the results
+        if [ -z "$actual_deleted_nodes" ] && [ -z "$modified_nodes" ]; then
+          echo "No nodes were deleted or modified."
         else
-          echo "Deleted nodes:"
-          echo "$deleted_nodes"
-          echo "Note: Review required for deleted nodes."
+          if [ -n "$actual_deleted_nodes" ]; then
+            echo "Deleted nodes:"
+            echo "$actual_deleted_nodes"
+            echo "Note: Review required for deleted nodes."
+          fi
+          
+          if [ -n "$modified_nodes" ]; then
+            echo "Modified nodes:"
+            echo "$modified_nodes"
+            echo "Note: Review required for modified nodes."
+          fi
         fi
     
         # Store the deleted nodes as an environment variable for later use

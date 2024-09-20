@@ -19,10 +19,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.inputs.pr_number }}
         run: |
-          # Remove draft files from sandbox-wp.gh.io
           gh repo clone wikipathways/sandbox-wp.gh.io
           cd sandbox-wp.gh.io
-          find _drafts _data/drafts draft_assets -type f -name "WP0__PR${PR_NUMBER}*" -delete
+          find _drafts _data/drafts draft_assets -type f -name "WP*__PR${PR_NUMBER}*" -delete
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .

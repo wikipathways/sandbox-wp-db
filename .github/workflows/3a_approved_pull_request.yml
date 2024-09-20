@@ -36,22 +36,37 @@ jobs:
         id: get_wpid
         working-directory: sandbox-wp.gh.io
         run: |
-          WPID=$(ls _pathways/ | grep -E '^WP[0-9]+\.md$' | sort -V | tail -n 1)
-          WPID=$(echo $WPID | sed 's/\.md//')
-          WPID_NUM=$(echo $WPID | sed 's/WP//')
-          WPID_NUM=$((WPID_NUM + 1))
-          WPID="WP$WPID_NUM"
+          PR_NUMBER=${{ github.event.inputs.pr_number }}
+          DRAFT_FILE=$(find _drafts -name "WP*__PR${PR_NUMBER}.md" | head -n 1)
+          
+          if [ -n "$DRAFT_FILE" ]; then
+            WPID_NUM=$(echo $DRAFT_FILE | sed -E 's/WP([0-9]+)__PR.*/\1/')
+            if [ "$WPID_NUM" -eq "0" ]; then
+              WPID=$(ls _pathways/ | grep -E '^WP[0-9]+\.md$' | sort -V | tail -n 1)
+              WPID=$(echo $WPID | sed 's/\.md//')
+              WPID_NEW=$(echo $WPID | sed 's/WP//')
+              WPID_NEW=$((WPID_NEW + 1))
+            else
+              WPID_NEW=$((WPID_NUM))
+            fi
+          else
+            echo "No draft file found for PR #${PR_NUMBER}"
+            exit 1
+          fi
+          
+          WPID="WP${WPID_NEW}"
           echo "::set-output name=wpid::$WPID"
+          echo "::set-output name=old_prefix::WP${WPID_NUM}__PR${PR_NUMBER}"
 
       - name: Rename and Move Files
         working-directory: sandbox-wp.gh.io
         run: |
-          PR_NUMBER=${{ github.event.inputs.pr_number }}
+          OLD_PREFIX=${{ steps.get_wpid.outputs.old_prefix }}
           WPID=${{ steps.get_wpid.outputs.wpid }}
           
           # Process .md files
-          find _drafts -type f -name "WP0__PR${PR_NUMBER}.md" | while read file; do
-            new_file=$(echo $file | sed "s/WP0__PR${PR_NUMBER}/${WPID}/")
+          find _drafts -type f -name "${OLD_PREFIX}.md" | while read file; do
+            new_file=$(echo $file | sed "s/${OLD_PREFIX}/${WPID}/")
             new_file=$(basename $new_file)
             mkdir -p "../sandbox-wp-db/pathways/${WPID}"
             cp "$file" "../sandbox-wp-db/pathways/${WPID}/${new_file}"
@@ -59,15 +74,15 @@ jobs:
           done
 
           # Process .tsv files
-          find _data/drafts -type f -name "WP0__PR${PR_NUMBER}*.tsv" | while read file; do
-            new_file=$(echo $file | sed "s/WP0__PR${PR_NUMBER}/${WPID}/")
+          find _data/drafts -type f -name "${OLD_PREFIX}*.tsv" | while read file; do
+            new_file=$(echo $file | sed "s/${OLD_PREFIX}/${WPID}/")
             new_file=$(basename $new_file)
             mv "$file" "_data/${new_file}"
           done
 
           # Process files in draft_assets
-          find draft_assets -type f -name "WP0__PR${PR_NUMBER}*" | while read file; do
-            new_file=$(echo $file | sed "s/WP0__PR${PR_NUMBER}/${WPID}/")
+          find draft_assets -type f -name "${OLD_PREFIX}*" | while read file; do
+            new_file=$(echo $file | sed "s/${OLD_PREFIX}/${WPID}/")
             new_file=$(basename $new_file)
             #Skip SVG files
             if [[ $file != *.svg ]]; then

@@ -910,8 +910,17 @@ jobs:
 
         echo "Exit from the while loop"
         
-        # Remove modified nodes from the deleted nodes list (avoid using subshell for `grep -f`)
-        actual_deleted_nodes=$(echo "$deleted_nodes" | grep -vF "$(echo "$modified_nodes" | sed '/^$/d')")
+        # Remove modified nodes from the deleted nodes list
+        # Check if modified_nodes is empty
+        if [ -n "$modified_nodes" ]; then
+          # Escape any special characters in modified_nodes
+          safe_modified_nodes=$(echo "$modified_nodes" | sed '/^$/d' | sed 's/[\/&]/\\&/g')
+        
+          # Safely remove modified nodes from deleted nodes
+          actual_deleted_nodes=$(echo "$deleted_nodes" | grep -vF "$safe_modified_nodes")
+        else
+          actual_deleted_nodes="$deleted_nodes"
+        fi
         echo "Actually deleted nodes:"
         echo "$actual_deleted_nodes"
         

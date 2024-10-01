@@ -879,9 +879,11 @@ jobs:
         
         # Extract nodes that were removed from the GPML file (lines starting with '-')
         deleted_nodes=$(echo "$diff_output" | grep "^-" | grep '<DataNode' | sed 's/^-//')
+        echo "Deleted nodes: $deleted_nodes"
         
         # Extract nodes that were added or changed in the GPML file (lines starting with '+')
         added_or_modified_nodes=$(echo "$diff_output" | grep "^+" | grep '<DataNode' | sed 's/^+//')
+        echo "Added/modified nodes: $added_or_modified_nodes"
         
         # Check for matching GraphId in both deleted and added/modified nodes to determine if it was modified
         modified_nodes=""

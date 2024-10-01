@@ -872,27 +872,38 @@ jobs:
           fi
         fi
 
-    - name: Check for deleted nodes
+    - name: Check for deleted, added, and modified nodes
       run: |
         # Read the diff output from the file
         diff_output=$(cat diff_output.txt)
         
         # Extract nodes that were removed from the GPML file (lines starting with '-')
         deleted_nodes=$(echo "$diff_output" | grep "^-" | grep '<DataNode' | sed 's/^-//')
-        echo "Deleted nodes: $deleted_nodes"
         
         # Extract nodes that were added or changed in the GPML file (lines starting with '+')
         added_or_modified_nodes=$(echo "$diff_output" | grep "^+" | grep '<DataNode' | sed 's/^+//')
-        echo "Added/modified nodes: $added_or_modified_nodes"
         
-        # Check for matching GraphId in both deleted and added/modified nodes to determine if it was modified
+        echo "Deleted nodes:"
+        echo "$deleted_nodes"
+        
+        echo "Added/modified nodes:"
+        echo "$added_or_modified_nodes"
+        
         modified_nodes=""
-        for deleted_node in $deleted_nodes; do
-          graph_id=$(echo "$deleted_node" | grep -o 'GraphId="[^"]*"' | sed 's/GraphId="//;s/"//')
-          if echo "$added_or_modified_nodes" | grep -q "GraphId=\"$graph_id\""; then
-            modified_nodes="$modified_nodes\n$deleted_node"
+        
+        # Use while loop to iterate through deleted nodes safely
+        while IFS= read -r deleted_node; do
+          if [ -n "$deleted_node" ]; then
+            graph_id=$(echo "$deleted_node" | grep -o 'GraphId="[^"]*"' | sed 's/GraphId="//;s/"//')
+            
+            # Check if the same GraphId exists in the added/modified nodes
+            matching_added_node=$(echo "$added_or_modified_nodes" | grep "GraphId=\"$graph_id\"")
+            
+            if [ -n "$matching_added_node" ]; then
+              modified_nodes="$modified_nodes\n$deleted_node"
+            fi
           fi
-        done
+        done <<< "$deleted_nodes"
     
         # Remove modified nodes from the deleted nodes list
         actual_deleted_nodes=$(echo "$deleted_nodes" | grep -v -f <(echo "$modified_nodes"))

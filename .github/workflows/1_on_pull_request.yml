@@ -883,21 +883,12 @@ jobs:
         # Extract nodes that were added or changed in the GPML file (lines starting with '+')
         added_or_modified_nodes=$(echo "$diff_output" | grep "^+" | grep '<DataNode' | sed 's/^+//')
         
-        echo "Deleted nodes:"
-        echo "$deleted_nodes"
-        
-        echo "Added/modified nodes:"
-        echo "$added_or_modified_nodes"
-        
         modified_nodes=""
         
         # Use while loop to iterate through deleted nodes safely
         while IFS= read -r deleted_node; do
-          echo "Inside the while loop"
           if [ -n "$deleted_node" ]; then
             graph_id=$(echo "$deleted_node" | grep -o 'GraphId="[^"]*"' | sed 's/GraphId="//;s/"//')
-            echo "Graph id is: "
-            echo "$graph_id"
             
             # Check if the same GraphId exists in the added/modified nodes
             matching_added_node=$(echo "$added_or_modified_nodes" | grep "GraphId=\"$graph_id\"")
@@ -907,45 +898,49 @@ jobs:
             fi
           fi
         done <<< "$deleted_nodes"
-
-        echo "Exit from the while loop"
         
-        # Remove modified nodes from the deleted nodes list
-        # Check if modified_nodes is empty
+        # Safely remove modified nodes from deleted nodes
         if [ -n "$modified_nodes" ]; then
-          # Escape any special characters in modified_nodes
           safe_modified_nodes=$(echo "$modified_nodes" | sed '/^$/d' | sed 's/[\/&]/\\&/g')
-        
-          # Safely remove modified nodes from deleted nodes
           actual_deleted_nodes=$(echo "$deleted_nodes" | grep -vF "$safe_modified_nodes")
         else
           actual_deleted_nodes="$deleted_nodes"
         fi
-        echo "Actually deleted nodes:"
-        echo "$actual_deleted_nodes"
         
-        # Output the results
-        if [ -z "$actual_deleted_nodes" ] && [ -z "$modified_nodes" ]; then
-          echo "No nodes were deleted or modified."
+        # Count the number of nodes
+        num_deleted_nodes=$(echo "$actual_deleted_nodes" | sed '/^$/d' | wc -l)
+        num_modified_nodes=$(echo "$modified_nodes" | sed '/^$/d' | wc -l)
+        num_added_nodes=$(echo "$added_or_modified_nodes" | grep -vF "$modified_nodes" | sed '/^$/d' | wc -l)
+
+        # Determine pass or review required and report
+        if [ "$num_deleted_nodes" -eq 0 ] && [ "$num_modified_nodes" -eq 0 ] && [ "$num_added_nodes" -eq 0 ]; then
+          # No changes, pass
+          echo "No nodes were deleted, modified, or added."
+          echo "note_test_nodes=No nodes were deleted, modified, or added." >> $GITHUB_ENV
+          echo "status_test_nodes=PASS" >> $GITHUB_ENV
+          echo "color_test_nodes=green" >> $GITHUB_ENV
         else
-          if [ -n "$actual_deleted_nodes" ]; then
-            echo "Deleted nodes:"
-            echo "$actual_deleted_nodes"
-            echo "Note: Review required for deleted nodes."
-          fi
-          
-          if [ -n "$modified_nodes" ]; then
-            echo "Modified nodes:"
-            echo "$modified_nodes"
-            echo "Note: Review required for modified nodes."
-          fi
+          # Nodes were changed, review required
+          echo "Review required."
+          [ "$num_deleted_nodes" -gt 0 ] && echo "Deleted nodes: $num_deleted_nodes"
+          [ "$num_modified_nodes" -gt 0 ] && echo "Modified nodes: $num_modified_nodes"
+          [ "$num_added_nodes" -gt 0 ] && echo "Added nodes: $num_added_nodes"
+    
+          review_note=""
+          [ "$num_deleted_nodes" -gt 0 ] && review_note+="Deleted nodes: $num_deleted_nodes\n"
+          [ "$num_modified_nodes" -gt 0 ] && review_note+="Modified nodes: $num_modified_nodes\n"
+          [ "$num_added_nodes" -gt 0 ] && review_note+="Added nodes: $num_added_nodes\n"
+    
+          echo "note_test_nodes=$review_note" >> $GITHUB_ENV
+          echo "status_test_nodes=REVIEW REQUIRED" >> $GITHUB_ENV
+          echo "color_test_nodes=red" >> $GITHUB_ENV
         fi
         
-        # Safely store the deleted nodes as an environment variable for later use
+        # Store the deleted, modified, and added nodes as environment variables for later use
         echo "deleted_nodes=${deleted_nodes}" >> $GITHUB_ENV
+        echo "modified_nodes=${modified_nodes}" >> $GITHUB_ENV
+        echo "added_nodes=${added_or_modified_nodes}" >> $GITHUB_ENV
 
-
-    
     - name: Report on testing
       id: report
       run: |    
@@ -958,7 +953,7 @@ jobs:
         |---|---|---|---|
         | 1 | Title Length | ${{ env.note_test_title }} | \$\${\color{${{ env.color_test_title }}}${{ env.status_test_title }}}\$\$ |
         | 2 | Description Length | ${{ env.note_test_desc }} | \$\${\color{${{ env.color_test_desc }}}${{ env.status_test_desc }}}\$\$ |
-        | 3 | Test three | | \$\${\color{green}PASS}\$\$ |
+        | 3 | Data nodes | ${{ env.note_test_nodes }} | \$\${\color{${{ env.color_test_nodes }}}${{ env.status_test_nodes }}}\$\$ |
 
         *As checklist*
         - [ ] Interactions are connected

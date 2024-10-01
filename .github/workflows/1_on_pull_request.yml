@@ -893,8 +893,11 @@ jobs:
         
         # Use while loop to iterate through deleted nodes safely
         while IFS= read -r deleted_node; do
+          echo "Inside the while loop"
           if [ -n "$deleted_node" ]; then
             graph_id=$(echo "$deleted_node" | grep -o 'GraphId="[^"]*"' | sed 's/GraphId="//;s/"//')
+            echo "Graph id is: "
+            echo "$graph_id"
             
             # Check if the same GraphId exists in the added/modified nodes
             matching_added_node=$(echo "$added_or_modified_nodes" | grep "GraphId=\"$graph_id\"")
@@ -904,10 +907,14 @@ jobs:
             fi
           fi
         done <<< "$deleted_nodes"
-    
-        # Remove modified nodes from the deleted nodes list
-        actual_deleted_nodes=$(echo "$deleted_nodes" | grep -v -f <(echo "$modified_nodes"))
-    
+
+        echo "Exit from the while loop"
+        
+        # Remove modified nodes from the deleted nodes list (avoid using subshell for `grep -f`)
+        actual_deleted_nodes=$(echo "$deleted_nodes" | grep -vF "$(echo "$modified_nodes" | sed '/^$/d')")
+        echo "Actually deleted nodes:"
+        echo "$actual_deleted_nodes"
+        
         # Output the results
         if [ -z "$actual_deleted_nodes" ] && [ -z "$modified_nodes" ]; then
           echo "No nodes were deleted or modified."
@@ -924,9 +931,10 @@ jobs:
             echo "Note: Review required for modified nodes."
           fi
         fi
-    
-        # Store the deleted nodes as an environment variable for later use
-        echo "deleted_nodes=$deleted_nodes" >> $GITHUB_ENV
+        
+        # Safely store the deleted nodes as an environment variable for later use
+        echo "deleted_nodes=${deleted_nodes}" >> $GITHUB_ENV
+
 
     
     - name: Report on testing

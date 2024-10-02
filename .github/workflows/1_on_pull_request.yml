@@ -973,7 +973,7 @@ jobs:
       id: report
       run: |    
         # Fixing newline characters for the Data nodes notes
-        note_test_nodes_formatted=$(echo "${{ env.note_test_nodes }}" | tr '\n' '<br>')
+        # note_test_nodes_formatted=$(echo "${{ env.note_test_nodes }}" | tr '\n' '<br>')
 
         # Initialize the review tasks based on the automated test results
         review_tasks=""
@@ -998,7 +998,7 @@ jobs:
         |---|---|---|---|
         | 1 | Title Length | ${{ env.note_test_title }} | \$\${\color{${{ env.color_test_title }}}${{ env.status_test_title }}}\$\$ |
         | 2 | Description Length | ${{ env.note_test_desc }} | \$\${\color{${{ env.color_test_desc }}}${{ env.status_test_desc }}}\$\$ |
-        | 3 | Data nodes | '"$note_test_nodes_formatted"' | \$\${\color{${{ env.color_test_nodes }}}${{ env.status_test_nodes }}}\$\$ |
+        | 3 | Data nodes | ${{ env.note_test_nodes }} | \$\${\color{${{ env.color_test_nodes }}}${{ env.status_test_nodes }}}\$\$ |
 
         ---
         ## Reviewer Checklist

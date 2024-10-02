@@ -892,7 +892,7 @@ jobs:
 
           # Set the environment variables for new GPML files
           echo "note_test_nodes=All nodes are new, as this is a new GPML file." >> $GITHUB_ENV
-          echo "status_test_nodes==REVIEW REQUIRED" >> $GITHUB_ENV
+          echo "status_test_nodes=REVIEW REQUIRED" >> $GITHUB_ENV
           echo "color_test_nodes=red" >> $GITHUB_ENV
           
         else

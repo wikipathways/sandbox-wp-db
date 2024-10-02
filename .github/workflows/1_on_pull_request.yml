@@ -882,7 +882,7 @@ jobs:
         
         if [ "$status" = "New" ]; then
           # For new GPML files, treat all nodes as added nodes
-          added_nodes=$(grep '<DataNode' "$GPML_FILE" | sed 's/^+//')
+          added_nodes=$(echo "$diff_output" | grep "^+" | grep '<DataNode' | sed 's/^+//')
           num_added_nodes=$(echo "$added_nodes" | sed '/^$/d' | wc -l)
 
           # Output the results for a new GPML file
@@ -892,8 +892,8 @@ jobs:
 
           # Set the environment variables for new GPML files
           echo "note_test_nodes=All nodes are new, as this is a new GPML file." >> $GITHUB_ENV
-          echo "status_test_nodes=PASS" >> $GITHUB_ENV
-          echo "color_test_nodes=green" >> $GITHUB_ENV
+          echo "status_test_nodes==REVIEW REQUIRED" >> $GITHUB_ENV
+          echo "color_test_nodes=red" >> $GITHUB_ENV
           
         else
           # For modified GPML files, proceed with checking deleted, added, and modified nodes

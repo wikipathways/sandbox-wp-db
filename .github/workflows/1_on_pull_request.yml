@@ -912,6 +912,13 @@ jobs:
         num_modified_nodes=$(echo "$modified_nodes" | sed '/^$/d' | wc -l)
         num_added_nodes=$(echo "$added_or_modified_nodes" | grep -vF "$modified_nodes" | sed '/^$/d' | wc -l)
 
+        # Output the results
+        echo "Summary:"
+        echo "Deleted nodes: $num_deleted_nodes"
+        echo "Modified nodes: $num_modified_nodes"
+        echo "Added nodes: $num_added_nodes"
+        echo "Added or modified nodes: $added_or_modified_nodes"
+
         # Determine pass or review required and report
         if [ "$num_deleted_nodes" -eq 0 ] && [ "$num_modified_nodes" -eq 0 ] && [ "$num_added_nodes" -eq 0 ]; then
           # No changes, pass
@@ -948,20 +955,21 @@ jobs:
         NEW_DESCRIPTION='
         ---
         ## Automated Testing
-        *As table*
         | # | Test name | Notes | Result |
         |---|---|---|---|
         | 1 | Title Length | ${{ env.note_test_title }} | \$\${\color{${{ env.color_test_title }}}${{ env.status_test_title }}}\$\$ |
         | 2 | Description Length | ${{ env.note_test_desc }} | \$\${\color{${{ env.color_test_desc }}}${{ env.status_test_desc }}}\$\$ |
         | 3 | Data nodes | ${{ env.note_test_nodes }} | \$\${\color{${{ env.color_test_nodes }}}${{ env.status_test_nodes }}}\$\$ |
 
-        *As checklist*
+        ---
+        ## Reviewer Checklist
         - [ ] Interactions are connected
         - [ ] Datanodes are annotated with database references
-        - [ ] Decription, consisting of 2-3 sentence overview of processes described in the pathway
-        - [ ] At least one literature reference
-        - [ ] At least one pathway ontology term
+        - [ ] A description, consisting of a 2-3 sentence overview of processes described in the pathway, is included
+        - [ ] At least one literature reference is provided
+        - [ ] At least one pathway ontology term is included
         - [ ] Pathway title conforms to the [guidelines](https://github.com/wikipathways/wikipathways-faq/discussions/24)
+        - [ ] Additional tests and checks are available in the [review checklist spreadsheet](https://docs.google.com/spreadsheets/d/1Pew5bxLRjjjDKFtqs2OIib-OOAPY23c1TrshoNOqfoI/edit?usp=sharing).
         ---
         '
         

@@ -872,102 +872,102 @@ jobs:
           fi
         fi
 
-        - name: Check for deleted, added, and modified nodes
-          run: |
-            # Read the diff output from the file
-            diff_output=$(cat diff_output.txt)
-    
-            # Check if the GPML file is new
-            status="${{ env.STATUS }}"
-            
-            if [ "$status" = "New" ]; then
-              # For new GPML files, treat all nodes as added nodes
-              added_nodes=$(grep '<DataNode' "$GPML_FILE" | sed 's/^+//')
-              num_added_nodes=$(echo "$added_nodes" | sed '/^$/d' | wc -l)
-    
-              # Output the results for a new GPML file
-              echo "New GPML submission detected."
-              echo "All nodes are considered as added nodes."
-              echo "Added nodes: $num_added_nodes"
-    
-              # Set the environment variables for new GPML files
-              echo "note_test_nodes=All nodes are new, as this is a new GPML file." >> $GITHUB_ENV
-              echo "status_test_nodes=PASS" >> $GITHUB_ENV
-              echo "color_test_nodes=green" >> $GITHUB_ENV
-              
-            else
-              # For modified GPML files, proceed with checking deleted, added, and modified nodes
-              # Extract nodes that were removed from the GPML file (lines starting with '-')
-              deleted_nodes=$(echo "$diff_output" | grep "^-" | grep '<DataNode' | sed 's/^-//')
-    
-              # Extract nodes that were added or changed in the GPML file (lines starting with '+')
-              added_or_modified_nodes=$(echo "$diff_output" | grep "^+" | grep '<DataNode' | sed 's/^+//')
-    
-              modified_nodes=""
-              
-              # Use while loop to iterate through deleted nodes safely
-              while IFS= read -r deleted_node; do
-                if [ -n "$deleted_node" ]; then
-                  graph_id=$(echo "$deleted_node" | grep -o 'GraphId="[^"]*"' | sed 's/GraphId="//;s/"//')
-                  
-                  # Check if the same GraphId exists in the added/modified nodes
-                  matching_added_node=$(echo "$added_or_modified_nodes" | grep "GraphId=\"$graph_id\"")
-                  
-                  if [ -n "$matching_added_node" ]; then
-                    modified_nodes="$modified_nodes\n$deleted_node"
-                  fi
-                fi
-              done <<< "$deleted_nodes"
-              
-              # Safely remove modified nodes from deleted nodes
-              if [ -n "$modified_nodes" ]; then
-                safe_modified_nodes=$(echo "$modified_nodes" | sed '/^$/d' | sed 's/[\/&]/\\&/g')
-                actual_deleted_nodes=$(echo "$deleted_nodes" | grep -vF "$safe_modified_nodes")
-              else
-                actual_deleted_nodes="$deleted_nodes"
-              fi
-              
-              # Count the number of nodes
-              num_deleted_nodes=$(echo "$actual_deleted_nodes" | sed '/^$/d' | wc -l)
-              num_modified_nodes=$(echo "$modified_nodes" | sed '/^$/d' | wc -l)
-              num_added_nodes=$(echo "$added_or_modified_nodes" | grep -vF "$modified_nodes" | sed '/^$/d' | wc -l)
-    
-              # Output the results for modified GPML file
-              echo "Summary:"
-              echo "Deleted nodes: $num_deleted_nodes"
-              echo "Modified nodes: $num_modified_nodes"
-              echo "Added nodes: $num_added_nodes"
-    
-              # Determine pass or review required and report
-              if [ "$num_deleted_nodes" -eq 0 ] && [ "$num_modified_nodes" -eq 0 ] && [ "$num_added_nodes" -eq 0 ]; then
-                # No changes, pass
-                echo "No nodes were deleted, modified, or added."
-                echo "note_test_nodes=No nodes were deleted, modified, or added." >> $GITHUB_ENV
-                echo "status_test_nodes=PASS" >> $GITHUB_ENV
-                echo "color_test_nodes=green" >> $GITHUB_ENV
-              else
-                # Nodes were changed, review required
-                echo "Review required."
-                [ "$num_deleted_nodes" -gt 0 ] && echo "Deleted nodes: $num_deleted_nodes"
-                [ "$num_modified_nodes" -gt 0 ] && echo "Modified nodes: $num_modified_nodes"
-                [ "$num_added_nodes" -gt 0 ] && echo "Added nodes: $num_added_nodes"
+    - name: Check for deleted, added, and modified nodes
+      run: |
+        # Read the diff output from the file
+        diff_output=$(cat diff_output.txt)
+
+        # Check if the GPML file is new
+        status="${{ env.STATUS }}"
+        
+        if [ "$status" = "New" ]; then
+          # For new GPML files, treat all nodes as added nodes
+          added_nodes=$(grep '<DataNode' "$GPML_FILE" | sed 's/^+//')
+          num_added_nodes=$(echo "$added_nodes" | sed '/^$/d' | wc -l)
+
+          # Output the results for a new GPML file
+          echo "New GPML submission detected."
+          echo "All nodes are considered as added nodes."
+          echo "Added nodes: $num_added_nodes"
+
+          # Set the environment variables for new GPML files
+          echo "note_test_nodes=All nodes are new, as this is a new GPML file." >> $GITHUB_ENV
+          echo "status_test_nodes=PASS" >> $GITHUB_ENV
+          echo "color_test_nodes=green" >> $GITHUB_ENV
           
-                review_note=""
-                [ "$num_deleted_nodes" -gt 0 ] && review_note+="Deleted nodes: $num_deleted_nodes\n"
-                [ "$num_modified_nodes" -gt 0 ] && review_note+="Modified nodes: $num_modified_nodes\n"
-                [ "$num_added_nodes" -gt 0 ] && review_note+="Added nodes: $num_added_nodes\n"
+        else
+          # For modified GPML files, proceed with checking deleted, added, and modified nodes
+          # Extract nodes that were removed from the GPML file (lines starting with '-')
+          deleted_nodes=$(echo "$diff_output" | grep "^-" | grep '<DataNode' | sed 's/^-//')
+
+          # Extract nodes that were added or changed in the GPML file (lines starting with '+')
+          added_or_modified_nodes=$(echo "$diff_output" | grep "^+" | grep '<DataNode' | sed 's/^+//')
+
+          modified_nodes=""
           
-                echo "note_test_nodes=$review_note" >> $GITHUB_ENV
-                echo "status_test_nodes=REVIEW REQUIRED" >> $GITHUB_ENV
-                echo "color_test_nodes=red" >> $GITHUB_ENV
+          # Use while loop to iterate through deleted nodes safely
+          while IFS= read -r deleted_node; do
+            if [ -n "$deleted_node" ]; then
+              graph_id=$(echo "$deleted_node" | grep -o 'GraphId="[^"]*"' | sed 's/GraphId="//;s/"//')
+              
+              # Check if the same GraphId exists in the added/modified nodes
+              matching_added_node=$(echo "$added_or_modified_nodes" | grep "GraphId=\"$graph_id\"")
+              
+              if [ -n "$matching_added_node" ]; then
+                modified_nodes="$modified_nodes\n$deleted_node"
               fi
             fi
-    
-            
-            # Store the deleted, modified, and added nodes as environment variables for later use
-            echo "deleted_nodes=${deleted_nodes}" >> $GITHUB_ENV
-            echo "modified_nodes=${modified_nodes}" >> $GITHUB_ENV
-            echo "added_nodes=${added_or_modified_nodes}" >> $GITHUB_ENV
+          done <<< "$deleted_nodes"
+          
+          # Safely remove modified nodes from deleted nodes
+          if [ -n "$modified_nodes" ]; then
+            safe_modified_nodes=$(echo "$modified_nodes" | sed '/^$/d' | sed 's/[\/&]/\\&/g')
+            actual_deleted_nodes=$(echo "$deleted_nodes" | grep -vF "$safe_modified_nodes")
+          else
+            actual_deleted_nodes="$deleted_nodes"
+          fi
+          
+          # Count the number of nodes
+          num_deleted_nodes=$(echo "$actual_deleted_nodes" | sed '/^$/d' | wc -l)
+          num_modified_nodes=$(echo "$modified_nodes" | sed '/^$/d' | wc -l)
+          num_added_nodes=$(echo "$added_or_modified_nodes" | grep -vF "$modified_nodes" | sed '/^$/d' | wc -l)
+
+          # Output the results for modified GPML file
+          echo "Summary:"
+          echo "Deleted nodes: $num_deleted_nodes"
+          echo "Modified nodes: $num_modified_nodes"
+          echo "Added nodes: $num_added_nodes"
+
+          # Determine pass or review required and report
+          if [ "$num_deleted_nodes" -eq 0 ] && [ "$num_modified_nodes" -eq 0 ] && [ "$num_added_nodes" -eq 0 ]; then
+            # No changes, pass
+            echo "No nodes were deleted, modified, or added."
+            echo "note_test_nodes=No nodes were deleted, modified, or added." >> $GITHUB_ENV
+            echo "status_test_nodes=PASS" >> $GITHUB_ENV
+            echo "color_test_nodes=green" >> $GITHUB_ENV
+          else
+            # Nodes were changed, review required
+            echo "Review required."
+            [ "$num_deleted_nodes" -gt 0 ] && echo "Deleted nodes: $num_deleted_nodes"
+            [ "$num_modified_nodes" -gt 0 ] && echo "Modified nodes: $num_modified_nodes"
+            [ "$num_added_nodes" -gt 0 ] && echo "Added nodes: $num_added_nodes"
+      
+            review_note=""
+            [ "$num_deleted_nodes" -gt 0 ] && review_note+="Deleted nodes: $num_deleted_nodes\n"
+            [ "$num_modified_nodes" -gt 0 ] && review_note+="Modified nodes: $num_modified_nodes\n"
+            [ "$num_added_nodes" -gt 0 ] && review_note+="Added nodes: $num_added_nodes\n"
+      
+            echo "note_test_nodes=$review_note" >> $GITHUB_ENV
+            echo "status_test_nodes=REVIEW REQUIRED" >> $GITHUB_ENV
+            echo "color_test_nodes=red" >> $GITHUB_ENV
+          fi
+        fi
+
+        
+        # Store the deleted, modified, and added nodes as environment variables for later use
+        echo "deleted_nodes=${deleted_nodes}" >> $GITHUB_ENV
+        echo "modified_nodes=${modified_nodes}" >> $GITHUB_ENV
+        echo "added_nodes=${added_or_modified_nodes}" >> $GITHUB_ENV                 
 
     - name: Report on testing
       id: report

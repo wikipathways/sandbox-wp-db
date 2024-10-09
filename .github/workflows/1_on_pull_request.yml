@@ -989,6 +989,9 @@ jobs:
         if [ "${{ env.status_test_nodes }}" = "REVIEW REQUIRED" ]; then
           review_tasks="${review_tasks}- [ ] Data nodes review required\n"
         fi
+
+        # Remove trailing newlines by piping through `sed`
+        review_tasks=$(echo -e "$review_tasks" | sed '/^$/d')
         
         # Update PR description
         NEW_DESCRIPTION='

@@ -665,7 +665,7 @@ jobs:
     # A markdown text report is stored as pr-desc to be compiled and written to the PR description.
     #if: false
     needs: [get-pr,get-gpml,metadata]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04 # do not upgrade as it breaks the puppeteer https://github.com/puppeteer/puppeteer/issues/12818
     outputs:
       pr-desc: ${{ steps.report.outputs.pr-desc }}
     env:

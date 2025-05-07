@@ -106,7 +106,6 @@ sequenceDiagram
 
 ### Failure modes
 * **GPML lint errors** – job fails, conclusion = `failure` → reviewer label `qc‑fail`.
-* **Preview build timeout** – common cause: new large images; instruct contributor to compress images.
 
 ---
 
@@ -142,8 +141,6 @@ sequenceDiagram
 | `release_notes` → Append line to `CHANGELOG.md` (`npm version-prerelease`)
 | `cleanup` → Delete source branch
 | `comment` → Congratulatory note with commit SHA & live URL
-
-After merge, GitHub Pages auto‑builds. If that build fails, on‑call follows **RUNBOOK.md §3**.
 
 ---
 

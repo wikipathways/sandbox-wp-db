@@ -40,7 +40,8 @@ download_bridge() {
   i=1
   while :; do
     echo "wget $norm -> $target (attempt $i/$attempts)"
-    if wget --user-agent="$ua" --header="Referer: $ref" \
+    if wget --quiet --progress=dot:giga \
+            --user-agent="$ua" --header="Referer: $ref" \
             --tries=5 --waitretry=2 --retry-connrefused \
             --retry-on-http-error=403,429,500,502,503,504 \
             -O "$tmp" "$norm"; then

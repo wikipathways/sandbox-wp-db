@@ -26,10 +26,6 @@
     <Graphics CenterX="285.0" CenterY="370.3333333333333" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="HMDB" ID="HMDB0001423" />
   </DataNode>
-  <DataNode TextLabel="GLYATL1" GraphId="e0307" Type="GeneProduct" GroupRef="fcfe4">
-    <Graphics CenterX="90.0" CenterY="385.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="" ID="" />
-  </DataNode>
   <DataNode TextLabel="Phosphate" GraphId="e077f" Type="Metabolite" GroupRef="bfd6f">
     <Graphics CenterX="285.0" CenterY="178.66666666666666" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="HMDB" ID="HMDB0001429" />
@@ -150,5 +146,6 @@
     </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
+
 
 

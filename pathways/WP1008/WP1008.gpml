@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Amino acid conjugation of benzoic acid" Data-Source="WikiPathways" Version="WP1008_r105985" Author="[MaintBot, Khanspers, Mkutmon, Mick Eikelhof]" Organism="Bos taurus">
-  <Comment Source="WikiPathways-description">Despite being the first conjugation reaction demonstrated in humans, amino acid conjugation as a route of metabolism of xenobiotic carboxylic acids is not well characterised. This is principally due to the small number and limited structural diversity of xenobiotic substrates for amino acid conjugation. Unlike CYP and uridine 5′-diphosphate glucuronosyltransferase, which are localised in the endoplasmic reticulum, the enzymes of amino acid conjugation reside in mitochondria. Unique among drug metabolism pathways, amino acid conjugation involves initial formation of a xenobiotic acyl-CoA thioester that is then conjugated principally with glycine in humans. Exogenously administered benzoic acid is metabolised to hippuric acid with a conjugation reaction in humans (as discovered in the first metabolism study in humans).</Comment>
+  <Comment Source="WikiPathways-description"></Comment>
   <Comment Source="HomologyConvert">This pathway was inferred from Homo sapiens pathway [http://wikipathways.org/instance/WP521_r63156 WP521(63156)]  with a 75.0% conversion rate.</Comment>
   <Graphics BoardWidth="386.6666666666667" BoardHeight="491.6666666666667" />
   <DataNode TextLabel="GLYAT" GraphId="a52db" Type="GeneProduct" GroupRef="fcfe4">
@@ -25,6 +25,10 @@
   <DataNode TextLabel="Coenzyme A" GraphId="cfee7" Type="Metabolite">
     <Graphics CenterX="285.0" CenterY="370.3333333333333" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="HMDB" ID="HMDB0001423" />
+  </DataNode>
+  <DataNode TextLabel="GLYATL1" GraphId="e0307" Type="GeneProduct" GroupRef="fcfe4">
+    <Graphics CenterX="90.0" CenterY="385.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="Phosphate" GraphId="e077f" Type="Metabolite" GroupRef="bfd6f">
     <Graphics CenterX="285.0" CenterY="178.66666666666666" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -146,6 +150,3 @@
     </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
-
-
-

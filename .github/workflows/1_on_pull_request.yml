@@ -40,7 +40,7 @@ jobs:
   get-pr:
     # This job determines the PR number and stores it as a GITHUB_OUTPUT environment variable 
     # that can accessed by subsequent jobs.
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
       pr-number:  ${{ steps.get-pr.outputs.pr-number }}
     steps:

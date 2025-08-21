@@ -1,5 +1,5 @@
 # Welcome to the WikiPathways Database SANDBOX
-This repository is a sandbox version of the wikipathways database to develop new actions and procedures for pathway curation.
+This repository is a sandbox version of the WikiiPathways database to develop new actions and procedures for pathway curation.
 
 ## General Usage
 Users should never have to see this repo. If you think you're here by accident, maybe you are looking for the [WikiPathways Database](https://github.com/wikipathways/wikipathways-database).

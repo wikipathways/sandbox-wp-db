@@ -131,7 +131,7 @@ jobs:
           wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
           org="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Organism)' "$GPML_FILEPATH")"  
           name="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Name)' "$GPML_FILEPATH")" 
-          desc="$(xmllint --xpath 'string(//*[local-name()="Comment" and @Source="WikiPathways-description"])' "$GPML_FILEPATH")"
+          desc="$(xmllint --xpath 'string(//*[local-name()="Comment" and @Source="WikiPathways-description"])' "$GPML_FILEPATH" | tr '\n' ' ')"
 
           echo "gpml-name=$name"
           echo "gpml-name=$name" >> $GITHUB_OUTPUT #for subsequent jobs

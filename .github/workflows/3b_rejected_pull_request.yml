@@ -26,6 +26,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git add .
           git commit -m "Remove draft files for rejected PR #${PR_NUMBER}" || echo "No changes to commit"
+          git pull --rebase
           
       - name: Push changes
         uses: ad-m/github-push-action@master

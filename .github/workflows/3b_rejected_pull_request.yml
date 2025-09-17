@@ -28,9 +28,12 @@ jobs:
         env:
           PR_NUMBER: ${{ github.event.inputs.pr_number }}
         run: |
+          pwd
+          ls
+          echo "WP*__PR${PR_NUMBER}*"
           find _drafts _data/drafts draft_assets -type f -name "WP*__PR${PR_NUMBER}*" -delete
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --glboal user.email "action@github.com"
+          git config --glboal user.name "GitHub Action"
           git add .
           git commit -m "Remove draft files for rejected PR #${PR_NUMBER}" || echo "No changes to commit"
           git pull --rebase

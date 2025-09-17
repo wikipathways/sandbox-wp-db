@@ -26,6 +26,7 @@ jobs:
 
       - name: Remove draft files
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
           PR_NUMBER: ${{ github.event.inputs.pr_number }}
         run: |
           pwd

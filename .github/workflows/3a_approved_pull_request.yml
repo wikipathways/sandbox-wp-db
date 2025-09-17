@@ -95,8 +95,8 @@ jobs:
       - name: Commit and push changes to sandbox-wp.gh.io
         working-directory: sandbox-wp.gh.io
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add .
           git commit -m "Publish approved pathway WP${{ steps.get_wpid.outputs.wpid }}"
           git push
@@ -104,8 +104,8 @@ jobs:
       - name: Commit and push changes to sandbox-wp-db
         working-directory: sandbox-wp-db
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add .
           git commit -m "Add files for approved pathway WP${{ steps.get_wpid.outputs.wpid }}"
           git push
@@ -113,8 +113,8 @@ jobs:
       - name: Commit and push changes to sandbox-wp-assets
         working-directory: sandbox-wp-assets
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add .
           git commit -m "Add assets for approved pathway WP${{ steps.get_wpid.outputs.wpid }}"
           git push

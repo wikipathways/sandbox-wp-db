@@ -14,26 +14,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Checkout jekyll repo
+        uses: actions/checkout@v4
+        with:
+          repository: wikipathways/sandbox-wp.gh.io
+          path: sandbox-wp.gh.io
+          submodules: true
+          fetch-depth: 1
+          ref: main
+          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+
       - name: Remove draft files
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.inputs.pr_number }}
         run: |
-          gh repo clone wikipathways/sandbox-wp.gh.io
-          cd sandbox-wp.gh.io
           find _drafts _data/drafts draft_assets -type f -name "WP*__PR${PR_NUMBER}*" -delete
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
           git commit -m "Remove draft files for rejected PR #${PR_NUMBER}" || echo "No changes to commit"
           git pull --rebase
-          
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          directory: sandbox-wp.gh.io
-          branch: ${{ github.ref }}
+          git push
 
       - name: Add rejection comment
         env:

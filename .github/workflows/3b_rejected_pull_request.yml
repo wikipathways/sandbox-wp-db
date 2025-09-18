@@ -48,7 +48,6 @@ jobs:
         run: |
           REJECTION_COMMENT="This pull request has been rejected. Please review the comments and make necessary changes before resubmitting."
           gh pr comment $PR_NUMBER --body "$REJECTION_COMMENT"
-          gh pr edit $PR_NUMBER --add-label "rejected"
 
       - name: Close PR
         env:

@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Dispatch based on label
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           label="${{ github.event.label.name }}"
           pr_number="${{ github.event.pull_request.number }}"
@@ -32,4 +32,4 @@ jobs:
           esac
           
           echo "Triggering workflow: $workflow"
-          gh workflow run $workflow -f pr_number=$pr_number
+          gh workflow run "$workflow" -R "${{ github.repository }}" -f pr_number="$pr_number"

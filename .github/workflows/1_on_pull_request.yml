@@ -239,17 +239,17 @@ jobs:
       uses: actions/cache@v4
       id: cacheMetaJar
       with:
-        path: ./meta-data-action-1.1.2-jar-with-dependencies.jar
-        key: cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.2-jar-with-dependencies.jar') }}
+        path: ./meta-data-action-1.1.4-jar-with-dependencies.jar
+        key: cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.4-jar-with-dependencies.jar') }}
         restore-keys: |
-          cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.2-jar-with-dependencies.jar') }}
+          cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.4-jar-with-dependencies.jar') }}
           cached-meta-data-action-
     
     - name: Install deps
       run: |
           echo "Refreshing cached-meta-data-action"
-          if [ ! -e ./meta-data-action-1.1.2-jar-with-dependencies.jar ]; then
-            wget -O meta-data-action-1.1.2-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v1.1.2/meta-data-action-1.1.2-jar-with-dependencies.jar
+          if [ ! -e ./meta-data-action-1.1.4-jar-with-dependencies.jar ]; then
+            wget -O meta-data-action-1.1.4-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v1.1.4/meta-data-action-1.1.4-jar-with-dependencies.jar
           fi
 
     - name: Cache and install dependencies
@@ -332,7 +332,7 @@ jobs:
 
     - name: Generate configs, install bridgeDb, generate info and tsv files
       run: |
-          chmod 777 meta-data-action-1.1.2-jar-with-dependencies.jar
+          chmod 777 meta-data-action-1.1.4-jar-with-dependencies.jar
           f=./$GPML_FILE
           org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
           echo "generating configuration files for "$org""
@@ -340,7 +340,7 @@ jobs:
           wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
           cat gdb.config
           echo "generating info and datanode files for $wpid, organism "$org""
-          java -jar meta-data-action-1.1.2-jar-with-dependencies.jar local "$f" $(date --utc +%F) gdb.config "$org"
+          java -jar meta-data-action-1.1.4-jar-with-dependencies.jar local "$f" $(date --utc +%F) gdb.config "$org"
           # generated files are placed in "pathways" dir
           #ls -R 
           mkdir ./metadata

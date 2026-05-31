@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2021" title="L-alanine degradation II (to D-lactate)" organism="TAX-4113" source="PlantCyc" Version="WP0001_20250101" Author="[Test]">
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="L-alanine degradation II (to D-lactate)" organism="TAX-4113" source="PlantCyc" Version="WP0001_20251101174234" Author="[Test]" Last-Modified="20251101174234">
   <Xref identifier="ALACAT2-PWY" dataSource="MetaCyc" />
   <Description>&lt;i&gt;Summary from MetaCyc:&lt;/i&gt;...</Description>
   <Authors>

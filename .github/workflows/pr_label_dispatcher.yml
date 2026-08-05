@@ -1,8 +1,13 @@
 name: PR Label Dispatcher
 
 on:
-  pull_request:
+  pull_request_target:
     types: [labeled]
+
+permissions:
+  actions: write
+  contents: read
+  pull-requests: read
 
 jobs:
   dispatch:

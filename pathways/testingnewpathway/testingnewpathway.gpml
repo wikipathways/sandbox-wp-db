@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="testing new pathway for plugin" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">checking by sneha</Comment>
+  <Graphics BoardWidth="591.0" BoardHeight="439.0" />
+  <DataNode TextLabel="Metabolite" GraphId="e8ae7" Type="Metabolite">
+    <Graphics CenterX="199.5" CenterY="158.75" Width="159.0" Height="132.5" ZOrder="32768" FontSize="12" Valign="Middle" Color="3955e7" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="GeneProduct" GraphId="fcdce" Type="GeneProduct">
+    <Graphics CenterX="424.5" CenterY="160.75" Width="201.0" Height="112.5" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Metabolite" GraphId="d3201" Type="Metabolite">
+    <Graphics CenterX="410.0" CenterY="347.25" Width="168.0" Height="123.5" ZOrder="32768" FontSize="12" Valign="Middle" Color="3955e7" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <Interaction GraphId="ae40a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="d0344" X="275.0" Y="167.0" />
+      <Point GraphId="d469a" X="357.0" Y="166.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e89de">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="d0e20" X="429.0" Y="217.0" />
+      <Point GraphId="bb0d8" X="429.0" Y="293.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+</Pathway>

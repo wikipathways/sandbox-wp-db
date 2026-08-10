@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="testing " Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description" />
+  <Graphics BoardWidth="424.0" BoardHeight="197.0" />
+  <DataNode TextLabel="Metabolite" GraphId="b0f91" Type="Metabolite">
+    <Graphics CenterX="122.0" CenterY="114.25" Width="136.0" Height="105.5" ZOrder="32768" FontSize="12" Valign="Middle" Color="3955e7" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="GeneProduct" GraphId="bbab5" Type="GeneProduct">
+    <Graphics CenterX="318.5" CenterY="111.75" Width="123.0" Height="64.5" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <Interaction GraphId="b1228">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="afdf5" X="190.0" Y="109.0" />
+      <Point GraphId="cc97a" X="257.0" Y="109.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+</Pathway>

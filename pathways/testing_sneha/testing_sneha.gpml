@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="testing sneha" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description" />
+  <Graphics BoardWidth="587.0" BoardHeight="275.0" />
+  <DataNode TextLabel="Metabolite" GraphId="fbc0a" Type="Metabolite">
+    <Graphics CenterX="129.0" CenterY="157.75" Width="290.0" Height="174.5" ZOrder="32768" FontSize="12" Valign="Middle" Color="3955e7" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Phenotype" GraphId="a7c48" Type="Phenotype">
+    <Graphics CenterX="455.5" CenterY="154.25" Width="171.0" Height="87.5" ZOrder="32768" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <Interaction GraphId="a19a9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="ace5a" X="275.0" Y="157.0" />
+      <Point GraphId="f5672" X="370.0" Y="154.25" GraphRef="a7c48" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+</Pathway>

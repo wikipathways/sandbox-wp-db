@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Peptide GPCRs" Data-Source="WikiPathways" Version="WP1001_r115319" Author="[MaintBot, Andra, Egonw, Mkutmon]" Last-Modified="20210213090943" Organism="Bos taurus">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Changing file name to test changes" Data-Source="WikiPathways" Version="WP1001_r115319" Author="[MaintBot, Andra, Egonw, Mkutmon]" Last-Modified="20210213090943" Organism="Bos taurus">
   <Comment Source="WikiPathways-description" />
   <Comment Source="HomologyConvert">This pathway was inferred from Homo sapiens pathway [http://wikipathways.org/instance/WP24_r79999 WP24(79999)]  with a 89.0% conversion rate.</Comment>
   <Graphics BoardWidth="823.9999999999999" BoardHeight="632.0" />
-  <DataNode TextLabel="SSTR2" GraphId="a0e" Type="GeneProduct" GroupRef="c24e1">
+  <DataNode TextLabel="SSTR2" GraphId="a0e" Type="GeneProduct" GroupRef="b590c">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:6752</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="SSTR2 | somatostatin receptor 2" />
     <Graphics CenterX="597.3333333333334" CenterY="312.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000017136" />
   </DataNode>
-  <DataNode TextLabel="CXCR2" GraphId="a14" Type="GeneProduct" GroupRef="ec13f">
+  <DataNode TextLabel="CXCR2" GraphId="a14" Type="GeneProduct" GroupRef="d6856">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:3577</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="IL8RA | interleukin 8 receptor alpha" />
     <Graphics CenterX="688.0" CenterY="348.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000026753" />
   </DataNode>
-  <DataNode TextLabel="NPY2R" GraphId="a33" Type="GeneProduct" GroupRef="a233d">
+  <DataNode TextLabel="NPY2R" GraphId="a33" Type="GeneProduct" GroupRef="efa1a">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:4887</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="NPY2R | neuropeptide Y receptor Y2" />
     <Graphics CenterX="597.0" CenterY="470.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000016633" />
   </DataNode>
-  <DataNode TextLabel="CXCR3" GraphId="a37" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="CXCR3" GraphId="a37" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:2833</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CXCR3 | chemokine (C-X-C motif) receptor 3" />
     <Graphics CenterX="716.0" CenterY="120.66666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000014798" />
   </DataNode>
-  <DataNode TextLabel="CCR5" GraphId="a4e" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="CCR5" GraphId="a4e" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:1234</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CCR5 | chemokine (C-C motif) receptor 5" />
     <Graphics CenterX="596.0" CenterY="200.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000008099" />
   </DataNode>
-  <DataNode TextLabel="GALR3" GraphId="a55" Type="GeneProduct" GroupRef="f825e">
+  <DataNode TextLabel="GALR3" GraphId="a55" Type="GeneProduct" GroupRef="d120f">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:8484</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="GALR3 | galanin receptor 3" />
     <Graphics CenterX="453.3333333333333" CenterY="402.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000008857" />
   </DataNode>
-  <DataNode TextLabel="NK1R" GraphId="a6e" Type="GeneProduct" GroupRef="cc4b0">
+  <DataNode TextLabel="NK1R" GraphId="a6e" Type="GeneProduct" GroupRef="f710c">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:6869</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="TACR1 | tachykinin receptor 1" />
     <Graphics CenterX="114.66666666666667" CenterY="467.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000015575" />
   </DataNode>
-  <DataNode TextLabel="BDKRB2" GraphId="a6f" Type="GeneProduct" GroupRef="a8e97">
+  <DataNode TextLabel="BDKRB2" GraphId="a6f" Type="GeneProduct" GroupRef="c5479">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:624</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="BDKRB2 | bradykinin receptor B2" />
     <Graphics CenterX="288.6666666666667" CenterY="438.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000021717" />
   </DataNode>
-  <DataNode TextLabel="FPR1" GraphId="a71" Type="GeneProduct" GroupRef="ec13f">
+  <DataNode TextLabel="FPR1" GraphId="a71" Type="GeneProduct" GroupRef="d6856">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="FPR1 | formyl peptide receptor 1" />
     <Graphics CenterX="748.0" CenterY="308.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="" ID="" />
@@ -60,212 +60,212 @@
     <Graphics CenterX="535.5" CenterY="592.0" Width="119.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP35" />
   </DataNode>
-  <DataNode TextLabel="AT2" GraphId="acd" Type="GeneProduct" GroupRef="bb818">
+  <DataNode TextLabel="AT2" GraphId="acd" Type="GeneProduct" GroupRef="f23e3">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:186</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="AGTR2 | angiotensin II receptor type 2" />
     <Graphics CenterX="114.66666666666667" CenterY="215.33333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000040386" />
   </DataNode>
-  <DataNode TextLabel="NMBR" GraphId="ad2" Type="GeneProduct" GroupRef="c0d54">
+  <DataNode TextLabel="NMBR" GraphId="ad2" Type="GeneProduct" GroupRef="cae6b">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:4829</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="NMBR | neuromedin B receptor" />
     <Graphics CenterX="289.6666666666667" CenterY="236.33333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000043954" />
   </DataNode>
-  <DataNode TextLabel="AVPR2" GraphId="ad5" Type="GeneProduct" GroupRef="ec3d3">
+  <DataNode TextLabel="AVPR2" GraphId="ad5" Type="GeneProduct" GroupRef="b7ea2">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:554</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="AVPR2 | arginine vasopressin receptor 2 (nephro..." />
     <Graphics CenterX="289.6666666666667" CenterY="166.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000047138" />
   </DataNode>
-  <DataNode TextLabel="TAC4" GraphId="ad8" Type="GeneProduct" GroupRef="cc4b0">
+  <DataNode TextLabel="TAC4" GraphId="ad8" Type="GeneProduct" GroupRef="f710c">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="TAC4 | tachykinin 4 (hemokinin)" />
     <Graphics CenterX="114.66666666666667" CenterY="527.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="BLR1" GraphId="aec" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="BLR1" GraphId="aec" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:643</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="BLR1 | Burkitt lymphoma receptor 1 GTP binding..." />
     <Graphics CenterX="716.0" CenterY="160.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000046320" />
   </DataNode>
-  <DataNode TextLabel="AGTR1" GraphId="b10" Type="GeneProduct" GroupRef="bb818">
+  <DataNode TextLabel="AGTR1" GraphId="b10" Type="GeneProduct" GroupRef="f23e3">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:185</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="AGTR1 | angiotensin II receptor type 1" />
     <Graphics CenterX="114.66666666666667" CenterY="155.33333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000045633" />
   </DataNode>
-  <DataNode TextLabel="SSTR4" GraphId="b12" Type="GeneProduct" GroupRef="c24e1">
+  <DataNode TextLabel="SSTR4" GraphId="b12" Type="GeneProduct" GroupRef="b590c">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="SSTR4 | somatostatin receptor 4" />
     <Graphics CenterX="597.3333333333334" CenterY="352.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="BDKRB1" GraphId="b2a" Type="GeneProduct" GroupRef="a8e97">
+  <DataNode TextLabel="BDKRB1" GraphId="b2a" Type="GeneProduct" GroupRef="c5479">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:623</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="BDKRB1 | bradykinin receptor B1" />
     <Graphics CenterX="288.6666666666667" CenterY="458.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000007052" />
   </DataNode>
-  <DataNode TextLabel="NTSR2" GraphId="b37" Type="GeneProduct" GroupRef="f9482">
+  <DataNode TextLabel="NTSR2" GraphId="b37" Type="GeneProduct" GroupRef="c5c02">
     <Comment Source="GenMAPP remarks">CAA71233 - human AA#</Comment>
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:23620</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="NTSR2 | neurotensin receptor 2" />
     <Graphics CenterX="288.6666666666667" CenterY="534.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000003691" />
   </DataNode>
-  <DataNode TextLabel="CXCR4" GraphId="b54" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="CXCR4" GraphId="b54" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:7852</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CXCR4 | chemokine (C-X-C motif) receptor 4" />
     <Graphics CenterX="716.0" CenterY="140.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000001060" />
   </DataNode>
-  <DataNode TextLabel="NPY5R" GraphId="b61" Type="GeneProduct" GroupRef="a233d">
+  <DataNode TextLabel="NPY5R" GraphId="b61" Type="GeneProduct" GroupRef="efa1a">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:4889</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="NPY5R | neuropeptide Y receptor Y5" />
     <Graphics CenterX="597.0" CenterY="510.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000038421" />
   </DataNode>
-  <DataNode TextLabel="CCR7" GraphId="ba1" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="CCR7" GraphId="ba1" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:1236</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CCR7 | chemokine (C-C motif) receptor 7" />
     <Graphics CenterX="656.0" CenterY="120.66666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000015133" />
   </DataNode>
-  <DataNode TextLabel="FPRL1" GraphId="bac" Type="GeneProduct" GroupRef="ec13f">
+  <DataNode TextLabel="FPRL1" GraphId="bac" Type="GeneProduct" GroupRef="d6856">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="FPRL1 | formyl peptide receptor-like 1" />
     <Graphics CenterX="748.0" CenterY="328.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="ATP8A1" GraphId="bb0" Type="GeneProduct" GroupRef="bb818">
+  <DataNode TextLabel="ATP8A1" GraphId="bb0" Type="GeneProduct" GroupRef="f23e3">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="ATP8A1 | ATPase aminophospholipid transporter ..." />
     <Graphics CenterX="114.66666666666667" CenterY="175.33333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="FPRL2" GraphId="bb5" Type="GeneProduct" GroupRef="ec13f">
+  <DataNode TextLabel="FPRL2" GraphId="bb5" Type="GeneProduct" GroupRef="d6856">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="FPRL2 | formyl peptide receptor-like 2" />
     <Graphics CenterX="748.0" CenterY="348.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="OPRM1" GraphId="be4" Type="GeneProduct" GroupRef="c8b19">
+  <DataNode TextLabel="OPRM1" GraphId="be4" Type="GeneProduct" GroupRef="af0ac">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:4988</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="OPRM1 | opioid receptor mu 1" />
     <Graphics CenterX="453.3333333333333" CenterY="504.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000019719" />
   </DataNode>
-  <DataNode TextLabel="AVPR1A" GraphId="bf1" Type="GeneProduct" GroupRef="ec3d3">
+  <DataNode TextLabel="AVPR1A" GraphId="bf1" Type="GeneProduct" GroupRef="b7ea2">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:552</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="AVPR1A | arginine vasopressin receptor 1A" />
     <Graphics CenterX="289.6666666666667" CenterY="126.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000007175" />
   </DataNode>
-  <DataNode TextLabel="GALR1" GraphId="c1a" Type="GeneProduct" GroupRef="f825e">
+  <DataNode TextLabel="GALR1" GraphId="c1a" Type="GeneProduct" GroupRef="d120f">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:2587</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="GALR1 | galanin receptor 1" />
     <Graphics CenterX="453.3333333333333" CenterY="362.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000021003" />
   </DataNode>
-  <DataNode TextLabel="CCKAR" GraphId="c1c" Type="GeneProduct" GroupRef="e5897">
+  <DataNode TextLabel="CCKAR" GraphId="c1c" Type="GeneProduct" GroupRef="c50da">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:886</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CCKAR | cholecystokinin A receptor" />
     <Graphics CenterX="114.66666666666667" CenterY="392.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000004988" />
   </DataNode>
-  <DataNode TextLabel="MC3R" GraphId="c36" Type="GeneProduct" GroupRef="efa2a">
+  <DataNode TextLabel="MC3R" GraphId="c36" Type="GeneProduct" GroupRef="e3262">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:4159</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="MC3R | melanocortin 3 receptor" />
     <Graphics CenterX="454.3333333333333" CenterY="265.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000004712" />
   </DataNode>
-  <DataNode TextLabel="LHCGR" GraphId="c43" Type="GeneProduct" GroupRef="afba9">
+  <DataNode TextLabel="LHCGR" GraphId="c43" Type="GeneProduct" GroupRef="fe1cf">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:3973</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="LHCGR | luteinizing hormone/choriogonadotropin ..." />
     <Graphics CenterX="454.3333333333333" CenterY="136.33333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000016573" />
   </DataNode>
-  <DataNode TextLabel="CCKBR" GraphId="c48" Type="GeneProduct" GroupRef="e5897">
+  <DataNode TextLabel="CCKBR" GraphId="c48" Type="GeneProduct" GroupRef="c50da">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:887</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CCKBR | cholecystokinin B receptor" />
     <Graphics CenterX="114.66666666666667" CenterY="412.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000005236" />
   </DataNode>
-  <DataNode TextLabel="EDNRA" GraphId="c53" Type="GeneProduct" GroupRef="d91f8">
+  <DataNode TextLabel="EDNRA" GraphId="c53" Type="GeneProduct" GroupRef="b4e34">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:1909</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="EDNRA | endothelin receptor type A" />
     <Graphics CenterX="288.6666666666667" CenterY="331.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000013674" />
   </DataNode>
-  <DataNode TextLabel="CX3CR1" GraphId="c67" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="CX3CR1" GraphId="c67" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:1524</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CX3CR1 | chemokine (C-X3-C motif) receptor 1" />
     <Graphics CenterX="716.0" CenterY="200.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000002923" />
   </DataNode>
-  <DataNode TextLabel="GHSR" GraphId="c69" Type="GeneProduct" GroupRef="d767e">
+  <DataNode TextLabel="GHSR" GraphId="c69" Type="GeneProduct" GroupRef="f22fe">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:2693</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="GHSR | growth hormone secretagogue receptor" />
     <Graphics CenterX="114.66666666666667" CenterY="324.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000010874" />
   </DataNode>
-  <DataNode TextLabel="CCR8" GraphId="c6e" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="CCR8" GraphId="c6e" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:1237</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CCR8 | chemokine (C-C motif) receptor 8" />
     <Graphics CenterX="656.0" CenterY="140.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000015483" />
   </DataNode>
-  <DataNode TextLabel="CCR9" GraphId="ca8" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="CCR9" GraphId="ca8" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:10803</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CCR9 | chemokine (C-C motif) receptor 9" />
     <Graphics CenterX="656.0" CenterY="160.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000031348" />
   </DataNode>
-  <DataNode TextLabel="SSTR3" GraphId="cca" Type="GeneProduct" GroupRef="c24e1">
+  <DataNode TextLabel="SSTR3" GraphId="cca" Type="GeneProduct" GroupRef="b590c">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="SSTR3 | somatostatin receptor 3" />
     <Graphics CenterX="597.3333333333334" CenterY="332.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="GRPR" GraphId="cd6" Type="GeneProduct" GroupRef="c0d54">
+  <DataNode TextLabel="GRPR" GraphId="cd6" Type="GeneProduct" GroupRef="cae6b">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:2925</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="GRPR | gastrin-releasing peptide receptor" />
     <Graphics CenterX="289.6666666666667" CenterY="256.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000007092" />
   </DataNode>
-  <DataNode TextLabel="EDNRB" GraphId="cdb" Type="GeneProduct" GroupRef="d91f8">
+  <DataNode TextLabel="EDNRB" GraphId="cdb" Type="GeneProduct" GroupRef="b4e34">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:1910</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="EDNRB | endothelin receptor type B" />
     <Graphics CenterX="288.6666666666667" CenterY="351.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000005299" />
   </DataNode>
-  <DataNode TextLabel="MC4R" GraphId="d06" Type="GeneProduct" GroupRef="efa2a">
+  <DataNode TextLabel="MC4R" GraphId="d06" Type="GeneProduct" GroupRef="e3262">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:4160</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="MC4R | melanocortin 4 receptor" />
     <Graphics CenterX="454.3333333333333" CenterY="285.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000019676" />
   </DataNode>
-  <DataNode TextLabel="FSHR" GraphId="d20" Type="GeneProduct" GroupRef="afba9">
+  <DataNode TextLabel="FSHR" GraphId="d20" Type="GeneProduct" GroupRef="fe1cf">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:2492</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="FSHR | follicle stimulating hormone receptor" />
     <Graphics CenterX="454.3333333333333" CenterY="116.33333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000032424" />
   </DataNode>
-  <DataNode TextLabel="TSHR" GraphId="d32" Type="GeneProduct" GroupRef="afba9">
+  <DataNode TextLabel="TSHR" GraphId="d32" Type="GeneProduct" GroupRef="fe1cf">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:7253</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="TSHR | thyroid stimulating hormone receptor" />
     <Graphics CenterX="454.3333333333333" CenterY="156.33333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000017489" />
   </DataNode>
-  <DataNode TextLabel="TACR3" GraphId="d51" Type="GeneProduct" GroupRef="cc4b0">
+  <DataNode TextLabel="TACR3" GraphId="d51" Type="GeneProduct" GroupRef="f710c">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:6870</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="TACR3 | tachykinin receptor 3" />
     <Graphics CenterX="114.66666666666667" CenterY="507.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000016247" />
   </DataNode>
-  <DataNode TextLabel="GNRHR" GraphId="d93" Type="GeneProduct" GroupRef="d767e">
+  <DataNode TextLabel="GNRHR" GraphId="d93" Type="GeneProduct" GroupRef="f22fe">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:2798</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNRHR | gonadotropin-releasing hormone receptor..." />
     <Graphics CenterX="114.66666666666667" CenterY="284.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000000438" />
   </DataNode>
-  <DataNode TextLabel="BRS3" GraphId="d9b" Type="GeneProduct" GroupRef="c0d54">
+  <DataNode TextLabel="BRS3" GraphId="d9b" Type="GeneProduct" GroupRef="cae6b">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:680</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="BRS3 | bombesin-like receptor 3" />
     <Graphics CenterX="289.6666666666667" CenterY="276.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -279,97 +279,97 @@
     <Graphics CenterX="202.5" CenterY="589.0" Width="119.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP35" />
   </DataNode>
-  <DataNode TextLabel="TRHR" GraphId="daf" Type="GeneProduct" GroupRef="d767e">
+  <DataNode TextLabel="TRHR" GraphId="daf" Type="GeneProduct" GroupRef="f22fe">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:7201</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="TRHR | thyrotropin-releasing hormone receptor" />
     <Graphics CenterX="114.66666666666667" CenterY="304.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000019997" />
   </DataNode>
-  <DataNode TextLabel="AVPR1B" GraphId="db2" Type="GeneProduct" GroupRef="ec3d3">
+  <DataNode TextLabel="AVPR1B" GraphId="db2" Type="GeneProduct" GroupRef="b7ea2">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:553</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="AVPR1B | arginine vasopressin receptor 1B" />
     <Graphics CenterX="289.6666666666667" CenterY="146.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000017301" />
   </DataNode>
-  <DataNode TextLabel="CXCR6" GraphId="db8" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="CXCR6" GraphId="db8" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:10663</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CXCR6 | chemokine (C-X-C motif) receptor 6" />
     <Graphics CenterX="656.0" CenterY="220.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000015708" />
   </DataNode>
-  <DataNode TextLabel="MC2R" GraphId="dd9" Type="GeneProduct" GroupRef="efa2a">
+  <DataNode TextLabel="MC2R" GraphId="dd9" Type="GeneProduct" GroupRef="e3262">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:4158</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="MC2R | melanocortin 2 receptor (adrenocorticotr..." />
     <Graphics CenterX="454.3333333333333" CenterY="225.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000011038" />
   </DataNode>
-  <DataNode TextLabel="NPY1R" GraphId="ddc" Type="GeneProduct" GroupRef="a233d">
+  <DataNode TextLabel="NPY1R" GraphId="ddc" Type="GeneProduct" GroupRef="efa1a">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:4886</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="NPY1R | neuropeptide Y receptor Y1" />
     <Graphics CenterX="597.0" CenterY="450.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000047586" />
   </DataNode>
-  <DataNode TextLabel="SSTR5" GraphId="df7" Type="GeneProduct" GroupRef="c24e1">
+  <DataNode TextLabel="SSTR5" GraphId="df7" Type="GeneProduct" GroupRef="b590c">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:6755</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="SSTR5 | somatostatin receptor 5" />
     <Graphics CenterX="597.3333333333334" CenterY="372.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000039974" />
   </DataNode>
-  <DataNode TextLabel="TACR2" GraphId="e29" Type="GeneProduct" GroupRef="cc4b0">
+  <DataNode TextLabel="TACR2" GraphId="e29" Type="GeneProduct" GroupRef="f710c">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:6865</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="TACR2 | tachykinin receptor 2" />
     <Graphics CenterX="114.66666666666667" CenterY="487.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000021664" />
   </DataNode>
-  <DataNode TextLabel="MC5R" GraphId="e39" Type="GeneProduct" GroupRef="efa2a">
+  <DataNode TextLabel="MC5R" GraphId="e39" Type="GeneProduct" GroupRef="e3262">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:4161</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="MC5R | melanocortin 5 receptor" />
     <Graphics CenterX="454.3333333333333" CenterY="305.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000009143" />
   </DataNode>
-  <DataNode TextLabel="MC1R" GraphId="e42" Type="GeneProduct" GroupRef="efa2a">
+  <DataNode TextLabel="MC1R" GraphId="e42" Type="GeneProduct" GroupRef="e3262">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:4157</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="MC1R | melanocortin 1 receptor (alpha melanocyt..." />
     <Graphics CenterX="454.3333333333333" CenterY="245.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000023731" />
   </DataNode>
-  <DataNode TextLabel="PPYR1" GraphId="e4c" Type="GeneProduct" GroupRef="a233d">
+  <DataNode TextLabel="PPYR1" GraphId="e4c" Type="GeneProduct" GroupRef="efa1a">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:5540</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="PPYR1 | pancreatic polypeptide receptor 1" />
     <Graphics CenterX="597.0" CenterY="490.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000004760" />
   </DataNode>
-  <DataNode TextLabel="CCR2" GraphId="e58" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="CCR2" GraphId="e58" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:729230</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CCR2 | chemokine (C-C motif) receptor 2" />
     <Graphics CenterX="596.0" CenterY="140.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000013586" />
   </DataNode>
-  <DataNode TextLabel="OXTR" GraphId="e64" Type="GeneProduct" GroupRef="ec3d3">
+  <DataNode TextLabel="OXTR" GraphId="e64" Type="GeneProduct" GroupRef="b7ea2">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:5021</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="OXTR | oxytocin receptor" />
     <Graphics CenterX="289.6666666666667" CenterY="186.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000019772" />
   </DataNode>
-  <DataNode TextLabel="OPRK1" GraphId="e82" Type="GeneProduct" GroupRef="c8b19">
+  <DataNode TextLabel="OPRK1" GraphId="e82" Type="GeneProduct" GroupRef="af0ac">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:4986</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="OPRK1 | opioid receptor kappa 1" />
     <Graphics CenterX="453.3333333333333" CenterY="484.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000000914" />
   </DataNode>
-  <DataNode TextLabel="CCR1" GraphId="e92" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="CCR1" GraphId="e92" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:1230</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CCR1 | chemokine (C-C motif) receptor 1" />
     <Graphics CenterX="596.0" CenterY="120.66666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000019428" />
   </DataNode>
-  <DataNode TextLabel="SSTR1" GraphId="ea3" Type="GeneProduct" GroupRef="c24e1">
+  <DataNode TextLabel="SSTR1" GraphId="ea3" Type="GeneProduct" GroupRef="b590c">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:6751</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="SSTR1 | somatostatin receptor 1" />
     <Graphics CenterX="597.3333333333334" CenterY="292.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000006582" />
   </DataNode>
-  <DataNode TextLabel="NTSR1" GraphId="eb0" Type="GeneProduct" GroupRef="f9482">
+  <DataNode TextLabel="NTSR1" GraphId="eb0" Type="GeneProduct" GroupRef="c5c02">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:4923</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="NTSR1 | neurotensin receptor 1 (high affinity)" />
     <Graphics CenterX="288.6666666666667" CenterY="514.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -379,49 +379,49 @@
     <Graphics CenterX="369.5" CenterY="591.0" Width="119.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP35" />
   </DataNode>
-  <DataNode TextLabel="GALR2" GraphId="ec1" Type="GeneProduct" GroupRef="f825e">
+  <DataNode TextLabel="GALR2" GraphId="ec1" Type="GeneProduct" GroupRef="d120f">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:8811</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="GALR2 | galanin receptor 2" />
     <Graphics CenterX="453.3333333333333" CenterY="382.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000024910" />
   </DataNode>
-  <DataNode TextLabel="CXCR2" GraphId="f35" Type="GeneProduct" GroupRef="ec13f">
+  <DataNode TextLabel="CXCR2" GraphId="f35" Type="GeneProduct" GroupRef="d6856">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:3579</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="IL8RB | interleukin 8 receptor beta" />
     <Graphics CenterX="688.0" CenterY="368.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000026753" />
   </DataNode>
-  <DataNode TextLabel="OPRD1" GraphId="f42" Type="GeneProduct" GroupRef="c8b19">
+  <DataNode TextLabel="OPRD1" GraphId="f42" Type="GeneProduct" GroupRef="af0ac">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:4985</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="OPRD1 | opioid receptor delta 1" />
     <Graphics CenterX="453.3333333333333" CenterY="464.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000003202" />
   </DataNode>
-  <DataNode TextLabel="OPRL1" GraphId="f47" Type="GeneProduct" GroupRef="c8b19">
+  <DataNode TextLabel="OPRL1" GraphId="f47" Type="GeneProduct" GroupRef="af0ac">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:4987</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="OPRL1 | opiate receptor-like 1" />
     <Graphics CenterX="453.3333333333333" CenterY="524.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000045701" />
   </DataNode>
-  <DataNode TextLabel="CCR10" GraphId="f49" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="CCR10" GraphId="f49" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:2826</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CCR10 | chemokine (C-C motif) receptor 10" />
     <Graphics CenterX="656.0" CenterY="180.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000019095" />
   </DataNode>
-  <DataNode TextLabel="NPY6R" GraphId="f57" Type="GeneProduct" GroupRef="a233d">
+  <DataNode TextLabel="NPY6R" GraphId="f57" Type="GeneProduct" GroupRef="efa1a">
     <Comment Source="GenMAPP remarks">human Acc# BAA13103</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="NPY6R | neuropeptide Y receptor Y6 (pseudogene)..." />
     <Graphics CenterX="597.0" CenterY="530.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="C3AR1" GraphId="f65" Type="GeneProduct" GroupRef="ec13f">
+  <DataNode TextLabel="C3AR1" GraphId="f65" Type="GeneProduct" GroupRef="d6856">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:719</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="C3AR1 | complement component 3a receptor 1" />
     <Graphics CenterX="688.0" CenterY="308.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000019741" />
   </DataNode>
-  <DataNode TextLabel="AGTR1" GraphId="f70" Type="GeneProduct" GroupRef="bb818">
+  <DataNode TextLabel="AGTR1" GraphId="f70" Type="GeneProduct" GroupRef="f23e3">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:185</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="AGTR1 | angiotensin II receptor type 1" />
     <Graphics CenterX="114.66666666666667" CenterY="195.33333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -431,37 +431,37 @@
     <Graphics CenterX="288.5" CenterY="394.5" Width="63.0" Height="17.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="HMDB" ID="HMDB0004246" />
   </DataNode>
-  <DataNode TextLabel="C5AR1" GraphId="faa" Type="GeneProduct" GroupRef="ec13f">
+  <DataNode TextLabel="C5AR1" GraphId="faa" Type="GeneProduct" GroupRef="d6856">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:728</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="C5R1 | complement component 5 receptor 1 (C5a l..." />
     <Graphics CenterX="688.0" CenterY="328.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000020872" />
   </DataNode>
-  <DataNode TextLabel="CCR3" GraphId="fb2" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="CCR3" GraphId="fb2" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:1232</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CCR3 | chemokine (C-C motif) receptor 3" />
     <Graphics CenterX="596.0" CenterY="160.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000001338" />
   </DataNode>
-  <DataNode TextLabel="ACKR1" GraphId="fbd" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="ACKR1" GraphId="fbd" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:2532</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="FY | Duffy blood group" />
     <Graphics CenterX="716.0" CenterY="180.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000003220" />
   </DataNode>
-  <DataNode TextLabel="CCR1" GraphId="ff5" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="CCR1" GraphId="ff5" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:1230</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CCR1 | chemokine (C-C motif) receptor 1" />
     <Graphics CenterX="656.0" CenterY="200.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000019428" />
   </DataNode>
-  <DataNode TextLabel="CCR4" GraphId="ffe" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="CCR4" GraphId="ffe" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:1233</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CCR4 | chemokine (C-C motif) receptor 4" />
     <Graphics CenterX="596.0" CenterY="180.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000034883" />
   </DataNode>
-  <DataNode TextLabel="CCR6" GraphId="fff" Type="GeneProduct" GroupRef="fb825">
+  <DataNode TextLabel="CCR6" GraphId="fff" Type="GeneProduct" GroupRef="fb9b8">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = L:1235</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CCR6 | chemokine (C-C motif) receptor 6" />
     <Graphics CenterX="596.0" CenterY="220.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -589,7 +589,7 @@
   <Interaction GraphId="d79b8">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point GraphId="dc3c6" X="288.5" Y="403.0" GraphRef="f79e5" RelX="0.0" RelY="1.0" />
-      <Point GraphId="ea197" X="288.6666666666667" Y="420.6666666666667" GraphRef="a8e97" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+      <Point GraphId="ea197" X="288.6666666666667" Y="420.6666666666667" GraphRef="c5479" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -617,7 +617,7 @@
   <Interaction GraphId="e4264">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point GraphId="dfd94" X="289.33333333333337" Y="92.83333333333334" GraphRef="d9d" RelX="0.0" RelY="1.0" />
-      <Point GraphId="c7a2f" X="289.6666666666667" Y="108.0" GraphRef="ec3d3" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+      <Point GraphId="c7a2f" X="289.6666666666667" Y="108.0" GraphRef="b7ea2" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -714,23 +714,23 @@
   <Label TextLabel="Chemokine Receptors" GraphId="fa8">
     <Graphics CenterX="657.0" CenterY="85.33333333333333" Width="136.0" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
-  <Group GroupId="f825e" GraphId="f825e" />
-  <Group GroupId="d91f8" GraphId="d91f8" />
-  <Group GroupId="fb825" GraphId="fb825" />
-  <Group GroupId="efa2a" GraphId="efa2a" />
-  <Group GroupId="c8b19" GraphId="c8b19" />
-  <Group GroupId="d767e" GraphId="d767e" />
-  <Group GroupId="a233d" GraphId="a233d" />
-  <Group GroupId="cc4b0" GraphId="cc4b0" />
-  <Group GroupId="c0d54" GraphId="c0d54" />
-  <Group GroupId="ec13f" GraphId="ec13f" />
-  <Group GroupId="a8e97" GraphId="a8e97" />
-  <Group GroupId="bb818" GraphId="bb818" />
-  <Group GroupId="afba9" GraphId="afba9" />
-  <Group GroupId="c24e1" GraphId="c24e1" />
-  <Group GroupId="f9482" GraphId="f9482" />
-  <Group GroupId="ec3d3" GraphId="ec3d3" />
-  <Group GroupId="e5897" GraphId="e5897" />
+  <Group GroupId="d120f" GraphId="d120f" />
+  <Group GroupId="b4e34" GraphId="b4e34" />
+  <Group GroupId="fb9b8" GraphId="fb9b8" />
+  <Group GroupId="e3262" GraphId="e3262" />
+  <Group GroupId="af0ac" GraphId="af0ac" />
+  <Group GroupId="f22fe" GraphId="f22fe" />
+  <Group GroupId="efa1a" GraphId="efa1a" />
+  <Group GroupId="f710c" GraphId="f710c" />
+  <Group GroupId="cae6b" GraphId="cae6b" />
+  <Group GroupId="d6856" GraphId="d6856" />
+  <Group GroupId="c5479" GraphId="c5479" />
+  <Group GroupId="f23e3" GraphId="f23e3" />
+  <Group GroupId="fe1cf" GraphId="fe1cf" />
+  <Group GroupId="b590c" GraphId="b590c" />
+  <Group GroupId="c5c02" GraphId="c5c02" />
+  <Group GroupId="b7ea2" GraphId="b7ea2" />
+  <Group GroupId="c50da" GraphId="c50da" />
   <InfoBox CenterX="77.36666666666666" CenterY="596.7666666666667" />
   <Legend CenterX="2.7" CenterY="583.5333333333333" />
   <Biopax>

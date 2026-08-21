@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Pathway Author="[traybug23]" Version="WP0001_r20260815222024" xmlns="http://pathvisio.org/GPML/2013a" Name="sneha test" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description" />
+  <Graphics BoardWidth="904.1633199464526" BoardHeight="673.9089692101744" />
+  <DataNode TextLabel="Metabolite" GraphId="c8ef9" Type="Metabolite">
+    <Graphics CenterX="318.86546184738955" CenterY="269.5197456492637" Width="253.83534136546186" Height="250.78647925033465" ZOrder="32768" FontSize="12" Valign="Middle" Color="3955e7" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="GeneProduct" GraphId="c58ef" Type="GeneProduct">
+    <Graphics CenterX="664.2469879518073" CenterY="289.60006693440425" Width="334.15662650602394" Height="274.88286479250337" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <Interaction GraphId="dd167">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="c8b46" X="445.7831325301205" Y="269.5197456492637" GraphRef="c8ef9" RelX="1.0" RelY="0.0" />
+      <Point GraphId="bd26c" X="497.16867469879537" Y="289.60006693440425" GraphRef="c58ef" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+</Pathway>

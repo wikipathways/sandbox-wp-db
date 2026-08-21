@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="testing new pathway" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description" />
+  <Graphics BoardWidth="663.0" BoardHeight="436.5" />
+  <DataNode TextLabel="GeneProduct" GraphId="f919c" Type="GeneProduct">
+    <Graphics CenterX="193.0" CenterY="214.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="GeneProduct" GraphId="c20ef" Type="GeneProduct">
+    <Graphics CenterX="373.0" CenterY="214.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="GeneProduct" GraphId="e02c2" Type="GeneProduct">
+    <Graphics CenterX="223.0" CenterY="272.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="GeneProduct" GraphId="c94e8" Type="GeneProduct">
+    <Graphics CenterX="403.0" CenterY="272.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Substrate" GraphId="ca68e" Type="Metabolite">
+    <Graphics CenterX="217.0" CenterY="364.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="3955e7" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Product" GraphId="bea8f" Type="Metabolite">
+    <Graphics CenterX="397.0" CenterY="364.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="3955e7" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Catalyst" GraphId="bdfa9" Type="GeneProduct">
+    <Graphics CenterX="307.0" CenterY="314.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <Interaction GraphId="a7bf1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="ef0dc" X="238.0" Y="214.0" GraphRef="f919c" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d4b01" X="328.0" Y="214.0" GraphRef="c20ef" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c2141">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="cca91" X="268.0" Y="272.0" GraphRef="e02c2" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d01c9" X="358.0" Y="272.0" GraphRef="c94e8" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="eed14">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="cbb12" X="262.0" Y="364.0" GraphRef="ca68e" RelX="1.0" RelY="0.0" />
+      <Point GraphId="dbc69" X="352.0" Y="364.0" GraphRef="bea8f" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5" Shape="None" GraphId="c4426" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b044a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="d05f9" X="307.0" Y="326.5" GraphRef="bdfa9" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c3eb7" X="307.0" Y="364.0" GraphRef="c4426" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+</Pathway>

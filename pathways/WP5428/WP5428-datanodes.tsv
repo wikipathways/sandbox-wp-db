@@ -1,0 +1,5 @@
+Label	Type	Identifier	Comment	Ensembl	NCBI gene	HGNC	UniProt	Wikidata	ChEBI	InChI	PubChem	ChemSpider	HMDB	KEGG	LipidMaps
+STIM1	GeneProduct	ensembl:ENSG00000167323	""	ensembl:ENSG00000167323	ncbigene:6786	hgnc.symbol:STIM1	uniprot:A0A8V8TP78;uniprot:A0A8V8TNW0;uniprot:E9PRZ7;uniprot:E9PIQ8;uniprot:A0A8V8TMX0;uniprot:Q13586;uniprot:E9PN27;uniprot:A0A8V8TNW5;uniprot:A0A8V8TP73;uniprot:E9PJ19;uniprot:G0XQ39;uniprot:E9PNJ4;uniprot:E9PR09;uniprot:E9PR07;uniprot:A0A8V8TMF0;uniprot:A0A8V8TMG1;uniprot:E9PMB4;uniprot:A0A8V8TMG5;uniprot:E9PRE4;uniprot:H0YDB2								
+ORAI1	GeneProduct	ensembl:ENSG00000276045	""	ensembl:ENSG00000276045	ncbigene:84876	hgnc.symbol:ORAI1	uniprot:A0A024RBT3;uniprot:Q96D31								
+CALM1	GeneProduct	ensembl:ENSG00000198668	""	ensembl:ENSG00000198668	ncbigene:801	hgnc.symbol:CALM1	uniprot:G3V361;uniprot:P0DP23;uniprot:G3V226;uniprot:G3V479;uniprot:Q96HY3;uniprot:B4DJ51								
+PPP3CA	GeneProduct	ensembl:ENSG00000138814	""	ensembl:ENSG00000138814	ncbigene:5530	hgnc.symbol:PPP3CA	uniprot:E9PPC8;uniprot:A0A0S2Z4B5;uniprot:A0A0S2Z4C6;uniprot:E7ETC2;uniprot:E9PK68;uniprot:Q08209;uniprot:H0YAB4								

@@ -1,0 +1,10 @@
+{
+    "wpid": "WP5428",
+    "organisms": ["Homo sapiens"],
+    "description": "Depletion of endoplasmic reticulum calcium stores is sensed by STIM1, which oligomerises and gates the plasma membrane channel ORAI1, admitting calcium that is subsequently decoded by calmodulin and calcineurin in human cells.",
+    "ontology-ids": ["PW:0000010"],
+    "last-edited": "2026-08-27",
+    "title": "Store-operated calcium entry proof run",
+    "authors": ["marvinm2"],
+    "revision": "r20260827072315"
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway Data-Source="WikiPathways" Last-Modified="20260827072315" Version="WP5428_r20260827072315" xmlns="http://pathvisio.org/GPML/2013a" Name="Store-operated calcium entry proof run" Author="[marvinm2]" Organism="Homo sapiens">
+  <Graphics BoardWidth="520.0" BoardHeight="560.0" />
+  <Comment Source="WikiPathways-description">Depletion of endoplasmic reticulum calcium stores is sensed by STIM1, which oligomerises and gates the plasma membrane channel ORAI1, admitting calcium that is subsequently decoded by calmodulin and calcineurin in human cells.</Comment>
+  <BiopaxRef>ref1</BiopaxRef>
+
+  <DataNode TextLabel="STIM1" GraphId="s2001" Type="GeneProduct">
+    <Graphics CenterX="260.0" CenterY="80.0" Width="120.0" Height="34.0" Color="1a5276" />
+    <Xref Database="Ensembl" ID="ENSG00000167323" />
+  </DataNode>
+
+  <DataNode TextLabel="ORAI1" GraphId="s2002" Type="GeneProduct">
+    <Graphics CenterX="260.0" CenterY="200.0" Width="120.0" Height="34.0" Color="1a5276" />
+    <Xref Database="Ensembl" ID="ENSG00000276045" />
+  </DataNode>
+
+  <DataNode TextLabel="CALM1" GraphId="s2003" Type="GeneProduct">
+    <Graphics CenterX="260.0" CenterY="320.0" Width="120.0" Height="34.0" Color="1a5276" />
+    <Xref Database="Ensembl" ID="ENSG00000198668" />
+  </DataNode>
+
+  <DataNode TextLabel="PPP3CA" GraphId="s2004" Type="GeneProduct">
+    <Graphics CenterX="260.0" CenterY="440.0" Width="120.0" Height="34.0" Color="1a5276" />
+    <Xref Database="Ensembl" ID="ENSG00000138814" />
+  </DataNode>
+
+  <Interaction>
+    <Graphics LineThickness="1.0">
+      <Point X="260.0" Y="97.0" GraphRef="s2001" RelX="0.0" RelY="1.0" />
+      <Point X="260.0" Y="183.0" GraphRef="s2002" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+  </Interaction>
+
+  <Interaction>
+    <Graphics LineThickness="1.0">
+      <Point X="260.0" Y="217.0" GraphRef="s2002" RelX="0.0" RelY="1.0" />
+      <Point X="260.0" Y="303.0" GraphRef="s2003" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+  </Interaction>
+
+  <Interaction>
+    <Graphics LineThickness="1.0">
+      <Point X="260.0" Y="337.0" GraphRef="s2003" RelX="0.0" RelY="1.0" />
+      <Point X="260.0" Y="423.0" GraphRef="s2004" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+  </Interaction>
+
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ref1">
+      <bp:ID>11413485</bp:ID>
+      <bp:DB>PubMed</bp:DB>
+      <bp:TITLE>The versatility and universality of calcium signalling</bp:TITLE>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"
+                                 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <bp:TERM rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcium/calcium-mediated signaling pathway</bp:TERM>
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000010</bp:ID>
+      <bp:Ontology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

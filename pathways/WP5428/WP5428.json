@@ -1,0 +1,459 @@
+{
+  "entitiesById": {
+    "http://identifiers.org/pw/PW:0000010": {
+      "gpmlElementName": "openControlledVocabulary",
+      "id": "http://identifiers.org/pw/PW:0000010",
+      "ontology": "Pathway Ontology",
+      "term": "calcium/calcium-mediated signaling pathway",
+      "type": [
+        "openControlledVocabulary"
+      ],
+      "xrefIdentifier": "PW:0000010"
+    },
+    "publicationXrefref1": {
+      "gpmlElementName": "PublicationXref",
+      "id": "publicationXrefref1",
+      "standardName": "The versatility and universality of calcium signalling",
+      "textContent": "1",
+      "type": [
+        "PublicationXref",
+        "PubMed:11413485"
+      ],
+      "xrefDataSource": "PubMed",
+      "xrefIdentifier": "11413485"
+    },
+    "pvjsgeneratedida01": {
+      "drawAs": "StraightLine",
+      "fill": "none",
+      "gpmlElementName": "Interaction",
+      "id": "pvjsgeneratedida01",
+      "isAttachedTo": [
+        "s2001",
+        "s2002"
+      ],
+      "kaavioType": "Edge",
+      "markerEnd": "Arrow",
+      "points": [
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              1
+            ]
+          },
+          "isAttachedTo": "s2001",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 260,
+          "y": 97
+        },
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              0
+            ]
+          },
+          "isAttachedTo": "s2002",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 260,
+          "y": 183
+        }
+      ],
+      "stroke": "#000000",
+      "strokeWidth": 1,
+      "type": [
+        "Interaction",
+        "Edge",
+        "SBO:0000167",
+        "SBO:0000393",
+        "SBO:0000394",
+        "DirectedInteraction"
+      ]
+    },
+    "pvjsgeneratedida02": {
+      "drawAs": "StraightLine",
+      "fill": "none",
+      "gpmlElementName": "Interaction",
+      "id": "pvjsgeneratedida02",
+      "isAttachedTo": [
+        "s2002",
+        "s2003"
+      ],
+      "kaavioType": "Edge",
+      "markerEnd": "Arrow",
+      "points": [
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              1
+            ]
+          },
+          "isAttachedTo": "s2002",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 260,
+          "y": 217
+        },
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              0
+            ]
+          },
+          "isAttachedTo": "s2003",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 260,
+          "y": 303
+        }
+      ],
+      "stroke": "#000000",
+      "strokeWidth": 1,
+      "type": [
+        "Interaction",
+        "Edge",
+        "SBO:0000167",
+        "SBO:0000393",
+        "SBO:0000394",
+        "DirectedInteraction"
+      ]
+    },
+    "pvjsgeneratedida03": {
+      "drawAs": "StraightLine",
+      "fill": "none",
+      "gpmlElementName": "Interaction",
+      "id": "pvjsgeneratedida03",
+      "isAttachedTo": [
+        "s2003",
+        "s2004"
+      ],
+      "kaavioType": "Edge",
+      "markerEnd": "Arrow",
+      "points": [
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              1
+            ]
+          },
+          "isAttachedTo": "s2003",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 260,
+          "y": 337
+        },
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              0
+            ]
+          },
+          "isAttachedTo": "s2004",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 260,
+          "y": 423
+        }
+      ],
+      "stroke": "#000000",
+      "strokeWidth": 1,
+      "type": [
+        "Interaction",
+        "Edge",
+        "SBO:0000167",
+        "SBO:0000393",
+        "SBO:0000394",
+        "DirectedInteraction"
+      ]
+    },
+    "s2001": {
+      "drawAs": "rect",
+      "fill": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "DataNode",
+      "height": 34,
+      "id": "s2001",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#1a5276",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "textContent": "STIM1",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "DataNode",
+        "SingleFreeNode",
+        "Ensembl:ENSG00000167323",
+        "GeneProduct",
+        "CompactIdentifier:ensembl:ENSG00000167323",
+        "STIM1",
+        "Ensembl:ENSG00000167323",
+        "Entrez Gene:6786",
+        "HGNC:STIM1",
+        "UniProt:A0A8V8TP78",
+        "UniProt:A0A8V8TNW0",
+        "UniProt:E9PRZ7",
+        "UniProt:E9PIQ8",
+        "UniProt:A0A8V8TMX0",
+        "UniProt:Q13586",
+        "UniProt:E9PN27",
+        "UniProt:A0A8V8TNW5",
+        "UniProt:A0A8V8TP73",
+        "UniProt:E9PJ19",
+        "UniProt:G0XQ39",
+        "UniProt:E9PNJ4",
+        "UniProt:E9PR09",
+        "UniProt:E9PR07",
+        "UniProt:A0A8V8TMF0",
+        "UniProt:A0A8V8TMG1",
+        "UniProt:E9PMB4",
+        "UniProt:A0A8V8TMG5",
+        "UniProt:E9PRE4",
+        "UniProt:H0YDB2"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 120,
+      "wpType": "GeneProduct",
+      "x": 200,
+      "xrefDataSource": "Ensembl",
+      "xrefIdentifier": "ENSG00000167323",
+      "y": 63
+    },
+    "s2002": {
+      "drawAs": "rect",
+      "fill": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "DataNode",
+      "height": 34,
+      "id": "s2002",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#1a5276",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "textContent": "ORAI1",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "DataNode",
+        "SingleFreeNode",
+        "Ensembl:ENSG00000276045",
+        "GeneProduct",
+        "CompactIdentifier:ensembl:ENSG00000276045",
+        "ORAI1",
+        "Ensembl:ENSG00000276045",
+        "Entrez Gene:84876",
+        "HGNC:ORAI1",
+        "UniProt:A0A024RBT3",
+        "UniProt:Q96D31"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 120,
+      "wpType": "GeneProduct",
+      "x": 200,
+      "xrefDataSource": "Ensembl",
+      "xrefIdentifier": "ENSG00000276045",
+      "y": 183
+    },
+    "s2003": {
+      "drawAs": "rect",
+      "fill": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "DataNode",
+      "height": 34,
+      "id": "s2003",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#1a5276",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "textContent": "CALM1",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "DataNode",
+        "SingleFreeNode",
+        "Ensembl:ENSG00000198668",
+        "GeneProduct",
+        "CompactIdentifier:ensembl:ENSG00000198668",
+        "CALM1",
+        "Ensembl:ENSG00000198668",
+        "Entrez Gene:801",
+        "HGNC:CALM1",
+        "UniProt:G3V361",
+        "UniProt:P0DP23",
+        "UniProt:G3V226",
+        "UniProt:G3V479",
+        "UniProt:Q96HY3",
+        "UniProt:B4DJ51"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 120,
+      "wpType": "GeneProduct",
+      "x": 200,
+      "xrefDataSource": "Ensembl",
+      "xrefIdentifier": "ENSG00000198668",
+      "y": 303
+    },
+    "s2004": {
+      "drawAs": "rect",
+      "fill": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "DataNode",
+      "height": 34,
+      "id": "s2004",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#1a5276",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "textContent": "PPP3CA",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "DataNode",
+        "SingleFreeNode",
+        "Ensembl:ENSG00000138814",
+        "GeneProduct",
+        "CompactIdentifier:ensembl:ENSG00000138814",
+        "PPP3CA",
+        "Ensembl:ENSG00000138814",
+        "Entrez Gene:5530",
+        "HGNC:PPP3CA",
+        "UniProt:E9PPC8",
+        "UniProt:A0A0S2Z4B5",
+        "UniProt:A0A0S2Z4C6",
+        "UniProt:E7ETC2",
+        "UniProt:E9PK68",
+        "UniProt:Q08209",
+        "UniProt:H0YAB4"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 120,
+      "wpType": "GeneProduct",
+      "x": 200,
+      "xrefDataSource": "Ensembl",
+      "xrefIdentifier": "ENSG00000138814",
+      "y": 423
+    }
+  },
+  "pathway": {
+    "@context": [
+      "https://cdn.rawgit.com/wikipathways/WpVocabularies/7a46a05/contexts/pvjs.jsonld",
+      {
+        "@base": "WP5428/"
+      }
+    ],
+    "author": "[marvinm2]",
+    "comments": [
+      {
+        "content": "Depletion of endoplasmic reticulum calcium stores is sensed by STIM1, which oligomerises and gates the plasma membrane channel ORAI1, admitting calcium that is subsequently decoded by calmodulin and calcineurin in human cells.",
+        "source": "WikiPathways-description"
+      }
+    ],
+    "contains": [
+      "s2001",
+      "s2002",
+      "s2003",
+      "s2004",
+      "pvjsgeneratedida01",
+      "pvjsgeneratedida02",
+      "pvjsgeneratedida03"
+    ],
+    "dataSourceVersion": "WP5428_r20260827072315",
+    "displayName": "Store-operated calcium entry proof run",
+    "drawAs": "rect",
+    "fill": "white",
+    "fontSize": 12,
+    "fontWeight": "bold",
+    "gpmlElementName": "Pathway",
+    "height": 560,
+    "id": "WP5428",
+    "kaavioType": "Group",
+    "name": "Store-operated calcium entry proof run",
+    "organism": "Homo sapiens",
+    "padding": 5,
+    "pathwayVersion": "PR84",
+    "standardName": "Store-operated calcium entry proof run",
+    "stroke": "black",
+    "strokeWidth": 0,
+    "textAlign": "left",
+    "textContent": "Name: Store-operated calcium entry proof run\nOrganism: Homo sapiens",
+    "type": [
+      "Pathway",
+      "http://identifiers.org/pw/PW:0000010"
+    ],
+    "verticalAlign": "top",
+    "width": 520,
+    "x": 0,
+    "y": 0,
+    "zIndex": 0
+  }
+}

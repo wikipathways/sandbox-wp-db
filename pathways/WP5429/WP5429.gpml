@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway Data-Source="WikiPathways" Last-Modified="20261119150524" Version="WP5429_r20261119150524" xmlns="http://pathvisio.org/GPML/2013a" Name="Aryl hydrocarbon receptor activation by dioxin" Author="[marvinm2]" Organism="Homo sapiens">
+  <Graphics BoardWidth="760.0" BoardHeight="560.0" />
+  <Comment Source="WikiPathways-description">The environmental contaminant 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD) binds the aryl hydrocarbon receptor (AHR), which is held in the cytoplasm by HSP90 and the co-chaperone AIP. Ligand binding releases the receptor, which moves to the nucleus, dimerises with ARNT and induces the xenobiotic-metabolising enzymes CYP1A1 and CYP1B1 in human cells.</Comment>
+  <BiopaxRef>ref1</BiopaxRef>
+
+  <DataNode TextLabel="TCDD" GraphId="d001" Type="Metabolite">
+    <Comment>2,3,7,8-tetrachlorodibenzo-p-dioxin, the prototypical high-affinity AHR ligand.</Comment>
+    <Graphics ZOrder="32768" CenterX="190.0" CenterY="90.0" Width="120.0" Height="34.0" Color="0000ff" FillColor="ffffff" />
+    <Xref Database="ChEBI" ID="CHEBI:28119" />
+  </DataNode>
+
+  <DataNode TextLabel="AHR" GraphId="d002" Type="GeneProduct" GroupRef="grp1">
+    <Comment>Ligand-activated basic helix-loop-helix PAS transcription factor.</Comment>
+    <Graphics ZOrder="32768" CenterX="190.0" CenterY="230.0" Width="120.0" Height="34.0" Color="1a5276" />
+    <Xref Database="Ensembl" ID="ENSG00000106546" />
+  </DataNode>
+
+  <DataNode TextLabel="HSP90AA1" GraphId="d003" Type="GeneProduct" GroupRef="grp1">
+    <Graphics ZOrder="32768" CenterX="190.0" CenterY="264.0" Width="120.0" Height="34.0" Color="1a5276" />
+    <Xref Database="Entrez Gene" ID="3320" />
+  </DataNode>
+
+  <DataNode TextLabel="AIP" GraphId="d004" Type="GeneProduct" GroupRef="grp1">
+    <Graphics ZOrder="32768" CenterX="190.0" CenterY="298.0" Width="120.0" Height="34.0" Color="1a5276" />
+    <Xref Database="Ensembl" ID="ENSG00000110711" />
+  </DataNode>
+
+  <DataNode TextLabel="ARNT" GraphId="d005" Type="Protein">
+    <Graphics ZOrder="32768" CenterX="560.0" CenterY="230.0" Width="120.0" Height="34.0" Color="1a5276" />
+    <Xref Database="Uniprot-TrEMBL" ID="P27540" />
+  </DataNode>
+
+  <DataNode TextLabel="CYP1A1" GraphId="d006" Type="GeneProduct">
+    <Graphics ZOrder="32768" CenterX="480.0" CenterY="400.0" Width="120.0" Height="34.0" Color="1a5276" />
+    <Xref Database="Ensembl" ID="ENSG00000140465" />
+  </DataNode>
+
+  <DataNode TextLabel="CYP1B1" GraphId="d007" Type="GeneProduct">
+    <Graphics ZOrder="32768" CenterX="640.0" CenterY="400.0" Width="120.0" Height="34.0" Color="1a5276" />
+    <Xref Database="Entrez Gene" ID="1545" />
+  </DataNode>
+
+  <Interaction GraphId="i001">
+    <BiopaxRef>ref1</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="190.0" Y="107.0" GraphRef="d001" RelX="0.0" RelY="1.0" />
+      <Point X="190.0" Y="213.0" GraphRef="d002" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+  </Interaction>
+
+  <Interaction GraphId="i002">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="250.0" Y="230.0" GraphRef="d002" RelX="1.0" RelY="0.0" />
+      <Point X="500.0" Y="230.0" GraphRef="d005" RelX="-1.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+  </Interaction>
+
+  <Interaction GraphId="i003">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="540.0" Y="247.0" GraphRef="d005" RelX="-0.333" RelY="1.0" />
+      <Point X="480.0" Y="383.0" GraphRef="d006" RelX="0.0" RelY="-1.0" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+  </Interaction>
+
+  <Interaction GraphId="i004">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="580.0" Y="247.0" GraphRef="d005" RelX="0.333" RelY="1.0" />
+      <Point X="640.0" Y="383.0" GraphRef="d007" RelX="0.0" RelY="-1.0" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+  </Interaction>
+
+  <Label TextLabel="Cytoplasm" GraphId="l001">
+    <Graphics ZOrder="28672" CenterX="190.0" CenterY="170.0" Width="100.0" Height="20.0" Color="666666" />
+  </Label>
+
+  <Label TextLabel="Nucleus" GraphId="l002">
+    <Graphics ZOrder="28672" CenterX="560.0" CenterY="170.0" Width="100.0" Height="20.0" Color="666666" />
+  </Label>
+
+  <Group GroupId="grp1" GraphId="g001" Style="Complex" />
+
+  <OntologyTerm Term="aryl hydrocarbon receptor signaling pathway" ID="PW:0000370" Ontology="Pathway Ontology" />
+  <OntologyTerm Term="xenobiotic metabolic pathway" ID="PW:0001229" Ontology="Pathway Ontology" />
+
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ref1">
+      <bp:ID>12540743</bp:ID>
+      <bp:DB>PubMed</bp:DB>
+      <bp:TITLE>Activation of the aryl hydrocarbon receptor by structurally diverse exogenous and endogenous chemicals</bp:TITLE>
+      <bp:SOURCE>Annu Rev Pharmacol Toxicol</bp:SOURCE>
+      <bp:YEAR>2003</bp:YEAR>
+      <bp:AUTHORS>Denison MS</bp:AUTHORS>
+      <bp:AUTHORS>Nagy SR</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

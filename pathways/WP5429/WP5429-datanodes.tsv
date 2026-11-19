@@ -1,0 +1,8 @@
+Label	Type	Identifier	Comment	Ensembl	NCBI gene	HGNC	UniProt	Wikidata	ChEBI	InChI	PubChem	ChemSpider	HMDB	KEGG	LipidMaps
+TCDD	Metabolite	chebi:28119	"2,3,7,8-tetrachlorodibenzo-p-dioxin, the prototypical high-affinity AHR ligand."					wikidata:Q52822	chebi:28119	inchikey:HGUFODBRKLSHSI-UHFFFAOYSA-N	pubchem.compound:15625	chemspider:14865	hmdb:HMDB0258755	kegg.compound:C07557	
+AHR	GeneProduct	ensembl:ENSG00000106546	"Ligand-activated basic helix-loop-helix PAS transcription factor."	ensembl:ENSG00000106546	ncbigene:196	hgnc.symbol:AHR	uniprot:A0A2R8Y7G1;uniprot:P35869;uniprot:A0A024R9Z8								
+HSP90AA1	GeneProduct	ncbigene:3320	""	ensembl:ENSG00000080824	ncbigene:3320	hgnc.symbol:HSP90AA1	uniprot:G3V592;uniprot:K9JA46;uniprot:A0A0U1RR69;uniprot:G3V2J8;uniprot:P07900;uniprot:H0YJF5								
+AIP	GeneProduct	ensembl:ENSG00000110711	""	ensembl:ENSG00000110711	ncbigene:9049	hgnc.symbol:AIP	uniprot:E9PMH2;uniprot:A0A804HJ46;uniprot:A0A804HKH9;uniprot:A0A804HIX8;uniprot:O00170;uniprot:A0A804HKK3;uniprot:A0A804HKP8;uniprot:A0A804HKL7;uniprot:A0A804HJ38;uniprot:V9GYQ3								
+CYP1A1	GeneProduct	ensembl:ENSG00000140465	""	ensembl:ENSG00000140465	ncbigene:1543	hgnc.symbol:CYP1A1	uniprot:E7EMT5;uniprot:P04798;uniprot:A0N0X8;uniprot:A4F3V8								
+CYP1B1	GeneProduct	ncbigene:1545	""	ensembl:ENSG00000138061	ncbigene:1545	hgnc.symbol:CYP1B1	uniprot:A0A087WUQ7;uniprot:A0A087WW26;uniprot:Q16678								
+ARNT	Protein	uniprot:P27540	""	ensembl:ENSG00000143437	ncbigene:405	hgnc.symbol:ARNT	uniprot:A6NGV6;uniprot:P27540;uniprot:D6RDB3								

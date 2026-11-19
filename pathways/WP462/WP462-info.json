@@ -2,8 +2,11 @@
     "wpid": "WP462",
     "organisms": ["Saccharomyces cerevisiae"],
     "description": "Coenzyme A is synthesized from pantothenate, which is made from beta-alanine and pantoate deriving from spermine and 2-keto-iosvalerate, respectively.",
-    "ontology-ids": ["PW:0001358"],
-    "last-edited": "2023-03-05",
+    "ontology-ids": [
+        "PW:0001358",
+        "PW:0000002"
+    ],
+    "last-edited": "2026-10-06",
     "title": "Pantothenate and coenzyme A biosynthesis",
     "authors": [
         "M.Braymer",
@@ -12,7 +15,8 @@
         "Egonw",
         "SNorton",
         "Eweitz",
-        "AlexanderPico"
+        "AlexanderPico",
+        "Khanspers"
     ],
-    "revision": "r125621"
+    "revision": "r20261006120831"
 }

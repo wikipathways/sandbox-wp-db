@@ -1,16 +1,27 @@
 {
     "wpid": "WP4008",
     "organisms": ["Homo sapiens"],
-    "description": "NO/cGMP/PKG mediated Neuroprotection",
+    "description": "NO/cGMP/PKG mediated Neuroprotection.  Proteins on this pathway have targeted assays available via the [CPTAC Assay Portal](https://assays.cancer.gov/available_assays?wp_id=WP4008).",
     "ontology-ids": [
-        "DOID:1307",
         "CL:0000540",
         "PW:0000003",
+        "CL:0000115",
         "CL:0002319",
-        "PW:0000541"
+        "CL:0000129",
+        "PW:0000541",
+        "DOID:1307"
     ],
-    "last-edited": "20210522",
+    "last-edited": "2025-08-18",
     "title": "NO/cGMP/PKG mediated neuroprotection",
-    "authors": ["SauerThorben","Egonw","Khanspers","MaintBot","Laurent","Eweitz"],
-    "revision": "r123318"
+    "authors": [
+        "SauerThorben",
+        "Egonw",
+        "Khanspers",
+        "MaintBot",
+        "Laurent",
+        "Eweitz",
+        "DeSl",
+        "Ddigles"
+    ],
+    "revision": "r140399"
 }

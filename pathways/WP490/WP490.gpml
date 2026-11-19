@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="TCA cycle" Data-Source="WikiPathways" Version="WP490_r124735" Author="[Kdahlquist, MaintBot, AlexanderPico, Khanspers, Thomas, Ddigles, Egonw, Mkutmon, DeSl, Eweitz]" Last-Modified="20221207202749" Organism="Saccharomyces cerevisiae">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="TCA cycle" Data-Source="WikiPathways" Version="WP490_r142343" Author="[Kdahlquist, MaintBot, AlexanderPico, Khanspers, Thomas, Ddigles, Egonw, Mkutmon, DeSl, Eweitz, Larsgw]" Last-Modified="20260125122316" Organism="Saccharomyces cerevisiae">
   <Comment Source="WikiPathways-description">Based on Glycolysis and Gluconeogenesis Pathways at SGD and on Kruckeberg, AL and Dickinson, JR (2004) Carbon Metabolism in The Metabolism and Molecular Physiology of Saccharomyces cerevisiae, Dickinson, JR and Schweizer, M, eds, CRC Press.</Comment>
   <BiopaxRef>de4</BiopaxRef>
   <Graphics BoardWidth="1074.810923329953" BoardHeight="1076.404356785512" />
@@ -144,7 +144,6 @@
   </DataNode>
   <DataNode TextLabel="ICL1" GraphId="e14" Type="GeneProduct">
     <Comment>peroxisome</Comment>
-    <Comment>Type your comment here</Comment>
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="ICL1 (peroxisome)" />
     <Graphics CenterX="790.9571196177112" CenterY="687.9516377747274" Width="61.4524765729584" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="YER065C" />
@@ -180,7 +179,6 @@
   </DataNode>
   <DataNode TextLabel="MLS1" GraphId="f37" Type="GeneProduct" GroupRef="cc976">
     <Comment>peroxisome</Comment>
-    <Comment>Type your comment here</Comment>
     <Graphics CenterX="457.32656363852004" CenterY="616.4204497314148" Width="70.18072289156589" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="YNL117W" />
   </DataNode>
@@ -249,8 +247,8 @@
   </Interaction>
   <Interaction GraphId="id2817f677">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="262.89374163319917" Y="232.40495314591715" GraphRef="dc42e" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
-      <Point X="550.1961178045519" Y="436.3855421686751" GraphRef="db223" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="262.89374163319917" Y="232.40495314591715" GraphRef="dc42e" RelX="0.5" RelY="1.0" />
+      <Point X="550.1961178045519" Y="436.3855421686751" GraphRef="db223" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -344,8 +342,8 @@
   </Interaction>
   <Interaction GraphId="id8777e9b">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="364.1019076305221" Y="144.05153949129868" GraphRef="d35d1" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
-      <Point X="517.4596720214188" Y="250.25903614457843" GraphRef="de671" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="364.1019076305221" Y="144.05153949129868" GraphRef="d35d1" RelX="0.5" RelY="1.0" />
+      <Point X="517.4596720214188" Y="250.25903614457843" GraphRef="de671" RelX="-0.5" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -438,8 +436,8 @@
   </Interaction>
   <Interaction GraphId="idc500405">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="200.83902275769768" Y="370.3701472556895" GraphRef="e7c" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
-      <Point X="359.60274431057593" Y="496.5642570281125" GraphRef="cf1" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="200.83902275769768" Y="370.3701472556895" GraphRef="e7c" RelX="0.5" RelY="1.0" />
+      <Point X="359.60274431057593" Y="496.5642570281125" GraphRef="cf1" RelX="-0.5" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -524,7 +522,7 @@
   <Biopax>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="de4">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0415299004</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN</bp:DB>
       <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metabolism and Molecular Physiology of Saccharomyces Cerevisiae</bp:TITLE>
       <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CRC Press (book); ISBN-10: 0415299004</bp:SOURCE>
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>

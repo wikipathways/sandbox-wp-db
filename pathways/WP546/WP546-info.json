@@ -1,13 +1,22 @@
 {
     "wpid": "WP546",
     "organisms": ["Saccharomyces cerevisiae"],
-    "description": "Based on http://pathway.yeastgenome.org/biocyc/",
+    "description": "Based on [yeastgenome.org](http://pathway.yeastgenome.org/biocyc/).",
     "ontology-ids": [
         "PW:0000042",
         "PW:0001364"
     ],
-    "last-edited": "20210507",
+    "last-edited": "2025-06-24",
     "title": "Lactose degradation and galactose metabolism",
-    "authors": ["J.Heckman","MaintBot","Ddigles","Egonw","Khanspers","DeSl","Marvin M2","Eweitz"],
-    "revision": "r116499"
+    "authors": [
+        "J.Heckman",
+        "MaintBot",
+        "Ddigles",
+        "Egonw",
+        "Khanspers",
+        "DeSl",
+        "Marvin M2",
+        "Eweitz"
+    ],
+    "revision": "r139593"
 }

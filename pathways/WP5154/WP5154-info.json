@@ -1,13 +1,20 @@
 {
     "wpid": "WP5154",
     "organisms": ["Homo sapiens"],
-    "description": "Docosahexaenoic acid (DHA) oxylipin metabolism",
+    "description": "Docosahexaenoic acid (DHA) oxylipin metabolism, involving the LOX, COX2, and sEH genes.",
     "ontology-ids": [
         "PW:0000010",
-        "PW:0000002"
+        "PW:0000002",
+        "PW:0000058"
     ],
-    "last-edited": "20221210",
+    "last-edited": "2026-03-23",
     "title": "Docosahexaenoic acid oxylipin metabolism",
-    "authors": ["Lcayer","AlexanderPico","Egonw"],
-    "revision": "r123805"
+    "authors": [
+        "Lcayer",
+        "AlexanderPico",
+        "Egonw",
+        "Eweitz",
+        "DeSl"
+    ],
+    "revision": "r142562"
 }

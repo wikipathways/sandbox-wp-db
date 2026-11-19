@@ -1,14 +1,20 @@
 {
     "wpid": "WP5238",
     "organisms": ["Homo sapiens"],
-    "description": "Cholestasis - bile flow obstruction",
+    "description": "Genetic causes of cholestasis. The pathway describes the enzymes involved in the bile acid (Ba) uptake and metabolism.",
     "ontology-ids": [
+        "CL:0000182",
         "DOID:13580",
-        "PW:0002480",
-        "CL:0000182"
+        "PW:0002480"
     ],
-    "last-edited": "20221210",
+    "last-edited": "2025-11-03",
     "title": "Cholestasis",
-    "authors": ["VPencheva","Susan","Fehrhart","Egonw"],
-    "revision": "r123341"
+    "authors": [
+        "VPencheva",
+        "Susan",
+        "Fehrhart",
+        "Egonw",
+        "Eweitz"
+    ],
+    "revision": "r141088"
 }

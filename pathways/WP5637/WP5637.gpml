@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="TGF-β1/SMAD2/3 signalling in decidual NK cells at the fetal-maternal interface" Version="WP5637_r20260712094518" Author="[MariaChahni, DeSl]" Last-Modified="20260712094518" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">This pathway provides an overview of TGFB1 signalling on dNK cells with downstream effects of phenotypic conversion, suppressed cytotoxicity, and stimulation of processes such as trophoblast invasion and spiral artery remodeling as a result of the signalling. Within the dNK cells an inhibitory feedback loop of the TGF-B signalling is also occurring as a result of the protein SMAD7 binding to TGFBR1 preventing its phosphorylation, and SMURF2 which catalyses the ubiquitination of TGFBR1. Following activation of TGFBR2, TGFBR1 is phosphorylated and triggers the phosphorylation of SMAD2 and SMAD3 which bind to SMAD4 forming a complex following the phosphorylation. The SMAD2/3:4 complex then translocates to the nucleus where work is done to suppress the activation of proteins FCGR3A (aka CD16), IFNG, and NKG2D which usually give NK cells their cytotoxic phenotype. 
+The complex also works to activate transcription of genes translating CD103, CD49A, KIR2DL4, and CD9 which work to promote a tolerogenic phenotypic conversion/differentiation of NK cells within the decidua from CD16+ to CD16-. The suppressed cytotoxicity triggered by the complex allows for the activation of cytokines  such as IL8, CXCL10 which stimulate trophoblast invasion and factors such as VEGFC, PLGF, ANGPT1, and ANGPT2 which stimulate the spiral artery remodelling. </Comment>
+  <BiopaxRef>d14</BiopaxRef>
+  <Graphics BoardWidth="1685.217163788592" BoardHeight="1104.0384615384617" />
+  <DataNode TextLabel="SMAD2" GraphId="e1dd2" Type="Protein" GroupRef="d9997">
+    <Graphics CenterX="576.4450992235255" CenterY="653.0354046678546" Width="90.0" Height="25.00611374121422" ZOrder="-8" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q15796" />
+  </DataNode>
+  <DataNode TextLabel="SMAD2" GraphId="e812c" Type="Protein" GroupRef="a2e13">
+    <Graphics CenterX="178.62721150872022" CenterY="563.4696418822498" Width="90.0" Height="25.0" ZOrder="-6" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q15796" />
+  </DataNode>
+  <DataNode TextLabel="CD9" GraphId="b8698" Type="Protein" GroupRef="ea974">
+    <Graphics CenterX="835.8018619145201" CenterY="753.8071284962317" Width="52.49840933191672" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P21926" />
+  </DataNode>
+  <DataNode TextLabel="Available State" GraphId="d87c5" Type="Protein">
+    <Graphics CenterX="912.2881850674577" CenterY="271.1000447967661" Width="104.70149253731398" Height="25.0" ZOrder="32770" FillColor="00cc00" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Unavailable State" GraphId="af8e4" Type="Protein">
+    <Graphics CenterX="912.2881850674561" CenterY="317.866213950996" Width="104.70149253731363" Height="25.0" ZOrder="32772" FillColor="ff0000" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Cytotoxicity" GraphId="c57b6" Type="Pathway">
+    <Graphics CenterX="340.5384615384614" CenterY="862.5384615384617" Width="90.0" Height="25.0" ZOrder="32774" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="CD49a" GraphId="f64bb" Type="Protein" GroupRef="ea974">
+    <Comment>AKA ITGA1</Comment>
+    <Graphics CenterX="835.8018619145201" CenterY="703.8071284962317" Width="52.49840933191672" Height="25.0" ZOrder="32776" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P56199" />
+  </DataNode>
+  <DataNode TextLabel="Trophoblast invasion " GraphId="c7822" Type="Pathway">
+    <Graphics CenterX="369.53846153845313" CenterY="1060.2051282051284" Width="146.66666666666623" Height="25.0" ZOrder="32778" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Reduced &#xA;Cytotoxicity" GraphId="a3335" Type="Pathway">
+    <Graphics CenterX="529.038461538461" CenterY="863.0384615384617" Width="149.0" Height="33.0" ZOrder="32780" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Decidual Macrophages " GraphId="b73a0">
+    <Comment>"decidual resident macrophage" http://purl.obolibrary.org/obo/CL_4033088 ; 
+"leukocyte" http://purl.obolibrary.org/obo/CL_0000738; 
+"eukaryotic cell" http://purl.obolibrary.org/obo/CL_0000255</Comment>
+    <BiopaxRef>b38</BiopaxRef>
+    <Graphics CenterX="113.33783560602367" CenterY="285.3242943914242" Width="160.71428571428575" Height="42.59183673469374" ZOrder="32782" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Xref Database="" ID="4033088" />
+  </DataNode>
+  <DataNode TextLabel="CD56bright tolerogenic dNK phenotype" GraphId="a68a6" Type="Pathway">
+    <Graphics CenterX="902.6862644560204" CenterY="854.7930241270177" Width="250.0" Height="36.5" ZOrder="32785" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="SMAD4" GraphId="e2edb" Type="Protein" GroupRef="e1e92">
+    <Graphics CenterX="634.3902872635" CenterY="576.1441648901068" Width="90.0" Height="25.0" ZOrder="32787" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q13485" />
+  </DataNode>
+  <DataNode TextLabel="ANGPT1" GraphId="a40ba" Type="Protein">
+    <Graphics CenterX="719.2051282051247" CenterY="923.5384615384617" Width="90.0" Height="25.0" ZOrder="32789" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q15389" />
+  </DataNode>
+  <DataNode TextLabel="Interleukin 8" GraphId="be428" Type="Protein">
+    <Graphics CenterX="309.6316254828036" CenterY="923.538461538462" Width="90.0" Height="25.0" ZOrder="32791" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P10145" />
+  </DataNode>
+  <DataNode TextLabel="DSCs" GraphId="f41da">
+    <Comment>"decidual cell" 
+http://purl.obolibrary.org/obo/CL_2000002 ;
+"stromal cell" http://purl.obolibrary.org/obo/CL_0000499 ; "eukaryotic cell" http://purl.obolibrary.org/obo/CL_0000255</Comment>
+    <BiopaxRef>bbf</BiopaxRef>
+    <Graphics CenterX="198.0022409501285" CenterY="229.80611455253828" Width="97.43877551020401" Height="40.81632653061223" ZOrder="32793" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Xref Database="" ID="2000002" />
+  </DataNode>
+  <DataNode TextLabel="TGFB1" GraphId="abbaa" Type="GeneProduct">
+    <Graphics CenterX="260.77344842893945" CenterY="348.8092874080272" Width="90.0" Height="30.357142857142815" ZOrder="32795" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000105329" />
+  </DataNode>
+  <DataNode TextLabel="SMAD3" GraphId="aa699" Type="Protein" GroupRef="e1e92">
+    <Graphics CenterX="544.3902872635001" CenterY="576.1441648901068" Width="90.0" Height="25.0" ZOrder="32797" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P84022" />
+  </DataNode>
+  <DataNode TextLabel="KIR2DL4" GraphId="e9640" Type="Protein" GroupRef="ea974">
+    <Comment>KIR 
+</Comment>
+    <Graphics CenterX="835.8018619145201" CenterY="728.8071284962317" Width="52.49840933191672" Height="25.0" ZOrder="32800" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q99706" />
+  </DataNode>
+  <DataNode TextLabel="IP-10/CXCL10" GraphId="fb738" Type="Protein">
+    <Graphics CenterX="417.5384615384623" CenterY="923.5384615384617" Width="90.0" Height="25.0" ZOrder="32802" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P02778" />
+  </DataNode>
+  <DataNode TextLabel="IFNG" GraphId="b4f2a" Type="GeneProduct" GroupRef="ef0db">
+    <Graphics CenterX="440.75984756122483" CenterY="719.0954235637781" Width="90.0" Height="25.0" ZOrder="32804" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P01579" />
+  </DataNode>
+  <DataNode TextLabel="SMURF2" GraphId="b35a5" Type="Protein">
+    <Graphics CenterX="844.0411619954646" CenterY="530.7557444632641" Width="90.0" Height="25.0" ZOrder="32806" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9HAU4" />
+  </DataNode>
+  <DataNode TextLabel="FCGR3A&#xA;(CD16)" GraphId="de3ea" Type="Protein" GroupRef="ef0db">
+    <Graphics CenterX="440.75984756122483" CenterY="690.8001358284304" Width="90.0" Height="31.590575470695462" ZOrder="32808" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P08637" />
+  </DataNode>
+  <DataNode TextLabel="CD103" GraphId="d38c0" Type="Protein" GroupRef="ea974">
+    <Comment>AKA ITGAE</Comment>
+    <Graphics CenterX="835.8018619145201" CenterY="678.8071284962317" Width="52.49840933191672" Height="25.0" ZOrder="32810" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P38570" />
+  </DataNode>
+  <DataNode TextLabel="Endovascular EVTs" GraphId="e3723">
+    <Comment>"endovascular extravillous trophoblast cell" http://purl.obolibrary.org/obo/CL_4033063; 
+"trophoblast cell" http://purl.obolibrary.org/obo/CL_0000351;
+"eukaryotic cell" http://purl.obolibrary.org/obo/CL_0000255</Comment>
+    <BiopaxRef>c28</BiopaxRef>
+    <Graphics CenterX="531.6866590209796" CenterY="288.75937409914513" Width="135.5612244897954" Height="40.561224489795904" ZOrder="32812" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Xref Database="" ID="4033063" />
+  </DataNode>
+  <DataNode TextLabel="CD4" GraphId="fca45" Type="Protein">
+    <Graphics CenterX="152.05707982544797" CenterY="188.94954330089092" Width="31.66666666665521" Height="18.333333333333346" ZOrder="32814" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P01730" />
+  </DataNode>
+  <DataNode TextLabel="Tregs" GraphId="b1c82">
+    <Comment>"natural T-regulatory cell" http://purl.obolibrary.org/obo/CL_0000903; 
+"regulatory T cell" http://purl.obolibrary.org/obo/CL_0000815;
+"eukaryotic cell" http://purl.obolibrary.org/obo/CL_0000255
+
+</Comment>
+    <BiopaxRef>cd7</BiopaxRef>
+    <Graphics CenterX="259.4337376876472" CenterY="172.44976753243125" Width="90.0" Height="43.11224489795911" ZOrder="32816" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Xref Database="" ID="0000255" />
+  </DataNode>
+  <DataNode TextLabel="NKG2D" GraphId="e1b8e" Type="Protein" GroupRef="ef0db">
+    <Graphics CenterX="440.75984756122483" CenterY="744.0954235637781" Width="90.0" Height="25.0" ZOrder="32819" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P26718" />
+  </DataNode>
+  <DataNode TextLabel="CD56&#xA;(CD56 bright)" GraphId="b5f1f" Type="Protein">
+    <Comment>AKA NCAM1</Comment>
+    <Graphics CenterX="522.7722144535094" CenterY="201.23262639895967" Width="80.00000000000011" Height="39.09090909090909" ZOrder="32821" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P13591" />
+  </DataNode>
+  <DataNode TextLabel="Spiral Artery Remodeling" GraphId="fcab3" Type="Pathway">
+    <Graphics CenterX="720.0384615384619" CenterY="1061.5384615384617" Width="175.66666666666663" Height="25.0" ZOrder="32823" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="CD14" GraphId="c8ac6" Type="Protein">
+    <Graphics CenterX="62.384406835313904" CenterY="224.94231027837938" Width="35.20248203788378" Height="25.0" ZOrder="32825" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P08571" />
+  </DataNode>
+  <DataNode TextLabel="TGFBR2" GraphId="dcf18" Type="GeneProduct">
+    <Graphics CenterX="260.77344842893945" CenterY="430.6412927415699" Width="90.0" Height="26.15546218487393" ZOrder="32827" FontSize="12" Valign="Middle" />
+    <Xref Database="HGNC" ID="TGFBR2" />
+  </DataNode>
+  <DataNode TextLabel="TGFBR1" GraphId="ed8ac" Type="GeneProduct">
+    <Comment>AKA ALK5</Comment>
+    <Graphics CenterX="564.8494167677152" CenterY="430.6412927415699" Width="61.502917790410095" Height="27.205882352941252" ZOrder="32829" FontSize="12" Valign="Middle" />
+    <Xref Database="HGNC" ID="TGFBR1" />
+  </DataNode>
+  <DataNode TextLabel="SMAD7" GraphId="ff2bb" Type="Protein">
+    <Graphics CenterX="885.5384615384612" CenterY="462.53846153846143" Width="90.0" Height="25.0" ZOrder="32832" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="O15105" />
+  </DataNode>
+  <DataNode TextLabel="ANGPT2" GraphId="b45fc" Type="Protein">
+    <Graphics CenterX="824.5384615384581" CenterY="923.5384615384617" Width="90.0" Height="25.0" ZOrder="32834" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="O15123" />
+  </DataNode>
+  <DataNode TextLabel="VEGFC" GraphId="f6706" Type="Protein">
+    <Graphics CenterX="519.7051282051292" CenterY="923.5384615384617" Width="72.99999999999869" Height="25.0" ZOrder="32836" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P49767" />
+  </DataNode>
+  <DataNode TextLabel="CD25 &#xA;(IL2RA)" GraphId="e3634" Type="Protein">
+    <Graphics CenterX="155.285219453165" CenterY="152.33078482692946" Width="48.333333333333265" Height="33.57613335103123" ZOrder="32838" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P01589" />
+  </DataNode>
+  <DataNode TextLabel="CD16 dim&#xA;(FCGR3A)" GraphId="a93a5" Type="Protein">
+    <Graphics CenterX="406.84063483385205" CenterY="261.02224553317785" Width="61.81818181818197" Height="32.562668541055245" ZOrder="32840" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P08637" />
+  </DataNode>
+  <DataNode TextLabel="proteinogenic &#xA;amino-acid residues" GraphId="d7c31" Type="Metabolite">
+    <Graphics CenterX="613.0295292576121" CenterY="527.8640743344731" Width="117.01786456169793" Height="33.34877440797686" ZOrder="32842" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:33700" />
+  </DataNode>
+  <DataNode TextLabel="PLGF" GraphId="ec4bb" Type="GeneProduct">
+    <Graphics CenterX="609.5384615384606" CenterY="923.5384615384617" Width="90.0" Height="25.0" ZOrder="32844" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P49763" />
+  </DataNode>
+  <DataNode TextLabel="dNK cells" GraphId="facba">
+    <Comment>"decidual natural killer cell" http://purl.obolibrary.org/obo/CL_0002343;
+"uterine natural killer cell" http://purl.obolibrary.org/obo/CL_4052028;
+"eukaryotic cell" http://purl.obolibrary.org/obo/CL_0000255
+</Comment>
+    <BiopaxRef>a39</BiopaxRef>
+    <Graphics CenterX="393.32181187140816" CenterY="193.43717087031158" Width="114.89752916091811" Height="45.738295318127186" ZOrder="32846" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Xref Database="" ID="0002343" />
+  </DataNode>
+  <DataNode TextLabel="FOXP3+&#xA;(FoxP3 bright)" GraphId="fe708" Type="Protein">
+    <BiopaxRef>baa</BiopaxRef>
+    <Graphics CenterX="357.3651676585231" CenterY="151.74022675725115" Width="83.63636363636331" Height="34.19120801887951" ZOrder="32849" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9BZS1" />
+  </DataNode>
+  <DataNode TextLabel="TGFBR1&#xA;" GraphId="a875b" Type="GeneProduct">
+    <Comment>Aka ALK5</Comment>
+    <Graphics CenterX="414.8491227602144" CenterY="430.6412927415698" Width="61.502917790410095" Height="27.205882352941252" ZOrder="32853" FontSize="12" Valign="Middle" />
+    <Xref Database="HGNC" ID="TGFBR1" />
+  </DataNode>
+  <DataNode TextLabel="SMAD7" GraphId="f394b" Type="Protein" GroupRef="ff450">
+    <Graphics CenterX="723.10721932824" CenterY="499.6436754977464" Width="61.56958869962528" Height="16.404029912754524" ZOrder="32856" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="O15105" />
+  </DataNode>
+  <DataNode TextLabel="SMURF2" GraphId="a1ad9" Type="Protein" GroupRef="ff450">
+    <Graphics CenterX="723.1072193282398" CenterY="515.4608753315642" Width="61.56958869962528" Height="16.40402991275448" ZOrder="32858" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9HAU4" />
+  </DataNode>
+  <DataNode TextLabel="SMAD3" GraphId="f7da6" Type="Protein" GroupRef="a2e13">
+    <Graphics CenterX="178.62721150872022" CenterY="588.4696418822491" Width="90.0" Height="25.0" ZOrder="32866" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P84022" />
+  </DataNode>
+  <DataNode TextLabel="SMAD4" GraphId="c466f" Type="Protein">
+    <Graphics CenterX="298.4695988983717" CenterY="619.7543627290627" Width="90.0" Height="25.0" ZOrder="32869" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q13485" />
+  </DataNode>
+  <DataNode TextLabel="SMAD2" GraphId="e78f7" Type="Protein" GroupRef="e1db7">
+    <Graphics CenterX="178.89833066043212" CenterY="461.2395633188378" Width="90.0" Height="25.0" ZOrder="32871" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q15796" />
+  </DataNode>
+  <DataNode TextLabel="SMAD3" GraphId="f8635" Type="Protein" GroupRef="e1db7">
+    <Graphics CenterX="178.89833066043212" CenterY="486.23956331883784" Width="90.0" Height="25.0" ZOrder="32873" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P84022" />
+  </DataNode>
+  <DataNode TextLabel="SMAD4" GraphId="a9105" Type="Protein" GroupRef="d9997">
+    <Graphics CenterX="576.4450992235255" CenterY="702.4568569373968" Width="90.0" Height="25.0" ZOrder="32885" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q13485" />
+  </DataNode>
+  <DataNode TextLabel="SMAD3" GraphId="e8d1d" Type="Protein" GroupRef="d9997">
+    <Graphics CenterX="576.4450992235257" CenterY="677.4060783321155" Width="90.0" Height="25.0" ZOrder="32887" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P84022" />
+  </DataNode>
+  <DataNode TextLabel="pNK cell " GraphId="cd7d5">
+    <Comment>"CD16-positive, CD56-dim natural killer cell" http://purl.obolibrary.org/obo/CL_0000939;
+"leukocyte" http://purl.obolibrary.org/obo/CL_0000738;
+"eukaryotic cell" http://purl.obolibrary.org/obo/CL_0000738</Comment>
+    <Graphics CenterX="1196.7482269503532" CenterY="801.5797872340421" Width="98.33333333333346" Height="44.49999999999997" ZOrder="34512" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Xref Database="" ID="0000939" />
+  </DataNode>
+  <DataNode TextLabel="dNK cell" GraphId="b10de">
+    <Comment>"decidual natural killer cell" http://purl.obolibrary.org/obo/CL_0002343;
+"uterine natural killer cell" http://purl.obolibrary.org/obo/CL_4052028;
+"eukaryotic cell" http://purl.obolibrary.org/obo/CL_0000255</Comment>
+    <BiopaxRef>a39</BiopaxRef>
+    <Graphics CenterX="1197.7482269503537" CenterY="927.7634510221397" Width="106.99999999999926" Height="45.738295318127186" ZOrder="34514" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Xref Database="" ID="0002343" />
+  </DataNode>
+  <DataNode TextLabel="CD56&#xA;(CD56 dim)" GraphId="a12e8" Type="Protein">
+    <Comment>AKA NCAM1</Comment>
+    <Graphics CenterX="1232.160522954382" CenterY="728.6397686351586" Width="61.50874132527588" Height="37.61996280223184" ZOrder="34519" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P13591" />
+  </DataNode>
+  <DataNode TextLabel="CD16 bright&#xA;(FCGR3A)" GraphId="ce00d" Type="Protein">
+    <Graphics CenterX="1165.1067991159805" CenterY="724.9689147284638" Width="66.38381099792105" Height="34.278254988842264" ZOrder="34523" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P08637" />
+  </DataNode>
+  <DataNode TextLabel="SMAD2" GraphId="a7553" Type="Protein" GroupRef="e1e92">
+    <Graphics CenterX="454.3902872635003" CenterY="576.1441648901068" Width="90.0" Height="25.0" ZOrder="34530" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q15796" />
+  </DataNode>
+  <DataNode TextLabel="CD16 dim&#xA;(FCGR3A)" GraphId="a6617" Type="Protein">
+    <Graphics CenterX="1155.2218081573421" CenterY="985.8297872340427" Width="64.61382908064434" Height="36.0" ZOrder="34533" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P08637" />
+  </DataNode>
+  <DataNode TextLabel="CD56&#xA;(CD56 bright)" GraphId="eea2a" Type="Protein">
+    <Comment>AKA NCAM1</Comment>
+    <Graphics CenterX="1236.91489361702" CenterY="981.3297872340427" Width="72.0" Height="31.0" ZOrder="34537" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P13591" />
+  </DataNode>
+  <DataNode TextLabel="Protein" GraphId="ef4fc" Type="Protein">
+    <Graphics CenterX="732.1041054654944" CenterY="158.9383532544762" Width="90.0" Height="25.0" ZOrder="34551" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Metabolite" GraphId="b391a" Type="Metabolite">
+    <Graphics CenterX="730.1041054654944" CenterY="206.93835325447648" Width="90.0" Height="25.0" ZOrder="34553" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Protein" GraphId="a14b8" Type="Protein">
+    <Graphics CenterX="729.1041054654944" CenterY="338.9383532544776" Width="90.0" Height="25.0" ZOrder="34555" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Protein" GraphId="a5108" Type="Protein">
+    <Graphics CenterX="729.1041054654944" CenterY="313.93835325447776" Width="90.0" Height="25.0" ZOrder="34557" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Functional Outcome" GraphId="f866b" Type="Pathway">
+    <Graphics CenterX="735.6041054654944" CenterY="247.9383532544766" Width="147.0" Height="25.0" ZOrder="34559" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Cell type" GraphId="a207a">
+    <Graphics CenterX="732.1041054654944" CenterY="113.93835325447598" Width="90.0" Height="25.0" ZOrder="34561" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <State GraphRef="e1dd2" TextLabel="P" GraphId="a6ffb">
+    <Comment>parentid= Q15796 ; parentsymbol=SMAD2  ; site=sPsVRCssMs  ; position=Ser465  ; sitegrpid=447494  ; ptm=p; direction=u</Comment>
+    <Comment>parentid= Q15796 ; parentsymbol=SMAD2  ; site=sVRCssMs   ; position=Ser467  ; sitegrpid=447495   ; ptm=p; direction=u</Comment>
+    <Graphics RelX="-0.5897435897435849" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="e812c" TextLabel="P" GraphId="bc66e">
+    <Graphics RelX="-0.58974358974359" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="b73a0" TextLabel="CD14+" GraphId="ece48">
+    <Comment>CD14+ macrophages</Comment>
+    <BiopaxRef>ad5</BiopaxRef>
+    <Graphics RelX="-0.630472437759472" RelY="-0.8054871890528293" Width="42.70745283743826" Height="18.38235294117645" FillColor="00cc00" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="aa699" TextLabel="P" GraphId="bf662">
+    <Comment>parentid= P84022; parentsymbol=SMAD3   ; site=sPsIRCssVs ; position=Ser423   ; sitegrpid= 448335  ; ptm=p; direction=u </Comment>
+    <Comment>parentid= P84022; parentsymbol=SMAD3   ; site=sIRCssVs ; position=Ser425   ; sitegrpid= 448336  ; ptm=p; direction=u </Comment>
+    <Graphics RelX="-0.5897435897435874" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="b1c82" TextLabel="CD4+" GraphId="cdbae">
+    <Comment>CD4+CD25brightFoxP3+ T cells</Comment>
+    <BiopaxRef>baa</BiopaxRef>
+    <Graphics RelX="-0.9549513047866892" RelY="0.7288013465564621" Width="29.438419761409527" Height="13.75172043865956" FillColor="00cc00" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="b1c82" TextLabel="CD25+" GraphId="cfa20">
+    <BiopaxRef>baa</BiopaxRef>
+    <Graphics RelX="-0.8341625207296803" RelY="-0.9387088227501637" Width="35.237419224273154" Height="17.34490178662321" FillColor="00cc00" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="b1c82" TextLabel="FoxP3+" GraphId="d5dcb">
+    <Graphics RelX="0.4716549622524932" RelY="-0.9581312883173484" Width="42.20630169201046" Height="16.13462661224009" FillColor="00cc00" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="ed8ac" TextLabel="P" GraphId="ea1f1">
+    <Comment>parentid=P36897 ; parentsymbol= TGFBR1 ; site=VPNEEDPsLDRPFIs ; position=Ser165 ; sitegrpid=448244 ; ptm=p; direction=u</Comment>
+    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="facba" TextLabel="CD56+" GraphId="a4364">
+    <Comment>CD56bright + NK cells</Comment>
+    <BiopaxRef>b28</BiopaxRef>
+    <Graphics RelX="0.9173569109537648" RelY="0.35690880777570927" Width="33.914045609013186" Height="15.907856039022816" FillColor="00cc00" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="facba" TextLabel="CD16-" GraphId="eb552">
+    <Comment>CD16- NK cells </Comment>
+    <BiopaxRef>b28</BiopaxRef>
+    <Graphics RelX="0.2296918767506971" RelY="0.9497847919655678" Width="30.796288848798547" Height="19.927795023703254" FillColor="ff0000" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="f7da6" TextLabel="P" GraphId="a1cdc">
+    <Graphics RelX="-0.5897435897435912" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="e8d1d" TextLabel="P" GraphId="bed6f">
+    <Comment>parentid= P84022; parentsymbol=SMAD3   ; site=sPsIRCssVs ; position=Ser423   ; sitegrpid= 448335  ; ptm=p; direction=u</Comment>
+    <Comment>parentid= P84022; parentsymbol=SMAD3   ; site=sIRCssVs ; position=Ser425   ; sitegrpid= 448336  ; ptm=p; direction=u</Comment>
+    <Graphics RelX="-0.5897435897435849" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="cd7d5" TextLabel="CD16+" GraphId="c1474">
+    <Graphics RelX="-0.6392236804774771" RelY="-0.8668542808779799" Width="34.717916924984706" Height="15.63391196528255" FillColor="00cc00" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="cd7d5" TextLabel="CD56+" GraphId="e822a">
+    <Graphics RelX="0.7298433993034593" RelY="-0.8751948770021996" Width="40.66075749740796" Height="15.691315663917749" FillColor="00cc00" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="b10de" TextLabel="CD16-" GraphId="c1750">
+    <Graphics RelX="-0.5859529878225355" RelY="0.7349876719958486" Width="36.36363636363604" Height="21.707289562933433" FillColor="ff0000" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="b10de" TextLabel="CD56+" GraphId="e6eb6">
+    <Graphics RelX="0.7850071410516061" RelY="0.8332986969006076" Width="35.58602150537946" Height="22.632672423805445" FillColor="00cc00" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="a7553" TextLabel="P" GraphId="e7bde">
+    <Comment>parentid= Q15796 ; parentsymbol=SMAD2  ; site=sPsVRCssMs  ; position=Ser465  ; sitegrpid=447494  ; ptm=p; direction=u </Comment>
+    <Comment>parentid= Q15796 ; parentsymbol=SMAD2  ; site=sVRCssMs   ; position=Ser467  ; sitegrpid=447495   ; ptm=p; direction=u </Comment>
+    <Graphics RelX="-0.5897435897435837" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <Interaction GraphId="id626842c3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="454.538461538461" Y="871.2884615384617" GraphRef="a3335" RelX="-1.0" RelY="0.5" />
+      <Point X="332.1316254828036" Y="911.038461538462" GraphRef="be428" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id29aab053">
+    <Graphics ConnectorType="Elbow" ZOrder="12290" LineThickness="1.0">
+      <Point X="440.75984756122483" Y="764.5954235637781" GraphRef="e23e3" RelX="0.0" RelY="1.0" />
+      <Point X="340.5384615384614" Y="850.0384615384617" GraphRef="c57b6" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Anchor Position="0.5108504126759839" Shape="None" GraphId="b2d41" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idaa63bcda">
+    <Graphics ZOrder="12292" LineStyle="Broken" LineThickness="1.0">
+      <Point X="385.5384615384614" Y="862.5384615384617" GraphRef="c57b6" RelX="1.0" RelY="0.0" />
+      <Point X="454.538461538461" Y="863.0384615384617" GraphRef="a3335" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc074d19f">
+    <BiopaxRef>d01</BiopaxRef>
+    <Graphics ZOrder="12294" LineThickness="1.0">
+      <Point X="519.7051282051293" Y="936.0384615384617" GraphRef="f6706" RelX="0.0" RelY="1.0" />
+      <Point X="632.2051282051286" Y="1061.5384615384617" GraphRef="fcab3" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3c61a05b">
+    <Graphics ZOrder="12296" LineThickness="1.0">
+      <Point X="566.288461538461" Y="879.5384615384617" GraphRef="a3335" RelX="0.5" RelY="1.0" />
+      <Point X="609.5384615384606" Y="911.0384615384617" GraphRef="ec4bb" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id7b9ac39a">
+    <Graphics ZOrder="12298" LineThickness="1.0">
+      <Point X="167.89041315877557" Y="188.94954330089092" GraphRef="fca45" RelX="1.0" RelY="0.0" />
+      <Point X="201.7417190915414" Y="188.15989859978353" GraphRef="cdbae" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf4d3c68">
+    <Graphics ZOrder="12300" LineThickness="1.0">
+      <Point X="179.45188611983164" Y="152.33078482692946" GraphRef="e3634" RelX="1.0" RelY="0.0" />
+      <Point X="204.277714642675" Y="152.21484520529128" GraphRef="cfa20" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf7a6a7db">
+    <BiopaxRef>d01</BiopaxRef>
+    <Graphics ZOrder="12302" LineThickness="1.0">
+      <Point X="719.2051282051247" Y="936.0384615384617" GraphRef="a40ba" RelX="0.0" RelY="1.0" />
+      <Point X="720.0384615384619" Y="1049.0384615384617" GraphRef="fcab3" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1208554c">
+    <BiopaxRef>b38</BiopaxRef>
+    <Graphics ZOrder="12304" LineThickness="1.0">
+      <Point X="260.77344842893945" Y="363.98785883659866" GraphRef="abbaa" RelX="0.0" RelY="1.0" />
+      <Point X="260.77344842893945" Y="417.5635616491329" GraphRef="dcf18" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida61e95e8">
+    <BiopaxRef>b38</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12306" LineThickness="1.0">
+      <Point X="549.4736873201126" Y="444.24423391804055" GraphRef="ed8ac" RelX="-0.5" RelY="1.0" />
+      <Point X="178.79381973553012" Y="520.7055225512507" GraphRef="c72e2" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2dab3af6">
+    <Graphics ZOrder="12308" LineThickness="1.0">
+      <Point X="259.4337376876472" Y="194.0058899814108" GraphRef="b1c82" RelX="0.0" RelY="1.0" />
+      <Point X="260.77344842893945" Y="333.6307159794558" GraphRef="abbaa" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id99910dce">
+    <BiopaxRef>a38</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12310" LineThickness="1.0">
+      <Point X="908.0384615384612" Y="475.03846153846143" GraphRef="ff2bb" RelX="0.5" RelY="1.0" />
+      <Point X="691.3902872635" Y="576.1441648901068" GraphRef="f67ab" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id48a21cfa">
+    <BiopaxRef>c28</BiopaxRef>
+    <Graphics ZOrder="12314" LineThickness="1.0">
+      <Point X="531.6866590209796" Y="309.0399863440431" GraphRef="e3723" RelX="0.0" RelY="1.0" />
+      <Point X="305.77344842893945" Y="348.8092874080272" GraphRef="abbaa" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2014ecb3">
+    <Graphics ZOrder="12316" LineThickness="1.0">
+      <Point X="603.538461538461" Y="871.2884615384617" GraphRef="a3335" RelX="1.0" RelY="0.5" />
+      <Point X="802.0384615384581" Y="911.0384615384617" GraphRef="b45fc" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd015eb3d">
+    <BiopaxRef>a5d</BiopaxRef>
+    <BiopaxRef>eb2</BiopaxRef>
+    <BiopaxRef>bc4</BiopaxRef>
+    <Graphics ZOrder="12318" LineThickness="1.0">
+      <Point X="633.4450992235257" Y="677.7446023673222" GraphRef="d6d0f" RelX="1.0" RelY="0.0" />
+      <Point X="801.5526572485618" Y="716.3071284962317" GraphRef="ceae8" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id8a38de81">
+    <Graphics ZOrder="12320" LineThickness="1.0">
+      <Point X="852.9264642474993" Y="774.3071284962317" GraphRef="ceae8" RelX="0.5" RelY="1.0" />
+      <Point X="902.6862644560204" Y="836.5430241270177" GraphRef="a68a6" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idacdc2122">
+    <Comment>Nuclear Translocation</Comment>
+    <Graphics ZOrder="12322" LineThickness="1.0">
+      <Point X="544.3902872635001" Y="600.6441648901068" GraphRef="f67ab" RelX="0.0" RelY="1.0" />
+      <Point X="576.4450992235256" Y="628.5323477972474" GraphRef="d6d0f" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id17b72fd7">
+    <Graphics ZOrder="12324" LineThickness="1.0">
+      <Point X="529.038461538461" Y="879.5384615384617" GraphRef="a3335" RelX="0.0" RelY="1.0" />
+      <Point X="501.45512820512965" Y="911.0384615384617" GraphRef="f6706" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="iddfd1678d">
+    <BiopaxRef>b38</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12326" LineThickness="1.0">
+      <Point X="260.77344842893945" Y="443.71902383400686" GraphRef="dcf18" RelX="0.0" RelY="1.0" />
+      <Point X="480.9995321422557" Y="437.4427633298052" GraphRef="b59f2" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd486f465">
+    <BiopaxRef>d24</BiopaxRef>
+    <Graphics ZOrder="12328" LineThickness="1.0">
+      <Point X="309.6316254828036" Y="936.038461538462" GraphRef="be428" RelX="0.0" RelY="1.0" />
+      <Point X="332.87179487178656" Y="1047.7051282051284" GraphRef="c7822" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6f400652">
+    <Graphics ZOrder="12330" LineThickness="1.0">
+      <Point X="178.89833066043212" Y="506.7395633188378" GraphRef="d7e9b" RelX="0.0" RelY="1.0" />
+      <Point X="178.62721150872022" Y="542.9696418822498" GraphRef="f23fe" RelX="0.0" RelY="-1.0" ArrowHead="mim-modification" />
+      <Anchor Position="0.3854796839032208" Shape="None" GraphId="c72e2" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idcca722ea">
+    <BiopaxRef>d01</BiopaxRef>
+    <Graphics ZOrder="12332" LineThickness="1.0">
+      <Point X="609.5384615384606" Y="936.0384615384617" GraphRef="ec4bb" RelX="0.0" RelY="1.0" />
+      <Point X="676.1217948717953" Y="1049.0384615384617" GraphRef="fcab3" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id19aceae2">
+    <Graphics ZOrder="12334" LineThickness="1.0">
+      <Point X="462.97985588955476" Y="201.5993710961546" GraphRef="a4364" RelX="1.0" RelY="0.0" />
+      <Point X="482.7722144535094" Y="201.23262639895967" GraphRef="b5f1f" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="iddf681644">
+    <BiopaxRef>a39</BiopaxRef>
+    <Graphics ZOrder="12338" LineThickness="1.0">
+      <Point X="393.32181187140816" Y="216.30631852937518" GraphRef="facba" RelX="0.0" RelY="1.0" />
+      <Point X="283.27344842893945" Y="333.6307159794558" GraphRef="abbaa" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id22871cf9">
+    <BiopaxRef>bbf</BiopaxRef>
+    <Graphics ZOrder="12340" LineThickness="1.0">
+      <Point X="198.0022409501285" Y="250.2142778178444" GraphRef="f41da" RelX="0.0" RelY="1.0" />
+      <Point X="238.27344842893945" Y="333.6307159794558" GraphRef="abbaa" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb30e4513">
+    <Graphics ZOrder="12344" LineThickness="1.0">
+      <Point X="62.38440683531391" Y="237.44231027837938" GraphRef="c8ac6" RelX="0.0" RelY="1.0" />
+      <Point X="62.67487185749466" Y="258.9795284968232" GraphRef="ece48" RelX="0.0" RelY="-1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id90bfab9d">
+    <Graphics ZOrder="12346" LineThickness="1.0">
+      <Point X="406.51732642490276" Y="225.12183703395678" GraphRef="eb552" RelX="0.0" RelY="1.0" />
+      <Point X="406.84063483385205" Y="244.74091126265023" GraphRef="a93a5" RelX="0.0" RelY="-1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idfe4dbc17">
+    <BiopaxRef>d75</BiopaxRef>
+    <Graphics ZOrder="12348" LineThickness="1.0">
+      <Point X="840.5384615384612" Y="462.53846153846143" GraphRef="ff2bb" RelX="-1.0" RelY="0.0" />
+      <Point X="603.1008756629202" Y="444.2442339180405" GraphRef="ea1f1" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id613742b">
+    <BiopaxRef>d01</BiopaxRef>
+    <Graphics ZOrder="12350" LineThickness="1.0">
+      <Point X="824.5384615384581" Y="936.0384615384617" GraphRef="b45fc" RelX="0.0" RelY="1.0" />
+      <Point X="763.9551282051285" Y="1049.0384615384617" GraphRef="fcab3" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id60c439a5">
+    <BiopaxRef>d14</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12352" LineThickness="1.0">
+      <Point X="547.9450992235256" Y="726.9568569373969" GraphRef="d6d0f" RelX="-0.5" RelY="1.0" />
+      <Point X="365.9130999428802" Y="784.5954235637781" GraphRef="b2d41" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="iddc6597b6">
+    <Graphics ZOrder="12356" LineThickness="1.0">
+      <Point X="491.788461538461" Y="879.5384615384617" GraphRef="a3335" RelX="-0.5" RelY="1.0" />
+      <Point X="395.0384615384623" Y="911.0384615384617" GraphRef="fb738" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id89839066">
+    <BiopaxRef>d24</BiopaxRef>
+    <Graphics ZOrder="12358" LineThickness="1.0">
+      <Point X="417.5384615384623" Y="936.0384615384617" GraphRef="fb738" RelX="0.0" RelY="1.0" />
+      <Point X="406.2051282051197" Y="1047.7051282051284" GraphRef="c7822" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide0f800be">
+    <Graphics ZOrder="12360" LineThickness="1.0">
+      <Point X="566.288461538461" Y="879.5384615384617" GraphRef="a3335" RelX="0.5" RelY="1.0" />
+      <Point X="696.7051282051247" Y="911.0384615384617" GraphRef="a40ba" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id17725c7b">
+    <Graphics ZOrder="12362" LineThickness="1.0">
+      <Point X="445.60058165541943" Y="437.44276332980513" GraphRef="a875b" RelX="1.0" RelY="0.5" />
+      <Point X="534.09795787251" Y="437.44276332980525" GraphRef="ed8ac" RelX="-1.0" RelY="0.5" ArrowHead="mim-modification" />
+      <Anchor Position="0.4" Shape="None" GraphId="b59f2" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4c8a0b82">
+    <BiopaxRef>a38</BiopaxRef>
+    <Graphics ZOrder="12364" LineThickness="1.0">
+      <Point X="863.0384615384612" Y="475.03846153846143" GraphRef="ff2bb" RelX="-0.5" RelY="1.0" />
+      <Point X="765.8920136780526" Y="507.55227541465536" GraphRef="c71fd" RelX="1.0" RelY="0.0" ArrowHead="mim-binding" />
+      <Anchor Position="0.4" Shape="None" GraphId="f6b5d" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="iddf4103d3">
+    <BiopaxRef>b38</BiopaxRef>
+    <Graphics ZOrder="12366" LineThickness="1.0">
+      <Point X="113.33783560602366" Y="306.62021275877106" GraphRef="b73a0" RelX="0.0" RelY="1.0" />
+      <Point X="215.77344842893945" Y="348.8092874080272" GraphRef="abbaa" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d72f1">
+    <Graphics ZOrder="32851" LineThickness="1.0">
+      <Point X="315.54698584034145" Y="151.74022675725115" GraphRef="fe708" RelX="-1.0" RelY="0.0" />
+      <Point X="301.7613618350146" Y="151.79617215926396" GraphRef="d5dcb" RelX="1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f2580">
+    <Graphics ZOrder="32860" LineThickness="1.0">
+      <Point X="844.0411619954646" Y="518.2557444632641" GraphRef="b35a5" RelX="0.0" RelY="-1.0" />
+      <Point X="824.1798823942978" Y="488.043987088939" GraphRef="f6b5d" RelX="0.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="af189">
+    <Graphics ZOrder="32862" LineThickness="1.0">
+      <Point X="564.8494167677152" Y="444.24423391804055" GraphRef="ed8ac" RelX="0.0" RelY="1.0" />
+      <Point X="583.7750631171876" Y="511.1896871304847" GraphRef="d7c31" RelX="-0.5" RelY="-1.0" ArrowHead="mim-modification" />
+      <Anchor Position="0.4" Shape="None" GraphId="b680e" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f336a">
+    <Comment>SMURF2-mediated ubiquitination targets TGFBR1 for proteasomal degradation, attenuating TGF-β signalling as part of the SMAD7 negative feedback loop</Comment>
+    <BiopaxRef>d75</BiopaxRef>
+    <Graphics ZOrder="32864" LineThickness="1.0">
+      <Point X="680.3224249784272" Y="493.49696797801226" GraphRef="c71fd" RelX="-1.0" RelY="-0.5" />
+      <Point X="572.4196753075041" Y="471.0224152030182" GraphRef="b680e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b9337">
+    <BiopaxRef>d70</BiopaxRef>
+    <Graphics ZOrder="32875" LineThickness="1.0">
+      <Point X="231.62721150872022" Y="575.9696418822494" GraphRef="f23fe" RelX="1.0" RelY="0.0" />
+      <Point X="397.3902872635002" Y="576.1441648901068" GraphRef="f67ab" RelX="-1.0" RelY="0.0" ArrowHead="mim-binding" />
+      <Anchor Position="0.4" Shape="None" GraphId="a311c" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d65e5">
+    <BiopaxRef>d70</BiopaxRef>
+    <Graphics ZOrder="32877" LineThickness="1.0">
+      <Point X="298.4695988983717" Y="607.2543627290627" GraphRef="c466f" RelX="0.0" RelY="-1.0" />
+      <Point X="297.9324418106322" Y="576.0394510853924" GraphRef="a311c" RelX="0.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5e6956ff">
+    <Graphics ConnectorType="Curved" ZOrder="34510" LineThickness="1.0">
+      <Point X="807.8717948717951" Y="1061.5384615384617" GraphRef="fcab3" RelX="1.0" RelY="0.0" />
+      <Point X="1430.8588633387444" Y="980.8502234793154" GraphRef="f84e6" RelX="-0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd06fa87c">
+    <Graphics ZOrder="34517" LineThickness="1.0">
+      <Point X="1196.7482269503532" Y="823.8297872340421" GraphRef="cd7d5" RelX="0.0" RelY="1.0" />
+      <Point X="1197.748226950354" Y="904.894303363076" GraphRef="b10de" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="a126a" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="iddef269d">
+    <Graphics ZOrder="34517" LineThickness="1.0">
+      <Point X="1027.6862644560204" Y="854.7930241270177" GraphRef="a68a6" RelX="1.0" RelY="0.0" />
+      <Point X="1197.1482269503535" Y="856.2555936856556" GraphRef="a126a" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id82f0ea53">
+    <Graphics ZOrder="34521" LineThickness="1.0">
+      <Point X="1232.160522954382" Y="747.4497500362745" GraphRef="a12e8" RelX="0.0" RelY="1.0" />
+      <Point X="1232.6321940827734" Y="774.2610433887843" GraphRef="e822a" RelX="0.0" RelY="-1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd5d6c53">
+    <Graphics ZOrder="34525" LineThickness="1.0">
+      <Point X="1165.1067991159805" Y="742.1080422228849" GraphRef="ce00d" RelX="0.0" RelY="1.0" />
+      <Point X="1165.3197293268772" Y="774.4753235018658" GraphRef="c1474" RelX="0.0" RelY="-1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idaf71d292">
+    <Graphics ZOrder="34535" LineThickness="1.0">
+      <Point X="1166.3997421018482" Y="955.4256374020708" GraphRef="c1750" RelX="0.0" RelY="1.0" />
+      <Point X="1155.2218081573421" Y="967.8297872340427" GraphRef="a6617" RelX="0.0" RelY="-1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5653f0a7">
+    <Graphics ZOrder="34539" LineThickness="1.0">
+      <Point X="1236.91489361702" Y="965.8297872340427" GraphRef="eea2a" RelX="0.0" RelY="-1.0" />
+      <Point X="1239.7461089966143" Y="958.1366181775677" GraphRef="e6eb6" RelX="0.0" RelY="1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <GraphicalLine GraphId="b64e4">
+    <Graphics ConnectorType="Elbow" ZOrder="34508" LineThickness="1.0">
+      <Point X="369.53846153845313" Y="1072.7051282051284" GraphRef="c7822" RelX="0.0" RelY="1.0" />
+      <Point X="1338.564572693836" Y="475.2128449386671" GraphRef="fa556" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c0253">
+    <Graphics ZOrder="34541" LineThickness="1.0">
+      <Point X="855.4954745131095" Y="114.9383532544761" />
+      <Point X="929.9574227262244" Y="114.9383532544761" ArrowHead="mim-binding" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d027b">
+    <Graphics ZOrder="34563" LineThickness="1.0">
+      <Point X="858.3140621754469" Y="148.34868102194824" />
+      <Point X="929.9574379850135" Y="148.93835325447617" ArrowHead="mim-conversion" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ebc7a">
+    <Graphics ZOrder="34565" LineThickness="1.0">
+      <Point X="854.0985979243956" Y="189.5133526492533" />
+      <Point X="929.9574379850135" Y="189.93835325447643" ArrowHead="mim-stimulation" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d7fb6">
+    <Graphics ZOrder="34567" LineThickness="1.0">
+      <Point X="853.9574379850133" Y="223.93835325447662" />
+      <Point X="930.2551815542895" Y="223.67705371686895" ArrowHead="mim-catalysis" />
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="EVT cells" GraphId="e7ecf" GroupRef="be2c4">
+    <Graphics CenterX="1338.7312393604943" CenterY="576.4628449386711" Width="90.0" Height="25.0" ZOrder="34416" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Binding " GraphId="abe9b">
+    <Graphics CenterX="985.6041054654823" CenterY="117.93835325447594" Width="123.0" Height="25.0" ZOrder="34545" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Legend" GraphId="f6e47">
+    <Graphics CenterX="832.1041054654934" CenterY="69.93835325447628" Width="90.0" Height="25.0" ZOrder="34547" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Protein Complex " GraphId="cf450">
+    <Graphics CenterX="730.1041054654944" CenterY="276.93835325447697" Width="90.0" Height="25.0" ZOrder="34549" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Conversion " GraphId="e8e8a">
+    <Graphics CenterX="985.6041054654822" CenterY="158.4383532544762" Width="135.0" Height="25.0" ZOrder="34569" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Stimulation" GraphId="b198f">
+    <Graphics CenterX="985.6041054654822" CenterY="190.4383532544761" Width="136.0" Height="25.0" ZOrder="34571" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Catalysis" GraphId="a676b">
+    <Graphics CenterX="985.6041054654823" CenterY="226.4383532544765" Width="105.0" Height="25.0" ZOrder="34573" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Shape TextLabel="dNK cell" GraphId="b419a">
+    <BiopaxRef>d24</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="531.7277619499837" CenterY="699.943923723335" Width="1027.621399176955" Height="540.4159663865552" ZOrder="-4" FontSize="12" Valign="Bottom" ShapeType="RoundedRectangle" LineThickness="3.0" Color="cc6600" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Decidual Microenvironment" GraphId="b7a2a">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="318.6808363432982" CenterY="236.49168559775603" Width="607.9213461813281" Height="315.0" ZOrder="-2" FillColor="ffff99" FontSize="12" ShapeType="RoundedRectangle" LineStyle="Broken" Color="ff33ff" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Nucleus" GraphId="baf2d">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="568.538461538461" CenterY="714.2273579501069" Width="418.0" Height="212.62220717670948" ZOrder="16384" FontSize="12" Valign="Bottom" ShapeType="Oval" LineThickness="3.0" Color="9999ff" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d7471">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1367.7729036858773" CenterY="711.9929078014184" Width="560.1337410433479" Height="677.333333333333" ZOrder="34382" FillColor="fff0ff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="966d30" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f77c7" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Organelle" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1227.3145726938328" CenterY="379.2128449386706" Width="47.5" Height="18.5" ZOrder="34386" FillColor="d7bb92" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="996f31" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a13a2" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Organelle" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1279.3145726938326" CenterY="379.2128449386706" Width="47.5" Height="18.5" ZOrder="34388" FillColor="d7bb92" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="976e30" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c9f0f" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Organelle" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1124.834294271556" CenterY="377.8926593238215" Width="47.5" Height="18.5" ZOrder="34390" FillColor="d7bb92" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="976e30" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b4657" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Organelle" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1177.3145726938328" CenterY="380.2128449386706" Width="47.5" Height="18.5" ZOrder="34392" FillColor="d7bb92" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="976e30" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ef121" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Organelle" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1431.314572693836" CenterY="379.2128449386706" Width="47.5" Height="18.5" ZOrder="34394" FillColor="d7bb92" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="976e30" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c4fc6" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Organelle" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1483.3145726938355" CenterY="379.2128449386706" Width="47.5" Height="18.5" ZOrder="34396" FillColor="d7bb92" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="976e30" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a639f" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Organelle" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1332.3145726938362" CenterY="380.2128449386706" Width="47.5" Height="18.5" ZOrder="34398" FillColor="d7bb92" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="976e30" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="be720" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Organelle" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1381.314572693836" CenterY="380.2128449386706" Width="47.5" Height="18.5" ZOrder="34400" FillColor="d7bb92" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="976e30" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b705f" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Organelle" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1537.3145726938365" CenterY="379.2128449386706" Width="47.5" Height="18.5" ZOrder="34402" FillColor="d7bb92" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="976e30" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c07a9" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Organelle" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1589.314572693836" CenterY="379.2128449386706" Width="47.5" Height="18.5" ZOrder="34404" FillColor="d7bb92" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="976e30" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d83d5" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Organelle" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1636.8908682412143" CenterY="380.2128449386706" Width="36.652591094755216" Height="18.5" ZOrder="34406" FillColor="d7bb92" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="976e30" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="aa493" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="None" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1534.757751468513" CenterY="669.02614374253" Width="121.68638644793319" Height="34.70784946917537" ZOrder="34408" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="990000" Rotation="4.728086278086404" />
+  </Shape>
+  <Shape GraphId="e081c" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Organelle" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1414.5805137385346" CenterY="666.316187138769" Width="144.2692554509524" Height="34.70784946917537" ZOrder="34410" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="990000" Rotation="4.728086278086404" />
+  </Shape>
+  <Shape GraphId="b516b" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1476.4479629804732" CenterY="1022.1511706233797" Width="14.898945833926462" Height="51.49253054811197" ZOrder="34412" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="990000" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Blastocyst" GraphId="f5b32" GroupRef="be2c4">
+    <Graphics CenterX="1477.5528673494287" CenterY="428.53042290393" Width="264.90066225165606" Height="194.53151073615254" ZOrder="34414" FillColor="ffccff" FontSize="32" Valign="Middle" ShapeType="Oval" Color="990099" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c953d" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1411.814572693835" CenterY="520.2128449386662" Width="36.5" Height="42.5" ZOrder="34418" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b6a3a" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1440.8145726938346" CenterY="532.2128449386657" Width="36.5" Height="42.5" ZOrder="34420" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f7b7a" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1384.8145726938346" CenterY="497.21284493866676" Width="36.5" Height="42.5" ZOrder="34422" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b904f" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1390.8145726938346" CenterY="537.2128449386664" Width="36.5" Height="42.5" ZOrder="34424" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b6e33" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1419.814572693835" CenterY="550.2128449386669" Width="36.5" Height="42.5" ZOrder="34426" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d62d0" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1397.8145726938346" CenterY="575.212844938668" Width="36.5" Height="42.5" ZOrder="34428" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c53d1" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1368.814572693836" CenterY="536.2128449386662" Width="36.5" Height="42.5" ZOrder="34430" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a04d6" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1428.8145726938346" CenterY="595.2128449386677" Width="36.5" Height="42.5" ZOrder="34432" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d3987" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1448.814572693835" CenterY="558.2128449386662" Width="36.5" Height="42.5" ZOrder="34434" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="abed5" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1521.814572693835" CenterY="526.212844938666" Width="36.5" Height="42.5" ZOrder="34436" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c6eb0" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1550.814572693835" CenterY="538.2128449386666" Width="36.5" Height="42.5" ZOrder="34438" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a8cea" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1468.8145726938346" CenterY="587.2128449386679" Width="36.5" Height="42.5" ZOrder="34440" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f23ed" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1500.814572693835" CenterY="543.2128449386669" Width="36.5" Height="42.5" ZOrder="34442" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c9516" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1529.8145726938355" CenterY="556.2128449386666" Width="36.5" Height="42.5" ZOrder="34444" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e9334" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1507.814572693835" CenterY="581.212844938668" Width="36.5" Height="42.5" ZOrder="34446" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ba3cf" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1478.8145726938346" CenterY="542.2128449386673" Width="36.5" Height="42.5" ZOrder="34448" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="bdbb0" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1479.8145726938346" CenterY="516.2128449386662" Width="36.5" Height="42.5" ZOrder="34450" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ebaef" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1537.8145726938355" CenterY="593.2128449386678" Width="36.5" Height="42.5" ZOrder="34452" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c4faa" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1580.814572693836" CenterY="523.212844938666" Width="36.5" Height="42.5" ZOrder="34454" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c95a1" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1561.8145726938355" CenterY="564.2128449386665" Width="36.5" Height="42.5" ZOrder="34456" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f2230" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1397.8145726938346" CenterY="616.2128449386679" Width="36.5" Height="42.5" ZOrder="34458" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="fa556" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1356.814572693836" CenterY="475.2128449386671" Width="36.5" Height="42.5" ZOrder="34460" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f532f" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1358.814572693836" CenterY="511.2128449386667" Width="36.5" Height="42.5" ZOrder="34462" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b2a94" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1437.8145726938346" CenterY="632.2128449386679" Width="36.5" Height="42.5" ZOrder="34464" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b0654" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1404.814572693835" CenterY="685.212844938668" Width="16.50000000000091" Height="42.5" ZOrder="34466" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b5a6a" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1557.8145726938355" CenterY="631.2128449386679" Width="36.5" Height="42.5" ZOrder="34468" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f65d3" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1565.8145726938355" CenterY="666.2128449386679" Width="36.5" Height="42.5" ZOrder="34470" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="dc4f6" GroupRef="be2c4">
+    <Graphics CenterX="1479.211942323558" CenterY="974.0574835630964" Width="38.5" Height="55.23213684821366" ZOrder="34472" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="4.719268343724812" />
+  </Shape>
+  <Shape GraphId="f7d80" GroupRef="be2c4">
+    <Graphics CenterX="1474.0815075409623" CenterY="933.8338810786265" Width="38.5" Height="55.23213684821366" ZOrder="34474" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="1.3228990072278832" />
+  </Shape>
+  <Shape GraphId="fa5a1" GroupRef="be2c4">
+    <Graphics CenterX="1454.9190531144436" CenterY="946.3501568120928" Width="68.57733063510435" Height="55.23213684821366" ZOrder="34476" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="5.180045934309635" />
+  </Shape>
+  <Shape GraphId="f84e6" GroupRef="be2c4">
+    <Graphics CenterX="1449.5624131128284" CenterY="913.7204595701744" Width="129.57982403979804" Height="64.87162011414293" ZOrder="34478" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="1.4924511896872754" />
+  </Shape>
+  <Shape GraphId="c7383" GroupRef="be2c4">
+    <Graphics CenterX="1443.545275656893" CenterY="830.7241502297678" Width="38.5" Height="55.23213684821366" ZOrder="34480" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="4.719268343724812" />
+  </Shape>
+  <Shape GraphId="aeefd" GroupRef="be2c4">
+    <Graphics CenterX="1449.748174207617" CenterY="792.3949576831848" Width="38.5" Height="55.23213684821366" ZOrder="34482" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="2.585161166577994" />
+  </Shape>
+  <Shape GraphId="d7a88" GroupRef="be2c4">
+    <Graphics CenterX="1420.8882300082064" CenterY="787.0511130977203" Width="89.49975698710762" Height="52.073708319636815" ZOrder="34484" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="0.013671678380317576" />
+  </Shape>
+  <Shape GraphId="e5d58" GroupRef="be2c4">
+    <Graphics CenterX="1401.8264808552112" CenterY="769.5944674054801" Width="73.38810971334784" Height="47.09448987860767" ZOrder="34486" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="2.02722031552484" />
+  </Shape>
+  <Shape GraphId="e414b" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1427.8145726938355" CenterY="671.2128449386679" Width="16.50000000000091" Height="42.5" ZOrder="34488" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f0e50" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1524.8145726938355" CenterY="685.212844938668" Width="16.50000000000091" Height="42.5" ZOrder="34490" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ac6ea" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1418.3381258566878" CenterY="726.5789283841577" Width="16.50000000000091" Height="42.5" ZOrder="34496" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c589e" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1539.2446735979424" CenterY="710.2401202236242" Width="16.50000000000091" Height="42.5" ZOrder="34498" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="EVT" GraphId="f702c" GroupRef="be2c4">
+    <Comment>Extravillous trophoblast cell involved in remodeling the maternal uterine tissue during pregnancy.</Comment>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1254.814572693832" CenterY="507.2128449386667" Width="36.5" Height="42.5" ZOrder="34500" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="EVT" GraphId="ffbac" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1308.8145726938308" CenterY="619.2128449386679" Width="36.5" Height="42.5" ZOrder="34502" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="EVT" GraphId="d6f73" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1295.8145726938312" CenterY="786.2128449386677" Width="36.5" Height="42.5" ZOrder="34504" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="EVT" GraphId="dc1b5" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1480.8145726938346" CenterY="671.2128449386679" Width="36.5" Height="42.5" ZOrder="34506" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ea28e">
+    <Graphics CenterX="833.2667454284355" CenterY="233.66336633663363" Width="396.8328457767923" Height="312.87128712871294" ZOrder="34543" FontSize="12" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c50b4" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1606.9351424676584" CenterY="1025.6639911362008" Width="14.898945833926462" Height="51.49253054811197" ZOrder="34575" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="990000" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="adfe0" GroupRef="be2c4">
+    <Graphics CenterX="1609.6991218107432" CenterY="977.5703040759176" Width="38.5" Height="55.23213684821366" ZOrder="34577" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="4.719268343724812" />
+  </Shape>
+  <Shape GraphId="b2f43" GroupRef="be2c4">
+    <Graphics CenterX="1604.5686870281475" CenterY="937.3467015914482" Width="38.5" Height="55.23213684821366" ZOrder="34579" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="1.3228990072278832" />
+  </Shape>
+  <Shape GraphId="fc69a" GroupRef="be2c4">
+    <Graphics CenterX="1585.4062326016287" CenterY="949.8629773249145" Width="68.57733063510435" Height="55.23213684821366" ZOrder="34581" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="5.180045934309635" />
+  </Shape>
+  <Shape GraphId="e4f19" GroupRef="be2c4">
+    <Graphics CenterX="1580.0495926000135" CenterY="917.2332800829965" Width="129.57982403979804" Height="64.87162011414293" ZOrder="34583" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="1.4924511896872754" />
+  </Shape>
+  <Shape GraphId="e9784" GroupRef="be2c4">
+    <Graphics CenterX="1574.032455144078" CenterY="834.2369707425903" Width="38.5" Height="55.23213684821366" ZOrder="34585" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="4.719268343724812" />
+  </Shape>
+  <Shape GraphId="fd28b" GroupRef="be2c4">
+    <Graphics CenterX="1580.2353536948021" CenterY="795.9077781960077" Width="38.5" Height="55.23213684821366" ZOrder="34587" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="2.585161166577994" />
+  </Shape>
+  <Shape GraphId="f1c7c" GroupRef="be2c4">
+    <Graphics CenterX="1551.3754094953915" CenterY="790.5639336105434" Width="89.49975698710762" Height="52.073708319636815" ZOrder="34589" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="0.013671678380317576" />
+  </Shape>
+  <Shape GraphId="cf8bb" GroupRef="be2c4">
+    <Graphics CenterX="1532.3136603423964" CenterY="773.1072879183032" Width="73.38810971334784" Height="47.09448987860767" ZOrder="34591" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="2.02722031552484" />
+  </Shape>
+  <Shape GraphId="fbd9b" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1548.5440477947777" CenterY="735.1065192320724" Width="16.50000000000091" Height="42.5" ZOrder="34592" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="dea0a" GroupRef="be2c4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1524.8145726938355" CenterY="729.2128449386681" Width="16.50000000000091" Height="42.5" ZOrder="34593" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="e2ec3" Style="Complex" />
+  <Group GroupId="d8ce1" Style="Group" />
+  <Group GroupId="be2c4" Style="Group" />
+  <Group GroupId="ff450" GraphId="c71fd" Style="Complex" />
+  <Group GroupId="ea974" GraphId="ceae8" Style="Group" />
+  <Group GroupId="d9997" GraphId="d6d0f" Style="Complex" />
+  <Group GroupId="e1db7" GraphId="d7e9b" Style="Group" />
+  <Group GroupId="ef0db" GraphId="e23e3" Style="Group" />
+  <Group GroupId="a2e13" GraphId="f23fe" Style="Group" />
+  <Group GroupId="e1e92" GraphId="f67ab" Style="Complex" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ad5">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26907385</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role of decidual CD14(+) macrophages in the homeostasis of maternal-fetal interface and the differentiation capacity of the cells during pregnancy and parturition.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Placenta</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hou Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ji X</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cd7">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natural killer cell function is regulated by TGF-β signaling in pregnancy and tumor progression</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.biorxiv.org/content/10.1101/2024.09.18.613652v1</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2024</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adam Yalin</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shuang-Yin Wang</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomer Landsberger</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moriya Gamliel</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naama Elefant</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rebecca Kotzur</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Debra Goldman-Wohl</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eyal David</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martina Molgora</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bishan Bhattarai</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marina Cella</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomer Meir-Salame</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ronit Gilad</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rana Abdelkader</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shveiky</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simcha Yagel</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or Zuk</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Colonna</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ofer Mandelboim</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ido Amit</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bbf">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34049032</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decidual stromal cells support tolerance at the human foetal-maternal interface by inducing regulatory M2 macrophages and regulatory T-cells.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Reprod Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lindau R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vondra S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spreckels J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Solders M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Svensson-Arvelund J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berg G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pollheimer J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaipe H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jenmalm MC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ernerudh J</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bc4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23487420</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conversion of peripheral blood NKcells to a decidual NK-like phenotype by a cocktail of defined factors.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cerdeira AS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rajakumar A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Royle CM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lo A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Husain Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thadhani RI</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sukhatme VP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karumanchi SA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kopcow HD</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d01">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16816146</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expression of angiogenic growth factors by uterine natural killer cells during early pregnancy.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Leukoc Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lash GE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schiessl B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kirkley M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innes BA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cooper A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Searle RF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robson SC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bulmer JN</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b28">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23973270</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decidual cell regulation of natural killer cell-recruiting chemokines: implications for the pathogenesis and prediction of preeclampsia.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Pathol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lockwood CJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huang SJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen CP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huang Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xu J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faramarzi S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kayisli O</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kayisli U</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koopman L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smedts D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buchwalder LF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schatz F</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d24">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16892062</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decidual NK cells regulate key developmental processes at the human fetal-maternal interface.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Med</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hanna J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goldman-Wohl D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hamani Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avraham I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greenfield C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natanson-Yaron S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prus D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cohen-Daniel L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arnon TI</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manaster I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gazit R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yutkin V</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benharroch D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Porgador A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keshet E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yagel S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandelboim O</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d14">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18768831</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TGF-beta utilizes SMAD3 to inhibit CD16-mediated IFN-gamma production and antibody-dependent cellular cytotoxicity in human NK cells.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trotta R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dal Col J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yu J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ciarlariello D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allard J 2nd</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wei M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mao H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Byrd JC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perrotti D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caligiuri MA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="baa">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25023688</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natural killer cells and regulatory T cells in early pregnancy loss.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Int J Dev Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sharma S</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a39">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31681264</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dynamic Function and Composition Changes of Immune Cells During Normal and Pathological Pregnancy at the Maternal-Fetal Interface.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Front Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yang F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zheng Q</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jin L</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d70">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40119192</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enhancing human NK cell antitumor function by knocking out SMAD4 to counteract TGFβ and activin A suppression.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2025</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rea A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santana-Hernández S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Villanueva J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sanvicente-García M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cabo M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suarez-Olmos J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quimis F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qin M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Llorens E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blasco-Benito S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Torralba-Raga L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perez L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bhattarai B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alari-Pahissa E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georgoudaki AM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balaguer F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pardo J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celià-Terrassa T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rovira A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Möker N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colonna M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanholtz J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malmberg KJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Montagut C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Albanell J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Güell M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">López-Botet M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muntasell A</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b38">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">38009061</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Endometrial TGFβ signaling fosters early pregnancy development by remodeling the fetomaternal interface.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Reprod Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parks SE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geng T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monsivais D</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eb2">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20540115</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TGF-β affects development and differentiation of human natural killer cell subsets.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eur J Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allan DS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rybalov B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Awong G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zúñiga-Pflücker JC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kopcow HD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlyle JR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strominger JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d75">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22992590</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TGFβ signalling in context.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Mol Cell Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Massagué J</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c28">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32291850</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Placental endovascular extravillous trophoblasts (enEVTs) educate maternal T-cell differentiation along the maternal-placental circulation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Prolif</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ma Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yang Q</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fan M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gu Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jia W</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li YX</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shao X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang YL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a5d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17360654</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TGFbeta promotes conversion of CD16+ peripheral blood NK cells into CD16- NK cells with similarities to decidual NK cells.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keskin DB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allan DS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rybalov B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andzelm MM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stern JN</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kopcow HD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koopman LA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strominger JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a38">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11163210</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smad7 binds to Smurf2 to form an E3 ubiquitin ligase that targets the TGF beta receptor for degradation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kavsak P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rasmussen RK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Causing CG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bonni S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhu H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomsen GH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wrana JL</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>
+

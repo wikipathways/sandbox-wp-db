@@ -1,5 +1,15 @@
 Label	Type	Identifier	Comment	Ensembl	NCBI gene	HGNC	UniProt	Wikidata	ChEBI	InChI	PubChem	ChemSpider	HMDB	KEGG	LipidMaps
-INS	GeneProduct	ensembl:ENSG00000254647	""	ensembl:ENSG00000254647	ncbigene:3630	hgnc.symbol:INS	uniprot:C9JNR5;uniprot:I3WAC9;uniprot:A6XGL2;uniprot:P01308								
-INSR	GeneProduct	ensembl:ENSG00000171105	""	ensembl:ENSG00000171105	ncbigene:3643	hgnc.symbol:INSR	uniprot:M0R3E6;uniprot:P06213								
-IRS1	GeneProduct	ensembl:ENSG00000169047	""	ensembl:ENSG00000169047	ncbigene:3667	hgnc.symbol:IRS1	uniprot:P35568								
-AKT1	GeneProduct	ensembl:ENSG00000142208	""	ensembl:ENSG00000142208	ncbigene:207	hgnc.symbol:AKT1	uniprot:G3V3X1;uniprot:P31749;uniprot:G3V2I6;uniprot:A0A804HJM6;uniprot:B0LPE5;uniprot:A0A087WY56								
+T-2 toxin	Metabolite	chebi:9381	""					wikidata:Q63392226	chebi:9381	inchikey:BXFOFFBJRFZBQZ-QYWOHJEZSA-N	pubchem.compound:5284461	chemspider:4447526		kegg.compound:C09738	
+HT-2 toxin	Metabolite	chebi:138861	""					wikidata:Q27896911	chebi:138861	inchikey:PNKLMTPXERFKEN-MLXHEQMXSA-N	pubchem.compound:10093830	chemspider:8269366		kegg.compound:C19952	
+3-acetyl-T2	Metabolite	pubchem.compound:49796734	""					wikidata:Q76616880		inchikey:NOTOVTQRFFVBSB-VZPCOZJFSA-N	pubchem.compound:49796734				
+3-trans-feruloyl-T2	Metabolite	pubchem.compound:165362807	""												
+3-trans-isoferuloyl-T2	Metabolite	wikidata:Q125535949	""					wikidata:Q125535949		inchikey:GDGVKOYIBXUTLV-UBTZBKDSSA-N					
+HT2-3-glucoside	Metabolite	wikidata:Q125536588	""					wikidata:Q125536588		inchikey:BADZYONHTIISJO-HRCHIXSNSA-N	pubchem.compound:165362852				
+15-acetyl-T2-tretraol-3-glucoside	Metabolite	wikidata:Q125536699	""					wikidata:Q125536699		inchikey:SEVWQJINOQXLSN-UMMBJOJISA-N					
+T2-triol-3-glucoside	Metabolite	wikidata:Q125536589	""					wikidata:Q125536589		inchikey:HFXOGVDZRBAPDX-VLCQUFBVSA-N					
+3'hydroxy-HT2-3-glucoside	Metabolite	wikidata:Q125536590	""					wikidata:Q125536590		inchikey:LEHRYAONIHZKIJ-YVNAETRJSA-N	pubchem.compound:165362905				
+dehydro-HT2-3-glucoside	Metabolite	wikidata:Q125536591	""					wikidata:Q125536591		inchikey:QPFWQYLKHMTPNN-HRCHIXSNSA-N					
+HT2-3-di-(1,6)-glucoside	Metabolite	wikidata:Q125536762	""					wikidata:Q125536762		inchikey:RZOIIAJHTBRPAA-IAGDJKPOSA-N					
+HT2-3-di-(1,4)-glucoside	Metabolite	wikidata:Q125536763	""					wikidata:Q125536763		inchikey:SECQKWZJPBAQDR-MHOBKIMKSA-N					
+HT2-3-malonyl-glucoside	Metabolite	wikidata:Q125536677	""					wikidata:Q125536677		inchikey:NXHKVPIXMWUGKZ-GOBCNMAISA-N	pubchem.compound:165362854				
+3'hydroxy-HT2-3-malonyl-glucoside	Metabolite	wikidata:Q125536679	""					wikidata:Q125536679		inchikey:BRSAYRGZHVHHBM-NXSBOMMSSA-N	pubchem.compound:165362904				

@@ -1,10 +1,21 @@
 {
     "wpid": "WP1992",
     "organisms": ["Homo sapiens"],
-    "description": "This catalog pathway was created using the database from \"http://diana.cslab.ece.ntua.gr/tarbase/\" with exclusions based on evidence type. This pathway only includes miR targeted genes expressed in adipocyte cells. This pathway is meant for data mapping.  Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP1992 CPTAC Assay Portal].",
-    "ontology-ids": ["CL:0000136"],
-    "last-edited": "20190815",
+    "description": "This catalog pathway was created using the database from [TarBase](http://diana.cslab.ece.ntua.gr/tarbase/) with exclusions based on evidence type. This pathway only includes miR targeted genes expressed in adipocyte cells. This pathway is meant for data mapping.  Proteins on this pathway have targeted assays available via the [CPTAC Assay Portal](https://assays.cancer.gov/available_assays?wp_id=WP1992).",
+    "ontology-ids": [
+        "PW:0000004",
+        "CL:0000136"
+    ],
+    "last-edited": "2025-11-23",
     "title": "Genes targeted by miRNAs in adipocytes",
-    "authors": ["Samuel Sklar","MaintBot","Khanspers","Egonw","AMTan"],
-    "revision": "r105839"
+    "authors": [
+        "Samuel Sklar",
+        "MaintBot",
+        "Khanspers",
+        "Egonw",
+        "AMTan",
+        "Mkutmon",
+        "Eweitz"
+    ],
+    "revision": "r141765"
 }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Alanine and aspartate metabolism" Data-Source="WikiPathways" Version="WP106_r126214" Author="[L.M.Ferrante, MaintBot, Khanspers, Andra, Michiel, MartijnVanIersel, AlexanderPico, Christine Chichester, Egonw, Mkutmon]" Last-Modified="20230416135023" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Alanine and aspartate metabolism" Data-Source="WikiPathways" Version="WP106_r140861" Author="[L.M.Ferrante, MaintBot, Khanspers, Andra, Michiel, MartijnVanIersel, AlexanderPico, Christine Chichester, Egonw, Mkutmon, Ddigles, Eweitz]" Last-Modified="20251030001553" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Converted from rat to human using ortholog information, originally from KEGG. Originally edited by Sebastien Burel. 
 
 This pathway describes the metabolism of amino acids alanine and aspartate. Alanine is broken down by oxidative deamination, the inverse reaction of the reductive amination biosynthesis, catalyzed by the same enzymes. 
 
-Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP106 CPTAC Assay Portal]</Comment>
+Proteins on this pathway have targeted assays available via the [CPTAC Assay Portal](https://assays.cancer.gov/available_assays?wp_id=WP106).</Comment>
   <BiopaxRef>e65</BiopaxRef>
   <BiopaxRef>f1b</BiopaxRef>
   <Graphics BoardWidth="1336.6666666666667" BoardHeight="1243.0" />
@@ -89,7 +89,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <DataNode TextLabel="b-Alanine" GraphId="b94" Type="Metabolite">
     <Comment Source="GenMAPP remarks">beta-alanine</Comment>
     <Graphics CenterX="717.0833333333334" CenterY="477.5833333333333" Width="58.166666666666664" Height="16.833333333333332" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="CAS" ID="6912-68-1" />
+    <Xref Database="ChEBI" ID="16958" />
   </DataNode>
   <DataNode TextLabel="DARS" GraphId="ba3" Type="GeneProduct">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="DARS | aspartyl-tRNA synthetase" />
@@ -144,8 +144,8 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Xref Database="Wikidata" ID="Q28000013" />
   </DataNode>
   <DataNode TextLabel="Pyrimidine metabolism" GraphId="c8f0c" Type="Pathway">
-    <Graphics CenterX="650.5" CenterY="387.0" Width="143.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
-    <Xref Database="" ID="" />
+    <Graphics CenterX="650.5" CenterY="387.0" Width="143.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP4022" />
   </DataNode>
   <DataNode TextLabel="6.3.5.6" GraphId="ca3" Type="GeneProduct">
     <Graphics CenterX="1024.6666666666665" CenterY="1203.0" Width="46.666666666666664" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -220,7 +220,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="892.0" CenterY="1103.3333333333333" Width="55.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Enzyme Nomenclature" ID="6.1.1.22" />
   </DataNode>
-  <DataNode TextLabel="Urea cycel and metabolism of amino groups" GraphId="d73ae" Type="Pathway">
+  <DataNode TextLabel="Urea cycle and metabolism of amino groups" GraphId="d73ae" Type="Pathway">
     <Graphics CenterX="1167.0" CenterY="618.0" Width="270.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP497" />
   </DataNode>
@@ -634,7 +634,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Interaction GraphId="c97e3">
     <Graphics ConnectorType="Curved" ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
       <Point X="916.3118359743972" Y="123.07197628925911" GraphRef="f0bda" RelX="0.0" RelY="0.0" />
-      <Point X="922.0" Y="89.76781738762239" />
+      <Point X="922.0" Y="88.03598814462956" />
       <Point X="1037.0" Y="53.0" GraphRef="cff02" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -1105,6 +1105,11 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000028</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amino acid metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000011</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e65">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9687539</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -1113,11 +1118,6 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wu G</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amino acid metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000011</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
 

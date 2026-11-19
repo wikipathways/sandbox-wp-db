@@ -1,0 +1,14 @@
+{
+    "wpid": "WP5392",
+    "organisms": ["Arabidopsis thaliana"],
+    "description": "The biosynthesis pathway of cannabidiol (CBD) from hexanoyl-CoA.",
+    "ontology-ids": ["PW:0000002"],
+    "last-edited": "2026-08-09",
+    "title": "CBD synthetic pathway",
+    "authors": [
+        "Dogrunjp",
+        "AlexanderPico",
+        "Egonw"
+    ],
+    "revision": "r20260809211000"
+}

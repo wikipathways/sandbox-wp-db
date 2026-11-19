@@ -1,10 +1,16 @@
 {
     "wpid": "WP5426",
     "organisms": ["Homo sapiens"],
-    "description": "Second verification run for the portal cutover, exercising the automatic publish path. Insulin binds and activates the insulin receptor, which phosphorylates IRS1 and propagates the signal downstream to the PI3K catalytic subunit PIK3CA.",
-    "ontology-ids": [],
-    "last-edited": "2026-08-21",
-    "title": "Portal end-to-end check 2026-08-21",
-    "authors": ["marvinm2"],
-    "revision": "r20260821200752"
+    "description": "HDAC6 stands out as a distinctive member within the histone deacetylase family due to its predominant presence in the cytosol, facilitating its interaction with a wide array of non-histone proteins. Its dysregulation has been linked to various outcomes, encompassing diverse cancer types, immune-related disorders, and neurological conditions, including Alzheimer's, Parkinson's, ALS, Huntington's, Charcot-Marie-Tooth disease, and Rett syndrome. The current network represents the known HDAC6 interactions in the central nervous system (CNS).",
+    "ontology-ids": ["PW:0001251"],
+    "last-edited": "2025-02-26",
+    "title": "HDAC6 interactions in the central nervous system",
+    "authors": [
+        "NasimBahramSangani",
+        "AlexanderPico",
+        "Khanspers",
+        "Egonw",
+        "Eweitz"
+    ],
+    "revision": "r136865"
 }

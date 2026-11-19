@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Osteoblast signaling" Data-Source="WikiPathways" Version="WP322_r126329" Author="[Ehsiao, AlexanderPico, 169.230.76.4, MaintBot, Khanspers, Egonw, Ddigles, Mkutmon, Zari, Teacup, Eweitz]" Last-Modified="20230422060051" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Osteoblast signaling" Data-Source="WikiPathways" Version="WP322_r142323" Author="[Ehsiao, AlexanderPico, 169.230.76.4, MaintBot, Khanspers, Egonw, Ddigles, Mkutmon, Zari, Teacup, Eweitz]" Last-Modified="20260105032942" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Osteoblasts are specialized, terminally differentiated cell of mesenchymal origin. They create dense, crosslinked collagen and also specialized proteins, including osteocalcin and osteopontin. This pathway illustrates various signaling pathways in osteoblasts relevant to collagen and protein production.
 
-Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP322 CPTAC Assay Portal]</Comment>
+Proteins on this pathway have targeted assays available via the [CPTAC Assay Portal](https://assays.cancer.gov/available_assays?wp_id=WP322)</Comment>
+  <BiopaxRef>b30</BiopaxRef>
   <Graphics BoardWidth="1029.6867469879526" BoardHeight="730.0" />
   <DataNode TextLabel="Parathyroid hormone" GraphId="a1d" Type="Protein">
     <Graphics CenterX="549.0883534136548" CenterY="641.1285140562263" Width="138.66666666666666" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -68,7 +69,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="551.1927710843374" CenterY="450.18072289156623" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="1277" />
   </DataNode>
-  <DataNode TextLabel="Na+" GraphId="d0189" Type="Metabolite">
+  <DataNode TextLabel="Na⁺" GraphId="d0189" Type="Metabolite">
     <Graphics CenterX="342.14859437751005" CenterY="495.8032128514062" Width="23.702811244979898" Height="22.39357429718757" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="Oval" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29101" />
   </DataNode>
@@ -98,7 +99,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="863.9979919678726" CenterY="118.27309236947798" Width="124.00401606425476" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="5741" />
   </DataNode>
-  <DataNode TextLabel="Na+" GraphId="edb" Type="Metabolite">
+  <DataNode TextLabel="Na⁺" GraphId="edb" Type="Metabolite">
     <Graphics CenterX="240.0" CenterY="495.8032128514062" Width="22.0" Height="22.39357429718757" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="Oval" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29101" />
   </DataNode>
@@ -170,7 +171,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Interaction GraphId="c29b3">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="251.0" Y="495.8032128514062" GraphRef="edb" RelX="1.0" RelY="0.0" />
-      <Point X="330.2971887550201" Y="495.8032128514062" GraphRef="d0189" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="330.2971887550201" Y="495.8032128514062" GraphRef="d0189" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -315,6 +316,20 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway pertinent to development</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000650</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b30">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24782782</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamin D and gene networks in human osteoblasts.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Front Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van de Peppel J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Leeuwen JP</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">osteoblast</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000062</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
@@ -322,11 +337,6 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000003</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway pertinent to development</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000650</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
   </Biopax>

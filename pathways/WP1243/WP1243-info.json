@@ -1,10 +1,15 @@
 {
     "wpid": "WP1243",
     "organisms": ["Mus musculus"],
-    "description": "based on science-slides...",
+    "description": "Latent membrane protein 1 (LMP1) of the Ebstein-Barr Virus (EBV) elicits its oncogenic effects through the activation of several downstream pathways such as Pi3K/akt, IRF4, and NFkB pathways.",
     "ontology-ids": ["PW:0001057"],
-    "last-edited": "20161006",
+    "last-edited": "2025-09-29",
     "title": "EBV LMP1 signaling",
-    "authors": ["MaintBot","Christine Chichester","Mkutmon"],
-    "revision": "r89985"
+    "authors": [
+        "MaintBot",
+        "Christine Chichester",
+        "Mkutmon",
+        "Egonw"
+    ],
+    "revision": "r140655"
 }

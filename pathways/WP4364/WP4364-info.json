@@ -1,13 +1,20 @@
 {
     "wpid": "WP4364",
     "organisms": ["Oryza sativa"],
-    "description": "Biotic stress response gene-network in rice",
+    "description": "Biotic stress response gene-network in rice, with annotation of kinases and hub genes.",
     "ontology-ids": [
         "PW:0000237",
         "PW:0000003"
     ],
-    "last-edited": "20210509",
+    "last-edited": "2026-03-22",
     "title": "Biotic stress response gene network ",
-    "authors": ["Snaithani","Mkutmon","DeSl","AlexanderPico","Eweitz"],
-    "revision": "r116681"
+    "authors": [
+        "Snaithani",
+        "Mkutmon",
+        "DeSl",
+        "AlexanderPico",
+        "Eweitz",
+        "Egonw"
+    ],
+    "revision": "r142552"
 }

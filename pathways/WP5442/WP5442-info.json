@@ -1,0 +1,18 @@
+{
+    "wpid": "WP5442",
+    "organisms": ["Homo sapiens"],
+    "description": "Wnt/Beta-catenin signaling inhibitors in current and past clinical trials",
+    "ontology-ids": [
+        "PW:0000003",
+        "PW:0000008"
+    ],
+    "last-edited": "2024-07-22",
+    "title": "Wnt/Beta-catenin signaling inhibitors in current and past clinical trials",
+    "authors": [
+        "Andra",
+        "AlexanderPico",
+        "Egonw",
+        "Eweitz"
+    ],
+    "revision": "r134411"
+}

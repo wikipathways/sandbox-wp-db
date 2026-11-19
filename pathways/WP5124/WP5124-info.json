@@ -1,14 +1,21 @@
 {
     "wpid": "WP5124",
     "organisms": ["Homo sapiens"],
-    "description": "draft",
+    "description": "This pathway displays current genes, proteolytic events and other processes associated with the progression of Alzheimer's disease. Note: mitochondrial associated genes Cx I through Cx V are not currently included, as these correspond to over a hundred distinct factors.   Adapted from [KEGG](https://www.kegg.jp/pathway/hsa05010).",
     "ontology-ids": [
+        "PW:0000013",
         "DOID:10652",
-        "PW:0000015",
-        "PW:0000013"
+        "CL:0000540",
+        "PW:0000015"
     ],
-    "last-edited": "20210629",
+    "last-edited": "2026-01-31",
     "title": "Alzheimer's disease",
-    "authors": ["Khanspers"],
-    "revision": "r123917"
+    "authors": [
+        "Khanspers",
+        "Eweitz",
+        "Ddigles",
+        "Egonw",
+        "DeSl"
+    ],
+    "revision": "r142379"
 }

@@ -4,16 +4,18 @@
     "description": "This model was constructed integrating the Fatty acid transporters (Homo sapiens) metapathway (WP5061), the Cholesterol metabolism (Homo sapiens) (WP5304) and the KEGG Cholesterol metabolism pathway (map04979) as well as information from the literature.",
     "ontology-ids": [
         "CL:0000182",
-        "CL:0019029"
+        "CL:0019029",
+        "PW:0000002"
     ],
-    "last-edited": "2023-03-18",
-    "title": "Fatty Acids and Lipoproteins Transport in Hepatocytes",
+    "last-edited": "2025-11-23",
+    "title": "Fatty acid and lipoprotein transport in hepatocytes",
     "authors": [
         "LLadeira",
         "Mkutmon",
         "Egonw",
         "DeSl",
-        "Jmillanacosta"
+        "Jmillanacosta",
+        "Eweitz"
     ],
-    "revision": "r125909"
+    "revision": "r141703"
 }

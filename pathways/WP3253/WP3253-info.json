@@ -4,9 +4,10 @@
     "description": "",
     "ontology-ids": [
         "PW:0000754",
-        "PW:0001093"
+        "PW:0001093",
+        "CL:0000182"
     ],
-    "last-edited": "20211209",
+    "last-edited": "2024-02-18",
     "title": "Drug induction of bile acid pathway",
     "authors": [
         "Mkutmon",
@@ -15,5 +16,5 @@
         "Eweitz",
         "Egonw"
     ],
-    "revision": "r120497"
+    "revision": "r128628"
 }

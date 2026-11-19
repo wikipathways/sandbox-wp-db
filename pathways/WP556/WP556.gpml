@@ -1,114 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Glutamate degradation I" Data-Source="WikiPathways" Version="WP556_r97054" Author="[J.Heckman, MaintBot, AlexanderPico, Christine Chichester, Egonw, Timverbruggen]" Organism="Saccharomyces cerevisiae">
-  <Comment Source="WikiPathways-description">Based on http://metacyc.org/META/NEW-IMAGE?type=PATHWAY&amp;object=GLUDEG-I-PWY</Comment>
-  <Graphics BoardWidth="831.7553333333334" BoardHeight="355.98886666666664" />
-  <DataNode TextLabel="L-glutamate" GraphId="b63" Type="Metabolite">
-    <Graphics CenterX="540.0888666666666" CenterY="183.15553333333335" Width="95.33333333333333" Height="19.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="CAS" ID="56-86-0" />
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Glutamate degradation I" Data-Source="WikiPathways" Version="WP556_r140475" Author="[J.Heckman, MaintBot, AlexanderPico, Christine Chichester, Egonw, Timverbruggen, Khanspers]" Last-Modified="20250829060452" Organism="Saccharomyces cerevisiae">
+  <Comment Source="WikiPathways-description">In S. cerevisiae, the main pathway for glutamate degradation is catalyzed by the glutamate dehydrogenase encoded by GDH2 ([WP503](https://www.wikipathways.org/pathways/WP503.html)). However, glutamate can also by degraded into gamma-aminobutyrate (GABA) by the glutamate decarboxylase Gad1p and then converted into succinate by the enzymes encoded by UGA1 and UGA2.
+
+Based on [Yeast Pathways](https://pathway.yeastgenome.org/).</Comment>
+  <BiopaxRef>d12</BiopaxRef>
+  <Graphics BoardWidth="790.0" BoardHeight="392.5" />
+  <DataNode TextLabel="H₂O" GraphId="a17a6" Type="Metabolite" GroupRef="a832a">
+    <Graphics CenterX="700.0" CenterY="217.0" Width="46.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="15377" />
   </DataNode>
-  <DataNode TextLabel="NADPH" GraphId="c79" Type="Metabolite">
-    <Graphics CenterX="770.0886666666667" CenterY="253.15553333333335" Width="63.333333333333336" Height="19.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="CAS" ID="53-57-6" />
+  <DataNode TextLabel="L-glutamate" GraphId="a55ec" Type="Metabolite">
+    <Graphics CenterX="513.0" CenterY="219.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="29985" />
+  </DataNode>
+  <DataNode TextLabel="UGA2" GraphId="a67d0" Type="GeneProduct">
+    <Graphics CenterX="519.5" CenterY="269.0" Width="65.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="YBR006W" />
+  </DataNode>
+  <DataNode TextLabel="succinate semialdehyde" GraphId="a723b" Type="Metabolite">
+    <Graphics CenterX="598.0" CenterY="152.0" Width="144.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="57706" />
+  </DataNode>
+  <DataNode TextLabel="CO₂" GraphId="c50ae" Type="Metabolite">
+    <Graphics CenterX="237.5" CenterY="205.0" Width="51.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB01967" />
+  </DataNode>
+  <DataNode TextLabel="2-oxoglutarate" GraphId="c7eed" Type="Metabolite">
+    <Graphics CenterX="398.0" CenterY="216.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="16810" />
+  </DataNode>
+  <DataNode TextLabel="NAD(P)H" GraphId="cb0a1" Type="Metabolite" GroupRef="ed57a">
+    <Graphics CenterX="728.0" CenterY="294.0" Width="64.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="13392" />
   </DataNode>
   <DataNode TextLabel="GAD1" GraphId="d1e" Type="GeneProduct">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="glutamate decarboxylase" />
-    <Graphics CenterX="180.08886666666666" CenterY="129.8222" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="193.08886666666666" CenterY="102.82220000000001" Width="40.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="SGD" ID="S000004862" />
   </DataNode>
-  <DataNode TextLabel="UGA2" GraphId="d30" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="succinate-semialdehyde dehydrogenase" />
-    <Graphics CenterX="673.422" CenterY="249.8222" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000000210" />
+  <DataNode TextLabel="4-aminobutanoate" GraphId="d8b29" Type="Metabolite">
+    <Graphics CenterX="346.0" CenterY="152.0" Width="126.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:59888" />
   </DataNode>
-  <DataNode TextLabel="UGA1" GraphId="de4" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Gamma-amino-N-butyrate transaminase" />
-    <Graphics CenterX="486.7555333333333" CenterY="133.15553333333335" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000003251" />
+  <DataNode TextLabel="succinate" GraphId="da8fc" Type="Metabolite">
+    <Graphics CenterX="598.0" CenterY="350.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="30031" />
   </DataNode>
-  <DataNode TextLabel="L-glutamine" GraphId="ed5" Type="Metabolite">
-    <Graphics CenterX="83.4222" CenterY="153.15553333333335" Width="95.33333333333333" Height="19.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="CAS" ID="56-85-9" />
+  <DataNode TextLabel="L-glutamate" GraphId="dd2e6" Type="Metabolite">
+    <Graphics CenterX="94.0" CenterY="152.0" Width="82.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:29985" />
+  </DataNode>
+  <DataNode TextLabel="NAD(P)+" GraphId="de987" Type="Metabolite" GroupRef="a832a">
+    <Graphics CenterX="700.0" CenterY="244.0" Width="69.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="13390" />
+  </DataNode>
+  <DataNode TextLabel="UGA1" GraphId="e9564" Type="GeneProduct">
+    <Graphics CenterX="454.5" CenterY="104.0" Width="51.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="YGR019W" />
+  </DataNode>
+  <DataNode TextLabel="H⁺" GraphId="f9274" Type="Metabolite">
+    <Graphics CenterX="156.0" CenterY="202.0" Width="42.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB59597" />
+  </DataNode>
+  <DataNode TextLabel="H⁺" GraphId="c9d82" Type="Metabolite" GroupRef="ed57a">
+    <Graphics CenterX="728.0" CenterY="322.0" Width="42.0" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB59597" />
+  </DataNode>
+  <DataNode TextLabel="H⁺" GraphId="f708d" Type="Metabolite" GroupRef="ed57a">
+    <Graphics CenterX="728.0" CenterY="349.0" Width="42.0" Height="25.0" ZOrder="32770" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB59597" />
   </DataNode>
   <Interaction GraphId="id1356da06">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="131.08886666666666" Y="153.15553333333335" GraphRef="ed5" RelX="1.0" RelY="0.0" />
-      <Point X="272.0888666666666" Y="153.15553333333335" GraphRef="e88" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="135.0" Y="152.0" GraphRef="dd2e6" RelX="1.0" RelY="0.0" />
+      <Point X="283.0" Y="152.0" GraphRef="d8b29" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="fa606" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id154ad31f">
+  <Interaction GraphId="id38174c4f">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="401.4222" Y="153.15553333333335" GraphRef="e88" RelX="1.0" RelY="0.0" />
-      <Point X="562.0889333333334" Y="153.15553333333335" GraphRef="e8e" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="657.5" Y="230.5" GraphRef="f0d14" RelX="-1.0" RelY="0.0" />
+      <Point X="598.0" Y="269.0" GraphRef="d9dac" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id6b452616">
+  <Interaction GraphId="id5fc21733">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="704.0889333333336" Y="162.65553333333335" GraphRef="e8e" RelX="0.5" RelY="1.0" />
-      <Point X="713.422" Y="306.98886666666664" GraphRef="b5b" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="194.2" Y="152.0" GraphRef="fa606" RelX="0.0" RelY="0.0" />
+      <Point X="237.5" Y="192.5" GraphRef="c50ae" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id6fa778e6">
+  <Interaction GraphId="id76efa8ad">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="496.7555379521352" Y="159.82219769059904" GraphRef="ff9" RelX="1.0" RelY="-0.5" />
-      <Point X="516.2555333333332" Y="173.65553333333335" GraphRef="b63" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="398.0" Y="203.5" GraphRef="c7eed" RelX="0.0" RelY="-1.0" />
+      <Point X="455.8" Y="152.0" GraphRef="e9ff1" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id7d313605">
+  <Interaction GraphId="id77422312">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="237.55669150037608" Y="166.48886666666667" GraphRef="c34" RelX="1.0" RelY="0.0" />
-      <Point X="240.08886666666666" Y="186.98886666666667" GraphRef="ecf" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="454.5" Y="116.5" GraphRef="e9564" RelX="0.0" RelY="1.0" />
+      <Point X="455.8" Y="152.0" GraphRef="e9ff1" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id9c69f155">
+  <Interaction GraphId="idad51913f">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="717.7650843187723" Y="252.33790331023954" GraphRef="c92" RelX="-0.5" RelY="1.0" />
-      <Point X="738.422" Y="253.15553333333332" GraphRef="c79" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="156.0" Y="189.5" GraphRef="f9274" RelX="0.0" RelY="-1.0" />
+      <Point X="194.2" Y="152.0" GraphRef="fa606" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Label TextLabel="H2O" GraphId="aa9">
-    <Graphics CenterX="750.0886666666667" CenterY="206.48886666666667" Width="38.333333333333336" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="succinate" GraphId="b5b">
-    <Graphics CenterX="713.422" CenterY="316.48886666666664" Width="79.33333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="2-oxoglutarate" GraphId="cf4">
-    <Graphics CenterX="426.7555333333333" CenterY="183.15553333333335" Width="115.33333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="NADP" GraphId="dab">
-    <Graphics CenterX="752.422" CenterY="223.15553333333335" Width="51.333333333333336" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="4-aminobutyrate" GraphId="e88">
-    <Graphics CenterX="336.7555333333333" CenterY="153.15553333333335" Width="129.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="succinate semialdehyde" GraphId="e8e">
-    <Graphics CenterX="656.7556000000001" CenterY="153.15553333333335" Width="189.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="CO2" GraphId="ecf">
-    <Graphics CenterX="240.08886666666666" CenterY="196.48886666666667" Width="38.333333333333336" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Shape GraphId="c34">
-    <Graphics CenterX="213.4222" CenterY="166.48886666666667" Width="48.07401333333333" Height="14.907119999999999" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Arc" Rotation="3.729595" />
-  </Shape>
-  <Shape GraphId="c92">
-    <Graphics CenterX="726.0448462048171" CenterY="236.33531500994016" Width="26.666666666666668" Height="28.12044804097374" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Arc" Rotation="1.783644340214822" />
-  </Shape>
-  <Shape GraphId="ff9">
-    <Graphics CenterX="483.4222" CenterY="166.48886666666667" Width="26.666666666666668" Height="26.666666666666668" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Arc" Rotation="3.141593" />
-  </Shape>
+  <Interaction GraphId="idc91f98e3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="552.0" Y="269.0" GraphRef="a67d0" RelX="1.0" RelY="0.0" />
+      <Point X="598.0" Y="269.0" GraphRef="d9dac" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide9dea94f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="455.8" Y="152.0" GraphRef="e9ff1" RelX="0.0" RelY="0.0" />
+      <Point X="513.0" Y="206.5" GraphRef="a55ec" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf2f34343">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="193.08886666666666" Y="115.32220000000001" GraphRef="d1e" RelX="0.0" RelY="1.0" />
+      <Point X="194.2" Y="152.0" GraphRef="fa606" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b960c">
+    <Graphics ZOrder="32771" LineThickness="1.0">
+      <Point X="409.0" Y="152.0" GraphRef="d8b29" RelX="1.0" RelY="0.0" />
+      <Point X="526.0" Y="152.0" GraphRef="a723b" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="e9ff1" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="adc8e">
+    <Graphics ZOrder="32772" LineThickness="1.0">
+      <Point X="598.0" Y="164.5" GraphRef="a723b" RelX="0.0" RelY="1.0" />
+      <Point X="598.0" Y="337.5" GraphRef="da8fc" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.6040462427745664" Shape="None" GraphId="d9dac" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e831d">
+    <Graphics ZOrder="32773" LineThickness="1.0">
+      <Point X="598.0" Y="269.0" GraphRef="d9dac" RelX="0.0" RelY="0.0" />
+      <Point X="688.0" Y="321.5" GraphRef="b480b" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Group GroupId="ed57a" GraphId="b480b" Style="Group" />
+  <Group GroupId="a832a" GraphId="f0d14" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
-  <Legend CenterX="-4.0" CenterY="1.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glutamate degradation pathway I</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001380</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d12">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pathway.yeastgenome.org/YEAST/NEW-IMAGE?type=PATHWAY&amp;object=GLUDEG-I-PWY-1</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glutamate degradation I</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yeast Pathways</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
+    </bp:PublicationXref>
   </Biopax>
 </Pathway>
 

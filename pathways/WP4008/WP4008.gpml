@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="NO/cGMP/PKG mediated neuroprotection" Data-Source="WikiPathways" Version="WP4008_r125786" Author="[SauerThorben, Egonw, Khanspers, MaintBot, Laurent, Eweitz, DeSl]" Last-Modified="20230310100311" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">NO/cGMP/PKG Neuroprotection.
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="NO/cGMP/PKG mediated neuroprotection" Data-Source="WikiPathways" Version="WP4008_r140399" Author="[SauerThorben, Egonw, Khanspers, MaintBot, Laurent, Eweitz, DeSl, Ddigles]" Last-Modified="20250817111524" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">NO/cGMP/PKG mediated Neuroprotection.
 
-Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP4008 CPTAC Assay Portal]</Comment>
-  <Comment Source="WikiPathways-description">NO/cGMP/PKG mediated Neuroprotection</Comment>
-  <Graphics BoardWidth="1706.0563380281692" BoardHeight="1621.111111111111" />
-  <DataNode TextLabel="Ca2+" GraphId="a0cab" Type="Metabolite" GroupRef="d513c">
+Proteins on this pathway have targeted assays available via the [CPTAC Assay Portal](https://assays.cancer.gov/available_assays?wp_id=WP4008).</Comment>
+  <Graphics BoardWidth="1706.0563380281692" BoardHeight="1580.0" />
+  <DataNode TextLabel="Ca²⁺" GraphId="a0cab" Type="Metabolite" GroupRef="d513c">
     <Graphics CenterX="753.1010399447633" CenterY="52.13776430386881" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29108" />
   </DataNode>
@@ -13,11 +12,11 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="1103.8125620875383" CenterY="1075.2806336249537" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000100300" />
   </DataNode>
-  <DataNode TextLabel="GRIN2D&#xA;" GraphId="a2f7a" Type="GeneProduct" GroupRef="ab63a">
+  <DataNode TextLabel="GRIN2D" GraphId="a2f7a" Type="GeneProduct" GroupRef="ab63a">
     <Graphics CenterX="519.104876262364" CenterY="510.504141103625" Width="90.00000000000003" Height="24.999999999999996" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000105464" />
   </DataNode>
-  <DataNode TextLabel="NADP&#xA;" GraphId="a68ae" Type="Metabolite">
+  <DataNode TextLabel="NADP" GraphId="a68ae" Type="Metabolite">
     <Graphics CenterX="342.0" CenterY="181.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:18009" />
   </DataNode>
@@ -57,7 +56,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="503.1329851103" CenterY="614.882023054953" Width="89.99999999999999" Height="24.868647210527673" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000148660" />
   </DataNode>
-  <DataNode TextLabel="O2" GraphId="bc38b" Type="Metabolite">
+  <DataNode TextLabel="O₂" GraphId="bc38b" Type="Metabolite">
     <Graphics CenterX="75.0" CenterY="128.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29372" />
   </DataNode>
@@ -97,7 +96,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="348.93022638573376" CenterY="1098.1695720053706" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000109320" />
   </DataNode>
-  <DataNode TextLabel="K+" GraphId="c7c85" Type="Metabolite">
+  <DataNode TextLabel="K⁺" GraphId="c7c85" Type="Metabolite">
     <Graphics CenterX="1597.5123609648888" CenterY="361.31302013635474" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29103" />
   </DataNode>
@@ -114,16 +113,16 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Xref Database="Ensembl" ID="ENSG00000127914" />
   </DataNode>
   <DataNode TextLabel="CASP9" GraphId="cc143" Type="GeneProduct">
-    <Graphics CenterX="865.5555555555552" CenterY="1448.3737215725803" Width="142.55070161046498" Height="24.99999999999997" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="865.5555555555552" CenterY="1416.3737215725803" Width="142.55070161046498" Height="24.99999999999997" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000132906" />
   </DataNode>
   <DataNode TextLabel="BCL2" GraphId="cd3f1" Type="GeneProduct">
     <Graphics CenterX="493.1824279007382" CenterY="1319.1549295774648" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000171791" />
   </DataNode>
-  <DataNode TextLabel="Caspase Cascade" GraphId="ce0fc" Type="Pathway">
+  <DataNode TextLabel="Caspase cascade" GraphId="ce0fc" Type="Pathway">
     <Comment>See https://www.abeomics.com/caspase-cascade as example for PW model</Comment>
-    <Graphics CenterX="865.5555555555551" CenterY="1506.440365353962" Width="142.550701610465" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="14931d" />
+    <Graphics CenterX="865.5555555555551" CenterY="1466.440365353962" Width="142.550701610465" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14931d" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="nNOS" GraphId="ce5d7" Type="GeneProduct">
@@ -138,12 +137,12 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="341.0" CenterY="215.35483870967744" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:16480" />
   </DataNode>
-  <DataNode TextLabel="Ca2+" GraphId="cf911" Type="Metabolite">
+  <DataNode TextLabel="Ca²⁺" GraphId="cf911" Type="Metabolite">
     <Graphics CenterX="757.9186460172889" CenterY="372.1242058185926" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29108" />
   </DataNode>
   <DataNode TextLabel="Apoptosis" GraphId="cfb18" Type="Pathway">
-    <Graphics CenterX="865.5555555555553" CenterY="1567.568612970283" Width="142.55070161046498" Height="24.99999999999997" ZOrder="32768" FontSize="12" Valign="Middle" Color="14931d" />
+    <Graphics CenterX="865.5555555555553" CenterY="1517.568612970283" Width="142.55070161046498" Height="24.99999999999997" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14931d" />
     <Xref Database="WikiPathways" ID="WP254" />
   </DataNode>
   <DataNode TextLabel="CAMK2B" GraphId="d0b4c" Type="GeneProduct" GroupRef="ab63a">
@@ -198,7 +197,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="1103.8125620875383" CenterY="1100.2806336249537" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000171497" />
   </DataNode>
-  <DataNode TextLabel="TNF-a&#xA;" GraphId="dde06" Type="Protein">
+  <DataNode TextLabel="TNF-a" GraphId="dde06" Type="Protein">
     <Graphics CenterX="135.73983558698404" CenterY="327.3237316679113" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000232810" />
   </DataNode>
@@ -242,7 +241,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="492.28705566733726" CenterY="1015.425888665325" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000118260" />
   </DataNode>
-  <DataNode TextLabel="Mg2+" GraphId="f3ea6" Type="Metabolite" GroupRef="ab63a">
+  <DataNode TextLabel="Mg²⁺" GraphId="f3ea6" Type="Metabolite" GroupRef="ab63a">
     <Graphics CenterX="411.1001625470802" CenterY="436.03276507480234" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:18420" />
   </DataNode>
@@ -254,7 +253,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="307.37817302583693" CenterY="615.82883501307" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000132535" />
   </DataNode>
-  <DataNode TextLabel="Ca2+" GraphId="fa33a" Type="Metabolite">
+  <DataNode TextLabel="Ca²⁺" GraphId="fa33a" Type="Metabolite">
     <Graphics CenterX="1597.5123609648888" CenterY="331.9303750595445" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29108" />
   </DataNode>
@@ -270,7 +269,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="1458.3915025788817" CenterY="730.1489483499495" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:17489" />
   </DataNode>
-  <DataNode TextLabel="O2" GraphId="ad6fe" Type="Metabolite">
+  <DataNode TextLabel="O₂" GraphId="ad6fe" Type="Metabolite">
     <Graphics CenterX="494.1612903225807" CenterY="131.22580645161293" Width="90.0" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29372" />
   </DataNode>
@@ -286,7 +285,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="494.1612903225807" CenterY="106.22580645161287" Width="90.0" Height="25.0" ZOrder="32772" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:64090" />
   </DataNode>
-  <DataNode TextLabel="NADP&#xA;" GraphId="a6424" Type="Metabolite">
+  <DataNode TextLabel="NADP" GraphId="a6424" Type="Metabolite">
     <Graphics CenterX="756.9642222120557" CenterY="181.5939862685373" Width="90.0" Height="25.0" ZOrder="32773" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:18009" />
   </DataNode>
@@ -306,7 +305,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="511.13815953976837" CenterY="663.4142237040127" Width="90.0" Height="25.0" ZOrder="32781" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000132535" />
   </DataNode>
-  <DataNode TextLabel="Ca2+" GraphId="fc6a2" Type="Metabolite" GroupRef="cfd10">
+  <DataNode TextLabel="Ca²⁺" GraphId="fc6a2" Type="Metabolite" GroupRef="cfd10">
     <Graphics CenterX="759.0159895631073" CenterY="562.9829281440518" Width="90.0" Height="25.0" ZOrder="32786" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29108" />
   </DataNode>
@@ -314,7 +313,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="759.0159895631075" CenterY="596.5828206954328" Width="90.0" Height="25.0" ZOrder="32787" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000198668" />
   </DataNode>
-  <DataNode TextLabel="O2" GraphId="e34eb" Type="Metabolite">
+  <DataNode TextLabel="O₂" GraphId="e34eb" Type="Metabolite">
     <Graphics CenterX="251.73553846282417" CenterY="865.4260565657326" Width="90.0" Height="25.0" ZOrder="32788" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29372" />
   </DataNode>
@@ -330,7 +329,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="251.73553846282417" CenterY="840.4260565657324" Width="90.0" Height="25.0" ZOrder="32791" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:64090" />
   </DataNode>
-  <DataNode TextLabel="NADP&#xA;" GraphId="d19d5" Type="Metabolite">
+  <DataNode TextLabel="NADP" GraphId="d19d5" Type="Metabolite">
     <Graphics CenterX="481.5106247842672" CenterY="914.9720322948333" Width="90.0" Height="25.0" ZOrder="32792" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:18009" />
   </DataNode>
@@ -346,11 +345,11 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="862.6439392644573" CenterY="740.0796552635851" Width="90.0" Height="25.0" ZOrder="32799" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:16480" />
   </DataNode>
-  <DataNode TextLabel="K+" GraphId="f92ff" Type="Metabolite">
+  <DataNode TextLabel="K⁺" GraphId="f92ff" Type="Metabolite">
     <Graphics CenterX="1597.512360964889" CenterY="602.504668387259" Width="90.0" Height="25.0" ZOrder="32801" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29103" />
   </DataNode>
-  <DataNode TextLabel="Ca2+" GraphId="c9ca1" Type="Metabolite">
+  <DataNode TextLabel="Ca²⁺" GraphId="c9ca1" Type="Metabolite">
     <Graphics CenterX="1597.512360964889" CenterY="573.1220233104486" Width="90.0" Height="25.0" ZOrder="32802" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29108" />
   </DataNode>
@@ -358,24 +357,24 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="211.20724346076432" CenterY="1015.425888665325" Width="90.0" Height="25.0" ZOrder="32803" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000002330" />
   </DataNode>
-  <DataNode TextLabel="K+" GraphId="b7976" Type="Metabolite">
+  <DataNode TextLabel="K⁺" GraphId="b7976" Type="Metabolite">
     <Graphics CenterX="1230.163124697951" CenterY="1005.4447217215103" Width="90.0" Height="25.0" ZOrder="32805" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29103" />
   </DataNode>
-  <DataNode TextLabel="Ca2+" GraphId="a7ad4" Type="Metabolite">
+  <DataNode TextLabel="Ca²⁺" GraphId="a7ad4" Type="Metabolite">
     <Graphics CenterX="1230.163124697951" CenterY="976.0620766446995" Width="90.0" Height="25.0" ZOrder="32806" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29108" />
   </DataNode>
-  <DataNode TextLabel="K+" GraphId="c1c51" Type="Metabolite">
+  <DataNode TextLabel="K⁺" GraphId="c1c51" Type="Metabolite">
     <Graphics CenterX="1230.489088822575" CenterY="1250.3603241704975" Width="90.0" Height="25.0" ZOrder="32808" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29103" />
   </DataNode>
-  <DataNode TextLabel="Ca2+" GraphId="adae0" Type="Metabolite">
+  <DataNode TextLabel="Ca²⁺" GraphId="adae0" Type="Metabolite">
     <Graphics CenterX="1230.489088822575" CenterY="1220.9776790936871" Width="90.0" Height="25.0" ZOrder="32809" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29108" />
   </DataNode>
   <DataNode TextLabel="Cytochrome C" GraphId="be6c3" Type="GeneProduct">
-    <Graphics CenterX="865.5555555555554" CenterY="1385.6101535315947" Width="142.55070161046498" Height="24.33524849236618" ZOrder="32811" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="865.5555555555554" CenterY="1365.6101535315947" Width="142.55070161046498" Height="24.33524849236618" ZOrder="32811" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000172115" />
   </DataNode>
   <Interaction GraphId="id1011a8e3">
@@ -423,8 +422,8 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   </Interaction>
   <Interaction GraphId="id21c2a14c">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="865.5555555555554" Y="1397.7777777777778" GraphRef="be6c3" RelX="0.0" RelY="1.0" />
-      <Point X="865.5555555555552" Y="1435.8737215725803" GraphRef="cc143" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point X="865.5555555555554" Y="1377.7777777777778" GraphRef="be6c3" RelX="0.0" RelY="1.0" />
+      <Point X="865.5555555555552" Y="1403.8737215725803" GraphRef="cc143" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -526,8 +525,8 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Interaction GraphId="id587ed8bd">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
       <Point X="936.2308639356052" Y="1277.7777777777778" GraphRef="da076" RelX="-0.5" RelY="1.0" />
-      <Point X="865.5555555555554" Y="1373.4425292854116" GraphRef="be6c3" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
-      <Anchor Position="0.6710054744526012" Shape="None" GraphId="e650b" />
+      <Point X="865.5555555555554" Y="1353.4425292854116" GraphRef="be6c3" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.7919740547545465" Shape="None" GraphId="e650b" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -584,7 +583,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Interaction GraphId="id74a974e2">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="538.1824279007383" Y="1319.1549295774648" GraphRef="cd3f1" RelX="1.0" RelY="0.0" />
-      <Point X="865.5555555555554" Y="1318.7175602031373" GraphRef="e650b" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point X="865.5555555555554" Y="1323.0" GraphRef="e650b" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -664,7 +663,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Interaction GraphId="idaaab01e2">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
       <Point X="348.4942991281021" Y="1331.6549295774648" GraphRef="aba9d" RelX="0.0" RelY="1.0" />
-      <Point X="794.2802047503226" Y="1506.440365353962" GraphRef="ce0fc" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point X="794.2802047503226" Y="1466.440365353962" GraphRef="ce0fc" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -699,8 +698,8 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   </Interaction>
   <Interaction GraphId="idb93345a8">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="865.5555555555551" Y="1518.940365353962" GraphRef="ce0fc" RelX="0.0" RelY="1.0" />
-      <Point X="865.5555555555553" Y="1555.068612970283" GraphRef="cfb18" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point X="865.5555555555551" Y="1478.940365353962" GraphRef="ce0fc" RelX="0.0" RelY="1.0" />
+      <Point X="865.5555555555553" Y="1505.068612970283" GraphRef="cfb18" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -786,8 +785,8 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   </Interaction>
   <Interaction GraphId="idea0ce3">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="865.5555555555552" Y="1460.8737215725803" GraphRef="cc143" RelX="0.0" RelY="1.0" />
-      <Point X="865.5555555555551" Y="1493.940365353962" GraphRef="ce0fc" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point X="865.5555555555552" Y="1428.8737215725803" GraphRef="cc143" RelX="0.0" RelY="1.0" />
+      <Point X="865.5555555555551" Y="1453.940365353962" GraphRef="ce0fc" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -868,13 +867,13 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Label TextLabel="Cell Depolarization" GraphId="b76e2">
+  <Label TextLabel="Cell depolarization" GraphId="b76e2">
     <Graphics CenterX="1597.1830985915497" CenterY="698.838028169014" Width="157.74647887323903" Height="27.676056338028275" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
-  <Label TextLabel="Mitochondrial Depolarization" GraphId="c2d41">
+  <Label TextLabel="Mitochondrial depolarization" GraphId="c2d41">
     <Graphics CenterX="1231.0215428925464" CenterY="1345.638750373726" Width="157.74647887323903" Height="27.676056338028275" ZOrder="32810" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
-  <Shape TextLabel="Endothelial Cell" GraphId="a8b92">
+  <Shape TextLabel="Endothelial cell" GraphId="a8b92">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
     <Graphics CenterX="636.8558467741932" CenterY="136.4072311827957" Width="406.71169354838685" Height="250.51887096774192" ZOrder="16384" FontSize="20" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
@@ -887,7 +886,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Shape TextLabel="Natriuretric Peptides" GraphId="b1d4d" GroupRef="b0da3">
     <Graphics CenterX="1088.327582966943" CenterY="327.8170705716227" Width="104.14516129032242" Height="83.14516129032262" ZOrder="16384" FontSize="12" Valign="Bottom" ShapeType="Rectangle" Rotation="0.0" />
   </Shape>
-  <Shape TextLabel="Small Solubles&#xA;" GraphId="b7bd4">
+  <Shape TextLabel="Small solubles" GraphId="b7bd4">
     <Graphics CenterX="1597.5123609648888" CenterY="355.8411448750113" Width="104.09980046976398" Height="83.07964845183088" ZOrder="16384" FontSize="12" Valign="Bottom" ShapeType="Rectangle" Rotation="0.0" />
   </Shape>
   <Shape TextLabel="sGC" GraphId="baafa" GroupRef="aa178">
@@ -896,7 +895,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Shape TextLabel="Neuron&#xA;" GraphId="bb6c4">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="841.0584602675139" CenterY="1021.9290507216028" Width="1646.771968353861" Height="1138.3641207790165" ZOrder="16384" FontSize="20" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+    <Graphics CenterX="841.0584602675139" CenterY="1001.3734951660473" Width="1646.771968353861" Height="1097.2530096679054" ZOrder="16384" FontSize="20" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
   <Shape TextLabel="NR2 Subunits" GraphId="be26e" GroupRef="ab63a">
     <Graphics CenterX="466.2963760483116" CenterY="500.6046910470398" Width="214.63439062188687" Height="86.88375985314768" ZOrder="16384" FontSize="12" Valign="Bottom" ShapeType="Rectangle" Rotation="0.0" />
@@ -949,13 +948,13 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Shape TextLabel="Calmodulin" GraphId="b51d5" GroupRef="cfd10">
     <Graphics CenterX="757.8883829780248" CenterY="585.0276612495769" Width="111.16520971602358" Height="87.99287002541541" ZOrder="32785" FontSize="12" Valign="Bottom" ShapeType="Rectangle" Rotation="0.0" />
   </Shape>
-  <Shape TextLabel="Small Solubles&#xA;" GraphId="bf4cf">
+  <Shape TextLabel="Small solubles" GraphId="bf4cf">
     <Graphics CenterX="1597.512360964889" CenterY="597.0327931259164" Width="104.09980046976398" Height="83.07964845183088" ZOrder="32800" FontSize="12" Valign="Bottom" ShapeType="Rectangle" Rotation="0.0" />
   </Shape>
   <Shape TextLabel="Small Solubles&#xA;" GraphId="a6893">
     <Graphics CenterX="1230.163124697951" CenterY="999.9728464601656" Width="104.09980046976398" Height="83.07964845183088" ZOrder="32804" FontSize="12" Valign="Bottom" ShapeType="Rectangle" Rotation="0.0" />
   </Shape>
-  <Shape TextLabel="Small Solubles&#xA;" GraphId="bee9c">
+  <Shape TextLabel="Small solubles" GraphId="bee9c">
     <Graphics CenterX="1230.489088822575" CenterY="1244.8884489091538" Width="104.09980046976398" Height="83.07964845183088" ZOrder="32807" FontSize="12" Valign="Bottom" ShapeType="Rectangle" Rotation="0.0" />
   </Shape>
   <Group GroupId="cfd10" GraphId="aa536" Style="Complex" />
@@ -970,14 +969,9 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neural cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0002319</bp:ID>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neuron</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000540</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dementia</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1307</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway</bp:TERM>
@@ -985,14 +979,29 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neuron</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000540</bp:ID>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">endothelial cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000115</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neural cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0002319</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microglial cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000129</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway involving second messengers</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000541</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dementia</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1307</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
     </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>

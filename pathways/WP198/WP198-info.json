@@ -1,10 +1,20 @@
 {
     "wpid": "WP198",
     "organisms": ["Saccharomyces cerevisiae"],
-    "description": "",
-    "ontology-ids": ["PW:0000072"],
-    "last-edited": "20210520",
-    "title": "Isoleucine, leucine, and valine biosynthesis",
-    "authors": ["J.Heckman","MaintBot","Ddigles","Egonw","Eweitz"],
-    "revision": "r117306"
+    "description": "The biosynthesis of branched-chain amino acids (BCAA) in *S. cerevisiae* involves a common pathway that metabolizes pyruvate to valine or -ketobutyrate (derived from threonine) to isoleucine. This pathway occurs in the mitochondrion until the final step, where the immediate precursor to valine or isoleucine is converted to its respective amino acid either in the mitochondrion (via Bat1p) or the cytosol (via Bat2p). In a branch of the common pathway, valines immediate precursor can instead be converted to -isopropylmalate via -isopropylmalate synthase (Leu4p and Leu9p), which is subsequently exported to the cytosol and metabolized to leucine in three additional steps.",
+    "ontology-ids": [
+        "PW:0000072",
+        "PW:0000002"
+    ],
+    "last-edited": "2026-09-15",
+    "title": "Superpathway of branched chain amino acid biosynthesis",
+    "authors": [
+        "J.Heckman",
+        "MaintBot",
+        "Ddigles",
+        "Egonw",
+        "Eweitz",
+        "Khanspers"
+    ],
+    "revision": "r20260915230703"
 }

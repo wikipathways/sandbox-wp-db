@@ -1,10 +1,18 @@
 {
     "wpid": "WP556",
     "organisms": ["Saccharomyces cerevisiae"],
-    "description": "Based on http://metacyc.org/META/NEW-IMAGE?type=PATHWAY&object=GLUDEG-I-PWY",
+    "description": "In S. cerevisiae, the main pathway for glutamate degradation is catalyzed by the glutamate dehydrogenase encoded by GDH2 ([WP503](https://www.wikipathways.org/pathways/WP503.html)). However, glutamate can also by degraded into gamma-aminobutyrate (GABA) by the glutamate decarboxylase Gad1p and then converted into succinate by the enzymes encoded by UGA1 and UGA2.  Based on [Yeast Pathways](https://pathway.yeastgenome.org/).",
     "ontology-ids": ["PW:0001380"],
-    "last-edited": "20180426",
+    "last-edited": "2025-08-30",
     "title": "Glutamate degradation I",
-    "authors": ["J.Heckman","MaintBot","AlexanderPico","Christine Chichester","Egonw","Timverbruggen"],
-    "revision": "r97054"
+    "authors": [
+        "J.Heckman",
+        "MaintBot",
+        "AlexanderPico",
+        "Christine Chichester",
+        "Egonw",
+        "Timverbruggen",
+        "Khanspers"
+    ],
+    "revision": "r140475"
 }

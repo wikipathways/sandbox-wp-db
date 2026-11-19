@@ -1,17 +1,19 @@
 {
     "wpid": "WP5136",
     "organisms": ["Homo sapiens"],
-    "description": "Alpha-Linolenic acid (ALA) oxylipin metabolism by ALOX5, ALOX15, and cytochrome P450.",
+    "description": "Alpha-linolenic acid (ALA) oxylipin metabolism by ALOX5, ALOX15, and cytochrome P450",
     "ontology-ids": [
         "PW:0000002",
         "PW:0000010"
     ],
-    "last-edited": "2023-03-06",
+    "last-edited": "2025-10-30",
     "title": "ALA oxylipin metabolism",
     "authors": [
         "Lcayer",
         "Mkutmon",
-        "AlexanderPico"
+        "AlexanderPico",
+        "Khanspers",
+        "Eweitz"
     ],
-    "revision": "r125624"
+    "revision": "r140845"
 }

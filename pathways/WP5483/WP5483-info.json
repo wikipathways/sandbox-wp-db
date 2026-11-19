@@ -1,0 +1,18 @@
+{
+    "wpid": "WP5483",
+    "organisms": ["Homo sapiens"],
+    "description": "Hallmarks of Cancer: Nonmutational epigenetical programming",
+    "ontology-ids": [
+        "PW:0000605",
+        "PW:0000004"
+    ],
+    "last-edited": "2025-11-29",
+    "title": "Hallmark of cancer: non-mutational epigenetic reprogramming",
+    "authors": [
+        "PhilipErnst",
+        "Eweitz",
+        "Khanspers",
+        "Egonw"
+    ],
+    "revision": "r141973"
+}

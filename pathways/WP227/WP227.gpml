@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Osteoblast signaling" Data-Source="WikiPathways" Version="WP227_r125587" Author="[Ehsiao, AlexanderPico, Khanspers, MaintBot, Ddigles, Mkutmon, Eweitz]" Last-Modified="20230302192611" Organism="Rattus norvegicus">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Osteoblast signaling" Data-Source="WikiPathways" Version="WP227_r126794" Author="[Ehsiao, AlexanderPico, Khanspers, MaintBot, Ddigles, Mkutmon, Eweitz, Egonw, DeSl]" Last-Modified="20230622142224" Organism="Rattus norvegicus">
   <Comment Source="WikiPathways-description">Osteoblasts are specialized, terminally differentiated uninucleated cells responsible for bone formation. Their activity is tightly regulated by external stimuli, originating from e.g. the parathyroid glands, osteocytes, etc. Along with osteoclasts, which are responsible for bone degradation, osteoblasts are key regulators of the shape and volume of bone tissue. </Comment>
+  <BiopaxRef>d71</BiopaxRef>
   <Graphics BoardWidth="1071.6867469879526" BoardHeight="704.6385542168696" />
   <DataNode TextLabel="Parathyroid hormone" GraphId="a1d" Type="GeneProduct">
     <Graphics CenterX="462.0883534136547" CenterY="650.1285140562263" Width="138.66666666666666" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -10,13 +11,17 @@
     <Graphics CenterX="547.0200803212861" CenterY="277.847389558233" Width="106.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="25341" />
   </DataNode>
+  <DataNode TextLabel="Vitamin D" GraphId="a6f63" Type="Metabolite">
+    <Graphics CenterX="170.4578313253014" CenterY="267.5823293172691" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="27300" />
+  </DataNode>
   <DataNode TextLabel="RANK ligand" GraphId="ac3" Type="GeneProduct">
     <Graphics CenterX="629.3815261044181" CenterY="247.43775100401606" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="117516" />
   </DataNode>
-  <DataNode TextLabel="Vitamin D" GraphId="b53" Type="GeneProduct">
-    <Graphics CenterX="170.4578313253014" CenterY="267.5823293172691" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="" ID="" />
+  <DataNode TextLabel="Vitamin D" GraphId="b3e9f" Type="Metabolite">
+    <Graphics CenterX="689.4939759036156" CenterY="89.70281124497994" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="27300" />
   </DataNode>
   <DataNode TextLabel="Bone sialoprotein" GraphId="b71" Type="GeneProduct">
     <Graphics CenterX="548.8835341365486" CenterY="374.05622489959836" Width="108.69076305220854" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -68,7 +73,7 @@
   </DataNode>
   <DataNode TextLabel="Sodium" GraphId="edb" Type="Metabolite">
     <Graphics CenterX="298.2971887550201" CenterY="589.6064257028125" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0033ff" />
-    <Xref Database="" ID="" />
+    <Xref Database="ChEBI" ID="29101" />
   </DataNode>
   <DataNode TextLabel="NPT3" GraphId="ef2" Type="GeneProduct">
     <Graphics CenterX="345.1887550200803" CenterY="539.2931726907632" Width="80.0" Height="22.666666666666668" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -76,14 +81,10 @@
   </DataNode>
   <DataNode TextLabel="Phosphate" GraphId="f00" Type="Metabolite">
     <Graphics CenterX="209.0120481927712" CenterY="589.8795180722907" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0033ff" />
-    <Xref Database="" ID="" />
+    <Xref Database="ChEBI" ID="18367" />
   </DataNode>
-  <DataNode TextLabel="PDGF-BB" GraphId="f1a" Type="GeneProduct">
+  <DataNode TextLabel="PDGF-BB" GraphId="f1a" Type="Metabolite">
     <Graphics CenterX="232.05187268899402" CenterY="127.43223112715178" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="" ID="" />
-  </DataNode>
-  <DataNode TextLabel="Vitamin D" GraphId="fa4" Type="GeneProduct">
-    <Graphics CenterX="689.4939759036156" CenterY="89.70281124497994" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="Osteoprotegerin" GraphId="fad" Type="GeneProduct">
@@ -122,7 +123,7 @@
   </Interaction>
   <Interaction GraphId="id39c49dc1">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="203.53413654618473" Y="271.32530120481925" GraphRef="b53" RelX="0.8269076305220828" RelY="0.37429718875501405" />
+      <Point X="203.53413654618473" Y="271.32530120481925" GraphRef="a6f63" RelX="0.8269076305220828" RelY="0.37429718875501405" />
       <Point X="489.07630522088544" Y="363.3895582329317" GraphRef="b71" RelX="-1.1005025125628272" RelY="-1.0666666666666687" ArrowHead="TBar" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -206,21 +207,21 @@
   </Interaction>
   <Interaction GraphId="idd1584d59">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="697.413654618475" Y="89.57429718875507" GraphRef="fa4" RelX="0.19799196787148504" RelY="-0.012851405622487277" />
+      <Point X="697.413654618475" Y="89.57429718875507" GraphRef="b3e9f" RelX="0.19799196787148504" RelY="-0.012851405622487277" />
       <Point X="636.0481927710847" Y="228.77108433734938" GraphRef="ac3" RelX="0.1666666666666657" RelY="-1.8666666666666685" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idd49181e3">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="199.9196787148595" Y="263.45381526104416" GraphRef="b53" RelX="0.7365461847389518" RelY="-0.4128514056224958" />
+      <Point X="199.9196787148595" Y="263.45381526104416" GraphRef="a6f63" RelX="0.7365461847389518" RelY="-0.4128514056224958" />
       <Point X="498.77911646586347" Y="328.56224899598396" GraphRef="fff" RelX="-1.108981380065723" RelY="-0.01285140562249012" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ide02f5f6d">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="689.6706827309241" Y="89.57429718875505" GraphRef="fa4" RelX="0.004417670682713037" RelY="-0.0128514056224887" />
+      <Point X="689.6706827309241" Y="89.57429718875505" GraphRef="b3e9f" RelX="0.004417670682713037" RelY="-0.0128514056224887" />
       <Point X="543.7911646586352" Y="259.18072289156623" GraphRef="a41" RelX="-0.06054216867470287" RelY="-1.8666666666666742" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -234,7 +235,7 @@
   </Interaction>
   <Interaction GraphId="idfb67f60b">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="167.56626506024105" Y="267.8393574297188" GraphRef="b53" RelX="-0.07228915662650906" RelY="0.02570281124496887" />
+      <Point X="167.56626506024105" Y="267.8393574297188" GraphRef="a6f63" RelX="-0.07228915662650906" RelY="0.02570281124496887" />
       <Point X="399.8393574297188" Y="397.0120481927712" GraphRef="d83" RelX="-0.5570281124498024" RelY="-1.5333333333333314" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -261,6 +262,18 @@
   <Group GroupId="f947c" GraphId="d40bc" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d71">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29930537</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamin D(3) Modulates Impaired Crosstalk Between RANK and Glucocorticoid Receptor Signaling in Bone Marrow Cells After Chronic Prednisolone Administration.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Front Endocrinol (Lausanne)</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shymanskyi I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lisakovska O</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mazanova A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Labudzynskyi D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veliky M</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">osteoblast</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000062</bp:ID>

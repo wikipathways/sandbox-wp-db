@@ -1,0 +1,21 @@
+{
+    "wpid": "WP5344",
+    "organisms": ["Homo sapiens"],
+    "description": "Involvement of titin in cardiomyocyte signaling pathways and its effect on protein quality control pathways as well as hypertrophic signaling within a cardiomyocyte.",
+    "ontology-ids": [
+        "CL:0000746",
+        "PW:0000003",
+        "PW:0000006"
+    ],
+    "last-edited": "2025-07-22",
+    "title": "Cardiomyocyte signaling converging on titin",
+    "authors": [
+        "Bep3.14e",
+        "Isa Leenders",
+        "Snnrrdc",
+        "Jmillanacosta",
+        "Egonw",
+        "Eweitz"
+    ],
+    "revision": "r140060"
+}

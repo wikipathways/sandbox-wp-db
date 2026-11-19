@@ -1,5 +1,0 @@
-Label	Type	Identifier	Comment	Ensembl	NCBI gene	HGNC	UniProt	Wikidata	ChEBI	InChI	PubChem	ChemSpider	HMDB	KEGG	LipidMaps
-EGF	GeneProduct	ensembl:ENSG00000138798	""	ensembl:ENSG00000138798	ncbigene:1950	hgnc.symbol:EGF	uniprot:A0A494C018;uniprot:P01133								
-EGFR	GeneProduct	ensembl:ENSG00000146648	""	ensembl:ENSG00000146648	ncbigene:1956	hgnc.symbol:EGFR	uniprot:P00533;uniprot:A0A8V8TPW8;uniprot:Q504U8;uniprot:C9JYS6								
-SOS1	GeneProduct	ensembl:ENSG00000115904	""	ensembl:ENSG00000115904	ncbigene:6654	hgnc.symbol:SOS1	uniprot:A0A8I5QJD1;uniprot:A0A8I5QJF3;uniprot:G5E9C8;uniprot:A0A8I5KWL0;uniprot:A0A8I5KY52;uniprot:Q07889;uniprot:A0A8I5KP47;uniprot:A0A8I5QJ77;uniprot:A0A8I5KV97;uniprot:C9K0N6								
-KRAS	GeneProduct	ensembl:ENSG00000133703	""	ensembl:ENSG00000133703	ncbigene:3845	hgnc.symbol:KRAS	uniprot:A0A8I5KQU3;uniprot:G3V4K2;uniprot:A0A8I5KQ21;uniprot:A0A8I5KR86;uniprot:A0A024RAV5;uniprot:A0A8I5KXN3;uniprot:P01116;uniprot:L7RSL8;uniprot:A0A8I5KYH6;uniprot:A0A8I5KUB5;uniprot:G3V5T7								

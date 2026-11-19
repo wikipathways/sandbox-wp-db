@@ -1,10 +1,20 @@
 {
     "wpid": "WP4707",
     "organisms": ["Homo sapiens"],
-    "description": "Aspirin effects on miRNAs.",
-    "ontology-ids": ["PW:0001613"],
-    "last-edited": "20210508",
+    "description": "The effects of aspirin on various miRNAs and the downstream impacts on various processes.",
+    "ontology-ids": [
+        "PW:0001613",
+        "PW:0000808"
+    ],
+    "last-edited": "2026-02-08",
     "title": "Aspirin and miRNAs",
-    "authors": ["Aminkhazeei","Fehrhart","L Dupuis","Egonw","Khanspers","Eweitz"],
-    "revision": "r116586"
+    "authors": [
+        "Aminkhazeei",
+        "Fehrhart",
+        "L Dupuis",
+        "Egonw",
+        "Khanspers",
+        "Eweitz"
+    ],
+    "revision": "r142423"
 }

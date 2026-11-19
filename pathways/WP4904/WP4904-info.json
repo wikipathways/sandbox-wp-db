@@ -1,13 +1,21 @@
 {
     "wpid": "WP4904",
     "organisms": ["Homo sapiens"],
-    "description": "A recent GWAS study was tweeted (https://twitter.com/BrentRichards19/status/1251550109931888643) showing an intronic SNP in LDLRAD4 as relevant. This pathway summarizes what is known of the biological role of this gene and its proteins.",
+    "description": "A recent GWAS study was [tweeted](https://twitter.com/BrentRichards19/status/1251550109931888643) showing an intronic SNP in LDLRAD4 as relevant. This pathway summarizes what is known of the biological role of this gene and its proteins, in relationship to COVID positive patients.",
     "ontology-ids": [
+        "DOID:0050117",
         "PW:0000013",
-        "DOID:0050117"
+        "DOID:4325",
+        "DOID:7148",
+        "PW:0002358"
     ],
-    "last-edited": "20211217",
-    "title": "LDLRAD4 and what we know about it",
-    "authors": ["Egonw","Fehrhart","Eweitz"],
-    "revision": "r124593"
+    "last-edited": "2025-11-23",
+    "title": "LDLRAD4 intronic SNP effect on COVID patients",
+    "authors": [
+        "Egonw",
+        "Fehrhart",
+        "Eweitz",
+        "DeSl"
+    ],
+    "revision": "r141676"
 }

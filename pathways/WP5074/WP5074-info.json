@@ -1,13 +1,20 @@
 {
     "wpid": "WP5074",
     "organisms": ["Homo sapiens"],
-    "description": "Pathway for Kallmann's Syndrome",
+    "description": "Pathway for Kallmann's Syndrome, linking various proteins to phenotypes related to the syndrome.",
     "ontology-ids": [
-        "DOID:3614",
-        "PW:0000013"
+        "PW:0000013",
+        "DOID:3614"
     ],
-    "last-edited": "20211130",
+    "last-edited": "2026-06-14",
     "title": "Kallmann syndrome",
-    "authors": ["Mtkerkhofs","Fehrhart","Egonw","Eweitz","AlexanderPico"],
-    "revision": "r123343"
+    "authors": [
+        "Mtkerkhofs",
+        "Fehrhart",
+        "Egonw",
+        "Eweitz",
+        "AlexanderPico",
+        "Larsgw"
+    ],
+    "revision": "r20260614072900"
 }

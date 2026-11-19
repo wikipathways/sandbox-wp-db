@@ -3,8 +3,16 @@
     "organisms": ["Mus musculus"],
     "description": "",
     "ontology-ids": ["PW:0000040"],
-    "last-edited": "20210523",
+    "last-edited": "2026-09-03",
     "title": "Steroid biosynthesis",
-    "authors": ["A.Kwa","MaintBot","Khanspers","Ddigles","Mkutmon","Eweitz"],
-    "revision": "r117948"
+    "authors": [
+        "A.Kwa",
+        "MaintBot",
+        "Khanspers",
+        "Ddigles",
+        "Mkutmon",
+        "Eweitz",
+        "Egonw"
+    ],
+    "revision": "r20260903054300"
 }

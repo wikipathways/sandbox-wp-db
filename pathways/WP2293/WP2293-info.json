@@ -1,10 +1,16 @@
 {
     "wpid": "WP2293",
     "organisms": ["Caenorhabditis elegans"],
-    "description": "",
+    "description": "Synthesis of a number of bile acids, include three dafachronic acids (chebi:78698).",
     "ontology-ids": ["PW:0000039"],
-    "last-edited": "20190816",
+    "last-edited": "2026-02-18",
     "title": "Biosynthesis and regulation of nematode bile acids",
-    "authors": ["Anwesha","MaintBot","Christine Chichester","Egonw","AlexanderPico"],
-    "revision": "r106026"
+    "authors": [
+        "Anwesha",
+        "MaintBot",
+        "Christine Chichester",
+        "Egonw",
+        "AlexanderPico"
+    ],
+    "revision": "r142455"
 }

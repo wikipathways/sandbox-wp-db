@@ -1,0 +1,15 @@
+{
+    "wpid": "WP5590",
+    "organisms": ["Paullinia cupana"],
+    "description": "Paullinia cupana caffeine synthesis pathway, describing the conversion of xanthine to caffeine.",
+    "ontology-ids": ["PW:0000002"],
+    "last-edited": "2026-03-23",
+    "title": "Caffeine synthesis",
+    "authors": [
+        "Hayashi",
+        "MaintBot",
+        "Egonw",
+        "Eweitz"
+    ],
+    "revision": "r142564"
+}

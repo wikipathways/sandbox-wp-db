@@ -1,0 +1,21 @@
+{
+    "wpid": "WP5574",
+    "organisms": ["Homo sapiens"],
+    "description": "Transcription factor and signaling pathways involved in oligodendrocyte development from neural stem cells through precursor cells to mature oligodendrocytes.",
+    "ontology-ids": [
+        "CL:0000047",
+        "PW:0000003",
+        "CL:0000128",
+        "CL:0002453",
+        "PW:0000650"
+    ],
+    "last-edited": "2025-10-29",
+    "title": "Oligodendrocyte development",
+    "authors": [
+        "ThiesHanssen",
+        "AlexanderPico",
+        "Egonw",
+        "Eweitz"
+    ],
+    "revision": "r140799"
+}

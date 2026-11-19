@@ -7,8 +7,14 @@
         "PW:0000002",
         "PW:0000026"
     ],
-    "last-edited": "20210106",
+    "last-edited": "2025-09-04",
     "title": "Mitochondrial fatty acid synthesis pathway",
-    "authors": ["Madeomuga","MaintBot","DeSl"],
-    "revision": "r114309"
+    "authors": [
+        "Madeomuga",
+        "MaintBot",
+        "DeSl",
+        "Eweitz",
+        "Egonw"
+    ],
+    "revision": "r140505"
 }

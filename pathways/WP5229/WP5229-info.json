@@ -1,0 +1,20 @@
+{
+    "wpid": "WP5229",
+    "organisms": ["Homo sapiens"],
+    "description": "Adverse outcome pathway showing the events of nephrotoxicity leading to tubular cell injury and death. ",
+    "ontology-ids": [
+        "PW:0000013",
+        "CL:1000507",
+        "DOID:784",
+        "DOID:12556"
+    ],
+    "last-edited": "2024-07-23",
+    "title": "Nephrotoxcicity adverse outcome pathway",
+    "authors": [
+        "Juliajohnsson",
+        "Marvin M2",
+        "Mkutmon",
+        "Eweitz"
+    ],
+    "revision": "r134519"
+}

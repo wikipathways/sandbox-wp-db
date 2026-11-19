@@ -1,14 +1,20 @@
 {
     "wpid": "WP5287",
     "organisms": ["Homo sapiens"],
-    "description": "17q12 copy number variation syndrome",
-    "ontology-ids": ["PW:0000013"],
-    "last-edited": "2023-02-14",
+    "description": "Overview of the 17q12 copy number variation syndrome, showing the involved genes, their pathways, and downstream events.",
+    "ontology-ids": [
+        "DOID:0060433",
+        "PW:0000013",
+        "DOID:0060404"
+    ],
+    "last-edited": "2025-07-11",
     "title": "17q12 copy number variation syndrome",
     "authors": [
         "JulietaCosta",
         "Egonw",
-        "Fehrhart"
+        "Fehrhart",
+        "Eweitz",
+        "Ddigles"
     ],
-    "revision": "r124559"
+    "revision": "r139902"
 }

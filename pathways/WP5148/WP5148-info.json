@@ -1,0 +1,25 @@
+{
+    "wpid": "WP5148",
+    "organisms": ["Homo sapiens"],
+    "description": "Hypothetical pathway for complement-mediated inflammation of the pulmonary alveolus in COVID-19. AEC\u2010II=Type II alveolar epithelial cell, EC=endothelial cells and MC=monocytes.",
+    "ontology-ids": [
+        "CL:0002063",
+        "DOID:0080600",
+        "CL:0000094",
+        "CL:0000115",
+        "CL:0000576",
+        "PW:0000504",
+        "CL:0010003",
+        "CL:0000775"
+    ],
+    "last-edited": "2025-06-01",
+    "title": "Complement-mediated inflammation of pulmonary alveolus in COVID-19 (hypothetical pathway)",
+    "authors": [
+        "Susan",
+        "Eweitz",
+        "Egonw",
+        "NhungP",
+        "Mkutmon"
+    ],
+    "revision": "r139316"
+}

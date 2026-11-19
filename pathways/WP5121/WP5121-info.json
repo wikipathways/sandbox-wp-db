@@ -6,8 +6,15 @@
         "PW:0000651",
         "PW:0000197"
     ],
-    "last-edited": "20210630",
+    "last-edited": "2023-11-28",
     "title": "Sphingolipid metabolism in senescence",
-    "authors": ["Eweitz","TadeIdowu","DKalbe"],
-    "revision": "r119472"
+    "authors": [
+        "TadeIdowu",
+        "DKalbe",
+        "Mario5181",
+        "JDoreen",
+        "Eweitz",
+        "Larsgw"
+    ],
+    "revision": "r125321"
 }

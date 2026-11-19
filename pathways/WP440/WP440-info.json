@@ -1,0 +1,24 @@
+{
+    "wpid": "WP440",
+    "organisms": ["Saccharomyces cerevisiae"],
+    "description": "Yeasts have a requirement for sulfur, which can be assimilated as a sulfate ion. Based on BioCyc.",
+    "ontology-ids": [
+        "PW:0000037",
+        "PW:0000002"
+    ],
+    "last-edited": "2025-06-23",
+    "title": "Sulfur degradation",
+    "authors": [
+        "J.Heckman",
+        "MaintBot",
+        "Shigeta",
+        "AlexanderPico",
+        "Leonjohn2008",
+        "Ddigles",
+        "Egonw",
+        "DeSl",
+        "L Dupuis",
+        "Khanspers"
+    ],
+    "revision": "r139577"
+}

@@ -5,14 +5,22 @@
     "ontology-ids": [
         "PW:0000440",
         "PW:0001084",
+        "PW:0000605",
+        "DOID:0060081",
+        "DOID:1612",
         "PW:0001086",
-        "DOID:0060081"
+        "PW:0000011",
+        "DOID:9252",
+        "PW:0000013"
     ],
-    "last-edited": "2023-01-18",
+    "last-edited": "2026-07-07",
     "title": "Amino acid metabolism in triple-negative breast cancer cells",
     "authors": [
         "Andra",
-        "Egonw"
+        "Egonw",
+        "Mkutmon",
+        "Eweitz",
+        "DeSl"
     ],
-    "revision": "r124889"
+    "revision": "r20260706142556"
 }

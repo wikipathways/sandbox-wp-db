@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Pathophysiological roles of DUX4 in FSHD1" Data-Source="WikiPathways" Version="WP5342_r139906" Author="[BTJvanDijl, Egonw, Jmillanacosta, Khanspers, Mkutmon, Eweitz, Ddigles]" Last-Modified="20250710081642" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">The transcription factor DUX4 is normally expressed during the 4-cell stage, activating various pathways leading to cleavage. This pathway shows how the abberrant expression of DUX4 in post-embryonic stages leads to several disturbations in skeletal muscle fibers, leading to adverse outcomes such as inflammation, apoptosis, and other processes contributing to facioscapulohumeral muscular dystrophy (FSHD). Low D4Z4 subunit methylation, which is caused either by low amount of D4Z4 subunits combined with a permissive 4q haplotype, or a mutation in genes involved with D4Z4 methylation, results in the expression of DUX4. </Comment>
+  <Graphics BoardWidth="1208.5714285714284" BoardHeight="784.2857142857143" />
+  <DataNode TextLabel="cAMP" GraphId="cb746" Type="Metabolite">
+    <Graphics CenterX="195.70229770229767" CenterY="184.4625374625374" Width="63.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:17489" />
+  </DataNode>
+  <DataNode TextLabel="E2" GraphId="e9ffa" Type="Metabolite">
+    <Graphics CenterX="87.46428571428577" CenterY="285.84523809523796" Width="27.16666666666665" Height="28.500000000000004" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:23965" />
+  </DataNode>
+  <DataNode TextLabel="p38 MAPK pathway" GraphId="cca6b" Type="Pathway">
+    <Graphics CenterX="195.70229770229759" CenterY="282.4984697808873" Width="139.0897394064304" Height="26.30275722763176" ZOrder="33134" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP400" />
+  </DataNode>
+  <DataNode TextLabel="MYOD1" GraphId="c1a87" Type="GeneProduct" GroupRef="e69da">
+    <Graphics CenterX="752.6967221786007" CenterY="430.1196772611187" Width="40.0" Height="20.0" ZOrder="33135" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="4654" />
+  </DataNode>
+  <DataNode TextLabel="PGC1A" GraphId="ed894" Type="GeneProduct">
+    <Graphics CenterX="597.401897767455" CenterY="642.8868604121308" Width="67.76751037590597" Height="18.824043810053297" ZOrder="33136" FontSize="12" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="10891" />
+  </DataNode>
+  <DataNode TextLabel="BMP pathway" GraphId="a109b" Type="Pathway">
+    <Graphics CenterX="512.7862280241591" CenterY="493.27115502167277" Width="81.68234804329904" Height="28.809741881766072" ZOrder="33137" FontWeight="Bold" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP211" />
+  </DataNode>
+  <DataNode TextLabel="PAX7" GraphId="dd984" Type="GeneProduct">
+    <BiopaxRef>cbc</BiopaxRef>
+    <Graphics CenterX="676.8339490473029" CenterY="290.4627873967957" Width="50.04953759035354" Height="27.651983357010323" ZOrder="33138" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000009709" />
+  </DataNode>
+  <DataNode TextLabel="ADRB2" GraphId="d6b20" Type="GeneProduct">
+    <Graphics CenterX="197.11113238861233" CenterY="89.160044146736" Width="60.5" Height="62.5" ZOrder="33140" FontSize="12" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="154" />
+  </DataNode>
+  <DataNode TextLabel="H3.Y" GraphId="b4e29" Type="GeneProduct">
+    <BiopaxRef>b37</BiopaxRef>
+    <Graphics CenterX="524.7130250095873" CenterY="283.53571978759663" Width="37.598103874691155" Height="16.669436467310454" ZOrder="33141" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000269466" />
+  </DataNode>
+  <DataNode TextLabel="Wnt signaling" GraphId="cb456" Type="Pathway">
+    <BiopaxRef>c4c</BiopaxRef>
+    <BiopaxRef>b8d</BiopaxRef>
+    <Graphics CenterX="358.3420772205902" CenterY="454.38555446141874" Width="90.0" Height="25.0" ZOrder="33142" FontWeight="Bold" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP428" />
+  </DataNode>
+  <DataNode TextLabel="Unknown" GraphId="d03c4">
+    <Graphics CenterX="195.70229770229773" CenterY="363.5922865498529" Width="60.0" Height="25.220842750089332" ZOrder="33144" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="MYC" GraphId="cc2eb" Type="GeneProduct">
+    <BiopaxRef>b17</BiopaxRef>
+    <Graphics CenterX="358.3420772205902" CenterY="525.3761086196296" Width="31.191964285714448" Height="18.357142857143028" ZOrder="33145" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="4609" />
+  </DataNode>
+  <DataNode TextLabel="DUX4" GraphId="c7e09" Type="GeneProduct">
+    <Graphics CenterX="597.401897767455" CenterY="436.978037397812" Width="91.91548886393255" Height="71.32674551482182" ZOrder="33146" FontSize="12" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="100288687" />
+  </DataNode>
+  <DataNode TextLabel="CDKN1A" GraphId="a607f" Type="GeneProduct">
+    <BiopaxRef>ea5</BiopaxRef>
+    <Graphics CenterX="443.4819352752653" CenterY="542.1067142633706" Width="46.585447118833216" Height="18.357142857143028" ZOrder="33148" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="1026" />
+  </DataNode>
+  <DataNode TextLabel="P53 pathway" GraphId="b7620" Type="Pathway">
+    <Graphics CenterX="422.9815770561287" CenterY="586.7748007734976" Width="81.68234804329904" Height="28.809741881766072" ZOrder="33149" FontWeight="Bold" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP2902" />
+  </DataNode>
+  <DataNode TextLabel="P300" GraphId="be933" Type="GeneProduct">
+    <BiopaxRef>a14</BiopaxRef>
+    <Graphics CenterX="498.328000282331" CenterY="348.8860990094193" Width="37.598103874691155" Height="16.669436467310454" ZOrder="33150" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2033" />
+  </DataNode>
+  <DataNode TextLabel="TNF-A pathway" GraphId="b98e4" Type="Pathway">
+    <BiopaxRef>c4c</BiopaxRef>
+    <Graphics CenterX="516.9039516992315" CenterY="529.5694657730419" Width="83.0" Height="22.662741069894764" ZOrder="33151" FontWeight="Bold" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP1047" />
+  </DataNode>
+  <DataNode TextLabel="JNK pathway" GraphId="f404f" Type="Pathway">
+    <Graphics CenterX="555.0" CenterY="583.0714135509177" Width="75.0" Height="23.0" ZOrder="33152" FontWeight="Bold" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP1047" />
+  </DataNode>
+  <DataNode TextLabel="MYOG" GraphId="c6535" Type="GeneProduct" GroupRef="e69da">
+    <Graphics CenterX="752.6967221786007" CenterY="410.11967726111874" Width="40.0" Height="20.0" ZOrder="33155" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="4656" />
+  </DataNode>
+  <DataNode TextLabel="ESR2" GraphId="c7f90" Type="GeneProduct">
+    <BiopaxRef>ffd</BiopaxRef>
+    <BiopaxRef>d9a</BiopaxRef>
+    <Graphics CenterX="87.11816498193488" CenterY="359.3460053354569" Width="60.5" Height="33.044871961637405" ZOrder="33156" FontSize="12" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2100" />
+  </DataNode>
+  <DataNode TextLabel="MAFbx" GraphId="c3e1b" Type="GeneProduct" GroupRef="dc872">
+    <Graphics CenterX="752.8889579758269" CenterY="491.3624863492437" Width="39.32687230973073" Height="16.42773904764431" ZOrder="33158" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="114907" />
+  </DataNode>
+  <DataNode TextLabel="MURF1" GraphId="d6159" Type="GeneProduct" GroupRef="dc872">
+    <Graphics CenterX="752.9187010151604" CenterY="506.6176044079981" Width="39.291883245544334" Height="14.377747550135666" ZOrder="33159" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="84676" />
+  </DataNode>
+  <DataNode TextLabel="UPF1" GraphId="e7a1c" Type="GeneProduct">
+    <BiopaxRef>ed2</BiopaxRef>
+    <BiopaxRef>e3b</BiopaxRef>
+    <Graphics CenterX="654.6891297976342" CenterY="607.398889994194" Width="47.12717882504853" Height="20.9440613468538" ZOrder="33162" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5976" />
+  </DataNode>
+  <DataNode TextLabel="RET" GraphId="d0f2e" Type="GeneProduct">
+    <Graphics CenterX="720.5063731863621" CenterY="334.3957712758888" Width="46.585447118833216" Height="18.357142857143028" ZOrder="33163" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5979" />
+  </DataNode>
+  <DataNode TextLabel="VEGFA" GraphId="f89cb" Type="GeneProduct">
+    <Graphics CenterX="597.401897767455" CenterY="689.5545996776318" Width="47.12717882504853" Height="20.9440613468538" ZOrder="33169" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="7422" />
+  </DataNode>
+  <DataNode TextLabel="MYF5" GraphId="f213a" Type="GeneProduct">
+    <BiopaxRef>e13</BiopaxRef>
+    <Graphics CenterX="720.1638605219999" CenterY="367.5286763115107" Width="47.12717882504853" Height="20.9440613468538" ZOrder="33172" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="4617" />
+  </DataNode>
+  <DataNode TextLabel="H3.X" GraphId="a4e0c" Type="GeneProduct">
+    <BiopaxRef>b37</BiopaxRef>
+    <Graphics CenterX="477.9403910540235" CenterY="283.5276057628303" Width="37.598103874691155" Height="16.669436467310454" ZOrder="33186" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000268799" />
+  </DataNode>
+  <Interaction GraphId="id44bebac">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="524.7130250095873" Y="291.87043802125186" GraphRef="b4e29" RelX="0.0" RelY="1.0" />
+      <Point X="574.4230255514719" Y="401.3146646404011" GraphRef="c7e09" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Anchor Position="0.6669876548739547" Shape="None" GraphId="ab1ca" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id88dece99">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="477.9403910540235" Y="291.86232399648554" GraphRef="a4e0c" RelX="0.0" RelY="1.0" />
+      <Point X="574.4230255514719" Y="401.3146646404011" GraphRef="c7e09" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id92d0e41f">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="517.1270522196766" Y="348.8860990094193" GraphRef="be933" RelX="1.0" RelY="0.0" />
+      <Point X="574.4230255514719" Y="401.3146646404011" GraphRef="c7e09" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbac3ca8">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="195.70229770229773" Y="376.20270792489754" GraphRef="d03c4" RelX="0.0" RelY="1.0" />
+      <Point X="551.4441533354887" Y="419.14635101910653" GraphRef="c7e09" RelX="-1.0" RelY="-0.5" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="feec7">
+    <Graphics ZOrder="33073" LineThickness="1.0">
+      <Point X="574.4230255514719" Y="472.6414101552229" GraphRef="c7e09" RelX="-0.5" RelY="1.0" />
+      <Point X="573.75" Y="571.5714135509177" GraphRef="f404f" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Anchor Position="0.21271668393610998" Shape="None" GraphId="d3016" />
+      <Anchor Position="0.2225876994522673" Shape="None" GraphId="df6cc" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="baa5b">
+    <Graphics ConnectorType="Elbow" ZOrder="33074" LineThickness="1.0">
+      <Point X="516.9039516992315" Y="540.9008363079893" GraphRef="b98e4" RelX="0.0" RelY="1.0" />
+      <Point X="500.0033942301431" Y="565.9218559218551" />
+      <Point X="483.10283676105473" Y="630.6998092418512" GraphRef="d85d2" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a158d">
+    <Graphics ZOrder="33075" LineThickness="1.0">
+      <Point X="643.3596421994213" Y="454.80972377651744" GraphRef="c7e09" RelX="1.0" RelY="0.5" />
+      <Point X="693.8592192691051" Y="541.8505140229885" GraphRef="a4785" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f05ef">
+    <Graphics ZOrder="33076" LineThickness="1.0">
+      <Point X="597.3378888527121" Y="261.627292536696" GraphRef="a3511" RelX="0.0" RelY="1.0" />
+      <Point X="597.401897767455" Y="393.3146646404011" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b5c95">
+    <Graphics ZOrder="33077" LineThickness="1.0">
+      <Point X="643.3596421994213" Y="419.14635101910653" GraphRef="c7e09" RelX="1.0" RelY="-0.5" />
+      <Point X="696.6002711094757" Y="367.5286763115107" GraphRef="f213a" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="de9c1">
+    <Graphics ZOrder="33078" LineThickness="1.0">
+      <Point X="643.3596421994213" Y="419.14635101910653" GraphRef="c7e09" RelX="1.0" RelY="-0.5" />
+      <Point X="697.2136496269457" Y="334.3957712758888" GraphRef="d0f2e" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b64ae">
+    <Graphics ZOrder="33079" LineThickness="1.0">
+      <Point X="460.60283676105473" Y="630.6998092418512" GraphRef="d85d2" RelX="-0.5" RelY="-1.0" />
+      <Point X="443.40216406695345" Y="601.1796717143807" GraphRef="b7620" RelX="0.5" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bd5f2">
+    <Comment>Most likely a PKA-independent mechanism involved</Comment>
+    <BiopaxRef>fa3</BiopaxRef>
+    <Graphics ZOrder="33080" LineThickness="1.0">
+      <Point X="195.70229770229759" Y="295.6498483947032" GraphRef="cca6b" RelX="0.0" RelY="1.0" />
+      <Point X="195.70229770229773" Y="350.9818651748082" GraphRef="d03c4" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bbada">
+    <Graphics ZOrder="33081" LineThickness="1.0">
+      <Point X="643.3596421994213" Y="419.14635101910653" GraphRef="c7e09" RelX="1.0" RelY="-0.5" />
+      <Point X="676.8339490473029" Y="304.2887790753009" GraphRef="dd984" RelX="0.0" RelY="1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d81e1">
+    <Graphics ZOrder="33082" LineThickness="1.0">
+      <Point X="654.6891297976342" Y="596.9268593207671" GraphRef="e7a1c" RelX="0.0" RelY="-1.0" />
+      <Point X="654.6891297976343" Y="579.8651907476348" GraphRef="aaa20" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ab3d5">
+    <Graphics ConnectorType="Elbow" ZOrder="33083" LineThickness="1.0">
+      <Point X="745.8836381380239" Y="554.3505140229885" GraphRef="a4785" RelX="0.0" RelY="1.0" />
+      <Point X="671.1513634967952" Y="567.3651907476348" GraphRef="aaa20" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a4183">
+    <Graphics ZOrder="33085" LineThickness="1.0">
+      <Point X="443.4819352752653" Y="551.2852856919421" GraphRef="a607f" RelX="0.0" RelY="1.0" />
+      <Point X="443.40216406695345" Y="572.3699298326146" GraphRef="b7620" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f3f16">
+    <Graphics ZOrder="33086" LineThickness="1.0">
+      <Point X="643.3596421994213" Y="419.14635101910653" GraphRef="c7e09" RelX="1.0" RelY="-0.5" />
+      <Point X="724.6967221786007" Y="420.1196772611187" GraphRef="c6305" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d1235">
+    <BiopaxRef>b38</BiopaxRef>
+    <Graphics ZOrder="33087" LineThickness="1.0">
+      <Point X="620.9654871799793" Y="689.5545996776318" GraphRef="f89cb" RelX="1.0" RelY="0.0" />
+      <Point X="666.5056227130729" Y="688.8453926308028" GraphRef="d8291" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="aa157">
+    <Graphics ZOrder="33088" LineThickness="1.0">
+      <Point X="643.3596421994213" Y="454.80972377651744" GraphRef="c7e09" RelX="1.0" RelY="0.5" />
+      <Point X="725.2255218209616" Y="498.4775475042438" GraphRef="ed376" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ca7bb">
+    <Comment>Mechanism independent of HIF pathway</Comment>
+    <BiopaxRef>b38</BiopaxRef>
+    <Graphics ZOrder="33090" LineThickness="1.0">
+      <Point X="597.401897767455" Y="652.2988823171574" GraphRef="ed894" RelX="0.0" RelY="1.0" />
+      <Point X="597.401897767455" Y="679.082569004205" GraphRef="f89cb" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c60de">
+    <Graphics ConnectorType="Elbow" ZOrder="33091" LineThickness="1.0">
+      <Point X="771.8958475724833" Y="554.3505140229885" GraphRef="a4785" RelX="0.5" RelY="1.0" />
+      <Point X="565.1189623965367" Y="711.428571428571" />
+      <Point X="358.3420772205902" Y="655.9465841947232" GraphRef="a12ef" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e7671">
+    <Comment>The ÃŽÂ²2 Adrenergic Receptor stimulates Adenylyl cyclase to transfrom ATP into cAMP.</Comment>
+    <BiopaxRef>fa3</BiopaxRef>
+    <Graphics ZOrder="33093" LineThickness="1.0">
+      <Point X="197.11113238861233" Y="120.410044146736" GraphRef="d6b20" RelX="0.0" RelY="1.0" />
+      <Point X="195.70229770229767" Y="171.9625374625374" GraphRef="cb746" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f4b9f">
+    <BiopaxRef>e95</BiopaxRef>
+    <Graphics ZOrder="33094" LineThickness="1.0">
+      <Point X="752.8950822294471" Y="475.1486168254215" GraphRef="ed376" RelX="0.0" RelY="-1.0" />
+      <Point X="752.7489632790434" Y="440.0438728288966" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fdbc4">
+    <Graphics ConnectorType="Elbow" ZOrder="33095" LineThickness="1.0">
+      <Point X="382.14040303447916" Y="586.7748007734976" GraphRef="b7620" RelX="-1.0" RelY="0.0" />
+      <Point X="358.3420772205902" Y="630.9465841947232" GraphRef="a12ef" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a35fb">
+    <Graphics ConnectorType="Elbow" ZOrder="33096" LineThickness="1.0">
+      <Point X="597.401897767455" Y="472.6414101552229" GraphRef="c7e09" RelX="0.0" RelY="1.0" />
+      <Point X="631.12554038511" Y="607.398889994194" GraphRef="e7a1c" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d7cae">
+    <Comment>NMD targets the DUX4 transcript</Comment>
+    <BiopaxRef>d76</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="33097" LineThickness="1.0">
+      <Point X="654.6891297976343" Y="554.8651907476348" GraphRef="aaa20" RelX="0.0" RelY="-1.0" />
+      <Point X="620.3807699834381" Y="472.6414101552229" GraphRef="c7e09" RelX="0.5" RelY="1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fdf80">
+    <Comment>Mechanism unknown</Comment>
+    <BiopaxRef>fa3</BiopaxRef>
+    <Graphics ZOrder="33098" LineThickness="1.0">
+      <Point X="195.70229770229767" Y="196.9625374625374" GraphRef="cb746" RelX="0.0" RelY="1.0" />
+      <Point X="195.70229770229759" Y="269.3470911670714" GraphRef="cca6b" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e83d3">
+    <Graphics ZOrder="33099" LineThickness="1.0">
+      <Point X="563.518142579502" Y="642.8868604121308" GraphRef="ed894" RelX="-1.0" RelY="0.0" />
+      <Point X="528.1028367610547" Y="643.1998092418512" GraphRef="d85d2" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f449d">
+    <Graphics ZOrder="33100" LineThickness="1.0">
+      <Point X="743.7274499345242" Y="367.5286763115107" GraphRef="f213a" RelX="1.0" RelY="0.0" />
+      <Point X="786.8533928522427" Y="367.52867631151065" GraphRef="c5155" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Anchor Position="0.0" Shape="None" GraphId="b1ef1" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c6f39">
+    <Graphics ConnectorType="Elbow" ZOrder="33101" LineThickness="1.0">
+      <Point X="651.8091802521261" Y="290.46278739679576" GraphRef="dd984" RelX="-1.0" RelY="0.0" />
+      <Point X="620.3807699834381" Y="401.3146646404011" GraphRef="c7e09" RelX="0.5" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="be0c6">
+    <Graphics ConnectorType="Elbow" ZOrder="33102" LineThickness="1.0">
+      <Point X="701.8587178424797" Y="290.46278739679576" GraphRef="dd984" RelX="1.0" RelY="0.0" />
+      <Point X="831.8533928522427" Y="355.02867631151065" GraphRef="c5155" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Anchor Position="0.8867677439111914" Shape="None" GraphId="bbde3" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c8f4f">
+    <Graphics ConnectorType="Elbow" ZOrder="33103" LineThickness="1.0">
+      <Point X="786.8533928522427" Y="367.52867631151065" GraphRef="c5155" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point X="752.6967221786007" Y="392.1196772611187" GraphRef="c6305" RelX="0.0" RelY="-1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cec24">
+    <Graphics ZOrder="33104" LineThickness="1.0">
+      <Point X="574.2798617879586" Y="493.68547241934317" GraphRef="d3016" RelX="0.0" RelY="0.0" />
+      <Point X="553.6274020458086" Y="493.27115502167277" GraphRef="a109b" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b09e1">
+    <Graphics ConnectorType="Elbow" ZOrder="33105" LineThickness="1.0">
+      <Point X="555.0" Y="594.5714135509177" GraphRef="f404f" RelX="0.0" RelY="1.0" />
+      <Point X="530.3014183805274" Y="611.6039574276713" />
+      <Point X="505.60283676105473" Y="630.6998092418512" GraphRef="d85d2" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ff903">
+    <Graphics ConnectorType="Elbow" ZOrder="33106" LineThickness="1.0">
+      <Point X="574.4230255514719" Y="472.6414101552229" GraphRef="c7e09" RelX="-0.5" RelY="1.0" />
+      <Point X="558.4039516992315" Y="529.5694657730419" GraphRef="b98e4" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="df359">
+    <Graphics ZOrder="33107" LineThickness="1.0">
+      <Point X="780.5646426379326" Y="498.4775475042438" GraphRef="ed376" RelX="1.0" RelY="0.0" />
+      <Point X="811.3594781768406" Y="498.11100346394556" GraphRef="b3a16" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b8389">
+    <Graphics ZOrder="33108" LineThickness="1.0">
+      <Point X="551.4441533354887" Y="454.80972377651744" GraphRef="c7e09" RelX="-1.0" RelY="0.5" />
+      <Point X="403.3420772205902" Y="454.38555446141874" GraphRef="cb456" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fab4d">
+    <Comment>Few D4Z4 repeats lead to chromatin relaxation and missing methylation, which leads to transcription; however, there is evidence against clear cutoff at 10 D4Z4 repeats</Comment>
+    <BiopaxRef>d76</BiopaxRef>
+    <BiopaxRef>e95</BiopaxRef>
+    <Graphics ZOrder="33109" LineThickness="1.0">
+      <Point X="523.5714285714287" Y="177.26680191087024" GraphRef="e4454" RelX="0.0" RelY="1.0" />
+      <Point X="523.5714285714287" Y="217.07142857142873" GraphRef="a89cb" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c5971">
+    <Graphics ZOrder="33110" LineThickness="1.0">
+      <Point X="87.46428571428577" Y="300.09523809523796" GraphRef="e9ffa" RelX="0.0" RelY="1.0" />
+      <Point X="87.11816498193488" Y="342.82356935463815" GraphRef="c7f90" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e23bc">
+    <Graphics ConnectorType="Elbow" ZOrder="33111" LineThickness="1.0">
+      <Point X="471.94505400250955" Y="493.27115502167277" GraphRef="a109b" RelX="-1.0" RelY="0.0" />
+      <Point X="443.4819352752653" Y="532.928142834799" GraphRef="a607f" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cebaa">
+    <Graphics ZOrder="33112" LineThickness="1.0">
+      <Point X="358.3420772205902" Y="534.5546800482011" GraphRef="cc2eb" RelX="0.0" RelY="1.0" />
+      <Point X="358.3420772205902" Y="630.9465841947232" GraphRef="a12ef" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a8db6">
+    <Comment>Estrogen Receptor-ÃŽÂ² inhibits DUX4 activity by transporting it to the cytoplasm.</Comment>
+    <BiopaxRef>fa3</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="33113" LineThickness="1.0">
+      <Point X="87.11816498193488" Y="375.8684413162756" GraphRef="c7f90" RelX="0.0" RelY="1.0" />
+      <Point X="551.4441533354887" Y="419.14635101910653" GraphRef="c7e09" RelX="-1.0" RelY="-0.5" ArrowHead="mim-inhibition" />
+      <Anchor Position="0.6806796351684556" Shape="None" GraphId="fabd0" />
+      <Anchor Position="0.31339789703290816" Shape="None" GraphId="f0b94" />
+      <Anchor Position="0.5977767144861882" Shape="None" GraphId="a93c9" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c5217">
+    <Graphics ConnectorType="Elbow" ZOrder="33114" LineThickness="1.0">
+      <Point X="551.4441533354887" Y="454.80972377651744" GraphRef="c7e09" RelX="-1.0" RelY="0.5" />
+      <Point X="426.02597402597416" Y="490.0929161980735" />
+      <Point X="373.93805936344745" Y="525.3761086196296" GraphRef="cc2eb" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fd0f4">
+    <Graphics ZOrder="33115" LineThickness="1.0">
+      <Point X="438.10283676105473" Y="643.1998092418512" GraphRef="d85d2" RelX="-1.0" RelY="0.0" />
+      <Point X="403.3420772205902" Y="643.4465841947232" GraphRef="a12ef" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b75ea">
+    <BiopaxRef>d76</BiopaxRef>
+    <Graphics ZOrder="33116" LineThickness="1.0">
+      <Point X="597.401897767455" Y="472.6414101552229" GraphRef="c7e09" RelX="0.0" RelY="1.0" />
+      <Point X="597.401897767455" Y="633.4748385071041" GraphRef="ed894" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fd1d5">
+    <Graphics ConnectorType="Elbow" ZOrder="33117" LineThickness="1.0">
+      <Point X="743.7990967457788" Y="334.3957712758888" GraphRef="d0f2e" RelX="1.0" RelY="0.0" />
+      <Point X="831.8533928522427" Y="355.02867631151065" GraphRef="c5155" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bb82b">
+    <Graphics ConnectorType="Elbow" ZOrder="33118" LineThickness="1.0">
+      <Point X="551.4441533354887" Y="419.14635101910653" GraphRef="c7e09" RelX="-1.0" RelY="-0.5" />
+      <Point X="358.3420772205902" Y="441.88555446141874" GraphRef="cb456" RelX="0.0" RelY="-1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fd38f">
+    <Graphics ZOrder="33119" LineThickness="1.0">
+      <Point X="358.3420772205902" Y="466.88555446141874" GraphRef="cb456" RelX="0.0" RelY="1.0" />
+      <Point X="358.3420772205902" Y="516.197537191058" GraphRef="cc2eb" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <GraphicalLine GraphId="e806d">
+    <Graphics ZOrder="33120" LineThickness="1.0">
+      <Point X="338.90833773284834" Y="242.52608342132126" />
+      <Point X="642.3378888527121" Y="242.87729253669602" GraphRef="a3511" RelX="1.0" RelY="-0.5" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d267e">
+    <Graphics ZOrder="33147" LineThickness="1.0">
+      <Point X="338.193327484804" Y="253.82435641667846" />
+      <Point X="672.6739510279266" Y="254.29784126516327" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="b0b66">
+    <Graphics ZOrder="33173" LineThickness="1.0">
+      <Point X="999.4075440934552" Y="314.87157142857166" />
+      <Point X="1072.129258945569" Y="314.87171899919554" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="fec90">
+    <Graphics ZOrder="33174" LineThickness="1.0">
+      <Point X="999.0918428758413" Y="280.0357907749693" />
+      <Point X="1073.765801647402" Y="279.8254415953311" ArrowHead="mim-stimulation" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="b0968">
+    <Graphics ZOrder="33177" LineThickness="1.0">
+      <Point X="1002.4736932361349" Y="354.3296250523297" />
+      <Point X="1079.4504780195293" Y="353.874595317508" ArrowHead="mim-inhibition" />
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="D4Z4 methylation" GraphId="a89cb">
+    <Graphics CenterX="523.5714285714287" CenterY="229.57142857142873" Width="110.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="Pathways" GraphId="b0a51">
+    <Graphics CenterX="1038.142857142856" CenterY="212.85714285714312" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="14961e" />
+  </Label>
+  <Label TextLabel="Nucleus" GraphId="bf01a">
+    <Graphics CenterX="347.0000000000001" CenterY="141.85714285714278" Width="70.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Protein" GraphId="e9cac">
+    <Graphics CenterX="1038.142857142856" CenterY="173.85714285714315" Width="72.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="DNA" GraphId="a3511">
+    <Graphics CenterX="597.3378888527121" CenterY="249.127292536696" Width="90.0" Height="25.0" ZOrder="33131" FillColor="ffffff" FontWeight="Bold" FontSize="8" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Apoptosis" GraphId="a12ef">
+    <Graphics CenterX="358.3420772205902" CenterY="643.4465841947232" Width="90.0" Height="25.0" ZOrder="33132" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="009900" />
+  </Label>
+  <Label TextLabel="Myogenesis" GraphId="c5155">
+    <BiopaxRef>ad6</BiopaxRef>
+    <Graphics CenterX="831.8533928522427" CenterY="367.52867631151065" Width="90.0" Height="25.0" ZOrder="33154" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="009900" />
+  </Label>
+  <Label TextLabel="Protein degradation" GraphId="b3a16">
+    <Graphics CenterX="862.3658329644809" CenterY="498.11100346394556" Width="102.01270957528054" Height="25.0" ZOrder="33161" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="009900" />
+  </Label>
+  <Label TextLabel="dsRNA accumulation" GraphId="a4785">
+    <BiopaxRef>c67</BiopaxRef>
+    <Graphics CenterX="745.8836381380239" CenterY="541.8505140229885" Width="104.0488377378376" Height="25.0" ZOrder="33164" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="009900" />
+  </Label>
+  <Label TextLabel="NMD" GraphId="aaa20">
+    <Graphics CenterX="654.6891297976343" CenterY="567.3651907476348" Width="32.92446739832167" Height="25.0" ZOrder="33165" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="009900" />
+  </Label>
+  <Label TextLabel="Oxidative stress" GraphId="d85d2">
+    <BiopaxRef>c4c</BiopaxRef>
+    <Graphics CenterX="483.10283676105473" CenterY="643.1998092418512" Width="90.0" Height="25.0" ZOrder="33166" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="009900" />
+  </Label>
+  <Label TextLabel="Angiogenesis" GraphId="d8291">
+    <Graphics CenterX="711.5056227130729" CenterY="688.8453926308028" Width="90.0" Height="25.0" ZOrder="33168" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="009900" />
+  </Label>
+  <Label TextLabel="Inhibition" GraphId="a67c2">
+    <Graphics CenterX="1134.0293696015008" CenterY="354.3291278377899" Width="80.0" Height="25.0" ZOrder="33179" FillColor="ffffff" FontSize="12" Valign="Middle" Align="Left" />
+  </Label>
+  <Label TextLabel="Stimulation" GraphId="ca1b1">
+    <Graphics CenterX="1134.0293696015008" CenterY="281.23052379500643" Width="80.0" Height="25.0" ZOrder="33180" FillColor="ffffff" FontSize="12" Valign="Middle" Align="Left" />
+  </Label>
+  <Label TextLabel="Legend" GraphId="d85cc">
+    <Graphics CenterX="1079.5452955471405" CenterY="124.3026940131723" Width="90.0" Height="25.0" ZOrder="33181" FillColor="ffffff" FontWeight="Bold" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Transcription" GraphId="f781e">
+    <Graphics CenterX="1134.0293696015008" CenterY="315.70476580725915" Width="80.0" Height="25.0" ZOrder="33182" FillColor="ffffff" FontSize="12" Valign="Middle" Align="Left" />
+  </Label>
+  <Label TextLabel="Cellular process" GraphId="a328c">
+    <Graphics CenterX="1038.1428571428562" CenterY="243.36108310721684" Width="102.01270957528054" Height="25.0" ZOrder="33184" FillColor="ffffff" FontSize="10" Valign="Middle" Color="009900" />
+  </Label>
+  <Label TextLabel="Cell" GraphId="a54a5">
+    <Graphics CenterX="78.14285714285664" CenterY="115.4285714285714" Width="70.0" Height="25.0" ZOrder="33187" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Shape TextLabel="Permissive 4q haplotype &#xA;&lt;10 D4Z4 subunits" GraphId="e4454">
+    <Graphics CenterX="523.5714285714287" CenterY="154.11254171847452" Width="142.4644983967018" Height="46.30852038479148" ZOrder="33121" FontSize="12" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f6ed8">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="612.5714285714287" CenterY="420.571428571428" Width="636.0" Height="616.0000000000003" ZOrder="33123" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d6633">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="494.28571428571433" CenterY="423.26752021563334" Width="917.1428571428571" Height="662.036388140162" ZOrder="33125" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d24f9">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="1077.9704293841296" CenterY="236.63051432144263" Width="201.20199837459768" Height="286.73897135711456" ZOrder="33178" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a61ed">
+    <Graphics CenterX="1038.1428571428578" CenterY="243.16490278461802" Width="91.88801148600146" Height="15.61080679266505" ZOrder="33183" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="00cc00" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="e69da" GraphId="c6305" Style="Group">
+    <BiopaxRef>cbc</BiopaxRef>
+    <BiopaxRef>a32</BiopaxRef>
+  </Group>
+  <Group GroupId="dc872" GraphId="ed376" Style="Group">
+    <BiopaxRef>d91</BiopaxRef>
+  </Group>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d76">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31979100</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DUX4 Signalling in the Pathogenesis of Facioscapulohumeral Muscular Dystrophy</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenji Rowel Q. Lim</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quynh Nguyen</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toshifumi Yokota</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b37">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31722199</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DUX4-Induced Histone Variants H3.X and H3.Y Mark DUX4 Target Genes for Expression</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pubmed.ncbi.nlm.nih.gov/31722199/</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resnick, R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wong, C.J.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hamm, D.C.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bennett, S.R.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skene, P.J.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hake, S.B.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henikoff, S.J.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d91">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19319192</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inhibition of atrogin-1/MAFbx mediated MyoD proteolysis prevents skeletal muscle atrophy in vivo.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLoS One</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lagirand-Cantaloube J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cornille K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Csibi A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Batonnet-Pichon S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leibovitch MP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leibovitch SA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d9a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29655530</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lifetime endogenous estrogen exposure and disease severity in female patients with facioscapulohumeral muscular dystrophy.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuromuscul Disord</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mul K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horlings CGC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voermans NC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schreuder THA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Engelen BGM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e95">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22053214</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The FSHD atrophic myotube phenotype is caused by DUX4 expression.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLoS One</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vanderplanck C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ansseau E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charron S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stricwant N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tassin A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laoudj-Chenivesse D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilton SD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CoppÃƒÂ©e F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belayew A</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ea5">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24589735</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dux4 induces cell cycle arrest at G1 phase through upregulation of p21 expression</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1016/j.bbrc.2014.02.105</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24589735</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dux4 induces cell cycle arrest at G1 phase through upregulation of p21 expression</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Biophys Res Community</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xu, H.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang, Z.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jin, S.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hao, H.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zheng, L.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhou, B.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang, W.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lv, H.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yuan, Y.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cbc">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28935672</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The DUX4 homeodomains mediate inhibition of myogenesis and are functionally exchangeable with the Pax7 homeodomain.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Cell Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bosnakovski D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toso EA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hartweck LM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magli A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee HA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thompson ER</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dandapat A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perlingeiro RCR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kyba M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a14">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31189728</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clinically Advanced p38 Inhibitors Suppress DUX4 Expression in Cellular and Animal Models of Facioscapulohumeral Muscular Dystrophy</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1124/jpet.119.259663</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oliva, J.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galasinski, S.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Richey, A.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Campbell, AE.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meyers, M. J.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modi, N.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhong, J. W.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tawil, R.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tapscott, S. J.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sverdrup, F. M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e3b">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26138914</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Upf1 is a highly processive RNA helicase and translocase with RNP remodelling activities.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Commun</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fiorini F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bagchi D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Hir H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Croquette V</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulatory pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000004</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fa3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33712050</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Facioscapulohumeral muscular dystrophy: genetics, gene activation and downstream signalling with regard to recent therapeutic approaches: an update</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teresa SchÃƒÂ¤tzl</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lars Kaiser</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans-Peter Deigner</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a32">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low level DUX4 expression disrupts myogenesis through deregulation of myogenic gene expression</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nature</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low level DUX4 expression disrupts myogenesis through deregulation of myogenic gene expression</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sci Rep</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bosnakovski, D.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gearhart, M.D.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toso, E.A.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b38">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18288196</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HIF-independent regulation of VEGF and angiogenesis by the transcriptional coactivator PGC-1alpha</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zoltan Arany</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shi-Yin Foo</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yanhong Ma</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jorge L Ruas</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Archana Bommi-Reddy</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geoffrey Girnun</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marcus Cooper</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dina Laznik</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jessica Chinsomboon</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shamina M Rangwala</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kwan Hyuck Baek</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anthony Rosenzweig</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bruce M Spiegelman</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e13">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low level DUX4 expression disrupts myogenesis through deregulation of myogenic gene expression.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sci Rep</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low level DUX4 expression disrupts myogenesis through deregulation of myogenic gene expression.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sci Rep</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bosnakovski, D.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gearhart, M.D.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toso, E.A.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">facioscapulohumeral muscular dystrophy</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:11727</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c4c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25551153</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ÃŽÂ²-Catenin is central to DUX4-driven network rewiring in facioscapulohumeral muscular dystrophy.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J R Soc Interface</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banerji CR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Knopp P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moyle LA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Severini S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orrell RW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teschendorff AE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zammit PS</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c67">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DUX4-induced dsRNA and MYC mRNA stabilization activate apoptotic pathways in human cell models of facioscapulohumeral dystrophy</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLOS Genetics</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shadle, S.C.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhong, J.W.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Campbell, A.E.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conerly, M.L.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jagannathan, S.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b8d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23821646</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wnt/ÃŽÂ²-catenin signaling suppresses DUX4 expression and prevents apoptosis of FSHD muscle cells.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hum Mol Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Block GJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narayanan D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amell AM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Petek LM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Davidson KC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bird TD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tawil R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moon RT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miller DG</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ffd">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28263188</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estrogens enhance myoblast differentiation in facioscapulohumeral muscular dystrophy by antagonizing DUX4 activity.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Invest</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teveroni E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pellegrino M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sacconi S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calandra P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cascino I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farioli-Vecchioli S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Puma A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garibaldi M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morosetti R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tasca G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ricci E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trevisan CP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galluzzi G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pontecorvi A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crescenzi M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deidda G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moretti F</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b17">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DUX4-induced dsRNA and MYC mRNA stabilization activate apoptotic pathways in human cell models of facioscapulohumeral dystrophy</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plos Genetics</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shadle, S.C.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhong, J.W.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Campbell, A.E.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conerly, M.L.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jagannathan, S.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ed2">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22622014</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Up-frameshift protein 1 (UPF1): multitalented entertainer in RNA decay.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drug Discov Ther</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imamachi N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tani H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akimitsu N</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000013</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ad6">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27744317</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DUX4 induces a transcriptome more characteristic of a less-differentiated cell state and inhibits myogenesis.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Cell Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Knopp P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krom YD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banerji CR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panamarova M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moyle LA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">den Hamer B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van der Maarel SM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zammit PS</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>
+

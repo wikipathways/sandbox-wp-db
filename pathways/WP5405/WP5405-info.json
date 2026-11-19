@@ -1,0 +1,18 @@
+{
+    "wpid": "WP5405",
+    "organisms": ["Homo sapiens"],
+    "description": "Deletion or duplication of the CRYL1 gene located at chromosome 13q12 (chr13:20977806-21100012 (GRCh37)) is a risk factor for psychiatric disorders (Kirov et al. 2014).  ",
+    "ontology-ids": [
+        "PW:0000013",
+        "DOID:0060388",
+        "DOID:150",
+        "DOID:0060429"
+    ],
+    "last-edited": "2025-10-30",
+    "title": "13q12 or CRYL1 copy number variation ",
+    "authors": [
+        "Fehrhart",
+        "Eweitz"
+    ],
+    "revision": "r140819"
+}

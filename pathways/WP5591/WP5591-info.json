@@ -1,0 +1,15 @@
+{
+    "wpid": "WP5591",
+    "organisms": ["Ilex paraguariensis"],
+    "description": "Caffeine synthesis pathway, starting with xanthine, via 3-methylxanthine, and theoromine.",
+    "ontology-ids": ["PW:0000002"],
+    "last-edited": "2025-11-10",
+    "title": "Caffeine synthesis",
+    "authors": [
+        "Hayashi",
+        "MaintBot",
+        "Egonw",
+        "Eweitz"
+    ],
+    "revision": "r141327"
+}

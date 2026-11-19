@@ -1,14 +1,20 @@
 {
     "wpid": "WP5130",
     "organisms": ["Homo sapiens"],
-    "description": "Th17 Cell Differentiation and the effect of Circadian network. The differentiation pathway for Th17 cell is considered and converted from the KEGG pathways database, whereas its connection with the Circadian network is taken from the literature. All the references will be provided soon.  ",
+    "description": "Th17 Cell differentiation and the effect of circadian network. The differentiation pathway for Th17 cell is considered and converted from the KEGG pathways database, whereas its connection with the circadian network is taken from the literature. All the references will be provided soon.  ",
     "ontology-ids": [
         "CL:0000899",
         "PW:0000023",
         "PW:0000003"
     ],
-    "last-edited": "20220214",
+    "last-edited": "2024-07-26",
     "title": "Th17 cell differentiation pathway",
-    "authors": ["Hafeez","Egonw","Khanspers"],
-    "revision": "r121321"
+    "authors": [
+        "Hafeez",
+        "Egonw",
+        "Khanspers",
+        "Larsgw",
+        "Eweitz"
+    ],
+    "revision": "r134675"
 }

@@ -4,14 +4,22 @@
     "description": "Virus-host interactome and proteomic survey of PMBCs from COVID-19 patients reveal potential virulence factors influencing SARS-CoV-2 pathogenesis",
     "ontology-ids": [
         "PW:0000013",
-        "PW:0000004",
+        "PW:0000024",
+        "DOID:2945",
         "DOID:934",
         "DOID:0080600",
-        "DOID:2945",
-        "PW:0000024"
+        "PW:0000004"
     ],
-    "last-edited": "20211222",
+    "last-edited": "2024-08-03",
     "title": "Pathogenesis of SARS-CoV-2 mediated by nsp9-nsp10 complex",
-    "authors": ["Rex D A B","Khanspers","Egonw","AlexanderPico","Eweitz","Finterly","IsabelWassink"],
-    "revision": "r124646"
+    "authors": [
+        "Rex D A B",
+        "Khanspers",
+        "Egonw",
+        "AlexanderPico",
+        "Eweitz",
+        "Finterly",
+        "IsabelWassink"
+    ],
+    "revision": "r135048"
 }

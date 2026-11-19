@@ -1,62 +1,508 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway Data-Source="WikiPathways" Last-Modified="20260827072315" Version="WP5428_r20260827072315" xmlns="http://pathvisio.org/GPML/2013a" Name="Store-operated calcium entry proof run" Author="[marvinm2]" Organism="Homo sapiens">
-  <Graphics BoardWidth="520.0" BoardHeight="560.0" />
-  <Comment Source="WikiPathways-description">Depletion of endoplasmic reticulum calcium stores is sensed by STIM1, which oligomerises and gates the plasma membrane channel ORAI1, admitting calcium that is subsequently decoded by calmodulin and calcineurin in human cells.</Comment>
-  <BiopaxRef>ref1</BiopaxRef>
-
-  <DataNode TextLabel="STIM1" GraphId="s2001" Type="GeneProduct">
-    <Graphics CenterX="260.0" CenterY="80.0" Width="120.0" Height="34.0" Color="1a5276" />
-    <Xref Database="Ensembl" ID="ENSG00000167323" />
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="FGFR4 p.G388R signaling" Data-Source="WikiPathways" Version="WP5428_r141656" Author="[Ulaganathan, Egonw, Khanspers, Eweitz]" Last-Modified="20251121042114" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">A germline variant, rs351855-G/A, in FGFR (c.1162G&gt;A, p.Gly388Arg), activates the proximal STAT3 signaling pathway. This germline receptor variant, FGFR p.Gly388Arg, recruits STAT3 to inner cell membranes, resulting in increased levels of STAT3 tyrosine phosphorylation. This heritable variant-specific signaling pathway enhances both tumor-intrinsic proliferation and tumor-extrinsic immune evasion within the tumor microenvironment.
+The tumor-intrinsic molecular function is driven by elevated levels of tyrosine-phosphorylated STAT3 in tumor cells, promoting cell division and enhancing proliferation. Meanwhile, the tumor-extrinsic molecular function is influenced by increased levels of tyrosine-phosphorylated STAT3 in regulatory T cells and CD8 T cells. This activates the STAT3 signaling pathway predominantly in Tregs and alters the Treg/CD8 T cell ratio in lymphoid organs, thereby limiting immune surveillance within the tumor microenvironment.</Comment>
+  <BiopaxRef>e07</BiopaxRef>
+  <BiopaxRef>ee4</BiopaxRef>
+  <BiopaxRef>dbc</BiopaxRef>
+  <Graphics BoardWidth="1777.415066469719" BoardHeight="1171.25" />
+  <DataNode TextLabel="IL10" GraphId="c0bb9" Type="Protein">
+    <BiopaxRef>dd6</BiopaxRef>
+    <Graphics CenterX="1359.9949888641436" CenterY="279.8168151447663" Width="55.065701559019956" Height="26.112472160356106" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P22301" />
   </DataNode>
-
-  <DataNode TextLabel="ORAI1" GraphId="s2002" Type="GeneProduct">
-    <Graphics CenterX="260.0" CenterY="200.0" Width="120.0" Height="34.0" Color="1a5276" />
-    <Xref Database="Ensembl" ID="ENSG00000276045" />
+  <DataNode TextLabel="STAT3" GraphId="c73af" Type="Protein" GroupRef="ed07c">
+    <BiopaxRef>bb4</BiopaxRef>
+    <Graphics CenterX="242.24806680676332" CenterY="164.80776573681027" Width="90.0" Height="25.0" ZOrder="32770" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P40763" />
   </DataNode>
-
-  <DataNode TextLabel="CALM1" GraphId="s2003" Type="GeneProduct">
-    <Graphics CenterX="260.0" CenterY="320.0" Width="120.0" Height="34.0" Color="1a5276" />
-    <Xref Database="Ensembl" ID="ENSG00000198668" />
+  <DataNode TextLabel="Cell cycle progression" GraphId="c15ac" Type="Pathway">
+    <Graphics CenterX="587.1361716931924" CenterY="369.52576372189606" Width="184.15025194686234" Height="19.281493357764475" ZOrder="32773" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP179" />
   </DataNode>
-
-  <DataNode TextLabel="PPP3CA" GraphId="s2004" Type="GeneProduct">
-    <Graphics CenterX="260.0" CenterY="440.0" Width="120.0" Height="34.0" Color="1a5276" />
-    <Xref Database="Ensembl" ID="ENSG00000138814" />
+  <DataNode TextLabel="STAT3" GraphId="c2008" Type="Protein" GroupRef="db9ea">
+    <BiopaxRef>bb4</BiopaxRef>
+    <Graphics CenterX="338.91404778593255" CenterY="350.04901637996085" Width="90.0" Height="25.0" ZOrder="32777" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P40763" />
   </DataNode>
-
-  <Interaction>
-    <Graphics LineThickness="1.0">
-      <Point X="260.0" Y="97.0" GraphRef="s2001" RelX="0.0" RelY="1.0" />
-      <Point X="260.0" Y="183.0" GraphRef="s2002" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+  <DataNode TextLabel="STAT3" GraphId="a0784" Type="Protein">
+    <BiopaxRef>bb4</BiopaxRef>
+    <Graphics CenterX="175.93314759238945" CenterY="251.81371566079585" Width="90.0" Height="25.0" ZOrder="32780" FillColor="cccccc" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P40763" />
+  </DataNode>
+  <DataNode TextLabel="CD334" GraphId="dc77e" Type="Protein" GroupRef="ed07c">
+    <BiopaxRef>e07</BiopaxRef>
+    <Graphics CenterX="298.33333333333013" CenterY="137.16698077647956" Width="65.71428571428575" Height="27.6190476190476" ZOrder="32784" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P22455" />
+  </DataNode>
+  <DataNode TextLabel="STAT3" GraphId="ee0eb" Type="Protein">
+    <BiopaxRef>bb4</BiopaxRef>
+    <Graphics CenterX="914.9346339709432" CenterY="171.82269110994477" Width="90.0" Height="25.0" ZOrder="32797" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P40763" />
+  </DataNode>
+  <DataNode TextLabel="CD334" GraphId="f4b1f" Type="Protein">
+    <BiopaxRef>e07</BiopaxRef>
+    <Graphics CenterX="971.0199004975099" CenterY="144.18190614961443" Width="65.71428571428575" Height="27.6190476190476" ZOrder="32800" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P22455" />
+  </DataNode>
+  <DataNode TextLabel="STAT3" GraphId="c8326" Type="Protein">
+    <BiopaxRef>bb4</BiopaxRef>
+    <Graphics CenterX="892.7357083003924" CenterY="252.0688020190119" Width="90.0" Height="25.0" ZOrder="32801" FillColor="cccccc" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P40763" />
+  </DataNode>
+  <DataNode TextLabel="Proliferation" GraphId="d30f9" Type="Pathway">
+    <Graphics CenterX="960.6000864934022" CenterY="402.4387666372852" Width="184.15025194686234" Height="19.281493357764475" ZOrder="32807" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP179" />
+  </DataNode>
+  <DataNode TextLabel="IL10" GraphId="dda73" Type="GeneProduct">
+    <Graphics CenterX="1125.027888883757" CenterY="309.4703688581724" Width="42.948038176039326" Height="17.99734888653302" ZOrder="32831" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000136634" />
+  </DataNode>
+  <DataNode TextLabel="STAT3" GraphId="a73f6" Type="Protein" GroupRef="b7566">
+    <BiopaxRef>bb4</BiopaxRef>
+    <Graphics CenterX="1110.9904096727407" CenterY="249.28700360973082" Width="90.0" Height="25.0" ZOrder="32838" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P40763" />
+  </DataNode>
+  <DataNode TextLabel="STAT3" GraphId="ed5bf" Type="Protein" GroupRef="b7566">
+    <BiopaxRef>bb4</BiopaxRef>
+    <Graphics CenterX="1099.4604050918858" CenterY="277.15232655980003" Width="90.0" Height="25.0" ZOrder="32840" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P40763" />
+  </DataNode>
+  <DataNode TextLabel="STAT3" GraphId="d68d9" Type="Protein" GroupRef="db9ea">
+    <BiopaxRef>bb4</BiopaxRef>
+    <Graphics CenterX="328.1828001417552" CenterY="377.38787804599997" Width="90.0" Height="25.0" ZOrder="32842" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P40763" />
+  </DataNode>
+  <DataNode TextLabel="Proliferation" GraphId="bd269" Type="Pathway">
+    <Graphics CenterX="1512.1415138659272" CenterY="279.8168151447663" Width="184.15025194686234" Height="19.281493357764475" ZOrder="32847" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP179" />
+  </DataNode>
+  <State GraphRef="c73af" TextLabel="" GraphId="d95bb">
+    <Comment>Tyrosine 705</Comment>
+    <BiopaxRef>f7a</BiopaxRef>
+    <Graphics RelX="1.0" RelY="0.6952380952380941" Width="19.166666666666416" Height="18.857142857143117" FillColor="ff3333" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="c2008" TextLabel="" GraphId="a4579">
+    <Comment>Tyrosine 705</Comment>
+    <BiopaxRef>f7a</BiopaxRef>
+    <Graphics RelX="1.0" RelY="0.6952380952380941" Width="19.166666666666416" Height="18.857142857143117" FillColor="ff3333" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="ee0eb" TextLabel="" GraphId="e7302">
+    <Comment>Tyrosine 705</Comment>
+    <BiopaxRef>f7a</BiopaxRef>
+    <Graphics RelX="1.0" RelY="0.6952380952380941" Width="19.166666666666416" Height="18.857142857143117" FillColor="ff3333" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="a73f6" TextLabel="" GraphId="ad530">
+    <Comment>Tyrosine 705</Comment>
+    <BiopaxRef>f7a</BiopaxRef>
+    <Graphics RelX="1.0" RelY="0.6952380952380941" Width="19.166666666666416" Height="18.857142857143117" FillColor="ff3333" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="ed5bf" TextLabel="" GraphId="adce3">
+    <Comment>Tyrosine 705</Comment>
+    <BiopaxRef>f7a</BiopaxRef>
+    <Graphics RelX="1.0" RelY="0.6952380952380941" Width="19.166666666666416" Height="18.857142857143117" FillColor="ff3333" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="d68d9" TextLabel="" GraphId="e5480">
+    <Comment>Tyrosine 705</Comment>
+    <BiopaxRef>f7a</BiopaxRef>
+    <Graphics RelX="1.0" RelY="0.6952380952380941" Width="19.166666666666416" Height="18.857142857143117" FillColor="ff3333" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <Interaction GraphId="id103ac82b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1387.5278396436536" Y="279.8168151447663" GraphRef="c0bb9" RelX="1.0" RelY="0.0" />
+      <Point X="1420.066387892496" Y="279.8168151447663" GraphRef="bd269" RelX="-1.0" RelY="0.0" ArrowHead="TBar" />
     </Graphics>
+    <Xref Database="" ID="" />
   </Interaction>
-
-  <Interaction>
-    <Graphics LineThickness="1.0">
-      <Point X="260.0" Y="217.0" GraphRef="s2002" RelX="0.0" RelY="1.0" />
-      <Point X="260.0" Y="303.0" GraphRef="s2003" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+  <Interaction GraphId="id1c10ba75">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1073.8429062370997" Y="301.65232655980003" GraphRef="c6ad9" RelX="-0.5" RelY="1.0" />
+      <Point X="960.6000864934022" Y="392.79801995840296" GraphRef="d30f9" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
+    <Xref Database="" ID="" />
   </Interaction>
-
-  <Interaction>
-    <Graphics LineThickness="1.0">
-      <Point X="260.0" Y="337.0" GraphRef="s2003" RelX="0.0" RelY="1.0" />
-      <Point X="260.0" Y="423.0" GraphRef="s2004" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+  <Interaction GraphId="id7e4af476">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1257.3333333333333" Y="280.0" />
+      <Point X="1332.4621380846336" Y="279.8168151447663" GraphRef="c0bb9" RelX="-1.0" RelY="0.0" />
     </Graphics>
+    <Xref Database="" ID="" />
   </Interaction>
-
+  <Interaction GraphId="id2196a4aa" GroupRef="ed07c">
+    <Graphics ZOrder="12289" LineStyle="Broken" LineThickness="1.0">
+      <Point X="175.93314759238945" Y="239.31371566079588" GraphRef="a0784" RelX="0.0" RelY="-1.0" />
+      <Point X="242.2480668067633" Y="177.30776573681027" GraphRef="c73af" RelX="0.0" RelY="1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd092eedf">
+    <Graphics ZOrder="12292" LineThickness="1.0">
+      <Point X="427.9337151341618" Y="369.89327932793486" GraphRef="af57a" RelX="1.0" RelY="0.5" />
+      <Point X="495.0610457197613" Y="369.52576372189606" GraphRef="c15ac" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3fe4d585" GroupRef="db9ea">
+    <Graphics ZOrder="12294" LineStyle="Broken" LineThickness="1.0">
+      <Point X="264.7480668067633" Y="177.30776573681027" GraphRef="c73af" RelX="0.5" RelY="1.0" />
+      <Point X="338.91404778593255" Y="337.54901637996085" GraphRef="c2008" RelX="0.0" RelY="-1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d8594">
+    <Graphics ZOrder="32794" LineStyle="Broken" LineThickness="1.0">
+      <Point X="892.7357083003924" Y="239.5688020190119" GraphRef="c8326" RelX="0.0" RelY="-1.0" />
+      <Point X="937.4346339709432" Y="184.32269110994477" GraphRef="ee0eb" RelX="0.5" RelY="1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e69af">
+    <Graphics ZOrder="32802" LineStyle="Broken" LineThickness="1.0">
+      <Point X="937.4346339709432" Y="184.32269110994477" GraphRef="ee0eb" RelX="0.5" RelY="1.0" />
+      <Point X="1042.4604050918858" Y="263.21966508476544" GraphRef="c6ad9" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <GraphicalLine GraphId="b3d4a">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1742.5" Y="487.5" />
+      <Point X="1516.0" Y="596.0" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ff22a">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="67.5" Y="465.0" />
+      <Point X="404.0" Y="598.0" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f56c7">
+    <Graphics ZOrder="32829" LineThickness="1.0">
+      <Point X="1106.1091510449442" Y="297.19550886255735" />
+      <Point X="1171.1297271766298" Y="298.0185541300471" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Elevated Treg/CD8 T cell ratio in the tumor microenvironment (For genotype rs351855-A/A)" GraphId="aa8e3">
+    <Graphics CenterX="732.2985184810416" CenterY="585.3548118378809" Width="672.350427350427" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Regulatory T cell" GraphId="b353b">
+    <Graphics CenterX="1190.7256399556718" CenterY="168.68076401665536" Width="219.89142986501065" Height="38.760703564857806" ZOrder="32791" FillColor="ffffff" FontWeight="Bold" FontSize="20" Valign="Middle" />
+  </Label>
+  <Label TextLabel="CD8 T cell" GraphId="f07a6">
+    <Graphics CenterX="1650.6823027718563" CenterY="261.26795945640856" Width="179.99999999999986" Height="38.760703564857806" ZOrder="32844" FillColor="ffffff" FontWeight="Bold" FontSize="20" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Tumor tissue" GraphId="e55ec">
+    <Graphics CenterX="1396.1797822077795" CenterY="632.9222394487571" Width="219.89142986501065" Height="38.760703564857806" ZOrder="32845" FillColor="ffffff" FontWeight="Bold" FontSize="14" Valign="Middle" Color="cccccc" />
+  </Label>
+  <Label TextLabel="Lymph node" GraphId="ac617">
+    <Graphics CenterX="1483.219778757122" CenterY="95.10467164433445" Width="219.89142986501065" Height="38.760703564857806" ZOrder="32846" FillColor="ffffff" FontWeight="Bold" FontSize="14" Valign="Middle" Color="009999" />
+  </Label>
+  <Label TextLabel="Tumor-extrinsic gain-of-function by FGFR4 p.Gly388Arg" GraphId="e7a58">
+    <Graphics CenterX="1066.9835782195348" CenterY="458.40825978232954" Width="448.57389801210013" Height="25.0" ZOrder="32848" FillColor="ffffff" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Tumor-intrinsic gain-of-function by FGFR4 p.Gly388Arg" GraphId="fe056">
+    <Graphics CenterX="381.4139991752837" CenterY="481.2630298608065" Width="448.57389801210013" Height="25.0" ZOrder="32849" FillColor="ffffff" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Tumor cell" GraphId="ea2d6">
+    <Graphics CenterX="619.9420009793439" CenterY="175.7065234961857" Width="219.89142986501065" Height="38.760703564857806" ZOrder="32850" FillColor="ffffff" FontWeight="Bold" FontSize="14" Valign="Middle" Color="0066cc" />
+  </Label>
+  <Shape GraphId="fb6bd">
+    <BiopaxRef>dbc</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="1269.337144498401" CenterY="281.90476190476204" Width="956.1558439426366" Height="401.90476190476215" ZOrder="-18" FillColor="cae4de" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e503f">
+    <BiopaxRef>ee4</BiopaxRef>
+    <BiopaxRef>dbc</BiopaxRef>
+    <BiopaxRef>e07</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="957.6578586563071" CenterY="868.6367262451696" Width="1110.3157173126142" Height="545.2265475096608" ZOrder="-16" FillColor="f6e5e5" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e9b2e">
+    <BiopaxRef>dbc</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1068.3440953897243" CenterY="286.9509722771685" Width="481.35189830741103" Height="282.7173866412653" ZOrder="-12" FillColor="ffeab0" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ffe4c">
+    <BiopaxRef>e07</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="380.48809523809547" CenterY="307.9880952380955" Width="632.6428571428571" Height="309.64285714285654" ZOrder="-8" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ed91d" GroupRef="ed07c">
+    <Graphics CenterX="300.97199788481856" CenterY="153.96690222093986" Width="7.037832900682676" Height="5.307230074031338" ZOrder="-5" FillColor="ff3333" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="ffffff" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="dc58b">
+    <BiopaxRef>a6f</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1645.1998551893253" CenterY="273.92034313919754" Width="146.26865671642122" Height="98.87063034685785" ZOrder="16384" FillColor="ccf3e2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f1ddd">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="957.5" CenterY="867.1933501767935" Width="1037.5" Height="510.613299646413" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ad128" GroupRef="ed07c">
+    <Graphics CenterX="290.49127487741555" CenterY="154.15822997788675" Width="7.037832900682676" Height="5.307230074031338" ZOrder="16388" FillColor="ff3333" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="ffffff" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d3a7c" GroupRef="ed07c">
+    <Graphics CenterX="290.4642857142773" CenterY="144.8928571428573" Width="7.166666666666661" Height="60.5" ZOrder="16390" FontSize="12" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ffb1a" GroupRef="db9ea">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="340.88609608654247" CenterY="372.5646410011667" Width="158.09523809523864" Height="112.38095238095275" ZOrder="16392" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b1e0c" GroupRef="ed07c">
+    <Graphics CenterX="300.86132051764463" CenterY="145.36904761904776" Width="7.166666666666661" Height="60.5" ZOrder="32782" FontSize="12" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a0274" GroupRef="e8be0">
+    <Graphics CenterX="973.6585650489983" CenterY="160.98182759407436" Width="7.037832900682676" Height="5.307230074031338" ZOrder="32792" FillColor="ff3333" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="ffffff" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e6b97">
+    <Graphics CenterX="963.1778420415952" CenterY="161.17315535102125" Width="7.037832900682676" Height="5.307230074031338" ZOrder="32795" FillColor="ff3333" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="ffffff" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="effe8">
+    <Graphics CenterX="963.1508528784572" CenterY="151.9077825159917" Width="7.166666666666661" Height="60.5" ZOrder="32796" FontSize="12" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d0be7">
+    <Graphics CenterX="973.5478876818245" CenterY="152.38397299218212" Width="7.166666666666661" Height="60.5" ZOrder="32799" FontSize="12" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tumor cell" GraphId="a524c">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="566.9314000794546" CenterY="696.7208784493921" Width="191.12015503875926" Height="100.0" ZOrder="32808" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tumor cell" GraphId="a8496">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="779.179462094958" CenterY="815.9444372825817" Width="191.12015503875926" Height="100.0" ZOrder="32809" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tumor cell" GraphId="b7600">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="986.388764420537" CenterY="696.7208784493926" Width="191.12015503875926" Height="100.0" ZOrder="32810" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tumor cell" GraphId="f986d">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="566.9314000794546" CenterY="815.9444372825819" Width="191.12015503875926" Height="100.0" ZOrder="32811" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tumor cell" GraphId="b8328">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="945.9236481414698" CenterY="935.9218325340603" Width="191.12015503875926" Height="100.0" ZOrder="32812" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tumor cell" GraphId="ee588">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="779.179462094958" CenterY="696.7208784493923" Width="191.12015503875926" Height="100.0" ZOrder="32813" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tregs" GraphId="fed67">
+    <BiopaxRef>dbc</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="969.3832273219849" CenterY="815.9444372825822" Width="138.6196013289" Height="80.0" ZOrder="32814" FillColor="ffeab0" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tregs" GraphId="b9cb8">
+    <BiopaxRef>dbc</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1128.06142251181" CenterY="815.9444372825822" Width="138.6196013289" Height="80.0" ZOrder="32815" FillColor="ffeab0" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tregs" GraphId="ac1ce">
+    <BiopaxRef>dbc</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="758.3754753840028" CenterY="935.9218325340609" Width="138.6196013289" Height="80.0" ZOrder="32816" FillColor="ffeab0" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tumor cell" GraphId="e0082">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="566.9314000794546" CenterY="935.9218325340605" Width="191.12015503875926" Height="100.0" ZOrder="32817" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tregs" GraphId="fde4c">
+    <BiopaxRef>dbc</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="653.6467932134599" CenterY="1055.9650644959002" Width="138.6196013289" Height="80.0" ZOrder="32818" FillColor="ffeab0" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tumor cell" GraphId="f6c48">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="842.2027179089135" CenterY="1055.9650644959002" Width="191.12015503875926" Height="100.0" ZOrder="32819" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="CD8 T cell" GraphId="aec73">
+    <BiopaxRef>a6f</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1365.6170987476662" CenterY="692.1235688143217" Width="90.62015503875932" Height="50.0" ZOrder="32820" FillColor="ccf3e2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tumor cell" GraphId="eac53">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1310.2496635804437" CenterY="815.9444372825817" Width="191.12015503875926" Height="100.0" ZOrder="32821" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tumor cell" GraphId="de344">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1153.6755861259617" CenterY="935.9218325340603" Width="191.12015503875926" Height="100.0" ZOrder="32822" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tumor cell" GraphId="b8779">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1199.0164726296368" CenterY="696.7208784493923" Width="191.12015503875926" Height="100.0" ZOrder="32823" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="CD8 T cell" GraphId="bdc95">
+    <BiopaxRef>a6f</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="506.40620628099975" CenterY="1055.9650644959004" Width="90.62015503875932" Height="50.0" ZOrder="32824" FillColor="ccf3e2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tumor cell" GraphId="f7635">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1054.6058186841017" CenterY="1055.9650644959004" Width="191.12015503875926" Height="100.0" ZOrder="32825" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tumor cell" GraphId="d2b8c">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1266.1562062810006" CenterY="1055.9650644959002" Width="191.12015503875926" Height="100.0" ZOrder="32826" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Tumor cell" GraphId="df500">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1363.675586125961" CenterY="935.9218325340603" Width="191.12015503875926" Height="100.0" ZOrder="32828" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d769b">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Endoplasmic Reticulum" />
+    <Graphics CenterX="1221.2258517087475" CenterY="293.17515087212456" Width="48.22004241781583" Height="143.62842188698346" ZOrder="32832" FontSize="12" Valign="Middle" ShapeType="Endoplasmic Reticulum" LineThickness="3.0" Color="c0c0c0" Rotation="3.4241144766240703" />
+  </Shape>
+  <Shape GraphId="b5d51">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1101.2725344644746" CenterY="280.48780487804873" Width="186.63838812301051" Height="145.2810180275717" ZOrder="32836" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="ed07c" Style="Group" />
+  <Group GroupId="e8be0" Style="Group" />
+  <Group GroupId="db9ea" GraphId="af57a" Style="Group" />
+  <Group GroupId="b7566" GraphId="c6ad9" Style="Complex" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"
-                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ref1">
-      <bp:ID>11413485</bp:ID>
-      <bp:DB>PubMed</bp:DB>
-      <bp:TITLE>The versatility and universality of calcium signalling</bp:TITLE>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"
-                                 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-      <bp:TERM rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcium/calcium-mediated signaling pathway</bp:TERM>
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000010</bp:ID>
-      <bp:Ontology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malignant cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0001064</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000605</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fibroblast growth factor signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000328</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">effector CD8-positive, alpha-beta T cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0001050</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ee4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27314095</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Membrane-proximal binding of STAT3 revealed by cancer-associated receptor variants.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell Oncol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ulaganathan VK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ullrich A</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a6f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32929195</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytotoxic CD8(+) T cells in cancer and cancer immunotherapy.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Br J Cancer</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raskov H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orhan A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christensen JP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gögenur I</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f7a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14966128</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Structural requirements for signal transducer and activator of transcription 3 binding to phosphotyrosine ligands containing the YXXQ motif.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shao H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xu X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mastrangelo MA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jing N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cook RG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legge GB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tweardy DJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e07">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26675719</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germline variant FGFR4  p.G388R exposes a membrane-proximal STAT3 binding site.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nature</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ulaganathan VK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sperl B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rapp UR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ullrich A</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neoplastic cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0001063</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bb4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17186030</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crosstalk between cancer and immune cells: role of STAT3 in the tumour microenvironment.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yu H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kortylewski M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pardoll D</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulatory T cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000815</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dbc">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29438108</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STAT3-enhancing germline mutations contribute to tumor-extrinsic immune evasion.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Invest</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kogan D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grabner A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yanucil C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faul C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ulaganathan VK</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dd6">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11244051</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interleukin-10 and the interleukin-10 receptor.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annu Rev Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moore KW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">de Waal Malefyt R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coffman RL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O'Garra A</bp:AUTHORS>
+    </bp:PublicationXref>
   </Biopax>
 </Pathway>
+

@@ -1,0 +1,79 @@
+Label	Type	Identifier	Comment	Ensembl	NCBI gene	HGNC	UniProt	Wikidata	ChEBI	InChI	PubChem	ChemSpider	HMDB	KEGG	LipidMaps
+Crotonyl-CoA	Metabolite	chebi:36926	"See https://www.rhea-db.org/rhea/26558"					wikidata:Q27104386	chebi:36926	inchikey:KFWWCMJSYSSPSK-CITAKDKDSA-N	pubchem.compound:644064	chemspider:21865275			
+trans,cis-Lauro-2,6-dienoyl-CoA	Metabolite	chebi:28387	""					wikidata:Q27103668	chebi:28387	inchikey:BNPQDIKRZDRREL-GQUYLXGASA-N	pubchem.compound:11966194	chemspider:10140187	hmdb:HMDB0062630;hmdb:HMDB0011123	kegg.compound:C05279	lipidmaps:LMFA07050111
+3-oxooctanoyl-CoA	Metabolite	chebi:62619	""					wikidata:Q27132048	chebi:62619	inchikey:WPIVBCGRGVNDDT-CECATXLMSA-J	pubchem.compound:46173417	chemspider:26332795			
+3-Oxododexanoyl-CoA	Metabolite	pubchem.compound:11966169	""					wikidata:Q27103381	chebi:27868	inchikey:HQANBZHVWIDNQZ-GMHMEAMDSA-N	pubchem.compound:11966169	chemspider:10140162	hmdb:HMDB0003937	kegg.compound:C05263	lipidmaps:LMFA07050013
+(S)-Hydroxyhexanoyl-CoA	Metabolite	chebi:28276	""					wikidata:Q27103605	chebi:28276	inchikey:VAAHKRMGOFIORX-IKTBLOROSA-N	pubchem.compound:11966160	chemspider:10140154	hmdb:HMDB0003942	kegg.compound:C05268	lipidmaps:LMFA07050156
+Fatty Acid	Metabolite	chebi:35366	""					wikidata:Q61476	chebi:35366					kegg.compound:C00162	lipidmaps:LMFA01010000
+4-cis-Decenoyl-CoA	Metabolite	hmdb:HMDB02145	""					wikidata:Q27109958;wikidata:Q76386913	chebi:29140	inchikey:QTOYQSMKQWCWOX-SGUJYKCESA-N;inchikey:QTOYQSMKQWCWOX-CCVVLBLYSA-N	pubchem.compound:6443609;pubchem.compound:24883430	chemspider:21864928;chemspider:4947585	hmdb:HMDB0002145		lipidmaps:LMFA07050301
+Octanoyl-CoA	Metabolite	hmdb:HMDB01070	""					wikidata:Q3348796	chebi:15533	inchikey:KQMZYOXOBSXMII-UHFFFAOYSA-N	pubchem.compound:380	chemspider:21232035;chemspider:21232550;chemspider:371	hmdb:HMDB0001070	kegg.compound:C01944	
+(S)-3-hydroxydodecanoyl-coenzyme A	Metabolite	chebi:27668	""					wikidata:Q27103249	chebi:27668	inchikey:IJFLXRCJWPKGKJ-AGWWUHEJSA-N;inchikey:IJFLXRCJWPKGKJ-LXIXEQKWSA-N	pubchem.compound:440603;pubchem.compound:11966173	chemspider:10140166;chemspider:389501	hmdb:HMDB0003936	kegg.compound:C05262	lipidmaps:LMFA07050158
+(2E)-Tetradecenoyl-CoA	Metabolite	hmdb:HMDB03946	""						chebi:27721	inchikey:MBCVYCOKMMMWLX-IKUURZALSA-N	pubchem.compound:5280767	chemspider:4444333	hmdb:HMDB0003946	kegg.compound:C05273	
+Glutarate	Metabolite	pubchem.compound:743	""					wikidata:Q409622	chebi:17859	inchikey:JFCQEDHGNNZCLN-UHFFFAOYSA-N	pubchem.compound:23322899;pubchem.compound:743	chemspider:723	hmdb:HMDB0000661	kegg.compound:C00489	lipidmaps:LMFA01170046
+(E)-hexadec-2-enoyl-coenzyme A	Metabolite	chebi:28935	""					wikidata:Q27103972	chebi:28935	inchikey:JUPAQFRKPHPXLD-MSHHSVQMSA-N	pubchem.compound:25271599	chemspider:26333160		kegg.compound:C05272	lipidmaps:LMFA07050144
+3-oxotetradecanoyl-CoA	Metabolite	chebi:62543	""					wikidata:Q27132003	chebi:62543	inchikey:IQNFBGHLIVBNOU-QSGBVPJFSA-J	pubchem.compound:25245316	chemspider:26332756			
+Trans-Oct-2-enoyl-CoA	Metabolite	chebi:27537	""					wikidata:Q27103182	chebi:27537	inchikey:CPSDNAXXKWVYIY-NTLMCJQISA-N;inchikey:CPSDNAXXKWVYIY-DPSCIZRPSA-N;inchikey:VJNXUFOTKNTNPG-YNJARDAQSA-O	pubchem.compound:5280769;pubchem.compound:11966175	chemspider:10140168;chemspider:4444335	hmdb:HMDB0003950;hmdb:HMDB0003949	kegg.compound:C05276	lipidmaps:LMFA07050394
+Myristoyl-CoA	Metabolite	chebi:15532	""					wikidata:Q27093236	chebi:15532	inchikey:DUAFKXOFBZQTQE-QSGBVPJFSA-N;inchikey:DUAFKXOFBZQTQE-XVDJLSDJSA-N	pubchem.compound:65113;pubchem.compound:11966124	chemspider:58623;chemspider:26329659	hmdb:HMDB0001521	kegg.compound:C02593	lipidmaps:LMFA07050352
+(S)-3-Hydroxytetradecanoyl-CoA	Metabolite	chebi:27466	""					wikidata:Q27103147	chebi:27466	inchikey:OXBHKMHNDGRDCZ-UOBIXJHKSA-N;inchikey:OXBHKMHNDGRDCZ-STLSENOWSA-N	pubchem.compound:11966177;pubchem.compound:440602	chemspider:10140170;chemspider:389500	hmdb:HMDB0003934	kegg.compound:C05260	lipidmaps:LMFA07050257
+Acetyl-CoA	Metabolite	cas:72-89-9	""					wikidata:Q715317	chebi:15351	inchikey:ZSLZBFCDCINBPY-ZSJPKINUSA-N	pubchem.compound:444493	chemspider:392413	hmdb:HMDB0001206	kegg.compound:C00024	lipidmaps:LMFA07050281
+Glutaryl-CoA	Metabolite	chebi:15524	""					wikidata:Q3066713	chebi:15524	inchikey:SYKWLIJQEHRDNH-CKRMAKSASA-N	pubchem.compound:3081383	chemspider:2338999	hmdb:HMDB0001339	kegg.compound:C00527	lipidmaps:LMFA07050324
+Glyceraldehyde-3-Phosphate	Metabolite	cas:591-57-1	""					wikidata:Q26992303	chebi:29052	inchikey:LXJXRIRHZLFYRP-VKHMYHEASA-N	pubchem.compound:439168	chemspider:388314	hmdb:HMDB0001112	kegg.compound:C00118	
+2-trans-dodecenoyl-CoA	Metabolite	chebi:15471	""					wikidata:Q27089455	chebi:15471	inchikey:IRFYVBULXZMEDE-DEEZISNZSA-N	pubchem.compound:11966110	chemspider:10140104	hmdb:HMDB0304089	kegg.compound:C03221	lipidmaps:LMFA07050176
+Glycerol	Metabolite	cas:56-81-5	""					wikidata:Q132501	chebi:17754	inchikey:PEDCQBHIVMGVHV-UHFFFAOYSA-N	pubchem.compound:753	chemspider:733	hmdb:HMDB0000131	kegg.compound:C00116	
+cis,cis-3,6-Dodecadienoyl-CoA	Metabolite	chebi:28002	""					wikidata:Q27103451	chebi:28002	inchikey:KEPSPLQXVPROMK-ASJCJLDXSA-N;inchikey:KEPSPLQXVPROMK-GXFXHJQUSA-N	pubchem.compound:5280771;pubchem.compound:11966165	chemspider:4444337;chemspider:10140158	hmdb:HMDB0003952	kegg.compound:C05280	lipidmaps:LMFA07050295
+Trans-Dec-2-enoyl-CoA	Metabolite	chebi:10723	""					wikidata:Q27108673	chebi:10723	inchikey:MGNBGCRQQFMNBM-YJHHLLFWSA-N;inchikey:MGNBGCRQQFMNBM-VHTAIFHGSA-N	pubchem.compound:24883423;pubchem.compound:5280768	chemspider:4444334;chemspider:21864765	hmdb:HMDB0003948	kegg.compound:C05275	lipidmaps:LMFA07050391
+3-Oxo-octanoyl-CoA	Metabolite	chebi:28264	""					wikidata:Q27103595	chebi:28264	inchikey:WPIVBCGRGVNDDT-FFJUWABQSA-N;inchikey:WPIVBCGRGVNDDT-CECATXLMSA-N	pubchem.compound:440608;pubchem.compound:11966162	chemspider:389506;chemspider:10140155	hmdb:HMDB0003941	kegg.compound:C05267	lipidmaps:LMFA07050249
+3-Oxohexanoyl-CoA	Metabolite	chebi:27648	""					wikidata:Q27103240	chebi:27648	inchikey:NFOYYXQAVVYWKV-ZOGSZLKASA-N;inchikey:NFOYYXQAVVYWKV-HDRQGHTBSA-N	pubchem.compound:3082152;pubchem.compound:440610	chemspider:389508;chemspider:2339623	hmdb:HMDB0003943	kegg.compound:C05269	lipidmaps:LMFA07050242
+2-trans-4-cis-decadienoyl-CoA	Metabolite	chebi:29119	""					wikidata:Q27109952	chebi:29119	inchikey:FASAKYLWSRDQOH-IMVFQKDNSA-N	pubchem.compound:6444117	chemspider:4948054	hmdb:HMDB0062344		lipidmaps:LMFA07050110
+Butanoyl-CoA	Metabolite	chebi:15517	""					wikidata:Q2929006	chebi:15517	inchikey:CRFNGMNYKDXRTN-CITAKDKDSA-N	pubchem.compound:122283	chemspider:388318;chemspider:109043	hmdb:HMDB0304279	kegg.compound:C00136	lipidmaps:LMFA07050292
+Decanoyl-CoA	Metabolite	chebi:28493	""					wikidata:Q27103740	chebi:28493	inchikey:CNKJPHSEFDPYDB-HSJNEKGZSA-N;inchikey:CNKJPHSEFDPYDB-BOJFXZHGSA-N	pubchem.compound:440615;pubchem.compound:164800	chemspider:144473;chemspider:389510	hmdb:HMDB0006404;hmdb:HMDB0304325	kegg.compound:C05274	lipidmaps:LMFA07050313
+Linoleoyl-CoA	Metabolite	cas:40757-80-0	""					wikidata:Q27098082	chebi:15530	inchikey:YECLLIMZHNYFCK-RRNJGNTNSA-N	pubchem.compound:5497112	chemspider:4593690	hmdb:HMDB0001064	kegg.compound:C02050	lipidmaps:LMFA07050343
+3-Oxopalmitoyl-CoA	Metabolite	chebi:15491	""					wikidata:Q27089474	chebi:15491	inchikey:NQMPLXPCRJOSHL-TZIIWEFPSA-N;inchikey:NQMPLXPCRJOSHL-BBECNAHFSA-N	pubchem.compound:440601;pubchem.compound:169621	chemspider:148337;chemspider:389499	hmdb:HMDB0006402	kegg.compound:C05259	lipidmaps:LMFA07050250
+Dihydroxyacetone Phosphate	Metabolite	cas:57-04-5	""					wikidata:Q416915	chebi:16108	inchikey:GNGACRATGGDKBX-UHFFFAOYSA-N	pubchem.compound:668	chemspider:648	hmdb:HMDB0001473	kegg.compound:C00111	
+Trans-Hex-2-enoyl-CoA	Metabolite	chebi:28706	""					wikidata:Q27103847	chebi:28706	inchikey:OINXHIBNZUUIMR-DOSZRKKKSA-N;inchikey:OINXHIBNZUUIMR-IXUYQXAASA-N	pubchem.compound:5280765;pubchem.compound:11966204	chemspider:10140197;chemspider:4444331	hmdb:HMDB0003944	kegg.compound:C05271	lipidmaps:LMFA07050393
+(S)-3-Hydroxyhexadecanoyl-CoA	Metabolite	chebi:27402	""					wikidata:Q27103110	chebi:27402	inchikey:DEHLMTDDPWDRDR-BCIKBWLNSA-N;inchikey:DEHLMTDDPWDRDR-QQOJFMBSSA-N	pubchem.compound:11966179;pubchem.compound:440600	chemspider:10140172;chemspider:389498	hmdb:HMDB0003932	kegg.compound:C05258	lipidmaps:LMFA07050161
+(S)-3-Hydroxybutanoyl-CoA	Metabolite	chebi:15453	""					wikidata:Q27089442	chebi:15453	inchikey:QHHKKMYHDBRONY-VKBDFPRVSA-N	pubchem.compound:9543037	chemspider:7822010	hmdb:HMDB0303997	kegg.compound:C01144	lipidmaps:LMFA07050153
+Lauroyl-CoA	Metabolite	cas:6244-92-4	""					wikidata:Q27098076	chebi:15521	inchikey:YMCXGHLSVALICC-GMHMEAMDSA-N	pubchem.compound:165436	chemspider:145018	hmdb:HMDB0003571	kegg.compound:C01832	lipidmaps:LMFA07050340
+Hexanoyl-CoA	Metabolite	chebi:27540	""					wikidata:Q27103184	chebi:27540	inchikey:OEXFMSFODMQEPE-HDRQGHTBSA-N	pubchem.compound:449118	chemspider:395736	hmdb:HMDB0002845	kegg.compound:C05270	lipidmaps:LMFA07050328
+L-Glycerol-3-Phosphate	Metabolite	chebi:15978	""					wikidata:Q27093499	chebi:15978	inchikey:AWUCVROLDVIAJX-GSVOUGTGSA-N	pubchem.compound:439162	chemspider:388308	hmdb:HMDB0000126	kegg.compound:C00093	
+Acyl-CoA	Metabolite	chebi:17984	""					wikidata:Q2699537	chebi:17984					kegg.compound:C00040	lipidmaps:LMFA07050000
+(S)-3-Hydroxydecanoyl-CoA	Metabolite	chebi:28325	""					wikidata:Q27103637	chebi:28325	inchikey:HIVSMYZAMUNFKZ-WQUYVQPTSA-N;inchikey:HIVSMYZAMUNFKZ-PNPVFPMQSA-N	pubchem.compound:16061159;pubchem.compound:11966158	chemspider:10140152;chemspider:17220838	hmdb:HMDB0303998;hmdb:HMDB0003938	kegg.compound:C05264	lipidmaps:LMFA07050403
+(S)-3-Hydroxyoctanoyl-CoA	Metabolite	chebi:28632	""					wikidata:Q27103800	chebi:28632	inchikey:ATVGTMKWKDUCMS-OTOYJEMWSA-N;inchikey:ATVGTMKWKDUCMS-FZQVHTIWSA-N	pubchem.compound:53477508;pubchem.compound:11966216	chemspider:10140209	hmdb:HMDB0003940	kegg.compound:C05266	lipidmaps:LMFA07050160
+Palmitoyl-CoA	Metabolite	chebi:15525	""					wikidata:Q28797916	chebi:15525	inchikey:MNBKLUUYKPBKDU-BBECNAHFSA-N	pubchem.compound:644109	chemspider:559149	hmdb:HMDB0001338	kegg.compound:C00154	lipidmaps:LMFA07050360
+Acetoacetyl-CoA	Metabolite	cas:1420-36-6	""					wikidata:Q2639429	chebi:15345	inchikey:OJFDKHTZOUZBOS-CITAKDKDSA-N	pubchem.compound:92153	chemspider:83198	hmdb:HMDB0001484	kegg.compound:C00332	lipidmaps:LMFA07050030
+3-trans-decenoyl-CoA	Metabolite	chebi:29126	""					wikidata:Q27109955	chebi:29126	inchikey:CQGVNMQHZQJNII-ZJZQAHHTSA-N	pubchem.compound:16019966	chemspider:13148715	hmdb:HMDB0002137		lipidmaps:LMFA07050386
+Triacylglycerol	Metabolite	chebi:17855	""					wikidata:Q186319	chebi:17855					kegg.compound:C00422	lipidmaps:LMGL03010000
+hadhab	GeneProduct	ensembl:ENSGMOG00000004080	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:3030:T"												
+ACADM	GeneProduct	ensembl:ENSGMOG00000002386	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:34:T"												
+HADHB	GeneProduct	ensembl:ENSGMOG00000017832	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:3032:T"												
+pnpla2	GeneProduct	ensembl:ENSGMOG00000017879	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:57104:T"												
+cpt2	GeneProduct	ensembl:ENSGMOG00000007580	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:1376:T"												
+acads	GeneProduct	ensembl:ENSGMOG00000007282	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:35:T"												
+eci1	GeneProduct	ensembl:ENSGMOG00000015755	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:1632:T"												
+echs1	GeneProduct	ensembl:ENSGMOG00000003479	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:1892:T"												
+gcdhb	GeneProduct	ensembl:ENSGMOG00000018332	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:2639:T"												
+HADH	GeneProduct	ensembl:ENSGMOG00000017363	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:3033:T"												
+acadvl	GeneProduct	ensembl:ENSGMOG00000014084	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:37:T"												
+gpd2	GeneProduct	ensembl:ENSGMOG00000003712	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:2820:T"												
+acsl5	GeneProduct	ensembl:ENSGMOG00000018683	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:51703:T"												
+dldh	GeneProduct	ensembl:ENSGMOG00000016861	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:1738:T"												
+ENSGMOG00000002057	GeneProduct	ensembl:ENSGMOG00000002057	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:55902:T"												
+tpi1b	GeneProduct	ensembl:ENSGMOG00000015591	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:7167:T"												
+gk	GeneProduct	ensembl:ENSGMOG00000008582	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:2712:T"												
+ENSGMOG00000009456	GeneProduct	ensembl:ENSGMOG00000009456	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:2180:T"												
+decr1	GeneProduct	ensembl:ENSGMOG00000015429	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:1666:T"												
+LIPC	GeneProduct	ensembl:ENSGMOG00000015559	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:3990:T"												
+slc25a20	GeneProduct	ensembl:ENSGMOG00000008168	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:788:T"												
+ENSGMOG00000012568	GeneProduct	ensembl:ENSGMOG00000012568	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:33:T"												
+CRAT	GeneProduct	ensembl:ENSGMOG00000003957	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:1384:T"												
+lipeb	GeneProduct	ensembl:ENSGMOG00000018939	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:3991:T"												
+acsl2	GeneProduct	ensembl:ENSGMOG00000005626	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:23305:T"												
+cpt1ab	GeneProduct	ensembl:ENSGMOG00000010115	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:1374:T"												
+cpt1b	GeneProduct	ensembl:ENSGMOG00000012229	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:1375:T"												
+ACSL4	GeneProduct	ensembl:ENSGMOG00000003130	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:2182:T"												
+gk	GeneProduct	ensembl:ENSGMOG00000008582	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:2710:T"												
+LIPF	GeneProduct	ncbigene:8513	"No homologues found for original id L:8513:T"												
+chkb	GeneProduct	ensembl:ENSGMOG00000012235	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:1120:T"												
+acat1	GeneProduct	ensembl:ENSGMOG00000014560	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:38:T"												
+acsl3b	GeneProduct	ensembl:ENSGMOG00000006180	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:2181:T"												
+lplb	GeneProduct	ensembl:ENSGMOG00000012494	"Homology Mapping from Homo sapiens to Gadus morhua: Original ID = L:4023:T"												

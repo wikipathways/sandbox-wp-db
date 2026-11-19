@@ -1,14 +1,22 @@
 {
     "wpid": "WP5063",
     "organisms": ["Homo sapiens"],
-    "description": "FOXP3 in Covid-19",
+    "description": "This pathways shows the role of FOXP3 in T cells in relation to Covid-19 severity.",
     "ontology-ids": [
         "PW:0000013",
+        "CL:0000815",
         "DOID:0080600",
-        "CL:0000084"
+        "CL:0000084",
+        "CL:0000145"
     ],
-    "last-edited": "20210602",
+    "last-edited": "2026-06-14",
     "title": "FOXP3 in COVID-19",
-    "authors": ["Iljadw","MaintBot","Fehrhart","Eweitz"],
-    "revision": "r118833"
+    "authors": [
+        "Iljadw",
+        "MaintBot",
+        "Fehrhart",
+        "Eweitz",
+        "Egonw"
+    ],
+    "revision": "r20260614072000"
 }

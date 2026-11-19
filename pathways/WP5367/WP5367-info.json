@@ -1,0 +1,19 @@
+{
+    "wpid": "WP5367",
+    "organisms": ["Homo sapiens"],
+    "description": "Rubinstein-Taybi syndrome is a rare disease caused by a pathogenic version of the CREBBP and/or EP300 genes.",
+    "ontology-ids": [
+        "DOID:630",
+        "DOID:1933",
+        "PW:0000013"
+    ],
+    "last-edited": "2024-03-27",
+    "title": "Rubinstein-Taybi syndrome 1",
+    "authors": [
+        "Ewoud",
+        "Khanspers",
+        "Eweitz",
+        "Mkutmon"
+    ],
+    "revision": "r129307"
+}

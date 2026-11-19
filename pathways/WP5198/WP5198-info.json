@@ -1,21 +1,41 @@
 {
     "wpid": "WP5198",
     "organisms": ["Homo sapiens"],
-    "description": "Pathway representing the inflammatory bowel disease showing steps leading to Crohn's disease and ulcerative colitis.",
+    "description": "Pathway representing the inflammatory bowel disease showing steps leading to Crohn's disease and ulcerative colitis.  ",
     "ontology-ids": [
-        "DOID:5353",
-        "DOID:8778",
-        "DOID:0060180",
-        "DOID:0050589",
-        "DOID:2914",
         "PW:0000541",
+        "CL:0000542",
+        "CL:0000899",
         "PW:0000617",
+        "CL:0009038",
+        "DOID:0050589",
+        "DOID:0060180",
+        "DOID:2914",
         "PW:0000913",
+        "DOID:5353",
+        "DOID:0050589",
+        "DOID:8577",
+        "CL:0000235",
+        "PW:0000013",
+        "CL:0000546",
+        "PW:0000814",
+        "DOID:8778",
+        "CL:0000895",
+        "CL:0000545",
         "PW:0000907",
-        "PW:0000814"
+        "CL:0000145"
     ],
-    "last-edited": "20220222",
+    "last-edited": "2025-12-02",
     "title": "Inflammatory bowel disease signaling",
-    "authors": ["ZDLech","JPippi","Andra","Susan","ImkeGrutters","Egonw"],
-    "revision": "r123858"
+    "authors": [
+        "ZDLech",
+        "JPippi",
+        "Andra",
+        "Susan",
+        "ImkeGrutters",
+        "Egonw",
+        "Eweitz",
+        "Mkutmon"
+    ],
+    "revision": "r142097"
 }

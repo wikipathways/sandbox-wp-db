@@ -1,0 +1,21 @@
+{
+    "wpid": "WP5140",
+    "organisms": ["Mus musculus"],
+    "description": "This pathway shows different oxylipins (such as eicosanoids and docosanoids) which are derived from arachidonic acid (AA), dihomo-γ-linolenic acid (DGLA), linoleic acid (LA), eicosapentaenoic acid (EPA), alpha-linoleic acid (ALA) and docosahexaenoic acid (DHA). ",
+    "ontology-ids": [
+        "PW:0000002",
+        "PW:0000029"
+    ],
+    "last-edited": "2025-07-05",
+    "title": "Oxylipins pathways",
+    "authors": [
+        "Friols",
+        "Egonw",
+        "MaintBot",
+        "Khanspers",
+        "Ash iyer",
+        "Eweitz",
+        "Ddigles"
+    ],
+    "revision": "r139759"
+}

@@ -1,10 +1,19 @@
 {
     "wpid": "WP5233",
     "organisms": ["Homo sapiens"],
-    "description": "This pathway represents arsenic metabolism and ROS production.",
-    "ontology-ids": ["DOID:162"],
-    "last-edited": "20221210",
+    "description": "This pathway represents the arsenic-induced ROS formation which may lead to carcinogenic effects. ",
+    "ontology-ids": [
+        "PW:0000002",
+        "DOID:162"
+    ],
+    "last-edited": "2025-07-09",
     "title": "Arsenic metabolism and reactive oxygen species generation",
-    "authors": ["ZDLech","Egonw","Fehrhart"],
-    "revision": "r123583"
+    "authors": [
+        "ZDLech",
+        "Egonw",
+        "Fehrhart",
+        "Mkutmon",
+        "Eweitz"
+    ],
+    "revision": "r139842"
 }

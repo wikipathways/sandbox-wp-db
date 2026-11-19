@@ -6,8 +6,13 @@
         "PW:0000460",
         "PW:0000147"
     ],
-    "last-edited": "2022-07-28",
+    "last-edited": "2026-06-07",
     "title": "Arachidonate epoxygenase / epoxide hydrolase",
-    "authors": ["MaintBot","Egonw","Mkutmon","Eweitz"],
-    "revision": "r117475"
+    "authors": [
+        "MaintBot",
+        "Egonw",
+        "Mkutmon",
+        "Eweitz"
+    ],
+    "revision": "r20260607143312"
 }

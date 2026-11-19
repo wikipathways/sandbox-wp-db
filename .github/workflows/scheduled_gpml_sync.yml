@@ -15,7 +15,7 @@ jobs:
     steps:
         
       - name: Checkout wikipathways-database repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
         with:
           persist-credentials: false
           token: ${{ secrets.PICOPAT }}
@@ -23,13 +23,13 @@ jobs:
           ref: main
           
       - name: Setup Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v6
         with:
           distribution: 'temurin'
           java-version: '8'
             
       - name: Cache gpml-sync-action
-        uses: actions/cache@v3
+        uses: actions/cache@v6
         id: cacheSyncJar
         with:
           path: ./SyncAction.jar

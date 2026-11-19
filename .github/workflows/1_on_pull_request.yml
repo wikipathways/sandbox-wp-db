@@ -80,7 +80,7 @@ jobs:
       # No checkout. This job runs on `pull_request_target`, so it holds the base
       # repository's secrets — including the deploy keys for the drafts and assets repos —
       # and checking out a fork's code into that context is the "pwn request" shape that
-      # actions/checkout@v6 now refuses outright. It refused every fork pull request this
+      # actions/checkout@v7 now refuses outright. It refused every fork pull request this
       # repository received (PRs #23/#24, 2026-08-04), which is every submission made through
       # the portal by anyone without push access here.
       #
@@ -246,7 +246,7 @@ jobs:
     steps:
     - name: Checkout repository for scripts
       # TODO: impl more efficient way to get scripts
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
         
     - name: Download GPML artifact
       # Downloads gpml-file artifact to working dir
@@ -256,7 +256,7 @@ jobs:
         name: gpml-file
         
     - name: Setup Java
-      uses: actions/setup-java@v5
+      uses: actions/setup-java@v6
       with:
         distribution: 'temurin'
         java-version: '11'
@@ -438,7 +438,7 @@ jobs:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
     - name: Checkout repository for scripts
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
         
     - name: Download GPML artifact
       # Downloads gpml-file artifact to working dir
@@ -556,7 +556,7 @@ jobs:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
     - name: Checkout repository for scripts
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
           
     - name: Download Metadata artifact
       # Downloads metadata artifact to working dir
@@ -566,7 +566,7 @@ jobs:
         name: metadata
 
     - name: Setup Node
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v7
       with:
         node-version: 20
 
@@ -628,7 +628,7 @@ jobs:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
     - name: Checkout repository for scripts
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
         
     - name: Download Metadata artifact
       # Downloads metadata artifacts to working dir
@@ -638,7 +638,7 @@ jobs:
         name: metadata
 
     - name: Setup Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v7
       with:
         python-version: '3.x'
           
@@ -700,7 +700,7 @@ jobs:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
     - name: Checkout repository for scripts
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
         
     - name: Download GPML and Metadata artifacts
       # Downloads gpml-file and metadata artifacts to working dir
@@ -708,7 +708,7 @@ jobs:
       uses: actions/download-artifact@v4
 
     - name: Setup Node
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v7
       with:
         node-version: 18
 
@@ -803,7 +803,7 @@ jobs:
       GH_TOKEN: ${{ github.token }}
     steps:
     - name: Checkout repository for scripts
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
         
     - name: Download GPML and Metadata artifacts
       # Downloads gpml-file and metadata artifacts to working dir
@@ -1122,7 +1122,7 @@ jobs:
 
     - name: Checkout jekyll repo
       # TESTING: change repo and ssh-key from sandbox to real
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
       with:
         repository: wikipathways/sandbox-wp.gh.io
         path: wikipathways.github.io
@@ -1180,7 +1180,7 @@ jobs:
     needs: [get-pr,get-gpml,metadata,authors,pubmed,frontmatter,testing] #json-svg add once that step is resolved
     runs-on: ubuntu-latest
     steps:
-    # No checkout, for the reason given on `get-gpml`: `actions/checkout@v6` refuses to place
+    # No checkout, for the reason given on `get-gpml`: `actions/checkout@v7` refuses to place
     # a fork's code inside a `pull_request_target` workflow holding this repository's secrets.
     # This job needed it least of all — it reads job outputs and runs `gh pr edit`, and never
     # touched the working tree. It was simply the last one anybody looked at.

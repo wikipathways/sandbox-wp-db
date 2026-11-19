@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Checkout jekyll repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: wikipathways/sandbox-wp.gh.io
           path: sandbox-wp.gh.io

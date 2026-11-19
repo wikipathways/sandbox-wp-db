@@ -46,7 +46,7 @@ jobs:
     steps:
       - name: Checkout sandbox-wp-db
         id: checkout_db
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: wikipathways/sandbox-wp-db
           path: sandbox-wp-db
@@ -59,7 +59,7 @@ jobs:
 
       - name: Checkout sandbox-wp.gh.io
         id: checkout_jekyll
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: wikipathways/sandbox-wp.gh.io
           path: sandbox-wp.gh.io
@@ -80,7 +80,7 @@ jobs:
         # pathway from being published. Once ACTIONS_SANDBOX_ASSETS_DEPLOY_KEY exists both
         # steps start working with no further edit.
         continue-on-error: true
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: wikipathways/sandbox-wp-assets
           path: sandbox-wp-assets

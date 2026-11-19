@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway Data-Source="WikiPathways" Last-Modified="20261119150524" Version="WP5429_r20261119150524" xmlns="http://pathvisio.org/GPML/2013a" Name="Aryl hydrocarbon receptor activation by dioxin" Author="[marvinm2]" Organism="Homo sapiens">
+<Pathway Data-Source="WikiPathways" Last-Modified="20261119152201" Version="WP5429_r20261119152201" xmlns="http://pathvisio.org/GPML/2013a" Name="Aryl hydrocarbon receptor activation by dioxin" Author="[marvinm2]" Organism="Homo sapiens">
   <Graphics BoardWidth="760.0" BoardHeight="560.0" />
-  <Comment Source="WikiPathways-description">The environmental contaminant 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD) binds the aryl hydrocarbon receptor (AHR), which is held in the cytoplasm by HSP90 and the co-chaperone AIP. Ligand binding releases the receptor, which moves to the nucleus, dimerises with ARNT and induces the xenobiotic-metabolising enzymes CYP1A1 and CYP1B1 in human cells.</Comment>
+  <Comment Source="WikiPathways-description">The environmental contaminant 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD) binds the aryl hydrocarbon receptor (AHR), which is held in the cytoplasm by HSP90 and the co-chaperone AIP. Ligand binding releases the receptor, which moves to the nucleus, dimerises with ARNT and induces the xenobiotic-metabolising enzymes CYP1A1 and CYP1B1 and the repressor AHRR in human cells.</Comment>
   <BiopaxRef>ref1</BiopaxRef>
+  <BiopaxRef>ref2</BiopaxRef>
 
   <DataNode TextLabel="TCDD" GraphId="d001" Type="Metabolite">
     <Comment>2,3,7,8-tetrachlorodibenzo-p-dioxin, the prototypical high-affinity AHR ligand.</Comment>
@@ -41,6 +42,13 @@
     <Xref Database="Entrez Gene" ID="1545" />
   </DataNode>
 
+  <!-- Added in the revision: the AHR repressor and its negative feedback on ARNT. -->
+  <DataNode TextLabel="AHRR" GraphId="d008" Type="GeneProduct">
+    <Comment>AHR repressor; an AHR target gene that competes with AHR for ARNT.</Comment>
+    <Graphics ZOrder="32768" CenterX="320.0" CenterY="480.0" Width="120.0" Height="34.0" Color="1a5276" />
+    <Xref Database="Ensembl" ID="ENSG00000063438" />
+  </DataNode>
+
   <Interaction GraphId="i001">
     <BiopaxRef>ref1</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
@@ -70,6 +78,23 @@
     </Graphics>
   </Interaction>
 
+  <Interaction GraphId="i005">
+    <BiopaxRef>ref2</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="500.0" Y="240.0" GraphRef="d005" RelX="-1.0" RelY="0.6" />
+      <Point X="320.0" Y="463.0" GraphRef="d008" RelX="0.0" RelY="-1.0" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+  </Interaction>
+
+  <Interaction GraphId="i006">
+    <BiopaxRef>ref2</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="380.0" Y="480.0" GraphRef="d008" RelX="1.0" RelY="0.0" />
+      <Point X="560.0" Y="480.0" />
+      <Point X="560.0" Y="247.0" GraphRef="d005" RelX="0.0" RelY="1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+  </Interaction>
+
   <Label TextLabel="Cytoplasm" GraphId="l001">
     <Graphics ZOrder="28672" CenterX="190.0" CenterY="170.0" Width="100.0" Height="20.0" Color="666666" />
   </Label>
@@ -82,6 +107,7 @@
 
   <OntologyTerm Term="aryl hydrocarbon receptor signaling pathway" ID="PW:0000370" Ontology="Pathway Ontology" />
   <OntologyTerm Term="xenobiotic metabolic pathway" ID="PW:0001229" Ontology="Pathway Ontology" />
+  <OntologyTerm Term="hepatocyte" ID="CL:0000182" Ontology="Cell Type" />
 
   <Biopax>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"
@@ -93,6 +119,18 @@
       <bp:YEAR>2003</bp:YEAR>
       <bp:AUTHORS>Denison MS</bp:AUTHORS>
       <bp:AUTHORS>Nagy SR</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ref2">
+      <bp:ID>9887096</bp:ID>
+      <bp:DB>PubMed</bp:DB>
+      <bp:TITLE>Identification of a novel mechanism of regulation of Ah (dioxin) receptor function</bp:TITLE>
+      <bp:SOURCE>Genes Dev</bp:SOURCE>
+      <bp:YEAR>1999</bp:YEAR>
+      <bp:AUTHORS>Mimura J</bp:AUTHORS>
+      <bp:AUTHORS>Ema M</bp:AUTHORS>
+      <bp:AUTHORS>Sogawa K</bp:AUTHORS>
+      <bp:AUTHORS>Fujii-Kuriyama Y</bp:AUTHORS>
     </bp:PublicationXref>
   </Biopax>
 </Pathway>

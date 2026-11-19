@@ -333,6 +333,60 @@
       "y": 383,
       "zIndex": 32768
     },
+    "d008": {
+      "comments": [
+        {
+          "content": "AHR repressor; an AHR target gene that competes with AHR for ARNT."
+        }
+      ],
+      "drawAs": "rect",
+      "fill": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "DataNode",
+      "height": 34,
+      "id": "d008",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#1a5276",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "textContent": "AHRR",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "DataNode",
+        "SingleFreeNode",
+        "Ensembl:ENSG00000063438",
+        "GeneProduct",
+        "CompactIdentifier:ensembl:ENSG00000063438",
+        "AHRR",
+        "Ensembl:ENSG00000063438",
+        "Entrez Gene:57491",
+        "HGNC:AHRR",
+        "UniProt:A0A7I2PK40",
+        "UniProt:E5RFG4",
+        "UniProt:E5RHE0",
+        "UniProt:A0A494BZY4",
+        "UniProt:H0YA43",
+        "UniProt:G3V143",
+        "UniProt:E5RGQ2",
+        "UniProt:D6RE68"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 120,
+      "wpType": "GeneProduct",
+      "x": 260,
+      "xrefDataSource": "Ensembl",
+      "xrefIdentifier": "ENSG00000063438",
+      "y": 463,
+      "zIndex": 32768
+    },
     "g001": {
       "contains": [
         "d002",
@@ -602,6 +656,134 @@
       ],
       "zIndex": 12288
     },
+    "i005": {
+      "citations": [
+        "publicationXrefref2"
+      ],
+      "drawAs": "StraightLine",
+      "fill": "none",
+      "gpmlElementName": "Interaction",
+      "id": "i005",
+      "isAttachedTo": [
+        "d005",
+        "d008"
+      ],
+      "kaavioType": "Edge",
+      "markerEnd": "MimTranscriptionTranslation",
+      "points": [
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0.8
+            ]
+          },
+          "isAttachedTo": "d005",
+          "orientation": [
+            -1,
+            0
+          ],
+          "x": 500,
+          "y": 240
+        },
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              0
+            ]
+          },
+          "isAttachedTo": "d008",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 320,
+          "y": 463
+        }
+      ],
+      "stroke": "#000000",
+      "strokeWidth": 1,
+      "type": [
+        "Interaction",
+        "Edge"
+      ],
+      "zIndex": 12288
+    },
+    "i006": {
+      "citations": [
+        "publicationXrefref2"
+      ],
+      "drawAs": "StraightLine",
+      "fill": "none",
+      "gpmlElementName": "Interaction",
+      "id": "i006",
+      "isAttachedTo": [
+        "d008",
+        "d005"
+      ],
+      "kaavioType": "Edge",
+      "markerEnd": "MimInhibition",
+      "points": [
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              1,
+              0.5
+            ]
+          },
+          "isAttachedTo": "d008",
+          "orientation": [
+            1,
+            0
+          ],
+          "x": 380,
+          "y": 480
+        },
+        {
+          "x": 560,
+          "y": 480
+        },
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              1
+            ]
+          },
+          "isAttachedTo": "d005",
+          "orientation": [
+            0,
+            -1
+          ],
+          "x": 560,
+          "y": 247
+        }
+      ],
+      "stroke": "#000000",
+      "strokeWidth": 1,
+      "type": [
+        "Interaction",
+        "Edge"
+      ],
+      "zIndex": 12288
+    },
     "l001": {
       "drawAs": "none",
       "fill": "transparent",
@@ -673,7 +855,7 @@
       "id": "publicationXrefref1",
       "source": "Annu Rev Pharmacol Toxicol",
       "standardName": "Activation of the aryl hydrocarbon receptor by structurally diverse exogenous and endogenous chemicals",
-      "textContent": "1",
+      "textContent": "2",
       "type": [
         "PublicationXref",
         "PubMed:12540743"
@@ -681,6 +863,26 @@
       "xrefDataSource": "PubMed",
       "xrefIdentifier": "12540743",
       "year": 2003
+    },
+    "publicationXrefref2": {
+      "authors": [
+        "Mimura J",
+        "Ema M",
+        "Sogawa K",
+        "Fujii-Kuriyama Y"
+      ],
+      "gpmlElementName": "PublicationXref",
+      "id": "publicationXrefref2",
+      "source": "Genes Dev",
+      "standardName": "Identification of a novel mechanism of regulation of Ah (dioxin) receptor function",
+      "textContent": "1",
+      "type": [
+        "PublicationXref",
+        "PubMed:9887096"
+      ],
+      "xrefDataSource": "PubMed",
+      "xrefIdentifier": "9887096",
+      "year": 1999
     }
   },
   "pathway": {
@@ -693,7 +895,7 @@
     "author": "[marvinm2]",
     "comments": [
       {
-        "content": "The environmental contaminant 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD) binds the aryl hydrocarbon receptor (AHR), which is held in the cytoplasm by HSP90 and the co-chaperone AIP. Ligand binding releases the receptor, which moves to the nucleus, dimerises with ARNT and induces the xenobiotic-metabolising enzymes CYP1A1 and CYP1B1 in human cells.",
+        "content": "The environmental contaminant 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD) binds the aryl hydrocarbon receptor (AHR), which is held in the cytoplasm by HSP90 and the co-chaperone AIP. Ligand binding releases the receptor, which moves to the nucleus, dimerises with ARNT and induces the xenobiotic-metabolising enzymes CYP1A1 and CYP1B1 and the repressor AHRR in human cells.",
         "source": "WikiPathways-description"
       }
     ],
@@ -702,15 +904,18 @@
       "i002",
       "i003",
       "i004",
+      "i005",
+      "i006",
       "l001",
       "l002",
       "d001",
       "d005",
       "d006",
       "d007",
+      "d008",
       "g001"
     ],
-    "dataSourceVersion": "WP5429_r20261119150524",
+    "dataSourceVersion": "WP5429_r20261119152201",
     "displayName": "Aryl hydrocarbon receptor activation by dioxin",
     "drawAs": "rect",
     "fill": "white",
@@ -723,7 +928,7 @@
     "name": "Aryl hydrocarbon receptor activation by dioxin",
     "organism": "Homo sapiens",
     "padding": 5,
-    "pathwayVersion": "PR88",
+    "pathwayVersion": "PR89",
     "standardName": "Aryl hydrocarbon receptor activation by dioxin",
     "stroke": "black",
     "strokeWidth": 0,

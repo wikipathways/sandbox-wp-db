@@ -1,10 +1,10 @@
 {
     "wpid": "WP5430",
     "organisms": ["Homo sapiens"],
-    "description": "The environmental contaminant 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD) binds the aryl hydrocarbon receptor (AHR), which is held in the cytoplasm by HSP90 and the co-chaperone AIP. Ligand binding releases the receptor, which moves to the nucleus, dimerises with ARNT and induces the xenobiotic-metabolising enzymes CYP1A1, CYP1B1 and NQO1 and the repressor AHRR in human cells.",
+    "description": "The environmental contaminant 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD) binds the aryl hydrocarbon receptor (AHR), which is held in the cytoplasm by HSP90 and the co-chaperone AIP. Ligand binding releases the receptor, which moves to the nucleus, dimerises with ARNT and induces the xenobiotic-metabolising enzymes CYP1A1, CYP1B1, NQO1 and TIPARP and the repressor AHRR in human cells.",
     "ontology-ids": [],
     "last-edited": "2026-11-20",
     "title": "Aryl hydrocarbon receptor activation by dioxin",
     "authors": ["marvinm2"],
-    "revision": "r20261120143707"
+    "revision": "r20261120164039"
 }

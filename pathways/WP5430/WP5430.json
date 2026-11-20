@@ -437,6 +437,56 @@
       "y": 293,
       "zIndex": 32768
     },
+    "d010": {
+      "comments": [
+        {
+          "content": "TCDD-inducible poly(ADP-ribose) polymerase; an AHR target gene that feeds back on AHR."
+        }
+      ],
+      "drawAs": "rect",
+      "fill": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "DataNode",
+      "height": 34,
+      "id": "d010",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#1a5276",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "textContent": "TIPARP",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "DataNode",
+        "SingleFreeNode",
+        "Ensembl:ENSG00000163659",
+        "GeneProduct",
+        "CompactIdentifier:ensembl:ENSG00000163659",
+        "TIPARP",
+        "Ensembl:ENSG00000163659",
+        "Entrez Gene:25976",
+        "HGNC:TIPARP",
+        "UniProt:C9JXM5",
+        "UniProt:Q7Z3E1",
+        "UniProt:H7C5K7",
+        "UniProt:G5E9W1"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 120,
+      "wpType": "GeneProduct",
+      "x": 620,
+      "xrefDataSource": "Ensembl",
+      "xrefIdentifier": "ENSG00000163659",
+      "y": 123,
+      "zIndex": 32768
+    },
     "g001": {
       "contains": [
         "d002",
@@ -893,6 +943,65 @@
       ],
       "zIndex": 12288
     },
+    "i008": {
+      "drawAs": "StraightLine",
+      "fill": "none",
+      "gpmlElementName": "Interaction",
+      "id": "i008",
+      "isAttachedTo": [
+        "d005",
+        "d010"
+      ],
+      "kaavioType": "Edge",
+      "markerEnd": "MimTranscriptionTranslation",
+      "points": [
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.6665,
+              0
+            ]
+          },
+          "isAttachedTo": "d005",
+          "orientation": [
+            0,
+            -1
+          ],
+          "x": 580,
+          "y": 213
+        },
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              1
+            ]
+          },
+          "isAttachedTo": "d010",
+          "orientation": [
+            0,
+            -1
+          ],
+          "x": 680,
+          "y": 157
+        }
+      ],
+      "stroke": "#000000",
+      "strokeWidth": 1,
+      "type": [
+        "Interaction",
+        "Edge"
+      ],
+      "zIndex": 12288
+    },
     "l001": {
       "drawAs": "none",
       "fill": "transparent",
@@ -1004,7 +1113,7 @@
     "author": "[marvinm2]",
     "comments": [
       {
-        "content": "The environmental contaminant 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD) binds the aryl hydrocarbon receptor (AHR), which is held in the cytoplasm by HSP90 and the co-chaperone AIP. Ligand binding releases the receptor, which moves to the nucleus, dimerises with ARNT and induces the xenobiotic-metabolising enzymes CYP1A1, CYP1B1 and NQO1 and the repressor AHRR in human cells.",
+        "content": "The environmental contaminant 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD) binds the aryl hydrocarbon receptor (AHR), which is held in the cytoplasm by HSP90 and the co-chaperone AIP. Ligand binding releases the receptor, which moves to the nucleus, dimerises with ARNT and induces the xenobiotic-metabolising enzymes CYP1A1, CYP1B1, NQO1 and TIPARP and the repressor AHRR in human cells.",
         "source": "WikiPathways-description"
       }
     ],
@@ -1016,6 +1125,7 @@
       "i005",
       "i006",
       "i007",
+      "i008",
       "l001",
       "l002",
       "d001",
@@ -1024,9 +1134,10 @@
       "d007",
       "d008",
       "d009",
+      "d010",
       "g001"
     ],
-    "dataSourceVersion": "WP5430_r20261120143707",
+    "dataSourceVersion": "WP5430_r20261120164039",
     "displayName": "Aryl hydrocarbon receptor activation by dioxin",
     "drawAs": "rect",
     "fill": "white",
@@ -1036,16 +1147,16 @@
     "height": 560,
     "id": "WP5430",
     "kaavioType": "Group",
-    "lastModified": "20261120113535",
+    "lastModified": "20261120143707",
     "name": "Aryl hydrocarbon receptor activation by dioxin",
     "organism": "Homo sapiens",
     "padding": 5,
-    "pathwayVersion": "PR93",
+    "pathwayVersion": "PR94",
     "standardName": "Aryl hydrocarbon receptor activation by dioxin",
     "stroke": "black",
     "strokeWidth": 0,
     "textAlign": "left",
-    "textContent": "Name: Aryl hydrocarbon receptor activation by dioxin\nLast Modified: 20261120113535\nOrganism: Homo sapiens",
+    "textContent": "Name: Aryl hydrocarbon receptor activation by dioxin\nLast Modified: 20261120143707\nOrganism: Homo sapiens",
     "type": [
       "Pathway"
     ],

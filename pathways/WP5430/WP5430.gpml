@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway Data-Source="WikiPathways" Last-Modified="20261120143707" Version="WP5430_r20261120143707" xmlns="http://pathvisio.org/GPML/2013a" Name="Aryl hydrocarbon receptor activation by dioxin" Author="[marvinm2]" Organism="Homo sapiens">
+<Pathway Data-Source="WikiPathways" Last-Modified="20261120164039" Version="WP5430_r20261120164039" xmlns="http://pathvisio.org/GPML/2013a" Name="Aryl hydrocarbon receptor activation by dioxin" Author="[marvinm2]" Organism="Homo sapiens">
   <Graphics BoardWidth="760.0" BoardHeight="560.0" />
-  <Comment Source="WikiPathways-description">The environmental contaminant 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD) binds the aryl hydrocarbon receptor (AHR), which is held in the cytoplasm by HSP90 and the co-chaperone AIP. Ligand binding releases the receptor, which moves to the nucleus, dimerises with ARNT and induces the xenobiotic-metabolising enzymes CYP1A1, CYP1B1 and NQO1 and the repressor AHRR in human cells.</Comment>
+  <Comment Source="WikiPathways-description">The environmental contaminant 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD) binds the aryl hydrocarbon receptor (AHR), which is held in the cytoplasm by HSP90 and the co-chaperone AIP. Ligand binding releases the receptor, which moves to the nucleus, dimerises with ARNT and induces the xenobiotic-metabolising enzymes CYP1A1, CYP1B1, NQO1 and TIPARP and the repressor AHRR in human cells.</Comment>
   <BiopaxRef>ref1</BiopaxRef>
   <BiopaxRef>ref2</BiopaxRef>
 
@@ -56,6 +56,13 @@
     <Xref Database="Ensembl" ID="ENSG00000181019" />
   </DataNode>
 
+  <!-- TIPARP: AHR target gene and negative regulator of AHR signalling. -->
+  <DataNode TextLabel="TIPARP" GraphId="d010" Type="GeneProduct">
+    <Comment>TCDD-inducible poly(ADP-ribose) polymerase; an AHR target gene that feeds back on AHR.</Comment>
+    <Graphics ZOrder="32768" CenterX="680.0" CenterY="140.0" Width="120.0" Height="34.0" Color="1a5276" />
+    <Xref Database="Ensembl" ID="ENSG00000163659" />
+  </DataNode>
+
   <Interaction GraphId="i001">
     <BiopaxRef>ref1</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
@@ -106,6 +113,13 @@
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="620.0" Y="230.0" GraphRef="d005" RelX="1.0" RelY="0.0" />
       <Point X="680.0" Y="293.0" GraphRef="d009" RelX="0.0" RelY="-1.0" ArrowHead="mim-transcription-translation" />
+    </Graphics>
+  </Interaction>
+
+  <Interaction GraphId="i008">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="580.0" Y="213.0" GraphRef="d005" RelX="0.333" RelY="-1.0" />
+      <Point X="680.0" Y="157.0" GraphRef="d010" RelX="0.0" RelY="1.0" ArrowHead="mim-transcription-translation" />
     </Graphics>
   </Interaction>
 

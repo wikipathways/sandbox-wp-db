@@ -1,0 +1,741 @@
+{
+  "entitiesById": {
+    "d001": {
+      "comments": [
+        {
+          "content": "2,3,7,8-tetrachlorodibenzo-p-dioxin, the prototypical high-affinity AHR ligand."
+        }
+      ],
+      "drawAs": "rect",
+      "fill": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "DataNode",
+      "height": 34,
+      "id": "d001",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#0000ff",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "textContent": "TCDD",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "DataNode",
+        "SingleFreeNode",
+        "ChEBI:CHEBI:28119",
+        "Metabolite",
+        "CompactIdentifier:chebi:28119",
+        "TCDD",
+        "Wikidata:Q52822",
+        "ChEBI:28119",
+        "InChI:HGUFODBRKLSHSI-UHFFFAOYSA-N",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 120,
+      "wpType": "Metabolite",
+      "x": 130,
+      "xrefDataSource": "ChEBI",
+      "xrefIdentifier": "CHEBI:28119",
+      "y": 73,
+      "zIndex": 32768
+    },
+    "d002": {
+      "comments": [
+        {
+          "content": "Ligand-activated basic helix-loop-helix PAS transcription factor."
+        }
+      ],
+      "drawAs": "rect",
+      "fill": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "DataNode",
+      "height": 34,
+      "id": "d002",
+      "isPartOf": "g001",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#1a5276",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "textContent": "AHR",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "DataNode",
+        "SingleFreeNode",
+        "Ensembl:ENSG00000106546",
+        "GeneProduct",
+        "CompactIdentifier:ensembl:ENSG00000106546",
+        "AHR",
+        "Ensembl:ENSG00000106546",
+        "Entrez Gene:196",
+        "HGNC:AHR",
+        "UniProt:A0A2R8Y7G1",
+        "UniProt:P35869",
+        "UniProt:A0A024R9Z8"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 120,
+      "wpType": "GeneProduct",
+      "x": 12,
+      "xrefDataSource": "Ensembl",
+      "xrefIdentifier": "ENSG00000106546",
+      "y": 12,
+      "zIndex": 32768
+    },
+    "d003": {
+      "drawAs": "rect",
+      "fill": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "DataNode",
+      "height": 34,
+      "id": "d003",
+      "isPartOf": "g001",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#1a5276",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "textContent": "HSP90AA1",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "DataNode",
+        "SingleFreeNode",
+        "Entrez Gene:3320",
+        "GeneProduct",
+        "CompactIdentifier:ncbigene:3320",
+        "HSP90AA1",
+        "Ensembl:ENSG00000080824",
+        "Entrez Gene:3320",
+        "HGNC:HSP90AA1",
+        "UniProt:G3V592",
+        "UniProt:K9JA46",
+        "UniProt:A0A0U1RR69",
+        "UniProt:G3V2J8",
+        "UniProt:P07900",
+        "UniProt:H0YJF5"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 120,
+      "wpType": "GeneProduct",
+      "x": 12,
+      "xrefDataSource": "Entrez Gene",
+      "xrefIdentifier": "3320",
+      "y": 46,
+      "zIndex": 32768
+    },
+    "d004": {
+      "drawAs": "rect",
+      "fill": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "DataNode",
+      "height": 34,
+      "id": "d004",
+      "isPartOf": "g001",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#1a5276",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "textContent": "AIP",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "DataNode",
+        "SingleFreeNode",
+        "Ensembl:ENSG00000110711",
+        "GeneProduct",
+        "CompactIdentifier:ensembl:ENSG00000110711",
+        "AIP",
+        "Ensembl:ENSG00000110711",
+        "Entrez Gene:9049",
+        "HGNC:AIP",
+        "UniProt:E9PMH2",
+        "UniProt:A0A804HJ46",
+        "UniProt:A0A804HKH9",
+        "UniProt:A0A804HIX8",
+        "UniProt:O00170",
+        "UniProt:A0A804HKK3",
+        "UniProt:A0A804HKP8",
+        "UniProt:A0A804HKL7",
+        "UniProt:A0A804HJ38",
+        "UniProt:V9GYQ3"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 120,
+      "wpType": "GeneProduct",
+      "x": 12,
+      "xrefDataSource": "Ensembl",
+      "xrefIdentifier": "ENSG00000110711",
+      "y": 80,
+      "zIndex": 32768
+    },
+    "d005": {
+      "drawAs": "rect",
+      "fill": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "DataNode",
+      "height": 34,
+      "id": "d005",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#1a5276",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "textContent": "ARNT",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "DataNode",
+        "SingleFreeNode",
+        "Uniprot-TrEMBL:P27540",
+        "Protein",
+        "CompactIdentifier:uniprot:P27540",
+        "ARNT",
+        "Ensembl:ENSG00000143437",
+        "Entrez Gene:405",
+        "HGNC:ARNT",
+        "UniProt:A6NGV6",
+        "UniProt:P27540",
+        "UniProt:D6RDB3"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 120,
+      "wpType": "Protein",
+      "x": 500,
+      "xrefDataSource": "Uniprot-TrEMBL",
+      "xrefIdentifier": "P27540",
+      "y": 213,
+      "zIndex": 32768
+    },
+    "d006": {
+      "drawAs": "rect",
+      "fill": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "DataNode",
+      "height": 34,
+      "id": "d006",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#1a5276",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "textContent": "CYP1A1",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "DataNode",
+        "SingleFreeNode",
+        "Ensembl:ENSG00000140465",
+        "GeneProduct",
+        "CompactIdentifier:ensembl:ENSG00000140465",
+        "CYP1A1",
+        "Ensembl:ENSG00000140465",
+        "Entrez Gene:1543",
+        "HGNC:CYP1A1",
+        "UniProt:E7EMT5",
+        "UniProt:P04798",
+        "UniProt:A0N0X8",
+        "UniProt:A4F3V8"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 120,
+      "wpType": "GeneProduct",
+      "x": 420,
+      "xrefDataSource": "Ensembl",
+      "xrefIdentifier": "ENSG00000140465",
+      "y": 383,
+      "zIndex": 32768
+    },
+    "d007": {
+      "drawAs": "rect",
+      "fill": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "DataNode",
+      "height": 34,
+      "id": "d007",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#1a5276",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "textContent": "CYP1B1",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "DataNode",
+        "SingleFreeNode",
+        "Entrez Gene:1545",
+        "GeneProduct",
+        "CompactIdentifier:ncbigene:1545",
+        "CYP1B1",
+        "Ensembl:ENSG00000138061",
+        "Entrez Gene:1545",
+        "HGNC:CYP1B1",
+        "UniProt:A0A087WUQ7",
+        "UniProt:A0A087WW26",
+        "UniProt:Q16678"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 120,
+      "wpType": "GeneProduct",
+      "x": 580,
+      "xrefDataSource": "Entrez Gene",
+      "xrefIdentifier": "1545",
+      "y": 383,
+      "zIndex": 32768
+    },
+    "g001": {
+      "contains": [
+        "d002",
+        "d003",
+        "d004"
+      ],
+      "drawAs": "Octagon",
+      "fill": "#b4b464",
+      "fillOpacity": 0.1,
+      "fontSize": 1,
+      "fontWeight": "bold",
+      "gpmlElementName": "Group",
+      "height": 126,
+      "id": "g001",
+      "kaavioType": "Group",
+      "padding": 11,
+      "stroke": "#808080",
+      "strokeWidth": 1,
+      "textAlign": "center",
+      "type": [
+        "Group",
+        "Complex",
+        "GroupComplex"
+      ],
+      "verticalAlign": "middle",
+      "width": 144,
+      "x": 118,
+      "y": 201,
+      "zIndex": 32768
+    },
+    "i001": {
+      "citations": [
+        "publicationXrefref1"
+      ],
+      "drawAs": "StraightLine",
+      "fill": "none",
+      "gpmlElementName": "Interaction",
+      "id": "i001",
+      "isAttachedTo": [
+        "d001",
+        "d002"
+      ],
+      "kaavioType": "Edge",
+      "markerEnd": "MimBinding",
+      "points": [
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              1
+            ]
+          },
+          "isAttachedTo": "d001",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 190,
+          "y": 107
+        },
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              0
+            ]
+          },
+          "isAttachedTo": "d002",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 190,
+          "y": 213
+        }
+      ],
+      "stroke": "#000000",
+      "strokeWidth": 1,
+      "type": [
+        "Interaction",
+        "Edge"
+      ],
+      "zIndex": 12288
+    },
+    "i002": {
+      "drawAs": "StraightLine",
+      "fill": "none",
+      "gpmlElementName": "Interaction",
+      "id": "i002",
+      "isAttachedTo": [
+        "d002",
+        "d005"
+      ],
+      "kaavioType": "Edge",
+      "markerEnd": "MimBinding",
+      "points": [
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              1,
+              0.5
+            ]
+          },
+          "isAttachedTo": "d002",
+          "orientation": [
+            1,
+            0
+          ],
+          "x": 250,
+          "y": 230
+        },
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0,
+              0.5
+            ]
+          },
+          "isAttachedTo": "d005",
+          "orientation": [
+            1,
+            0
+          ],
+          "x": 500,
+          "y": 230
+        }
+      ],
+      "stroke": "#000000",
+      "strokeWidth": 1,
+      "type": [
+        "Interaction",
+        "Edge"
+      ],
+      "zIndex": 12288
+    },
+    "i003": {
+      "drawAs": "StraightLine",
+      "fill": "none",
+      "gpmlElementName": "Interaction",
+      "id": "i003",
+      "isAttachedTo": [
+        "d005",
+        "d006"
+      ],
+      "kaavioType": "Edge",
+      "markerEnd": "MimTranscriptionTranslation",
+      "points": [
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.3335,
+              1
+            ]
+          },
+          "isAttachedTo": "d005",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 540,
+          "y": 247
+        },
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              0
+            ]
+          },
+          "isAttachedTo": "d006",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 480,
+          "y": 383
+        }
+      ],
+      "stroke": "#000000",
+      "strokeWidth": 1,
+      "type": [
+        "Interaction",
+        "Edge"
+      ],
+      "zIndex": 12288
+    },
+    "i004": {
+      "drawAs": "StraightLine",
+      "fill": "none",
+      "gpmlElementName": "Interaction",
+      "id": "i004",
+      "isAttachedTo": [
+        "d005",
+        "d007"
+      ],
+      "kaavioType": "Edge",
+      "markerEnd": "MimTranscriptionTranslation",
+      "points": [
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.6665,
+              1
+            ]
+          },
+          "isAttachedTo": "d005",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 580,
+          "y": 247
+        },
+        {
+          "attachmentDisplay": {
+            "offset": [
+              0,
+              0
+            ],
+            "position": [
+              0.5,
+              0
+            ]
+          },
+          "isAttachedTo": "d007",
+          "orientation": [
+            0,
+            1
+          ],
+          "x": 640,
+          "y": 383
+        }
+      ],
+      "stroke": "#000000",
+      "strokeWidth": 1,
+      "type": [
+        "Interaction",
+        "Edge"
+      ],
+      "zIndex": 12288
+    },
+    "l001": {
+      "drawAs": "none",
+      "fill": "transparent",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "Label",
+      "height": 20,
+      "id": "l001",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#666666",
+      "strokeWidth": 0,
+      "textAlign": "center",
+      "textContent": "Cytoplasm",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "Label",
+        "SingleFreeNode"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 100,
+      "x": 140,
+      "y": 160,
+      "zIndex": 28672
+    },
+    "l002": {
+      "drawAs": "none",
+      "fill": "transparent",
+      "fontFamily": "Arial",
+      "fontSize": 12,
+      "fontStyle": "normal",
+      "fontWeight": "normal",
+      "gpmlElementName": "Label",
+      "height": 20,
+      "id": "l002",
+      "kaavioType": "SingleFreeNode",
+      "lineHeight": 1.1,
+      "overflow": "hidden",
+      "padding": 8,
+      "stroke": "#666666",
+      "strokeWidth": 0,
+      "textAlign": "center",
+      "textContent": "Nucleus",
+      "textDecoration": "none",
+      "textOverflow": "clip",
+      "type": [
+        "Label",
+        "SingleFreeNode"
+      ],
+      "verticalAlign": "top",
+      "whiteSpace": "pre",
+      "width": 100,
+      "x": 510,
+      "y": 160,
+      "zIndex": 28672
+    },
+    "publicationXrefref1": {
+      "authors": [
+        "Denison MS",
+        "Nagy SR"
+      ],
+      "gpmlElementName": "PublicationXref",
+      "id": "publicationXrefref1",
+      "source": "Annu Rev Pharmacol Toxicol",
+      "standardName": "Activation of the aryl hydrocarbon receptor by structurally diverse exogenous and endogenous chemicals",
+      "textContent": "1",
+      "type": [
+        "PublicationXref",
+        "PubMed:12540743"
+      ],
+      "xrefDataSource": "PubMed",
+      "xrefIdentifier": "12540743",
+      "year": 2003
+    }
+  },
+  "pathway": {
+    "@context": [
+      "https://cdn.rawgit.com/wikipathways/WpVocabularies/7a46a05/contexts/pvjs.jsonld",
+      {
+        "@base": "WP5430/"
+      }
+    ],
+    "author": "[marvinm2]",
+    "comments": [
+      {
+        "content": "The environmental contaminant 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD) binds the aryl hydrocarbon receptor (AHR), which is held in the cytoplasm by HSP90 and the co-chaperone AIP. Ligand binding releases the receptor, which moves to the nucleus, dimerises with ARNT and induces the xenobiotic-metabolising enzymes CYP1A1 and CYP1B1 in human cells.",
+        "source": "WikiPathways-description"
+      }
+    ],
+    "contains": [
+      "i001",
+      "i002",
+      "i003",
+      "i004",
+      "l001",
+      "l002",
+      "d001",
+      "d005",
+      "d006",
+      "d007",
+      "g001"
+    ],
+    "dataSourceVersion": "WP5430_r20261120095243",
+    "displayName": "Aryl hydrocarbon receptor activation by dioxin",
+    "drawAs": "rect",
+    "fill": "white",
+    "fontSize": 12,
+    "fontWeight": "bold",
+    "gpmlElementName": "Pathway",
+    "height": 560,
+    "id": "WP5430",
+    "kaavioType": "Group",
+    "name": "Aryl hydrocarbon receptor activation by dioxin",
+    "organism": "Homo sapiens",
+    "padding": 5,
+    "pathwayVersion": "PR91",
+    "standardName": "Aryl hydrocarbon receptor activation by dioxin",
+    "stroke": "black",
+    "strokeWidth": 0,
+    "textAlign": "left",
+    "textContent": "Name: Aryl hydrocarbon receptor activation by dioxin\nOrganism: Homo sapiens",
+    "type": [
+      "Pathway"
+    ],
+    "verticalAlign": "top",
+    "width": 760,
+    "x": 0,
+    "y": 0,
+    "zIndex": 0
+  }
+}

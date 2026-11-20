@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway Data-Source="WikiPathways" Last-Modified="20261120113535" Version="WP5430_r20261120113535" xmlns="http://pathvisio.org/GPML/2013a" Name="Aryl hydrocarbon receptor activation by dioxin" Author="[marvinm2]" Organism="Homo sapiens">
+<Pathway Data-Source="WikiPathways" Last-Modified="20261120113535" Version="WP5430_r20261120143027" xmlns="http://pathvisio.org/GPML/2013a" Name="Aryl hydrocarbon receptor activation by dioxin" Author="[marvinm2]" Organism="Homo sapiens">
   <Graphics BoardWidth="760.0" BoardHeight="560.0" />
-  <Comment Source="WikiPathways-description">The environmental contaminant 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD) binds the aryl hydrocarbon receptor (AHR), which is held in the cytoplasm by HSP90 and the co-chaperone AIP. Ligand binding releases the receptor, which moves to the nucleus, dimerises with ARNT and induces the xenobiotic-metabolising enzymes CYP1A1 and CYP1B1 and the repressor AHRR in human cells.</Comment>
+  <Comment Source="WikiPathways-description">The environmental contaminant 2,3,7,8-tetrachlorodibenzo-p-dioxin (TCDD) binds the aryl hydrocarbon receptor (AHR), which is held in the cytoplasm by HSP90 and the co-chaperone AIP. Ligand binding releases the receptor, which moves to the nucleus, dimerises with ARNT and induces the xenobiotic-metabolising enzymes CYP1A1, CYP1B1 and NQO1 and the repressor AHRR in human cells.</Comment>
   <BiopaxRef>ref1</BiopaxRef>
   <BiopaxRef>ref2</BiopaxRef>
 
@@ -49,6 +49,13 @@
     <Xref Database="Ensembl" ID="ENSG00000063438" />
   </DataNode>
 
+  <!-- NQO1: a further AHR/ARNT target gene. -->
+  <DataNode TextLabel="NQO1" GraphId="d009" Type="GeneProduct">
+    <Comment>NAD(P)H quinone dehydrogenase 1; induced through the xenobiotic response element.</Comment>
+    <Graphics ZOrder="32768" CenterX="680.0" CenterY="310.0" Width="120.0" Height="34.0" Color="1a5276" />
+    <Xref Database="Ensembl" ID="ENSG00000181019" />
+  </DataNode>
+
   <Interaction GraphId="i001">
     <BiopaxRef>ref1</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
@@ -92,6 +99,13 @@
       <Point X="380.0" Y="480.0" GraphRef="d008" RelX="1.0" RelY="0.0" />
       <Point X="560.0" Y="480.0" />
       <Point X="560.0" Y="247.0" GraphRef="d005" RelX="0.0" RelY="1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+  </Interaction>
+
+  <Interaction GraphId="i007">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="620.0" Y="230.0" GraphRef="d005" RelX="1.0" RelY="0.0" />
+      <Point X="680.0" Y="280.0" ArrowHead="mim-transcription-translation" />
     </Graphics>
   </Interaction>
 
